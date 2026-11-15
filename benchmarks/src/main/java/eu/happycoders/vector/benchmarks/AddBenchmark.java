@@ -8,7 +8,8 @@ import org.openjdk.jmh.annotations.*;
 
 /**
  * Adds two float arrays: scalar with and without C2's auto-vectorization, and with the Vector
- * API, once with a tail loop and once with a mask.
+ * API, once with a tail loop, once with a mask in every iteration, and once with an unmasked
+ * main loop and a single masked iteration for the tail.
  */
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)
@@ -68,6 +69,24 @@ public class AddBenchmark {
   @Benchmark
   public float[] vectorMasked() {
     for (int i = 0; i < a.length; i += SPECIES.length()) {
+      VectorMask<Float> m = SPECIES.indexInRange(i, a.length);
+      FloatVector va = FloatVector.fromArray(SPECIES, a, i, m);
+      FloatVector vb = FloatVector.fromArray(SPECIES, b, i, m);
+      va.add(vb).intoArray(c, i, m);
+    }
+    return c;
+  }
+
+  @Benchmark
+  public float[] vectorMaskedTail() {
+    int i = 0;
+    int upperBound = SPECIES.loopBound(a.length);
+    for (; i < upperBound; i += SPECIES.length()) {
+      FloatVector va = FloatVector.fromArray(SPECIES, a, i);
+      FloatVector vb = FloatVector.fromArray(SPECIES, b, i);
+      va.add(vb).intoArray(c, i);
+    }
+    if (i < a.length) {
       VectorMask<Float> m = SPECIES.indexInRange(i, a.length);
       FloatVector va = FloatVector.fromArray(SPECIES, a, i, m);
       FloatVector vb = FloatVector.fromArray(SPECIES, b, i, m);
