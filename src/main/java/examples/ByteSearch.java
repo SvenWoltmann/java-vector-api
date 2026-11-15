@@ -1,11 +1,12 @@
-import jdk.incubator.vector.*;
-
 import static jdk.incubator.vector.VectorOperators.*;
+
+import jdk.incubator.vector.*;
 
 static final VectorSpecies<Byte> SPECIES = ByteVector.SPECIES_PREFERRED;
 
 void main() {
-  String text = """
+  String text =
+      """
       The Vector API has been incubating since Java 16.
       Java 27 contains the twelfth incubator round.
       It waits for Project Valhalla.

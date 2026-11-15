@@ -1,6 +1,6 @@
-import jdk.incubator.vector.*;
-
 import static jdk.incubator.vector.VectorOperators.*;
+
+import jdk.incubator.vector.*;
 
 static final VectorSpecies<Integer> SPECIES = IntVector.SPECIES_128;
 
@@ -16,8 +16,9 @@ void main() {
     IntVector packed = v.compress(positive);
     IO.println(v + " -> compress " + positive + " -> " + packed);
 
-    packed.intoArray(result, count);  // the zeros at the end are overwritten
-    count += positive.trueCount();    // in the next round
+    // Writes all four lanes; the next round overwrites the zeros at the end
+    packed.intoArray(result, count);
+    count += positive.trueCount();
   }
   IO.println(Arrays.toString(Arrays.copyOf(result, count)));
 

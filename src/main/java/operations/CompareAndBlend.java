@@ -1,6 +1,6 @@
-import jdk.incubator.vector.*;
-
 import static jdk.incubator.vector.VectorOperators.*;
+
+import jdk.incubator.vector.*;
 
 static final VectorSpecies<Float> SPECIES = FloatVector.SPECIES_128;
 

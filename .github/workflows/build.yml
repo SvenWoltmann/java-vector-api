@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
+  schedule:
+    # SonarQube Cloud removes tokens unused for 60 days, and Dependabot
+    # builds skip the Sonar step, so a quiet repository loses its token.
+    # A monthly run keeps it in use.
+    - cron: '23 4 5 * *'
 
 jobs:
   build:
@@ -16,6 +21,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
       # The Vector API is the incubator module jdk.incubator.vector;
       # the examples and measurements of the article use Java 27.
@@ -25,6 +32,16 @@ jobs:
           distribution: 'temurin'
           java-version: '27'
           cache: 'maven'
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v6
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Verify code format
+        run: mvn -B spotless:check
 
       - name: Build
         run: mvn -B verify
@@ -39,3 +56,10 @@ jobs:
       # Compiles the benchmarks; running them needs an idle machine
       - name: Compile the benchmarks
         run: mvn -B -f benchmarks/pom.xml package
+
+      - name: Analyze code with Sonar
+        if: ${{ env.SONAR_TOKEN }} # the token is not available in Dependabot-triggered builds
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar

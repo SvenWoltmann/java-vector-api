@@ -11,6 +11,16 @@
   <properties>
     <maven.compiler.release>27</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <spotless.version>3.11.0</spotless.version>
+    <google-java-format.version>2.0.0</google-java-format.version>
+
+    <!-- SonarQube Cloud setup -->
+    <sonar.projectKey>SvenWoltmann_java-vector-api</sonar.projectKey>
+    <sonar.organization>svenwoltmann</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <!-- Demo programs without tests: no coverage to measure -->
+    <sonar.coverage.exclusions>**/*.java</sonar.coverage.exclusions>
   </properties>
 
   <build>
@@ -24,6 +34,22 @@
             <arg>--add-modules</arg>
             <arg>jdk.incubator.vector</arg>
           </compilerArgs>
+        </configuration>
+      </plugin>
+
+      <!-- Spotless plugin to verify code style -->
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <version>${spotless.version}</version>
+        <configuration>
+          <java>
+            <googleJavaFormat>
+              <version>${google-java-format.version}</version>
+              <style>GOOGLE</style>
+            </googleJavaFormat>
+            <lineEndings>UNIX</lineEndings>
+          </java>
         </configuration>
       </plugin>
     </plugins>

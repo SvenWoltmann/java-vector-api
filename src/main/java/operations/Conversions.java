@@ -1,6 +1,6 @@
-import jdk.incubator.vector.*;
-
 import static jdk.incubator.vector.VectorOperators.*;
+
+import jdk.incubator.vector.*;
 
 static final VectorSpecies<Byte> BYTES = ByteVector.SPECIES_128;
 static final VectorSpecies<Integer> INTS = IntVector.SPECIES_128;
@@ -8,7 +8,7 @@ static final VectorSpecies<Integer> INTS = IntVector.SPECIES_128;
 void main() {
   byte[] data = new byte[16];
   for (int i = 0; i < data.length; i++) {
-    data[i] = (byte) (i * 20);  // byte is signed: from 140 on, values wrap
+    data[i] = (byte) (i * 20); // byte is signed: from 140 on, values wrap
   }
   ByteVector bytes = ByteVector.fromArray(BYTES, data, 0);
   IO.println("Bytes: " + bytes);

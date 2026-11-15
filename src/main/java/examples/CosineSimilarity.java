@@ -1,6 +1,6 @@
-import jdk.incubator.vector.*;
-
 import static jdk.incubator.vector.VectorOperators.*;
+
+import jdk.incubator.vector.*;
 
 static final VectorSpecies<Float> SPECIES = FloatVector.SPECIES_PREFERRED;
 
@@ -36,7 +36,7 @@ float cosineVector(float[] a, float[] b) {
   for (; i < SPECIES.loopBound(a.length); i += SPECIES.length()) {
     FloatVector va = FloatVector.fromArray(SPECIES, a, i);
     FloatVector vb = FloatVector.fromArray(SPECIES, b, i);
-    dot = va.fma(vb, dot);        // dot   += va * vb, lane by lane
+    dot = va.fma(vb, dot); // dot += va * vb, lane by lane
     normA = va.fma(va, normA);
     normB = vb.fma(vb, normB);
   }

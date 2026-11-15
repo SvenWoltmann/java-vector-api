@@ -27,16 +27,18 @@ void main() {
 // Result goes straight back into an int array
 void add() {
   for (int i = 0; i < a.length; i += SPECIES.length()) {
-    IntVector.fromArray(SPECIES, a, i).add(IntVector.fromArray(SPECIES, b, i))
-        .intoArray(c, i);
+    IntVector va = IntVector.fromArray(SPECIES, a, i);
+    IntVector vb = IntVector.fromArray(SPECIES, b, i);
+    va.add(vb).intoArray(c, i);
   }
 }
 
 // Result is stored as an object, so it must exist on the heap
 void addAndKeep() {
   for (int i = 0; i < a.length; i += SPECIES.length()) {
-    kept[i / 4] =
-        IntVector.fromArray(SPECIES, a, i).add(IntVector.fromArray(SPECIES, b, i));
+    IntVector va = IntVector.fromArray(SPECIES, a, i);
+    IntVector vb = IntVector.fromArray(SPECIES, b, i);
+    kept[i / 4] = va.add(vb);
   }
 }
 

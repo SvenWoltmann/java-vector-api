@@ -1,6 +1,6 @@
-import jdk.incubator.vector.*;
-
 import static jdk.incubator.vector.VectorOperators.*;
+
+import jdk.incubator.vector.*;
 
 // Four methods for the machine code in the article: two scalar loops
 // (one that C2 vectorizes on its own, one that it does not) and their
@@ -19,7 +19,7 @@ void main() {
     a[i] = i;
     b[i] = 2 * i;
   }
-  data[999] = 1;  // the search runs to the end of the array
+  data[999] = 1; // the search runs to the end of the array
 
   // Enough calls for C2 to compile all four methods
   long check = 0;
