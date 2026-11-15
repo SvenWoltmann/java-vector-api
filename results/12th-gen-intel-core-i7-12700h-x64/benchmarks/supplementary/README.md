@@ -9,6 +9,7 @@ The machine is a laptop with a 12th Gen Intel Core i7-12700H (AVX2, no AVX-512, 
 | `add-masked-tail` | `AddBenchmark.vector` and `vectorMasked` with 1,003 and 100,003 elements, where the last iteration needs a partial mask (all sizes of the main run except 7 are multiples of the eight lanes), with the GC profiler |
 | `add-16-byte-aligned-arrays` | `AddBenchmark.scalar` and `vector` with `-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=16`, which puts the first element of every array on a 16-byte boundary |
 | `dot-product-dependency-chains` | All variants of `DotProductBenchmark` in one run: `scalar`, `scalarFourSums` (the scalar loop with four independent sums), `vector` and `vectorFourAccumulators` |
+| `add-vector-1000-ten-forks` | `AddBenchmark.vector` with 1,000 elements and 10 forks instead of 3, run afterwards because the forks of the main run differed by up to 27 %. Each fork is stable (standard deviation below 1 ns), but the fork means range from 41.7 to 53.0 ns/op; even the fastest fork is slower than `AddBenchmark.scalar` (32.7 ns/op) |
 
 `vectorMasked` was about three times slower than `vector` with 1,003 elements, so a short diagnostic run with `-XX:+PrintIntrinsics` followed; `masked-tail-intrinsics.txt` holds the lines of intrinsics C2 could not inline (marked `**`), with their counts.
 
@@ -21,6 +22,7 @@ $JMH -rff add-masked-tail.json 'AddBenchmark\.(vector|vectorMasked)$' -p size=10
 $JMH -rff add-16-byte-aligned-arrays.json 'AddBenchmark\.(scalar|vector)$' -p size=1000,100000 \
   -jvmArgsAppend "-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=16"
 $JMH -rff dot-product-dependency-chains.json 'DotProductBenchmark\.'
+$JMH -rff add-vector-1000-ten-forks.json 'AddBenchmark\.vector$' -p size=1000 -f 10
 
 $JMH 'AddBenchmark\.vectorMasked$' -p size=1003 -f 1 -wi 3 -i 1 \
   -jvmArgsAppend "-XX:+UnlockDiagnosticVMOptions -XX:+PrintIntrinsics" 2>&1 \
