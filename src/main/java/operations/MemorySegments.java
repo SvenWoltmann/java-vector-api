@@ -11,9 +11,9 @@ void main() {
   try (Arena arena = Arena.ofConfined()) {
     // Off-heap memory, aligned to the vector size
     long vectorBytes = SPECIES.vectorByteSize();
-    MemorySegment segment = arena.allocate(count * Long.BYTES, vectorBytes);
+    MemorySegment segment = arena.allocate(count * (long) Long.BYTES, vectorBytes);
     for (int i = 0; i < count; i++) {
-      segment.setAtIndex(ValueLayout.JAVA_LONG, i, i + 1);
+      segment.setAtIndex(ValueLayout.JAVA_LONG, i, i + 1L);
     }
 
     // The offset is in bytes, not in elements

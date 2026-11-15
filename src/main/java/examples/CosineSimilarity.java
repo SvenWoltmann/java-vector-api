@@ -19,7 +19,9 @@ void main() {
 }
 
 float cosineScalar(float[] a, float[] b) {
-  float dot = 0, normA = 0, normB = 0;
+  float dot = 0;
+  float normA = 0;
+  float normB = 0;
   for (int i = 0; i < a.length; i++) {
     dot += a[i] * b[i];
     normA += a[i] * a[i];
