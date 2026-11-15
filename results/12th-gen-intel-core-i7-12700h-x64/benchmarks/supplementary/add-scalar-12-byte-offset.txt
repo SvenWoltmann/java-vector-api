@@ -1,0 +1,172 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/svenw/claude-test/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /home/svenw/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector -XX:ObjectAlignmentInBytes=32
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.scalar
+# Parameters: (size = 1000)
+
+# Run progress: 0.00% complete, ETA 00:01:00
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/svenw/claude-test/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 32.918 ns/op
+# Warmup Iteration   2: 32.562 ns/op
+# Warmup Iteration   3: 33.996 ns/op
+# Warmup Iteration   4: 32.651 ns/op
+# Warmup Iteration   5: 32.753 ns/op
+Iteration   1: 32.135 ns/op
+Iteration   2: 32.187 ns/op
+Iteration   3: 32.294 ns/op
+Iteration   4: 32.730 ns/op
+Iteration   5: 32.208 ns/op
+
+# Run progress: 16.67% complete, ETA 00:00:51
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/svenw/claude-test/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 33.341 ns/op
+# Warmup Iteration   2: 32.480 ns/op
+# Warmup Iteration   3: 32.505 ns/op
+# Warmup Iteration   4: 32.299 ns/op
+# Warmup Iteration   5: 33.020 ns/op
+Iteration   1: 32.564 ns/op
+Iteration   2: 32.375 ns/op
+Iteration   3: 32.240 ns/op
+Iteration   4: 32.194 ns/op
+Iteration   5: 32.656 ns/op
+
+# Run progress: 33.33% complete, ETA 00:00:41
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/svenw/claude-test/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 33.037 ns/op
+# Warmup Iteration   2: 32.757 ns/op
+# Warmup Iteration   3: 32.595 ns/op
+# Warmup Iteration   4: 32.515 ns/op
+# Warmup Iteration   5: 32.580 ns/op
+Iteration   1: 32.488 ns/op
+Iteration   2: 32.284 ns/op
+Iteration   3: 32.380 ns/op
+Iteration   4: 32.677 ns/op
+Iteration   5: 32.877 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.scalar":
+  32.419 ±(99.9%) 0.248 ns/op [Average]
+  (min, avg, max) = (32.135, 32.419, 32.877), stdev = 0.232
+  CI (99.9%): [32.171, 32.667] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /home/svenw/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector -XX:ObjectAlignmentInBytes=32
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.scalar
+# Parameters: (size = 100000)
+
+# Run progress: 50.00% complete, ETA 00:00:30
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/svenw/claude-test/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10724.653 ns/op
+# Warmup Iteration   2: 10009.831 ns/op
+# Warmup Iteration   3: 10079.295 ns/op
+# Warmup Iteration   4: 10085.936 ns/op
+# Warmup Iteration   5: 10063.322 ns/op
+Iteration   1: 10012.331 ns/op
+Iteration   2: 9852.216 ns/op
+Iteration   3: 9917.645 ns/op
+Iteration   4: 10086.448 ns/op
+Iteration   5: 9995.309 ns/op
+
+# Run progress: 66.67% complete, ETA 00:00:20
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/svenw/claude-test/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10597.822 ns/op
+# Warmup Iteration   2: 9765.738 ns/op
+# Warmup Iteration   3: 9691.741 ns/op
+# Warmup Iteration   4: 9872.236 ns/op
+# Warmup Iteration   5: 9980.923 ns/op
+Iteration   1: 9990.956 ns/op
+Iteration   2: 9874.178 ns/op
+Iteration   3: 9889.996 ns/op
+Iteration   4: 9724.377 ns/op
+Iteration   5: 9825.447 ns/op
+
+# Run progress: 83.33% complete, ETA 00:00:10
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/svenw/claude-test/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 9756.972 ns/op
+# Warmup Iteration   2: 9109.895 ns/op
+# Warmup Iteration   3: 9141.153 ns/op
+# Warmup Iteration   4: 9166.557 ns/op
+# Warmup Iteration   5: 9109.674 ns/op
+Iteration   1: 9063.227 ns/op
+Iteration   2: 8989.692 ns/op
+Iteration   3: 9027.136 ns/op
+Iteration   4: 8976.607 ns/op
+Iteration   5: 9129.257 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.scalar":
+  9623.655 ±(99.9%) 469.174 ns/op [Average]
+  (min, avg, max) = (8976.607, 9623.655, 10086.448), stdev = 438.866
+  CI (99.9%): [9154.481, 10092.829] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:01:01
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark            (size)  Mode  Cnt     Score     Error  Units
+AddBenchmark.scalar    1000  avgt   15    32.419 ±   0.248  ns/op
+AddBenchmark.scalar  100000  avgt   15  9623.655 ± 469.174  ns/op
+
+Benchmark result is saved to results/12th-gen-intel-core-i7-12700h-x64/benchmarks/supplementary/add-scalar-12-byte-offset.json

@@ -1,0 +1,3173 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/svenw/claude-test/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /home/svenw/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector -XX:ObjectAlignmentInBytes=32 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:CompileCommand=print,*AddBenchmark*::scalar*
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 1 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.scalar
+# Parameters: (size = 1000)
+
+# Run progress: 0.00% complete, ETA 00:00:04
+# Fork: 1 of 1
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/svenw/claude-test/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1) 251  952 %     3       eu.happycoders.vector.benchmarks.AddBenchmark::scalar @ 2 (41 bytes)
+ total in heap  [0x00007ccd0c514188,0x00007ccd0c514508] = 896
+ main code      [0x00007ccd0c514280,0x00007ccd0c5144e0] = 608
+ stub code      [0x00007ccd0c5144e0,0x00007ccd0c514500] = 32
+ oops           [0x00007ccd0c514500,0x00007ccd0c514508] = 8
+ mutable data [0x00007cccc82d5bd0,0x00007cccc82d5c20] = 80
+ relocation     [0x00007cccc82d5bd0,0x00007cccc82d5c18] = 72
+ metadata       [0x00007cccc82d5c18,0x00007cccc82d5c20] = 8
+ immutable data [0x00007cccc82d5a60,0x00007cccc82d5bc4] = 356
+ dependencies   [0x00007cccc82d5a60,0x00007cccc82d5a68] = 8
+ nul chk table  [0x00007cccc82d5a68,0x00007cccc82d5aa0] = 56
+ scopes pcs     [0x00007cccc82d5aa0,0x00007cccc82d5b80] = 224
+ scopes data    [0x00007cccc82d5b80,0x00007cccc82d5bc0] = 64
+
+[Constant Pool (empty)]
+
+
+[Disassembly] (capstone, Intel syntax)
+[Instructions begin]
+  0x00007ccd0c514280:   nop	word ptr [rax + rax]
+  0x00007ccd0c51428b:   nop
+  0x00007ccd0c51428f:   mov	r10, qword ptr [rsi]
+  0x00007ccd0c514292:   shr	r10, 0x2a
+  0x00007ccd0c514296:   cmp	r10d, dword ptr [rax + 8]
+
+;   {runtime_call ic_miss_blob (shared runtime)}
+  0x00007ccd0c51429a:   jne	0x7ccd138aa760
+[Verified Entry Point]
+  0x00007ccd0c5142a0:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd0c5142a7:   push	rbp
+  0x00007ccd0c5142a8:   sub	rsp, 0x50
+  0x00007ccd0c5142ac:   cmp	dword ptr [r15 + 0x20], 1
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd0c5142b4:   je	0x7ccd0c5142bb
+  0x00007ccd0c5142b6:   call	0x7ccd13891a20
+
+;   {metadata(method data for {method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c5142bb:   movabs	rdi, 0x7cccf0b07b40
+  0x00007ccd0c5142c5:   mov	ebx, dword ptr [rdi + 0x70]
+  0x00007ccd0c5142c8:   add	ebx, 2
+  0x00007ccd0c5142cb:   mov	dword ptr [rdi + 0x70], ebx
+  0x00007ccd0c5142ce:   and	ebx, 0x7fe
+  0x00007ccd0c5142d4:   test	ebx, ebx
+  0x00007ccd0c5142d6:   je	0x7ccd0c514417
+  0x00007ccd0c5142dc:   mov	edi, 0
+  0x00007ccd0c5142e1:   jmp	0x7ccd0c51436a
+  0x00007ccd0c5142e6:   nop
+  0x00007ccd0c5142e8:   mov	ebx, dword ptr [rsi + 0x14]
+  0x00007ccd0c5142eb:   shl	rbx, 5
+  0x00007ccd0c5142ef:   cmp	edi, dword ptr [rax + 8]
+  0x00007ccd0c5142f2:   jae	0x7ccd0c514438
+  0x00007ccd0c5142f8:   movsxd	rdx, edi
+  0x00007ccd0c5142fb:   vmovss	xmm0, dword ptr [rax + rdx*4 + 0xc]
+  0x00007ccd0c514301:   mov	eax, dword ptr [rsi + 0x10]
+  0x00007ccd0c514304:   shl	rax, 5
+
+; implicit exception: dispatches to 0x00007ccd0c514446
+  0x00007ccd0c514308:   cmp	edi, dword ptr [rax + 8]
+  0x00007ccd0c51430b:   jae	0x7ccd0c514450
+  0x00007ccd0c514311:   movsxd	rdx, edi
+  0x00007ccd0c514314:   vmovss	xmm1, dword ptr [rax + rdx*4 + 0xc]
+  0x00007ccd0c51431a:   vaddss	xmm0, xmm0, xmm1
+  0x00007ccd0c51431e:   cmp	edi, dword ptr [rbx + 8]
+  0x00007ccd0c514321:   jae	0x7ccd0c514468
+  0x00007ccd0c514327:   movsxd	rax, edi
+  0x00007ccd0c51432a:   vmovss	dword ptr [rbx + rax*4 + 0xc], xmm0
+
+;   {metadata(method data for {method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514330:   inc	edi
+  0x00007ccd0c514332:   movabs	rax, 0x7cccf0b07b40
+  0x00007ccd0c51433c:   mov	ebx, dword ptr [rax + 0x74]
+  0x00007ccd0c51433f:   add	ebx, 2
+  0x00007ccd0c514342:   mov	dword ptr [rax + 0x74], ebx
+  0x00007ccd0c514345:   and	ebx, 0x3ffe
+  0x00007ccd0c51434b:   test	ebx, ebx
+  0x00007ccd0c51434d:   je	0x7ccd0c514476
+  0x00007ccd0c514353:   mov	r10, qword ptr [r15 + 0x30]
+
+; ImmutableOopMap {rsi=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+                      ;   {poll}
+  0x00007ccd0c514357:   test	dword ptr [r10], eax
+
+;   {metadata(method data for {method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c51435a:   movabs	rax, 0x7cccf0b07b40
+  0x00007ccd0c514364:   inc	dword ptr [rax + 0xc8]
+  0x00007ccd0c51436a:   mov	eax, dword ptr [rsi + 0xc]
+  0x00007ccd0c51436d:   shl	rax, 5
+  0x00007ccd0c514371:   mov	ebx, dword ptr [rax + 8]
+
+;   {metadata(method data for {method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514374:   cmp	edi, ebx
+  0x00007ccd0c514376:   movabs	rbx, 0x7cccf0b07b40
+  0x00007ccd0c514380:   mov	edx, 0xb8
+  0x00007ccd0c514385:   jl	0x7ccd0c51438c
+  0x00007ccd0c514387:   mov	edx, 0xa8
+  0x00007ccd0c51438c:   mov	rcx, qword ptr [rbx + rdx]
+  0x00007ccd0c514390:   lea	rcx, [rcx + 1]
+  0x00007ccd0c514394:   mov	qword ptr [rbx + rdx], rcx
+  0x00007ccd0c514398:   jl	0x7ccd0c5142e8
+  0x00007ccd0c51439e:   mov	eax, dword ptr [rsi + 0x14]
+  0x00007ccd0c5143a1:   shl	rax, 5
+  0x00007ccd0c5143a5:   add	rsp, 0x50
+
+;   {poll_return}
+  0x00007ccd0c5143a9:   pop	rbp
+  0x00007ccd0c5143aa:   cmp	rsp, qword ptr [r15 + 0x28]
+  0x00007ccd0c5143ae:   ja	0x7ccd0c5144a1
+  0x00007ccd0c5143b4:   ret
+  0x00007ccd0c5143b5:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd0c5143bc:   push	rbp
+  0x00007ccd0c5143bd:   sub	rsp, 0x50
+  0x00007ccd0c5143c1:   nop
+  0x00007ccd0c5143c4:   cmp	dword ptr [r15 + 0x20], 0
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd0c5143cc:   je	0x7ccd0c5143d3
+  0x00007ccd0c5143ce:   call	0x7ccd13891a20
+  0x00007ccd0c5143d3:   mov	edi, 8
+  0x00007ccd0c5143d8:   movsxd	rdi, edi
+  0x00007ccd0c5143db:   mov	rbx, qword ptr [rsi + rdi]
+  0x00007ccd0c5143df:   mov	edi, 0
+  0x00007ccd0c5143e4:   movsxd	rdi, edi
+  0x00007ccd0c5143e7:   mov	eax, dword ptr [rsi + rdi]
+  0x00007ccd0c5143ea:   mov	rdi, rsi
+  0x00007ccd0c5143ed:   mov	qword ptr [rsp + 0x38], rbx
+  0x00007ccd0c5143f2:   mov	dword ptr [rsp + 0x30], eax
+
+;   {runtime_call SharedRuntime::OSR_migration_end(long*)}
+  0x00007ccd0c5143f6:   call	0x7ccd2be81f80
+
+;   {post_call_nop}
+  0x00007ccd0c5143fb:   nop	dword ptr [rax + rax]
+  0x00007ccd0c514403:   mov	eax, dword ptr [rsp + 0x30]
+  0x00007ccd0c514407:   mov	rdi, rax
+  0x00007ccd0c51440a:   mov	rbx, qword ptr [rsp + 0x38]
+  0x00007ccd0c51440f:   mov	rsi, rbx
+  0x00007ccd0c514412:   jmp	0x7ccd0c51436a
+
+;   {metadata({method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514417:   movabs	r10, 0x7cccf09478e0
+  0x00007ccd0c514421:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c514426:   mov	qword ptr [rsp], 0xffffffffffffffff
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c51442e:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rsi=Oop }
+                      ;*synchronization entry
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@-1 (line 40)
+  0x00007ccd0c514433:   jmp	0x7ccd0c5142dc
+  0x00007ccd0c514438:   mov	qword ptr [rsp], rdi
+  0x00007ccd0c51443c:   mov	qword ptr [rsp + 8], rax
+
+;   {runtime_call throw_range_check_failed_blob (C1 runtime)}
+  0x00007ccd0c514441:   call	0x7ccd1397b760
+
+; ImmutableOopMap {rsi=Oop rax=Oop rbx=Oop }
+                      ;*faload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@21 (line 41)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c514446:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rbx=Oop rax=Oop }
+                      ;*faload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@27 (line 41)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c51444b:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rbx=Oop rax=Oop }
+                      ;*faload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@27 (line 41)
+  0x00007ccd0c514450:   mov	qword ptr [rsp], rdi
+  0x00007ccd0c514454:   mov	qword ptr [rsp + 8], rax
+
+;   {runtime_call throw_range_check_failed_blob (C1 runtime)}
+  0x00007ccd0c514459:   call	0x7ccd1397b760
+
+; ImmutableOopMap {rsi=Oop rbx=Oop rax=Oop }
+                      ;*faload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@27 (line 41)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c51445e:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rbx=Oop }
+                      ;*fastore {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@29 (line 41)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c514463:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rbx=Oop }
+                      ;*fastore {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@29 (line 41)
+  0x00007ccd0c514468:   mov	qword ptr [rsp], rdi
+  0x00007ccd0c51446c:   mov	qword ptr [rsp + 8], rbx
+
+;   {runtime_call throw_range_check_failed_blob (C1 runtime)}
+  0x00007ccd0c514471:   call	0x7ccd1397b760
+
+; ImmutableOopMap {rsi=Oop rbx=Oop }
+                      ;*fastore {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@29 (line 41)
+                      ;   {metadata({method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514476:   movabs	r10, 0x7cccf09478e0
+  0x00007ccd0c514480:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c514485:   mov	qword ptr [rsp], 0x21
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c51448d:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rsi=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+  0x00007ccd0c514492:   jmp	0x7ccd0c514353
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c514497:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop }
+                      ;*getfield a {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@4 (line 40)
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c51449c:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rax=Oop }
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@7 (line 40)
+                      ;   {internal_word}
+  0x00007ccd0c5144a1:   movabs	r10, 0x7ccd0c5143aa
+  0x00007ccd0c5144ab:   mov	qword ptr [r15 + 0x510], r10
+
+;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00007ccd0c5144b2:   jmp	0x7ccd138acbe0
+  0x00007ccd0c5144b7:   mov	rax, qword ptr [r15 + 0x578]
+  0x00007ccd0c5144be:   mov	qword ptr [r15 + 0x578], 0
+  0x00007ccd0c5144c9:   mov	qword ptr [r15 + 0x580], 0
+  0x00007ccd0c5144d4:   add	rsp, 0x50
+
+;   {runtime_call unwind_exception_blob (C1 runtime)}
+  0x00007ccd0c5144d8:   pop	rbp
+  0x00007ccd0c5144d9:   jmp	0x7ccd1397b160
+  0x00007ccd0c5144de:   hlt
+  0x00007ccd0c5144df:   hlt
+[Exception Handler]
+;   {runtime_call handle_exception_from_callee_blob (C1 runtime)}
+  0x00007ccd0c5144e0:   call	0x7ccd1397de60
+
+;   {external_word}
+  0x00007ccd0c5144e5:   movabs	rdi, 0x7ccd2c17762f
+  0x00007ccd0c5144ef:   and	rsp, 0xfffffffffffffff0
+
+;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x00007ccd0c5144f3:   call	0x7ccd2bc8bd30
+
+;   {runtime_call DeoptimizationBlob}
+  0x00007ccd0c5144f8:   hlt
+  0x00007ccd0c5144f9:   call	0x7ccd138acee0
+  0x00007ccd0c5144fe:   jmp	0x7ccd0c5144f9
+[/Disassembly]
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1) 255  955       3       eu.happycoders.vector.benchmarks.AddBenchmark::scalar (41 bytes)
+ total in heap  [0x00007ccd0c514b88,0x00007ccd0c514e88] = 768
+ main code      [0x00007ccd0c514c80,0x00007ccd0c514e60] = 480
+ stub code      [0x00007ccd0c514e60,0x00007ccd0c514e80] = 32
+ oops           [0x00007ccd0c514e80,0x00007ccd0c514e88] = 8
+ mutable data [0x00007cccd4194b90,0x00007cccd4194bd8] = 72
+ relocation     [0x00007cccd4194b90,0x00007cccd4194bd0] = 64
+ metadata       [0x00007cccd4194bd0,0x00007cccd4194bd8] = 8
+ immutable data [0x00007cccd4194a50,0x00007cccd4194b7c] = 300
+ dependencies   [0x00007cccd4194a50,0x00007cccd4194a58] = 8
+ nul chk table  [0x00007cccd4194a58,0x00007cccd4194a88] = 48
+ scopes pcs     [0x00007cccd4194a88,0x00007cccd4194b48] = 192
+ scopes data    [0x00007cccd4194b48,0x00007cccd4194b78] = 48
+
+[Constant Pool (empty)]
+
+
+[Disassembly] (capstone, Intel syntax)
+[Instructions begin]
+  0x00007ccd0c514c80:   nop	word ptr [rax + rax]
+  0x00007ccd0c514c8b:   nop
+  0x00007ccd0c514c8f:   mov	r10, qword ptr [rsi]
+  0x00007ccd0c514c92:   shr	r10, 0x2a
+  0x00007ccd0c514c96:   cmp	r10d, dword ptr [rax + 8]
+
+;   {runtime_call ic_miss_blob (shared runtime)}
+  0x00007ccd0c514c9a:   jne	0x7ccd138aa760
+[Verified Entry Point]
+  0x00007ccd0c514ca0:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd0c514ca7:   push	rbp
+  0x00007ccd0c514ca8:   sub	rsp, 0x40
+  0x00007ccd0c514cac:   cmp	dword ptr [r15 + 0x20], 1
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd0c514cb4:   je	0x7ccd0c514cbb
+  0x00007ccd0c514cb6:   call	0x7ccd13891a20
+
+;   {metadata(method data for {method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514cbb:   movabs	rax, 0x7cccf0b07b40
+  0x00007ccd0c514cc5:   mov	edi, dword ptr [rax + 0x70]
+  0x00007ccd0c514cc8:   add	edi, 2
+  0x00007ccd0c514ccb:   mov	dword ptr [rax + 0x70], edi
+  0x00007ccd0c514cce:   and	edi, 0x7fe
+  0x00007ccd0c514cd4:   test	edi, edi
+  0x00007ccd0c514cd6:   je	0x7ccd0c514dac
+  0x00007ccd0c514cdc:   mov	eax, 0
+  0x00007ccd0c514ce1:   jmp	0x7ccd0c514d61
+  0x00007ccd0c514ce6:   nop
+  0x00007ccd0c514ce8:   mov	ebx, dword ptr [rsi + 0x14]
+  0x00007ccd0c514ceb:   shl	rbx, 5
+  0x00007ccd0c514cef:   movsxd	rdx, eax
+  0x00007ccd0c514cf2:   vmovss	xmm0, dword ptr [rdi + rdx*4 + 0xc]
+  0x00007ccd0c514cf8:   mov	edi, dword ptr [rsi + 0x10]
+  0x00007ccd0c514cfb:   shl	rdi, 5
+  0x00007ccd0c514cff:   cmp	eax, dword ptr [rdi + 8]
+  0x00007ccd0c514d02:   jae	0x7ccd0c514dd7
+  0x00007ccd0c514d08:   movsxd	rdx, eax
+  0x00007ccd0c514d0b:   vmovss	xmm1, dword ptr [rdi + rdx*4 + 0xc]
+  0x00007ccd0c514d11:   vaddss	xmm0, xmm0, xmm1
+  0x00007ccd0c514d15:   cmp	eax, dword ptr [rbx + 8]
+  0x00007ccd0c514d18:   jae	0x7ccd0c514def
+  0x00007ccd0c514d1e:   movsxd	rdi, eax
+  0x00007ccd0c514d21:   vmovss	dword ptr [rbx + rdi*4 + 0xc], xmm0
+  0x00007ccd0c514d27:   inc	eax
+
+;   {metadata(method data for {method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514d29:   movabs	rdi, 0x7cccf0b07b40
+  0x00007ccd0c514d33:   mov	ebx, dword ptr [rdi + 0x74]
+  0x00007ccd0c514d36:   add	ebx, 2
+  0x00007ccd0c514d39:   mov	dword ptr [rdi + 0x74], ebx
+  0x00007ccd0c514d3c:   and	ebx, 0x3ffe
+  0x00007ccd0c514d42:   test	ebx, ebx
+  0x00007ccd0c514d44:   je	0x7ccd0c514dfd
+  0x00007ccd0c514d4a:   mov	r10, qword ptr [r15 + 0x30]
+
+; ImmutableOopMap {rsi=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+                      ;   {poll}
+  0x00007ccd0c514d4e:   test	dword ptr [r10], eax
+
+;   {metadata(method data for {method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514d51:   movabs	rdi, 0x7cccf0b07b40
+  0x00007ccd0c514d5b:   inc	dword ptr [rdi + 0xc8]
+  0x00007ccd0c514d61:   mov	edi, dword ptr [rsi + 0xc]
+  0x00007ccd0c514d64:   shl	rdi, 5
+
+; implicit exception: dispatches to 0x00007ccd0c514e1e
+  0x00007ccd0c514d68:   mov	ebx, dword ptr [rdi + 8]
+  0x00007ccd0c514d6b:   cmp	eax, ebx
+
+;   {metadata(method data for {method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514d6d:   movabs	rbx, 0x7cccf0b07b40
+  0x00007ccd0c514d77:   mov	edx, 0xb8
+  0x00007ccd0c514d7c:   jl	0x7ccd0c514d83
+  0x00007ccd0c514d7e:   mov	edx, 0xa8
+  0x00007ccd0c514d83:   mov	rcx, qword ptr [rbx + rdx]
+  0x00007ccd0c514d87:   lea	rcx, [rcx + 1]
+  0x00007ccd0c514d8b:   mov	qword ptr [rbx + rdx], rcx
+  0x00007ccd0c514d8f:   jl	0x7ccd0c514ce8
+  0x00007ccd0c514d95:   mov	eax, dword ptr [rsi + 0x14]
+  0x00007ccd0c514d98:   shl	rax, 5
+  0x00007ccd0c514d9c:   add	rsp, 0x40
+
+;   {poll_return}
+  0x00007ccd0c514da0:   pop	rbp
+  0x00007ccd0c514da1:   cmp	rsp, qword ptr [r15 + 0x28]
+  0x00007ccd0c514da5:   ja	0x7ccd0c514e23
+  0x00007ccd0c514dab:   ret
+
+;   {metadata({method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514dac:   movabs	r10, 0x7cccf09478e0
+  0x00007ccd0c514db6:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c514dbb:   mov	qword ptr [rsp], 0xffffffffffffffff
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c514dc3:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rsi=Oop }
+                      ;*synchronization entry
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@-1 (line 40)
+  0x00007ccd0c514dc8:   jmp	0x7ccd0c514cdc
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c514dcd:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rbx=Oop rdi=Oop }
+                      ;*faload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@27 (line 41)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c514dd2:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rbx=Oop rdi=Oop }
+                      ;*faload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@27 (line 41)
+  0x00007ccd0c514dd7:   mov	qword ptr [rsp], rax
+  0x00007ccd0c514ddb:   mov	qword ptr [rsp + 8], rdi
+
+;   {runtime_call throw_range_check_failed_blob (C1 runtime)}
+  0x00007ccd0c514de0:   call	0x7ccd1397b760
+
+; ImmutableOopMap {rsi=Oop rbx=Oop rdi=Oop }
+                      ;*faload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@27 (line 41)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c514de5:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rbx=Oop }
+                      ;*fastore {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@29 (line 41)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c514dea:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rbx=Oop }
+                      ;*fastore {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@29 (line 41)
+  0x00007ccd0c514def:   mov	qword ptr [rsp], rax
+  0x00007ccd0c514df3:   mov	qword ptr [rsp + 8], rbx
+
+;   {runtime_call throw_range_check_failed_blob (C1 runtime)}
+  0x00007ccd0c514df8:   call	0x7ccd1397b760
+
+; ImmutableOopMap {rsi=Oop rbx=Oop }
+                      ;*fastore {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@29 (line 41)
+                      ;   {metadata({method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd0c514dfd:   movabs	r10, 0x7cccf09478e0
+  0x00007ccd0c514e07:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c514e0c:   mov	qword ptr [rsp], 0x21
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c514e14:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rsi=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+  0x00007ccd0c514e19:   jmp	0x7ccd0c514d4a
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c514e1e:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rsi=Oop rdi=Oop }
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@7 (line 40)
+                      ;   {internal_word}
+  0x00007ccd0c514e23:   movabs	r10, 0x7ccd0c514da1
+  0x00007ccd0c514e2d:   mov	qword ptr [r15 + 0x510], r10
+
+;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00007ccd0c514e34:   jmp	0x7ccd138acbe0
+  0x00007ccd0c514e39:   mov	rax, qword ptr [r15 + 0x578]
+  0x00007ccd0c514e40:   mov	qword ptr [r15 + 0x578], 0
+  0x00007ccd0c514e4b:   mov	qword ptr [r15 + 0x580], 0
+  0x00007ccd0c514e56:   add	rsp, 0x40
+
+;   {runtime_call unwind_exception_blob (C1 runtime)}
+  0x00007ccd0c514e5a:   pop	rbp
+  0x00007ccd0c514e5b:   jmp	0x7ccd1397b160
+[Exception Handler]
+;   {runtime_call handle_exception_from_callee_blob (C1 runtime)}
+  0x00007ccd0c514e60:   call	0x7ccd1397de60
+
+;   {external_word}
+  0x00007ccd0c514e65:   movabs	rdi, 0x7ccd2c17762f
+  0x00007ccd0c514e6f:   and	rsp, 0xfffffffffffffff0
+
+;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x00007ccd0c514e73:   call	0x7ccd2bc8bd30
+
+;   {runtime_call DeoptimizationBlob}
+  0x00007ccd0c514e78:   hlt
+  0x00007ccd0c514e79:   call	0x7ccd138acee0
+  0x00007ccd0c514e7e:   jmp	0x7ccd0c514e79
+[/Disassembly]
+
+============================= C2-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c2) 260  956 %     4       eu.happycoders.vector.benchmarks.AddBenchmark::scalar @ 2 (41 bytes)
+ total in heap  [0x00007ccd13fdc088,0x00007ccd13fdc4e0] = 1112
+ main code      [0x00007ccd13fdc180,0x00007ccd13fdc4d0] = 848
+ stub code      [0x00007ccd13fdc4d0,0x00007ccd13fdc4d8] = 8
+ oops           [0x00007ccd13fdc4d8,0x00007ccd13fdc4e0] = 8
+ mutable data [0x00007cccb801a780,0x00007cccb801a7c0] = 64
+ relocation     [0x00007cccb801a780,0x00007cccb801a7b8] = 56
+ metadata       [0x00007cccb801a7b8,0x00007cccb801a7c0] = 8
+ immutable data [0x00007cccb801a7d0,0x00007cccb801a8e4] = 276
+ dependencies   [0x00007cccb801a7d0,0x00007cccb801a7d8] = 8
+ nul chk table  [0x00007cccb801a7d8,0x00007cccb801a7f8] = 32
+ scopes pcs     [0x00007cccb801a7f8,0x00007cccb801a888] = 144
+ scopes data    [0x00007cccb801a888,0x00007cccb801a8e0] = 88
+
+[Constant Pool (empty)]
+
+
+[Disassembly] (capstone, Intel syntax)
+[Verified Entry Point]
+  # {method} {0x00007cccf09478e0} 'scalar' '()[F' in 'eu/happycoders/vector/benchmarks/AddBenchmark'
+;   {runtime_call os::breakpoint()}
+  0x00007ccd13fdc180:   call	0x7ccd2bdb3f80
+  0x00007ccd13fdc185:   nop	word ptr [rax + rax]
+  0x00007ccd13fdc190:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd13fdc197:   push	rbp
+  0x00007ccd13fdc198:   sub	rsp, 0x40
+  0x00007ccd13fdc19c:   cmp	dword ptr [r15 + 0x20], 1
+  0x00007ccd13fdc1a4:   jne	0x7ccd13fdc4c6
+  0x00007ccd13fdc1aa:   mov	rbx, qword ptr [rsi + 8]
+  0x00007ccd13fdc1ae:   mov	ebp, dword ptr [rsi]
+  0x00007ccd13fdc1b0:   mov	rdi, rsi
+  0x00007ccd13fdc1b3:   vzeroupper
+
+;   {runtime_call SharedRuntime::OSR_migration_end(long*)}
+  0x00007ccd13fdc1b6:   movabs	r10, 0x7ccd2be81f80
+
+;   {post_call_nop}
+  0x00007ccd13fdc1c0:   call	r10
+  0x00007ccd13fdc1c3:   nop	dword ptr [rax + rax]
+  0x00007ccd13fdc1cb:   test	rbx, rbx
+  0x00007ccd13fdc1ce:   je	0x7ccd13fdc45c
+  0x00007ccd13fdc1d4:   mov	r10d, dword ptr [rbx + 4]
+  0x00007ccd13fdc1d8:   shr	r10d, 0xa
+
+;   {metadata('eu/happycoders/vector/benchmarks/AddBenchmark')}
+  0x00007ccd13fdc1dc:   movabs	r11, 0x981d5c00
+  0x00007ccd13fdc1e6:   mov	r8d, 0x4c0000
+  0x00007ccd13fdc1ec:   add	r8, r10
+  0x00007ccd13fdc1ef:   shl	r8, 9
+  0x00007ccd13fdc1f3:   mov	r10, qword ptr [r8 + 0x38]
+  0x00007ccd13fdc1f7:   cmp	r10, r11
+  0x00007ccd13fdc1fa:   jne	0x7ccd13fdc478
+  0x00007ccd13fdc200:   mov	r10d, dword ptr [rbx + 0xc]
+  0x00007ccd13fdc204:   shl	r10, 5
+
+; implicit exception: dispatches to 0x00007ccd13fdc45e
+  0x00007ccd13fdc208:   mov	r13d, dword ptr [r10 + 8]
+  0x00007ccd13fdc20c:   mov	r11d, dword ptr [rbx + 0x10]
+  0x00007ccd13fdc210:   mov	r14, r11
+  0x00007ccd13fdc213:   shl	r14, 5
+  0x00007ccd13fdc217:   mov	esi, dword ptr [r14 + 8]
+  0x00007ccd13fdc21b:   mov	r11d, dword ptr [rbx + 0x14]
+  0x00007ccd13fdc21f:   mov	rax, r11
+  0x00007ccd13fdc222:   shl	rax, 5
+  0x00007ccd13fdc226:   mov	r11d, dword ptr [rax + 8]
+  0x00007ccd13fdc22a:   cmp	ebp, r13d
+  0x00007ccd13fdc22d:   jge	0x7ccd13fdc3c9
+  0x00007ccd13fdc233:   movsxd	r9, r13d
+  0x00007ccd13fdc236:   lea	r8d, [rbp + 1]
+  0x00007ccd13fdc23a:   movsxd	rdi, r8d
+  0x00007ccd13fdc23d:   mov	ecx, 0x3ffffffd
+  0x00007ccd13fdc242:   xor	edx, edx
+  0x00007ccd13fdc244:   test	r8d, r8d
+  0x00007ccd13fdc247:   cmovl	rdi, rdx
+  0x00007ccd13fdc24b:   mov	r8d, edi
+  0x00007ccd13fdc24e:   cmp	r8d, r13d
+  0x00007ccd13fdc251:   cmovg	r8d, r13d
+  0x00007ccd13fdc255:   sub	ecx, r8d
+  0x00007ccd13fdc258:   movsxd	rdi, r8d
+  0x00007ccd13fdc25b:   mov	r8d, 3
+  0x00007ccd13fdc261:   bzhi	r8, rcx, r8
+  0x00007ccd13fdc266:   add	rdi, r8
+  0x00007ccd13fdc269:   cmp	rdi, r9
+  0x00007ccd13fdc26c:   mov	r8, r9
+  0x00007ccd13fdc26f:   cmovl	r8, rdi
+  0x00007ccd13fdc273:   mov	r8d, r8d
+  0x00007ccd13fdc276:   cmp	ebp, r13d
+  0x00007ccd13fdc279:   jae	0x7ccd13fdc3dc
+  0x00007ccd13fdc27f:   vmovss	xmm0, dword ptr [r10 + rbp*4 + 0xc]
+  0x00007ccd13fdc286:   cmp	ebp, esi
+  0x00007ccd13fdc288:   jae	0x7ccd13fdc400
+  0x00007ccd13fdc28e:   vaddss	xmm0, xmm0, dword ptr [r14 + rbp*4 + 0xc]
+  0x00007ccd13fdc295:   cmp	ebp, r11d
+  0x00007ccd13fdc298:   jae	0x7ccd13fdc430
+  0x00007ccd13fdc29e:   vmovss	dword ptr [rax + rbp*4 + 0xc], xmm0
+  0x00007ccd13fdc2a4:   inc	ebp
+  0x00007ccd13fdc2a6:   cmp	ebp, r8d
+  0x00007ccd13fdc2a9:   jl	0x7ccd13fdc276
+  0x00007ccd13fdc2ab:   movsxd	r8, esi
+  0x00007ccd13fdc2ae:   cmp	r9, r8
+  0x00007ccd13fdc2b1:   cmovl	r8, r9
+  0x00007ccd13fdc2b5:   movsxd	r9, r11d
+  0x00007ccd13fdc2b8:   cmp	r9, r8
+  0x00007ccd13fdc2bb:   cmovl	r8, r9
+  0x00007ccd13fdc2bf:   mov	r8d, r8d
+  0x00007ccd13fdc2c2:   lea	ecx, [r8 - 0x1f]
+  0x00007ccd13fdc2c6:   cmp	ebp, ecx
+  0x00007ccd13fdc2c8:   jge	0x7ccd13fdc395
+  0x00007ccd13fdc2ce:   mov	r9d, 0x7d00
+  0x00007ccd13fdc2d4:   xor	edx, edx
+  0x00007ccd13fdc2d6:   jmp	0x7ccd13fdc2dd
+
+;   {other}
+  0x00007ccd13fdc2d8:   vmovq	rbx, xmm0
+  0x00007ccd13fdc2dd:   mov	edi, r8d
+  0x00007ccd13fdc2e0:   sub	edi, ebp
+  0x00007ccd13fdc2e2:   add	edi, -0x1f
+  0x00007ccd13fdc2e5:   cmp	ecx, ebp
+  0x00007ccd13fdc2e7:   cmovl	edi, edx
+  0x00007ccd13fdc2ea:   cmp	edi, 0x7d00
+  0x00007ccd13fdc2f0:   cmova	edi, r9d
+  0x00007ccd13fdc2f4:   add	edi, ebp
+  0x00007ccd13fdc2f6:   vmovq	xmm0, rbx
+  0x00007ccd13fdc2fb:   nop	dword ptr [rax + rax]
+  0x00007ccd13fdc300:   vmovups	ymm1, ymmword ptr [r14 + rbp*4 + 0xc]
+  0x00007ccd13fdc307:   vaddps	ymm1, ymm1, ymmword ptr [r10 + rbp*4 + 0xc]
+  0x00007ccd13fdc30e:   vmovdqu	ymmword ptr [rax + rbp*4 + 0xc], ymm1
+  0x00007ccd13fdc314:   movsxd	rbx, ebp
+  0x00007ccd13fdc317:   vmovups	ymm1, ymmword ptr [r14 + rbx*4 + 0x2c]
+  0x00007ccd13fdc31e:   vaddps	ymm1, ymm1, ymmword ptr [r10 + rbx*4 + 0x2c]
+  0x00007ccd13fdc325:   vmovdqu	ymmword ptr [rax + rbx*4 + 0x2c], ymm1
+  0x00007ccd13fdc32b:   vmovups	ymm1, ymmword ptr [r14 + rbx*4 + 0x4c]
+  0x00007ccd13fdc332:   vaddps	ymm1, ymm1, ymmword ptr [r10 + rbx*4 + 0x4c]
+  0x00007ccd13fdc339:   vmovdqu	ymmword ptr [rax + rbx*4 + 0x4c], ymm1
+  0x00007ccd13fdc33f:   vmovups	ymm1, ymmword ptr [r14 + rbx*4 + 0x6c]
+  0x00007ccd13fdc346:   vaddps	ymm1, ymm1, ymmword ptr [r10 + rbx*4 + 0x6c]
+  0x00007ccd13fdc34d:   vmovdqu	ymmword ptr [rax + rbx*4 + 0x6c], ymm1
+  0x00007ccd13fdc353:   add	ebp, 0x20
+  0x00007ccd13fdc356:   cmp	ebp, edi
+  0x00007ccd13fdc358:   jl	0x7ccd13fdc300
+  0x00007ccd13fdc35a:   mov	rbx, qword ptr [r15 + 0x30]
+
+; ImmutableOopMap {r10=Oop rax=Oop r14=Oop xmm0=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+                      ;   {poll}
+  0x00007ccd13fdc35e:   test	dword ptr [rbx], eax
+  0x00007ccd13fdc360:   cmp	ebp, ecx
+  0x00007ccd13fdc362:   jl	0x7ccd13fdc2d8
+  0x00007ccd13fdc368:   add	r8d, -7
+  0x00007ccd13fdc36c:   cmp	ebp, r8d
+  0x00007ccd13fdc36f:   jge	0x7ccd13fdc390
+  0x00007ccd13fdc371:   nop
+  0x00007ccd13fdc374:   vmovups	ymm1, ymmword ptr [r14 + rbp*4 + 0xc]
+  0x00007ccd13fdc37b:   vaddps	ymm1, ymm1, ymmword ptr [r10 + rbp*4 + 0xc]
+  0x00007ccd13fdc382:   vmovdqu	ymmword ptr [rax + rbp*4 + 0xc], ymm1
+  0x00007ccd13fdc388:   add	ebp, 8
+  0x00007ccd13fdc38b:   cmp	ebp, r8d
+  0x00007ccd13fdc38e:   jl	0x7ccd13fdc374
+  0x00007ccd13fdc390:   vmovq	rbx, xmm0
+  0x00007ccd13fdc395:   cmp	ebp, r13d
+  0x00007ccd13fdc398:   jge	0x7ccd13fdc3c9
+  0x00007ccd13fdc39a:   nop
+  0x00007ccd13fdc39c:   cmp	ebp, r13d
+  0x00007ccd13fdc39f:   jae	0x7ccd13fdc3dc
+  0x00007ccd13fdc3a1:   vmovss	xmm0, dword ptr [r10 + rbp*4 + 0xc]
+  0x00007ccd13fdc3a8:   cmp	ebp, esi
+  0x00007ccd13fdc3aa:   jae	0x7ccd13fdc407
+  0x00007ccd13fdc3ac:   vaddss	xmm0, xmm0, dword ptr [r14 + rbp*4 + 0xc]
+  0x00007ccd13fdc3b3:   cmp	ebp, r11d
+  0x00007ccd13fdc3b6:   jae	0x7ccd13fdc437
+  0x00007ccd13fdc3bc:   vmovss	dword ptr [rax + rbp*4 + 0xc], xmm0
+  0x00007ccd13fdc3c2:   inc	ebp
+  0x00007ccd13fdc3c4:   cmp	ebp, r13d
+  0x00007ccd13fdc3c7:   jl	0x7ccd13fdc39c
+  0x00007ccd13fdc3c9:   vzeroupper
+  0x00007ccd13fdc3cc:   add	rsp, 0x40
+
+;   {poll_return}
+  0x00007ccd13fdc3d0:   pop	rbp
+  0x00007ccd13fdc3d1:   cmp	rsp, qword ptr [r15 + 0x28]
+  0x00007ccd13fdc3d5:   ja	0x7ccd13fdc4b0
+  0x00007ccd13fdc3db:   ret
+  0x00007ccd13fdc3dc:   mov	esi, 0xffffffe4
+  0x00007ccd13fdc3e1:   mov	qword ptr [rsp], rbx
+  0x00007ccd13fdc3e5:   mov	qword ptr [rsp + 8], rax
+  0x00007ccd13fdc3ea:   mov	qword ptr [rsp + 0x18], r10
+  0x00007ccd13fdc3ef:   nop
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdc3f0:   vzeroupper
+  0x00007ccd13fdc3f3:   call	0x7ccd139828e0
+
+; ImmutableOopMap {[0]=Oop [8]=Oop [24]=Oop }
+                      ;*faload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@21 (line 41)
+
+;   {post_call_nop}
+  0x00007ccd13fdc3f8:   nop	dword ptr [rax + rax + 0x1000370]
+  0x00007ccd13fdc400:   vmovss	dword ptr [rsp], xmm0
+  0x00007ccd13fdc405:   jmp	0x7ccd13fdc40c
+  0x00007ccd13fdc407:   vmovss	dword ptr [rsp], xmm0
+  0x00007ccd13fdc40c:   mov	esi, 0xffffffe4
+  0x00007ccd13fdc411:   mov	qword ptr [rsp + 8], rbx
+  0x00007ccd13fdc416:   mov	qword ptr [rsp + 0x10], rax
+  0x00007ccd13fdc41b:   mov	qword ptr [rsp + 0x18], r14
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdc420:   vzeroupper
+  0x00007ccd13fdc423:   call	0x7ccd139828e0
+
+; ImmutableOopMap {[8]=Oop [16]=Oop [24]=Oop }
+                      ;*faload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@27 (line 41)
+
+;   {post_call_nop}
+  0x00007ccd13fdc428:   nop	dword ptr [rax + rax + 0x20003a0]
+  0x00007ccd13fdc430:   vmovss	dword ptr [rsp], xmm0
+  0x00007ccd13fdc435:   jmp	0x7ccd13fdc43c
+  0x00007ccd13fdc437:   vmovss	dword ptr [rsp], xmm0
+  0x00007ccd13fdc43c:   mov	esi, 0xffffffe4
+  0x00007ccd13fdc441:   mov	qword ptr [rsp + 8], rbx
+  0x00007ccd13fdc446:   mov	qword ptr [rsp + 0x10], rax
+  0x00007ccd13fdc44b:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdc44c:   vzeroupper
+  0x00007ccd13fdc44f:   call	0x7ccd139828e0
+
+; ImmutableOopMap {[8]=Oop [16]=Oop }
+                      ;*fastore {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@29 (line 41)
+
+;   {post_call_nop}
+  0x00007ccd13fdc454:   nop	dword ptr [rax + rax + 0x30003cc]
+  0x00007ccd13fdc45c:   xor	ebx, ebx
+  0x00007ccd13fdc45e:   mov	esi, 0xffffff6e
+  0x00007ccd13fdc463:   mov	qword ptr [rsp], rbx
+  0x00007ccd13fdc467:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdc468:   vzeroupper
+  0x00007ccd13fdc46b:   call	0x7ccd139828e0
+
+; ImmutableOopMap {[0]=Oop }
+                      ;*iload_1 {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@2 (line 40)
+
+;   {post_call_nop}
+  0x00007ccd13fdc470:   nop	dword ptr [rax + rax + 0x40003e8]
+  0x00007ccd13fdc478:   mov	esi, 0xffffff85
+  0x00007ccd13fdc47d:   mov	qword ptr [rsp], rbx
+  0x00007ccd13fdc481:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdc484:   vzeroupper
+  0x00007ccd13fdc487:   call	0x7ccd139828e0
+
+; ImmutableOopMap {[0]=Oop }
+                      ;*iload_1 {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@2 (line 40)
+
+;   {post_call_nop}
+  0x00007ccd13fdc48c:   nop	dword ptr [rax + rax + 0x5000404]
+  0x00007ccd13fdc494:   mov	esi, 0xffffffbe
+  0x00007ccd13fdc499:   mov	qword ptr [rsp], rbx
+  0x00007ccd13fdc49d:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdc4a0:   vzeroupper
+  0x00007ccd13fdc4a3:   call	0x7ccd139828e0
+
+; ImmutableOopMap {[0]=Oop }
+                      ;*iload_1 {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@2 (line 40)
+
+;   {post_call_nop}
+  0x00007ccd13fdc4a8:   nop	dword ptr [rax + rax + 0x6000420]
+
+;   {internal_word}
+  0x00007ccd13fdc4b0:   movabs	r10, 0x7ccd13fdc3d1
+  0x00007ccd13fdc4ba:   mov	qword ptr [r15 + 0x510], r10
+
+;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00007ccd13fdc4c1:   jmp	0x7ccd138acbe0
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd13fdc4c6:   call	0x7ccd13891a20
+  0x00007ccd13fdc4cb:   jmp	0x7ccd13fdc1aa
+[Stub Code]
+;   {runtime_call DeoptimizationBlob}
+  0x00007ccd13fdc4d0:   call	0x7ccd138acee0
+  0x00007ccd13fdc4d5:   jmp	0x7ccd13fdc4d0
+  0x00007ccd13fdc4d7:   hlt
+[/Disassembly]
+
+============================= C2-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c2) 266  957       4       eu.happycoders.vector.benchmarks.AddBenchmark::scalar (41 bytes)
+ total in heap  [0x00007ccd13fdc808,0x00007ccd13fdcbd8] = 976
+ main code      [0x00007ccd13fdc900,0x00007ccd13fdcbc8] = 712
+ stub code      [0x00007ccd13fdcbc8,0x00007ccd13fdcbd0] = 8
+ oops           [0x00007ccd13fdcbd0,0x00007ccd13fdcbd8] = 8
+ mutable data [0x00007cccd0152c40,0x00007cccd0152c68] = 40
+ relocation     [0x00007cccd0152c40,0x00007cccd0152c60] = 32
+ metadata       [0x00007cccd0152c60,0x00007cccd0152c68] = 8
+ immutable data [0x00007cccd0152b80,0x00007cccd0152c2c] = 172
+ dependencies   [0x00007cccd0152b80,0x00007cccd0152b88] = 8
+ nul chk table  [0x00007cccd0152b88,0x00007cccd0152ba8] = 32
+ scopes pcs     [0x00007cccd0152ba8,0x00007cccd0152bf8] = 80
+ scopes data    [0x00007cccd0152bf8,0x00007cccd0152c28] = 48
+
+[Constant Pool (empty)]
+
+
+[Disassembly] (capstone, Intel syntax)
+[Instructions begin]
+  0x00007ccd13fdc900:   nop	word ptr [rax + rax]
+  0x00007ccd13fdc90b:   nop
+  0x00007ccd13fdc90f:   mov	r10, qword ptr [rsi]
+  0x00007ccd13fdc912:   shr	r10, 0x2a
+  0x00007ccd13fdc916:   cmp	r10d, dword ptr [rax + 8]
+
+;   {runtime_call ic_miss_blob (shared runtime)}
+  0x00007ccd13fdc91a:   jne	0x7ccd138aa760
+[Verified Entry Point]
+  0x00007ccd13fdc920:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd13fdc927:   push	rbp
+  0x00007ccd13fdc928:   sub	rsp, 0x20
+  0x00007ccd13fdc92c:   cmp	dword ptr [r15 + 0x20], 1
+  0x00007ccd13fdc934:   jne	0x7ccd13fdcbbe
+  0x00007ccd13fdc93a:   mov	rbx, rsi
+  0x00007ccd13fdc93d:   mov	r11d, dword ptr [rsi + 0xc]
+  0x00007ccd13fdc941:   mov	rdx, r11
+  0x00007ccd13fdc944:   shl	rdx, 5
+
+; implicit exception: dispatches to 0x00007ccd13fdcb91
+  0x00007ccd13fdc948:   mov	r10d, dword ptr [rdx + 8]
+  0x00007ccd13fdc94c:   mov	r8d, dword ptr [rsi + 0x14]
+  0x00007ccd13fdc950:   mov	rax, r8
+  0x00007ccd13fdc953:   shl	rax, 5
+  0x00007ccd13fdc957:   test	r10d, r10d
+  0x00007ccd13fdc95a:   jbe	0x7ccd13fdcb5d
+  0x00007ccd13fdc960:   lea	r8d, [r10 - 1]
+  0x00007ccd13fdc964:   cmp	r8d, r10d
+  0x00007ccd13fdc967:   jae	0x7ccd13fdcb70
+  0x00007ccd13fdc96d:   mov	r11d, dword ptr [rsi + 0x10]
+  0x00007ccd13fdc971:   mov	rsi, r11
+  0x00007ccd13fdc974:   shl	rsi, 5
+
+; implicit exception: dispatches to 0x00007ccd13fdcb70
+  0x00007ccd13fdc978:   mov	r11d, dword ptr [rsi + 8]
+  0x00007ccd13fdc97c:   test	r11d, r11d
+  0x00007ccd13fdc97f:   jbe	0x7ccd13fdcb70
+  0x00007ccd13fdc985:   cmp	r8d, r11d
+  0x00007ccd13fdc988:   jae	0x7ccd13fdcb70
+  0x00007ccd13fdc98e:   mov	r11d, dword ptr [rax + 8]
+  0x00007ccd13fdc992:   test	r11d, r11d
+  0x00007ccd13fdc995:   jbe	0x7ccd13fdcb70
+  0x00007ccd13fdc99b:   cmp	r8d, r11d
+  0x00007ccd13fdc99e:   jae	0x7ccd13fdcb70
+  0x00007ccd13fdc9a4:   movsxd	r11, r10d
+  0x00007ccd13fdc9a7:   mov	r8d, 5
+  0x00007ccd13fdc9ad:   cmp	r10d, 5
+  0x00007ccd13fdc9b1:   cmovg	r11, r8
+  0x00007ccd13fdc9b5:   mov	edi, r11d
+  0x00007ccd13fdc9b8:   xor	r8d, r8d
+  0x00007ccd13fdc9bb:   xor	r11d, r11d
+  0x00007ccd13fdc9be:   vmovss	xmm1, dword ptr [rsi + r11*4 + 0xc]
+  0x00007ccd13fdc9c5:   vaddss	xmm0, xmm1, dword ptr [rdx + r11*4 + 0xc]
+  0x00007ccd13fdc9cc:   vmovss	dword ptr [rax + r11*4 + 0xc], xmm0
+  0x00007ccd13fdc9d3:   lea	r9d, [r11 + 1]
+  0x00007ccd13fdc9d7:   cmp	r9d, edi
+  0x00007ccd13fdc9da:   jge	0x7ccd13fdc9e1
+  0x00007ccd13fdc9dc:   mov	r11d, r9d
+  0x00007ccd13fdc9df:   jmp	0x7ccd13fdc9be
+  0x00007ccd13fdc9e1:   lea	ecx, [r10 - 0x3f]
+  0x00007ccd13fdc9e5:   cmp	r9d, ecx
+  0x00007ccd13fdc9e8:   jge	0x7ccd13fdcb8c
+  0x00007ccd13fdc9ee:   inc	r11d
+  0x00007ccd13fdc9f1:   mov	r9d, 0xfa00
+  0x00007ccd13fdc9f7:   jmp	0x7ccd13fdcae9
+  0x00007ccd13fdc9fc:   nop	dword ptr [rax]
+  0x00007ccd13fdca00:   mov	r11d, edi
+  0x00007ccd13fdca03:   vmovups	ymm0, ymmword ptr [rsi + r11*4 + 0xc]
+  0x00007ccd13fdca0a:   vaddps	ymm0, ymm0, ymmword ptr [rdx + r11*4 + 0xc]
+  0x00007ccd13fdca11:   vmovdqu	ymmword ptr [rax + r11*4 + 0xc], ymm0
+;   {other}
+  0x00007ccd13fdca18:   vmovups	ymm0, ymmword ptr [rsi + r11*4 + 0x2c]
+  0x00007ccd13fdca1f:   vaddps	ymm0, ymm0, ymmword ptr [rdx + r11*4 + 0x2c]
+  0x00007ccd13fdca26:   vmovdqu	ymmword ptr [rax + r11*4 + 0x2c], ymm0
+  0x00007ccd13fdca2d:   vmovups	ymm0, ymmword ptr [rsi + r11*4 + 0x4c]
+  0x00007ccd13fdca34:   vaddps	ymm0, ymm0, ymmword ptr [rdx + r11*4 + 0x4c]
+  0x00007ccd13fdca3b:   vmovdqu	ymmword ptr [rax + r11*4 + 0x4c], ymm0
+  0x00007ccd13fdca42:   vmovups	ymm0, ymmword ptr [rsi + r11*4 + 0x6c]
+  0x00007ccd13fdca49:   vaddps	ymm0, ymm0, ymmword ptr [rdx + r11*4 + 0x6c]
+  0x00007ccd13fdca50:   vmovdqu	ymmword ptr [rax + r11*4 + 0x6c], ymm0
+  0x00007ccd13fdca57:   vmovups	ymm0, ymmword ptr [rsi + r11*4 + 0x8c]
+  0x00007ccd13fdca61:   vaddps	ymm0, ymm0, ymmword ptr [rdx + r11*4 + 0x8c]
+  0x00007ccd13fdca6b:   vmovdqu	ymmword ptr [rax + r11*4 + 0x8c], ymm0
+  0x00007ccd13fdca75:   vmovups	ymm0, ymmword ptr [rsi + r11*4 + 0xac]
+  0x00007ccd13fdca7f:   vaddps	ymm0, ymm0, ymmword ptr [rdx + r11*4 + 0xac]
+  0x00007ccd13fdca89:   vmovdqu	ymmword ptr [rax + r11*4 + 0xac], ymm0
+  0x00007ccd13fdca93:   vmovups	ymm0, ymmword ptr [rsi + r11*4 + 0xcc]
+  0x00007ccd13fdca9d:   vaddps	ymm0, ymm0, ymmword ptr [rdx + r11*4 + 0xcc]
+  0x00007ccd13fdcaa7:   vmovdqu	ymmword ptr [rax + r11*4 + 0xcc], ymm0
+  0x00007ccd13fdcab1:   vmovups	ymm0, ymmword ptr [rsi + r11*4 + 0xec]
+  0x00007ccd13fdcabb:   vaddps	ymm0, ymm0, ymmword ptr [rdx + r11*4 + 0xec]
+  0x00007ccd13fdcac5:   vmovdqu	ymmword ptr [rax + r11*4 + 0xec], ymm0
+  0x00007ccd13fdcacf:   lea	edi, [r11 + 0x40]
+  0x00007ccd13fdcad3:   cmp	edi, ebp
+  0x00007ccd13fdcad5:   jl	0x7ccd13fdca00
+  0x00007ccd13fdcadb:   mov	rbp, qword ptr [r15 + 0x30]
+
+; ImmutableOopMap {rbx=Oop rdx=Oop rsi=Oop rax=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+                      ;   {poll}
+  0x00007ccd13fdcadf:   test	dword ptr [rbp], eax
+  0x00007ccd13fdcae2:   cmp	edi, ecx
+  0x00007ccd13fdcae4:   jge	0x7ccd13fdcb2f
+  0x00007ccd13fdcae6:   mov	r11d, edi
+  0x00007ccd13fdcae9:   mov	ebp, r10d
+  0x00007ccd13fdcaec:   sub	ebp, r11d
+  0x00007ccd13fdcaef:   add	ebp, -0x3f
+  0x00007ccd13fdcaf2:   cmp	ecx, r11d
+  0x00007ccd13fdcaf5:   cmovl	ebp, r8d
+  0x00007ccd13fdcaf9:   cmp	ebp, 0xfa00
+  0x00007ccd13fdcaff:   cmova	ebp, r9d
+  0x00007ccd13fdcb03:   add	ebp, r11d
+  0x00007ccd13fdcb06:   jmp	0x7ccd13fdca03
+  0x00007ccd13fdcb0b:   add	r11d, 0x40
+  0x00007ccd13fdcb0f:   vmovups	ymm0, ymmword ptr [rsi + r11*4 + 0xc]
+  0x00007ccd13fdcb16:   vaddps	ymm0, ymm0, ymmword ptr [rdx + r11*4 + 0xc]
+  0x00007ccd13fdcb1d:   vmovdqu	ymmword ptr [rax + r11*4 + 0xc], ymm0
+  0x00007ccd13fdcb24:   add	r11d, 8
+  0x00007ccd13fdcb28:   cmp	r11d, r9d
+  0x00007ccd13fdcb2b:   jl	0x7ccd13fdcb0f
+  0x00007ccd13fdcb2d:   jmp	0x7ccd13fdcb3b
+  0x00007ccd13fdcb2f:   lea	r9d, [r10 - 7]
+  0x00007ccd13fdcb33:   cmp	edi, r9d
+  0x00007ccd13fdcb36:   jl	0x7ccd13fdcb0b
+  0x00007ccd13fdcb38:   mov	r11d, edi
+  0x00007ccd13fdcb3b:   cmp	r11d, r10d
+  0x00007ccd13fdcb3e:   jge	0x7ccd13fdcb5d
+  0x00007ccd13fdcb40:   vmovss	xmm0, dword ptr [rsi + r11*4 + 0xc]
+  0x00007ccd13fdcb47:   vaddss	xmm1, xmm0, dword ptr [rdx + r11*4 + 0xc]
+  0x00007ccd13fdcb4e:   vmovss	dword ptr [rax + r11*4 + 0xc], xmm1
+  0x00007ccd13fdcb55:   inc	r11d
+  0x00007ccd13fdcb58:   cmp	r11d, r10d
+  0x00007ccd13fdcb5b:   jl	0x7ccd13fdcb40
+  0x00007ccd13fdcb5d:   vzeroupper
+  0x00007ccd13fdcb60:   add	rsp, 0x20
+
+;   {poll_return}
+  0x00007ccd13fdcb64:   pop	rbp
+  0x00007ccd13fdcb65:   cmp	rsp, qword ptr [r15 + 0x28]
+  0x00007ccd13fdcb69:   ja	0x7ccd13fdcba8
+  0x00007ccd13fdcb6f:   ret
+  0x00007ccd13fdcb70:   mov	esi, 0xffffff6e
+  0x00007ccd13fdcb75:   mov	rbp, rbx
+  0x00007ccd13fdcb78:   mov	dword ptr [rsp], r10d
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdcb7c:   vzeroupper
+  0x00007ccd13fdcb7f:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@8 (line 40)
+
+;   {post_call_nop}
+  0x00007ccd13fdcb84:   nop	dword ptr [rax + rax + 0x100037c]
+  0x00007ccd13fdcb8c:   mov	r11d, r9d
+  0x00007ccd13fdcb8f:   jmp	0x7ccd13fdcb3b
+  0x00007ccd13fdcb91:   mov	esi, 0xfffffff6
+  0x00007ccd13fdcb96:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdcb98:   vzeroupper
+  0x00007ccd13fdcb9b:   call	0x7ccd139828e0
+
+; ImmutableOopMap {}
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@7 (line 40)
+
+;   {post_call_nop}
+  0x00007ccd13fdcba0:   nop	dword ptr [rax + rax + 0x2000398]
+
+;   {internal_word}
+  0x00007ccd13fdcba8:   movabs	r10, 0x7ccd13fdcb65
+  0x00007ccd13fdcbb2:   mov	qword ptr [r15 + 0x510], r10
+
+;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00007ccd13fdcbb9:   jmp	0x7ccd138acbe0
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd13fdcbbe:   call	0x7ccd13891a20
+  0x00007ccd13fdcbc3:   jmp	0x7ccd13fdc93a
+[Stub Code]
+;   {runtime_call DeoptimizationBlob}
+  0x00007ccd13fdcbc8:   call	0x7ccd138acee0
+  0x00007ccd13fdcbcd:   jmp	0x7ccd13fdcbc8
+  0x00007ccd13fdcbcf:   hlt
+[/Disassembly]
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1) 270  959 %     3       eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub @ 13 (57 bytes)
+ total in heap  [0x00007ccd0c514f08,0x00007ccd0c515510] = 1544
+ main code      [0x00007ccd0c515000,0x00007ccd0c5154d0] = 1232
+ stub code      [0x00007ccd0c5154d0,0x00007ccd0c515508] = 56
+ oops           [0x00007ccd0c515508,0x00007ccd0c515510] = 8
+ mutable data [0x00007cccc82de090,0x00007cccc82de128] = 152
+ relocation     [0x00007cccc82de090,0x00007cccc82de0f8] = 104
+ metadata       [0x00007cccc82de0f8,0x00007cccc82de128] = 48
+ immutable data [0x00007cccc82dde90,0x00007cccc82de084] = 500
+ dependencies   [0x00007cccc82dde90,0x00007cccc82ddea0] = 16
+ nul chk table  [0x00007cccc82ddea0,0x00007cccc82dded0] = 48
+ scopes pcs     [0x00007cccc82dded0,0x00007cccc82ddf90] = 192
+ scopes data    [0x00007cccc82ddf90,0x00007cccc82de080] = 240
+
+[Constant Pool (empty)]
+
+
+[Disassembly] (capstone, Intel syntax)
+[Verified Entry Point]
+  # {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest'
+  0x00007ccd0c515000:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd0c515007:   push	rbp
+  0x00007ccd0c515008:   sub	rsp, 0xd0
+  0x00007ccd0c51500f:   nop
+  0x00007ccd0c515010:   cmp	dword ptr [r15 + 0x20], 1
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd0c515018:   je	0x7ccd0c51501f
+  0x00007ccd0c51501a:   call	0x7ccd13891a20
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c51501f:   movabs	rbx, 0x7cccf0b07cf8
+  0x00007ccd0c515029:   mov	eax, dword ptr [rbx + 0x70]
+  0x00007ccd0c51502c:   add	eax, 2
+  0x00007ccd0c51502f:   mov	dword ptr [rbx + 0x70], eax
+  0x00007ccd0c515032:   and	eax, 0x7fe
+  0x00007ccd0c515037:   test	eax, eax
+  0x00007ccd0c515039:   je	0x7ccd0c515411
+  0x00007ccd0c51503f:   mov	qword ptr [rsp + 0x48], rdi
+  0x00007ccd0c515044:   mov	qword ptr [rsp + 0x40], rdx
+  0x00007ccd0c515049:   mov	qword ptr [rsp + 0x50], rsi
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c51504e:   movabs	rax, 0x7cccf0b07cf8
+  0x00007ccd0c515058:   add	qword ptr [rax + 0xa8], 1
+
+;   {runtime_call os::javaTimeNanos()}
+  0x00007ccd0c515060:   call	0x7ccd2bdb5740
+
+;   {post_call_nop}
+  0x00007ccd0c515065:   nop	dword ptr [rax + rax]
+  0x00007ccd0c51506d:   mov	rdx, qword ptr [rsp + 0x40]
+  0x00007ccd0c515072:   mov	qword ptr [rdx + 0x20], rax
+  0x00007ccd0c515076:   mov	rdi, qword ptr [rsp + 0xf0]
+  0x00007ccd0c51507e:   mov	rbx, qword ptr [rsp + 0x48]
+  0x00007ccd0c515083:   mov	rsi, qword ptr [rsp + 0x50]
+  0x00007ccd0c515088:   mov	eax, 0
+  0x00007ccd0c51508d:   mov	ecx, 0
+  0x00007ccd0c515092:   mov	qword ptr [rsp + 0xb0], rax
+  0x00007ccd0c51509a:   mov	qword ptr [rsp + 0x90], rcx
+  0x00007ccd0c5150a2:   mov	qword ptr [rsp + 0x88], rbx
+  0x00007ccd0c5150aa:   mov	qword ptr [rsp + 0xa8], rdx
+  0x00007ccd0c5150b2:   jmp	0x7ccd0c515180
+  0x00007ccd0c5150b7:   nop
+
+;   {metadata(method data for {method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c5150b8:   movabs	rsi, 0x981de810
+  0x00007ccd0c5150c2:   add	qword ptr [rsi + 0xc8], 1
+
+;   {metadata(method data for {method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c5150ca:   movabs	rsi, 0x981de810
+  0x00007ccd0c5150d4:   inc	dword ptr [rsi + 0xd8]
+  0x00007ccd0c5150da:   mov	rsi, qword ptr [rsp + 0x98]
+  0x00007ccd0c5150e2:   mov	rcx, qword ptr [rsp + 0x90]
+  0x00007ccd0c5150ea:   mov	r10d, 1
+  0x00007ccd0c5150f0:   add	rcx, r10
+  0x00007ccd0c5150f3:   movsx	edi, byte ptr [rsi + 0x90]
+  0x00007ccd0c5150fa:   test	edi, edi
+  0x00007ccd0c5150fc:   mov	eax, 2
+  0x00007ccd0c515101:   je	0x7ccd0c515108
+  0x00007ccd0c515103:   mov	eax, 0
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c515108:   movabs	rdx, 0x7cccf0b07cf8
+  0x00007ccd0c515112:   mov	r8d, dword ptr [rdx + 0x74]
+  0x00007ccd0c515116:   add	r8d, eax
+  0x00007ccd0c515119:   mov	dword ptr [rdx + 0x74], r8d
+  0x00007ccd0c51511d:   test	eax, eax
+  0x00007ccd0c51511f:   jne	0x7ccd0c515127
+  0x00007ccd0c515121:   mov	r8d, 2
+  0x00007ccd0c515127:   and	r8d, 0x3ffe
+  0x00007ccd0c51512e:   test	r8d, r8d
+  0x00007ccd0c515131:   je	0x7ccd0c51543c
+  0x00007ccd0c515137:   mov	r10, qword ptr [r15 + 0x30]
+
+; ImmutableOopMap {rbx=Oop rsi=Oop [160]=Oop [168]=Oop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@33 (line 192)
+                      ;   {poll}
+  0x00007ccd0c51513b:   test	dword ptr [r10], eax
+  0x00007ccd0c51513e:   test	edi, edi
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c515140:   movabs	rdi, 0x7cccf0b07cf8
+  0x00007ccd0c51514a:   mov	eax, 0x128
+  0x00007ccd0c51514f:   jne	0x7ccd0c515156
+  0x00007ccd0c515151:   mov	eax, 0x118
+  0x00007ccd0c515156:   mov	rdx, qword ptr [rdi + rax]
+  0x00007ccd0c51515a:   lea	rdx, [rdx + 1]
+  0x00007ccd0c51515e:   mov	qword ptr [rdi + rax], rdx
+  0x00007ccd0c515162:   jne	0x7ccd0c5152c0
+  0x00007ccd0c515168:   mov	qword ptr [rsp + 0x90], rcx
+  0x00007ccd0c515170:   mov	rdi, qword ptr [rsp + 0xa0]
+  0x00007ccd0c515178:   mov	qword ptr [rsp + 0x88], rbx
+  0x00007ccd0c515180:   mov	qword ptr [rsp + 0x98], rsi
+
+; implicit exception: dispatches to 0x00007ccd0c51545d
+  0x00007ccd0c515188:   cmp	rax, qword ptr [rdi]
+  0x00007ccd0c51518b:   mov	r8, rdi
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c51518e:   movabs	r9, 0x7cccf0b07cf8
+  0x00007ccd0c515198:   mov	r8, qword ptr [r8]
+  0x00007ccd0c51519b:   shr	r8, 0x2a
+  0x00007ccd0c51519f:   shl	r8, 9
+  0x00007ccd0c5151a3:   mov	r10d, 0x98000000
+  0x00007ccd0c5151a9:   add	r8, r10
+  0x00007ccd0c5151ac:   mov	r10d, 0x18
+  0x00007ccd0c5151b2:   cmp	r8, qword ptr [r9 + r10*8]
+  0x00007ccd0c5151b6:   je	0x7ccd0c5151ed
+  0x00007ccd0c5151b8:   add	r10, 2
+  0x00007ccd0c5151bc:   cmp	r10, 0x1c
+  0x00007ccd0c5151c0:   jne	0x7ccd0c5151b2
+  0x00007ccd0c5151c2:   mov	r10d, 0x18
+  0x00007ccd0c5151c8:   cmp	qword ptr [r9 + r10*8], 0
+  0x00007ccd0c5151cd:   je	0x7ccd0c5151e1
+  0x00007ccd0c5151cf:   add	r10, 2
+  0x00007ccd0c5151d3:   cmp	r10, 0x1c
+  0x00007ccd0c5151d7:   jne	0x7ccd0c5151c8
+  0x00007ccd0c5151d9:   mov	r10d, 0x17
+  0x00007ccd0c5151df:   jmp	0x7ccd0c5151f1
+  0x00007ccd0c5151e1:   push	rax
+  0x00007ccd0c5151e2:   xor	rax, rax
+  0x00007ccd0c5151e5:   cmpxchg	qword ptr [r9 + r10*8], r8
+  0x00007ccd0c5151ea:   pop	rax
+  0x00007ccd0c5151eb:   jmp	0x7ccd0c5151ac
+  0x00007ccd0c5151ed:   add	r10, 1
+  0x00007ccd0c5151f1:   add	qword ptr [r9 + r10*8], 1
+  0x00007ccd0c5151f6:   mov	rsi, rdi
+  0x00007ccd0c5151f9:   mov	qword ptr [rsp + 0xa0], rdi
+  0x00007ccd0c515201:   nop	word ptr [rax + rax]
+
+;   {optimized virtual_call}
+  0x00007ccd0c515207:   call	0x7ccd13fdc920
+
+; ImmutableOopMap {[136]=Oop [152]=Oop [160]=Oop [168]=Oop }
+                      ;*invokevirtual scalar {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd0c51520c:   nop	dword ptr [rax + rax + 0x1000304]
+  0x00007ccd0c515214:   mov	rbx, qword ptr [rsp + 0x88]
+
+; implicit exception: dispatches to 0x00007ccd0c515462
+  0x00007ccd0c51521c:   cmp	rax, qword ptr [rbx]
+  0x00007ccd0c51521f:   mov	rsi, rbx
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c515222:   movabs	rdi, 0x7cccf0b07cf8
+  0x00007ccd0c51522c:   mov	rsi, qword ptr [rsi]
+  0x00007ccd0c51522f:   shr	rsi, 0x2a
+  0x00007ccd0c515233:   shl	rsi, 9
+  0x00007ccd0c515237:   mov	r10d, 0x98000000
+  0x00007ccd0c51523d:   add	rsi, r10
+  0x00007ccd0c515240:   mov	r10d, 0x1e
+  0x00007ccd0c515246:   cmp	rsi, qword ptr [rdi + r10*8]
+  0x00007ccd0c51524a:   je	0x7ccd0c515281
+  0x00007ccd0c51524c:   add	r10, 2
+  0x00007ccd0c515250:   cmp	r10, 0x22
+  0x00007ccd0c515254:   jne	0x7ccd0c515246
+  0x00007ccd0c515256:   mov	r10d, 0x1e
+  0x00007ccd0c51525c:   cmp	qword ptr [rdi + r10*8], 0
+  0x00007ccd0c515261:   je	0x7ccd0c515275
+  0x00007ccd0c515263:   add	r10, 2
+  0x00007ccd0c515267:   cmp	r10, 0x22
+  0x00007ccd0c51526b:   jne	0x7ccd0c51525c
+  0x00007ccd0c51526d:   mov	r10d, 0x1d
+  0x00007ccd0c515273:   jmp	0x7ccd0c515285
+  0x00007ccd0c515275:   push	rax
+  0x00007ccd0c515276:   xor	rax, rax
+  0x00007ccd0c515279:   cmpxchg	qword ptr [rdi + r10*8], rsi
+  0x00007ccd0c51527e:   pop	rax
+  0x00007ccd0c51527f:   jmp	0x7ccd0c515240
+  0x00007ccd0c515281:   add	r10, 1
+  0x00007ccd0c515285:   add	qword ptr [rdi + r10*8], 1
+
+;   {metadata(method data for {method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c51528a:   movabs	rsi, 0x981de810
+  0x00007ccd0c515294:   mov	edi, dword ptr [rsi + 0x70]
+  0x00007ccd0c515297:   add	edi, 2
+  0x00007ccd0c51529a:   mov	dword ptr [rsi + 0x70], edi
+  0x00007ccd0c51529d:   and	edi, 0x1ffffe
+  0x00007ccd0c5152a3:   test	edi, edi
+  0x00007ccd0c5152a5:   je	0x7ccd0c515467
+;   {metadata(method data for {method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c5152ab:   movabs	rsi, 0x981de810
+  0x00007ccd0c5152b5:   inc	dword ptr [rsi + 0xb8]
+  0x00007ccd0c5152bb:   jmp	0x7ccd0c5150b8
+  0x00007ccd0c5152c0:   mov	qword ptr [rsp + 0xb8], rcx
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c5152c8:   movabs	rsi, 0x7cccf0b07cf8
+  0x00007ccd0c5152d2:   add	qword ptr [rsi + 0x138], 1
+
+;   {runtime_call os::javaTimeNanos()}
+  0x00007ccd0c5152da:   call	0x7ccd2bdb5740
+
+;   {post_call_nop}
+  0x00007ccd0c5152df:   nop	dword ptr [rax + rax]
+  0x00007ccd0c5152e7:   mov	rdx, qword ptr [rsp + 0xa8]
+  0x00007ccd0c5152ef:   mov	qword ptr [rdx + 0x28], rax
+  0x00007ccd0c5152f3:   mov	rax, qword ptr [rsp + 0xb0]
+  0x00007ccd0c5152fb:   mov	qword ptr [rdx + 0x18], rax
+  0x00007ccd0c5152ff:   mov	rcx, qword ptr [rsp + 0xb8]
+  0x00007ccd0c515307:   vcvtsi2sd	xmm0, xmm0, rcx
+  0x00007ccd0c51530c:   vmovsd	qword ptr [rdx + 0x10], xmm0
+  0x00007ccd0c515311:   add	rsp, 0xd0
+
+;   {poll_return}
+  0x00007ccd0c515318:   pop	rbp
+  0x00007ccd0c515319:   cmp	rsp, qword ptr [r15 + 0x28]
+  0x00007ccd0c51531d:   ja	0x7ccd0c51548d
+  0x00007ccd0c515323:   ret
+  0x00007ccd0c515324:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd0c51532b:   push	rbp
+  0x00007ccd0c51532c:   sub	rsp, 0xd0
+  0x00007ccd0c515333:   nop
+  0x00007ccd0c515334:   cmp	dword ptr [r15 + 0x20], 0
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd0c51533c:   je	0x7ccd0c515343
+  0x00007ccd0c51533e:   call	0x7ccd13891a20
+  0x00007ccd0c515343:   mov	edi, 0x60
+  0x00007ccd0c515348:   movsxd	rdi, edi
+  0x00007ccd0c51534b:   mov	rbx, qword ptr [rsi + rdi]
+  0x00007ccd0c51534f:   mov	edi, 0x58
+  0x00007ccd0c515354:   movsxd	rdi, edi
+  0x00007ccd0c515357:   mov	rax, qword ptr [rsi + rdi]
+  0x00007ccd0c51535b:   mov	edi, 0x38
+  0x00007ccd0c515360:   movsxd	rdi, edi
+  0x00007ccd0c515363:   mov	rdx, qword ptr [rsi + rdi]
+  0x00007ccd0c515367:   mov	edi, 0x20
+  0x00007ccd0c51536c:   movsxd	rdi, edi
+  0x00007ccd0c51536f:   mov	rcx, qword ptr [rsi + rdi]
+  0x00007ccd0c515373:   mov	edi, 0x10
+  0x00007ccd0c515378:   movsxd	rdi, edi
+  0x00007ccd0c51537b:   mov	r8, qword ptr [rsi + rdi]
+  0x00007ccd0c51537f:   mov	edi, 0
+  0x00007ccd0c515384:   movsxd	rdi, edi
+  0x00007ccd0c515387:   mov	r9, qword ptr [rsi + rdi]
+  0x00007ccd0c51538b:   mov	rdi, rsi
+  0x00007ccd0c51538e:   mov	qword ptr [rsp + 0x80], rbx
+  0x00007ccd0c515396:   mov	qword ptr [rsp + 0x78], rax
+  0x00007ccd0c51539b:   mov	qword ptr [rsp + 0x70], rdx
+  0x00007ccd0c5153a0:   mov	qword ptr [rsp + 0x68], rcx
+  0x00007ccd0c5153a5:   mov	qword ptr [rsp + 0x60], r8
+  0x00007ccd0c5153aa:   mov	qword ptr [rsp + 0x58], r9
+
+;   {runtime_call SharedRuntime::OSR_migration_end(long*)}
+  0x00007ccd0c5153af:   call	0x7ccd2be81f80
+
+;   {post_call_nop}
+  0x00007ccd0c5153b4:   nop	dword ptr [rax + rax]
+  0x00007ccd0c5153bc:   mov	r9, qword ptr [rsp + 0x58]
+  0x00007ccd0c5153c1:   mov	rax, r9
+  0x00007ccd0c5153c4:   mov	r8, qword ptr [rsp + 0x60]
+  0x00007ccd0c5153c9:   mov	rcx, r8
+  0x00007ccd0c5153cc:   mov	rsi, qword ptr [rsp + 0x68]
+  0x00007ccd0c5153d1:   mov	rdi, rsi
+  0x00007ccd0c5153d4:   mov	rdx, qword ptr [rsp + 0x70]
+  0x00007ccd0c5153d9:   mov	rbx, rdx
+  0x00007ccd0c5153dc:   mov	rsi, qword ptr [rsp + 0x78]
+  0x00007ccd0c5153e1:   mov	rdx, rsi
+  0x00007ccd0c5153e4:   mov	rsi, qword ptr [rsp + 0x80]
+  0x00007ccd0c5153ec:   mov	qword ptr [rsp + 0xb0], rax
+  0x00007ccd0c5153f4:   mov	qword ptr [rsp + 0x90], rcx
+  0x00007ccd0c5153fc:   mov	qword ptr [rsp + 0x88], rbx
+  0x00007ccd0c515404:   mov	qword ptr [rsp + 0xa8], rdx
+  0x00007ccd0c51540c:   jmp	0x7ccd0c515180
+
+;   {metadata({method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c515411:   movabs	r10, 0x981cbb78
+  0x00007ccd0c51541b:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c515420:   mov	qword ptr [rsp], 0xffffffffffffffff
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c515428:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rsi=Oop rdx=Oop rcx=Oop r8=Oop r9=Oop rdi=Oop [224]=Oop [240]=Oop }
+                      ;*synchronization entry
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@-1 (line 186)
+  0x00007ccd0c51542d:   jmp	0x7ccd0c51503f
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c515432:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rdx=Oop [72]=Oop [80]=Oop [240]=Oop }
+                      ;*putfield startTime {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@10 (line 188)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c515437:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rbx=Oop rsi=Oop [160]=Oop [168]=Oop }
+                      ;*getfield isDone {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@30 (line 192)
+
+;   {metadata({method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c51543c:   movabs	r10, 0x981cbb78
+  0x00007ccd0c515446:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c51544b:   mov	qword ptr [rsp], 0x21
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c515453:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rbx=Oop rsi=Oop [160]=Oop [168]=Oop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@33 (line 192)
+  0x00007ccd0c515458:   jmp	0x7ccd0c515137
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c51545d:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rdi=Oop [136]=Oop [152]=Oop [168]=Oop }
+                      ;*invokevirtual scalar {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c515462:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rax=Oop rbx=Oop [152]=Oop [160]=Oop [168]=Oop }
+                      ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@20 (line 190)
+                      ;   {metadata({method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c515467:   movabs	r10, 0x7cccf093fd98
+  0x00007ccd0c515471:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c515476:   mov	qword ptr [rsp], 0xffffffffffffffff
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c51547e:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rax=Oop rbx=Oop [152]=Oop [160]=Oop [168]=Oop }
+                      ;*synchronization entry
+                      ; - org.openjdk.jmh.infra.Blackhole::consume@-1 (line 322)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@20 (line 190)
+  0x00007ccd0c515483:   jmp	0x7ccd0c5152ab
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c515488:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rdx=Oop }
+                      ;*putfield stopTime {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@40 (line 193)
+                      ;   {internal_word}
+  0x00007ccd0c51548d:   movabs	r10, 0x7ccd0c515319
+  0x00007ccd0c515497:   mov	qword ptr [r15 + 0x510], r10
+
+;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00007ccd0c51549e:   jmp	0x7ccd138acbe0
+  0x00007ccd0c5154a3:   mov	rax, qword ptr [r15 + 0x578]
+  0x00007ccd0c5154aa:   mov	qword ptr [r15 + 0x578], 0
+  0x00007ccd0c5154b5:   mov	qword ptr [r15 + 0x580], 0
+  0x00007ccd0c5154c0:   add	rsp, 0xd0
+  0x00007ccd0c5154c7:   pop	rbp
+
+;   {runtime_call unwind_exception_blob (C1 runtime)}
+  0x00007ccd0c5154c8:   jmp	0x7ccd1397b160
+  0x00007ccd0c5154cd:   hlt
+  0x00007ccd0c5154ce:   hlt
+  0x00007ccd0c5154cf:   hlt
+[Stub Code]
+;   {other}
+  0x00007ccd0c5154d0:   nop	dword ptr [rax + rax]
+
+;   {static_stub}
+  0x00007ccd0c5154d5:   movabs	rbx, 0
+
+;   {runtime_call nmethod}
+  0x00007ccd0c5154df:   jmp	0x7ccd0c5154df
+[Exception Handler]
+;   {runtime_call handle_exception_from_callee_blob (C1 runtime)}
+  0x00007ccd0c5154e4:   call	0x7ccd1397de60
+
+;   {external_word}
+  0x00007ccd0c5154e9:   movabs	rdi, 0x7ccd2c17762f
+  0x00007ccd0c5154f3:   and	rsp, 0xfffffffffffffff0
+
+;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x00007ccd0c5154f7:   call	0x7ccd2bc8bd30
+
+;   {runtime_call DeoptimizationBlob}
+  0x00007ccd0c5154fc:   hlt
+  0x00007ccd0c5154fd:   call	0x7ccd138acee0
+  0x00007ccd0c515502:   jmp	0x7ccd0c5154fd
+  0x00007ccd0c515504:   hlt
+  0x00007ccd0c515505:   hlt
+  0x00007ccd0c515506:   hlt
+  0x00007ccd0c515507:   hlt
+[/Disassembly]
+
+============================= C2-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c2) 278  960 %     4       eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub @ 13 (57 bytes)
+ total in heap  [0x00007ccd13fdcc08,0x00007ccd13fdd1c0] = 1464
+ main code      [0x00007ccd13fdcd00,0x00007ccd13fdd1b0] = 1200
+ stub code      [0x00007ccd13fdd1b0,0x00007ccd13fdd1b8] = 8
+ oops           [0x00007ccd13fdd1b8,0x00007ccd13fdd1c0] = 8
+ mutable data [0x00007cccb8059310,0x00007cccb8059380] = 112
+ relocation     [0x00007cccb8059310,0x00007cccb8059348] = 56
+ metadata       [0x00007cccb8059348,0x00007cccb8059380] = 56
+ immutable data [0x00007cccb80590e0,0x00007cccb80592fc] = 540
+ dependencies   [0x00007cccb80590e0,0x00007cccb80590f8] = 24
+ nul chk table  [0x00007cccb80590f8,0x00007cccb8059120] = 40
+ scopes pcs     [0x00007cccb8059120,0x00007cccb80591b0] = 144
+ scopes data    [0x00007cccb80591b0,0x00007cccb80592f8] = 328
+
+[Constant Pool (empty)]
+
+
+[Disassembly] (capstone, Intel syntax)
+[Verified Entry Point]
+  # {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest'
+;   {runtime_call os::breakpoint()}
+  0x00007ccd13fdcd00:   call	0x7ccd2bdb3f80
+  0x00007ccd13fdcd05:   nop	word ptr [rax + rax]
+  0x00007ccd13fdcd10:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd13fdcd17:   push	rbp
+  0x00007ccd13fdcd18:   sub	rsp, 0x50
+  0x00007ccd13fdcd1c:   cmp	dword ptr [r15 + 0x20], 1
+  0x00007ccd13fdcd24:   jne	0x7ccd13fdd19f
+  0x00007ccd13fdcd2a:   mov	r10, qword ptr [rsi + 0x60]
+  0x00007ccd13fdcd2e:   mov	qword ptr [rsp], r10
+  0x00007ccd13fdcd32:   mov	r10, qword ptr [rsi + 0x58]
+  0x00007ccd13fdcd36:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd13fdcd3b:   mov	rbx, qword ptr [rsi]
+  0x00007ccd13fdcd3e:   mov	rbp, qword ptr [rsi + 0x38]
+  0x00007ccd13fdcd42:   mov	r13, qword ptr [rsi + 0x20]
+  0x00007ccd13fdcd46:   mov	r14, qword ptr [rsi + 0x10]
+  0x00007ccd13fdcd4a:   mov	rdi, rsi
+  0x00007ccd13fdcd4d:   vzeroupper
+
+;   {runtime_call SharedRuntime::OSR_migration_end(long*)}
+  0x00007ccd13fdcd50:   movabs	r10, 0x7ccd2be81f80
+  0x00007ccd13fdcd5a:   call	r10
+
+;   {post_call_nop}
+  0x00007ccd13fdcd5d:   nop	dword ptr [rax + rax]
+  0x00007ccd13fdcd65:   mov	r10, qword ptr [rsp]
+  0x00007ccd13fdcd69:   test	r10, r10
+  0x00007ccd13fdcd6c:   je	0x7ccd13fdd0f0
+  0x00007ccd13fdcd72:   mov	r11, r10
+  0x00007ccd13fdcd75:   mov	r8d, dword ptr [r10 + 4]
+  0x00007ccd13fdcd79:   shr	r8d, 0xa
+;   {metadata('org/openjdk/jmh/runner/InfraControl')}
+  0x00007ccd13fdcd7d:   cmp	r8d, 0xe82
+  0x00007ccd13fdcd84:   jne	0x7ccd13fdd13c
+  0x00007ccd13fdcd8a:   mov	rcx, r10
+  0x00007ccd13fdcd8d:   mov	r8, qword ptr [rsp + 8]
+  0x00007ccd13fdcd92:   test	r8, r8
+  0x00007ccd13fdcd95:   je	0x7ccd13fdd0fa
+  0x00007ccd13fdcd9b:   mov	r10d, dword ptr [r8 + 4]
+  0x00007ccd13fdcd9f:   shr	r10d, 0xa
+
+;   {metadata('org/openjdk/jmh/results/RawResults')}
+  0x00007ccd13fdcda3:   cmp	r10d, 0xe92
+  0x00007ccd13fdcdaa:   jne	0x7ccd13fdd141
+  0x00007ccd13fdcdb0:   mov	rdi, r8
+  0x00007ccd13fdcdb3:   test	rbp, rbp
+  0x00007ccd13fdcdb6:   je	0x7ccd13fdd101
+  0x00007ccd13fdcdbc:   mov	r10d, dword ptr [rbp + 4]
+  0x00007ccd13fdcdc0:   shr	r10d, 0xa
+
+;   {metadata('org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd13fdcdc4:   cmp	r10d, 0xe9e
+  0x00007ccd13fdcdcb:   jne	0x7ccd13fdd141
+  0x00007ccd13fdcdd1:   mov	rdx, rbp
+
+; implicit exception: dispatches to 0x00007ccd13fdd108
+  0x00007ccd13fdcdd4:   mov	r10d, dword ptr [r13 + 4]
+  0x00007ccd13fdcdd8:   shr	r10d, 0xa
+
+;   {metadata('eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType')}
+  0x00007ccd13fdcddc:   cmp	r10d, 0xeb6
+  0x00007ccd13fdcde3:   jne	0x7ccd13fdd141
+  0x00007ccd13fdcde9:   test	rdx, rdx
+  0x00007ccd13fdcdec:   je	0x7ccd13fdd10b
+  0x00007ccd13fdcdf2:   test	rcx, rcx
+  0x00007ccd13fdcdf5:   je	0x7ccd13fdd10b
+  0x00007ccd13fdcdfb:   mov	r10d, 0xfa00
+  0x00007ccd13fdce01:   xor	r8d, r8d
+  0x00007ccd13fdce04:   jmp	0x7ccd13fdcf72
+  0x00007ccd13fdce09:   nop	dword ptr [rax]
+  0x00007ccd13fdce10:   mov	edi, ebx
+  0x00007ccd13fdce12:   vmovups	ymm3, ymmword ptr [rcx + rdi*4 + 0xc]
+  0x00007ccd13fdce18:   vaddps	ymm3, ymm3, ymmword ptr [rbp + rdi*4 + 0xc]
+  0x00007ccd13fdce1e:   vmovdqu	ymmword ptr [rsi + rdi*4 + 0xc], ymm3
+  0x00007ccd13fdce24:   vmovups	ymm3, ymmword ptr [rcx + rdi*4 + 0x2c]
+  0x00007ccd13fdce2a:   vaddps	ymm3, ymm3, ymmword ptr [rbp + rdi*4 + 0x2c]
+  0x00007ccd13fdce30:   vmovdqu	ymmword ptr [rsi + rdi*4 + 0x2c], ymm3
+  0x00007ccd13fdce36:   vmovups	ymm3, ymmword ptr [rcx + rdi*4 + 0x4c]
+  0x00007ccd13fdce3c:   vaddps	ymm3, ymm3, ymmword ptr [rbp + rdi*4 + 0x4c]
+  0x00007ccd13fdce42:   vmovdqu	ymmword ptr [rsi + rdi*4 + 0x4c], ymm3
+  0x00007ccd13fdce48:   vmovups	ymm3, ymmword ptr [rcx + rdi*4 + 0x6c]
+  0x00007ccd13fdce4e:   vaddps	ymm3, ymm3, ymmword ptr [rbp + rdi*4 + 0x6c]
+  0x00007ccd13fdce54:   vmovdqu	ymmword ptr [rsi + rdi*4 + 0x6c], ymm3
+  0x00007ccd13fdce5a:   vmovups	ymm3, ymmword ptr [rcx + rdi*4 + 0x8c]
+  0x00007ccd13fdce63:   vaddps	ymm3, ymm3, ymmword ptr [rbp + rdi*4 + 0x8c]
+  0x00007ccd13fdce6c:   vmovdqu	ymmword ptr [rsi + rdi*4 + 0x8c], ymm3
+  0x00007ccd13fdce75:   vmovups	ymm3, ymmword ptr [rcx + rdi*4 + 0xac]
+  0x00007ccd13fdce7e:   vaddps	ymm3, ymm3, ymmword ptr [rbp + rdi*4 + 0xac]
+  0x00007ccd13fdce87:   vmovdqu	ymmword ptr [rsi + rdi*4 + 0xac], ymm3
+  0x00007ccd13fdce90:   vmovups	ymm3, ymmword ptr [rcx + rdi*4 + 0xcc]
+  0x00007ccd13fdce99:   vaddps	ymm3, ymm3, ymmword ptr [rbp + rdi*4 + 0xcc]
+  0x00007ccd13fdcea2:   vmovdqu	ymmword ptr [rsi + rdi*4 + 0xcc], ymm3
+  0x00007ccd13fdceab:   vmovups	ymm3, ymmword ptr [rcx + rdi*4 + 0xec]
+  0x00007ccd13fdceb4:   vaddps	ymm3, ymm3, ymmword ptr [rbp + rdi*4 + 0xec]
+  0x00007ccd13fdcebd:   vmovdqu	ymmword ptr [rsi + rdi*4 + 0xec], ymm3
+  0x00007ccd13fdcec6:   lea	ebx, [rdi + 0x40]
+  0x00007ccd13fdcec9:   cmp	ebx, eax
+  0x00007ccd13fdcecb:   jl	0x7ccd13fdce10
+  0x00007ccd13fdced1:   mov	rax, qword ptr [r15 + 0x30]
+
+; ImmutableOopMap {rcx=Oop rsi=Oop rbp=Oop r13=Oop xmm0=Oop xmm1=Oop xmm2=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+                      ;   {poll}
+  0x00007ccd13fdced5:   test	dword ptr [rax], eax
+  0x00007ccd13fdced7:   cmp	ebx, r11d
+  0x00007ccd13fdceda:   jge	0x7ccd13fdcf1c
+  0x00007ccd13fdcedc:   mov	edi, ebx
+  0x00007ccd13fdcede:   mov	eax, r9d
+  0x00007ccd13fdcee1:   sub	eax, edi
+  0x00007ccd13fdcee3:   add	eax, -0x3f
+  0x00007ccd13fdcee6:   cmp	r11d, edi
+  0x00007ccd13fdcee9:   cmovl	eax, r8d
+  0x00007ccd13fdceed:   cmp	eax, 0xfa00
+  0x00007ccd13fdcef2:   cmova	eax, r10d
+  0x00007ccd13fdcef6:   add	eax, edi
+  0x00007ccd13fdcef8:   jmp	0x7ccd13fdce12
+  0x00007ccd13fdcefd:   add	edi, 0x40
+  0x00007ccd13fdcf00:   vmovups	ymm3, ymmword ptr [rcx + rdi*4 + 0xc]
+  0x00007ccd13fdcf06:   vaddps	ymm3, ymm3, ymmword ptr [rbp + rdi*4 + 0xc]
+  0x00007ccd13fdcf0c:   vmovdqu	ymmword ptr [rsi + rdi*4 + 0xc], ymm3
+  0x00007ccd13fdcf12:   add	edi, 8
+  0x00007ccd13fdcf15:   cmp	edi, r11d
+  0x00007ccd13fdcf18:   jl	0x7ccd13fdcf00
+  0x00007ccd13fdcf1a:   jmp	0x7ccd13fdcf27
+  0x00007ccd13fdcf1c:   lea	r11d, [r9 - 7]
+  0x00007ccd13fdcf20:   cmp	ebx, r11d
+  0x00007ccd13fdcf23:   jl	0x7ccd13fdcefd
+  0x00007ccd13fdcf25:   mov	edi, ebx
+  0x00007ccd13fdcf27:   cmp	edi, r9d
+  0x00007ccd13fdcf2a:   jge	0x7ccd13fdcf45
+  0x00007ccd13fdcf2c:   vmovss	xmm3, dword ptr [rcx + rdi*4 + 0xc]
+  0x00007ccd13fdcf32:   vaddss	xmm4, xmm3, dword ptr [rbp + rdi*4 + 0xc]
+  0x00007ccd13fdcf38:   vmovss	dword ptr [rsi + rdi*4 + 0xc], xmm4
+  0x00007ccd13fdcf3e:   inc	edi
+  0x00007ccd13fdcf40:   cmp	edi, r9d
+  0x00007ccd13fdcf43:   jl	0x7ccd13fdcf2c
+  0x00007ccd13fdcf45:   mov	rbx, rdx
+  0x00007ccd13fdcf48:   vmovq	rcx, xmm0
+  0x00007ccd13fdcf4d:   vmovq	rdi, xmm1
+  0x00007ccd13fdcf52:   vmovq	rdx, xmm2
+  0x00007ccd13fdcf57:   movzx	r9d, byte ptr [rcx + 0x90]
+  0x00007ccd13fdcf5f:   mov	r11, qword ptr [r15 + 0x30]
+  0x00007ccd13fdcf63:   inc	r14
+
+; ImmutableOopMap {rcx=Oop rdi=Oop rdx=Oop r13=Oop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@33 (line 192)
+                      ;   {poll}
+  0x00007ccd13fdcf66:   test	dword ptr [r11], eax
+  0x00007ccd13fdcf69:   test	r9d, r9d
+  0x00007ccd13fdcf6c:   jne	0x7ccd13fdd0ca
+  0x00007ccd13fdcf72:   mov	r9d, dword ptr [r13 + 0xc]
+  0x00007ccd13fdcf76:   mov	rbp, r9
+  0x00007ccd13fdcf79:   shl	rbp, 5
+  0x00007ccd13fdcf7d:   mov	r9d, dword ptr [rbp + 8]
+  0x00007ccd13fdcf81:   mov	r11d, dword ptr [r13 + 0x14]
+  0x00007ccd13fdcf85:   mov	rsi, r11
+  0x00007ccd13fdcf88:   shl	rsi, 5
+  0x00007ccd13fdcf8c:   test	r9d, r9d
+  0x00007ccd13fdcf8f:   jbe	0x7ccd13fdcf57
+  0x00007ccd13fdcf91:   lea	r11d, [r9 - 1]
+  0x00007ccd13fdcf95:   cmp	r11d, r9d
+  0x00007ccd13fdcf98:   jae	0x7ccd13fdd038
+  0x00007ccd13fdcf9e:   vmovq	xmm2, rdx
+  0x00007ccd13fdcfa3:   vmovq	xmm1, rdi
+  0x00007ccd13fdcfa8:   vmovq	xmm0, rcx
+  0x00007ccd13fdcfad:   mov	rdx, rbx
+  0x00007ccd13fdcfb0:   mov	ebx, dword ptr [r13 + 0x10]
+  0x00007ccd13fdcfb4:   mov	rcx, rbx
+  0x00007ccd13fdcfb7:   shl	rcx, 5
+  0x00007ccd13fdcfbb:   mov	edi, dword ptr [rcx + 8]
+  0x00007ccd13fdcfbe:   test	edi, edi
+  0x00007ccd13fdcfc0:   jbe	0x7ccd13fdd09f
+  0x00007ccd13fdcfc6:   cmp	r11d, edi
+  0x00007ccd13fdcfc9:   jae	0x7ccd13fdd070
+  0x00007ccd13fdcfcf:   mov	edi, dword ptr [rsi + 8]
+  0x00007ccd13fdcfd2:   test	edi, edi
+  0x00007ccd13fdcfd4:   jbe	0x7ccd13fdd0b3
+  0x00007ccd13fdcfda:   cmp	r11d, edi
+  0x00007ccd13fdcfdd:   jae	0x7ccd13fdd084
+  0x00007ccd13fdcfe3:   movsxd	r11, r9d
+  0x00007ccd13fdcfe6:   cmp	r9d, 5
+  0x00007ccd13fdcfea:   mov	ebx, 5
+  0x00007ccd13fdcfef:   cmovg	r11, rbx
+  0x00007ccd13fdcff3:   mov	r11d, r11d
+  0x00007ccd13fdcff6:   xor	edi, edi
+  0x00007ccd13fdcff8:   vmovss	xmm3, dword ptr [rcx + rdi*4 + 0xc]
+  0x00007ccd13fdcffe:   vaddss	xmm4, xmm3, dword ptr [rbp + rdi*4 + 0xc]
+  0x00007ccd13fdd004:   vmovss	dword ptr [rsi + rdi*4 + 0xc], xmm4
+  0x00007ccd13fdd00a:   lea	ebx, [rdi + 1]
+  0x00007ccd13fdd00d:   cmp	ebx, r11d
+  0x00007ccd13fdd010:   jge	0x7ccd13fdd016
+  0x00007ccd13fdd012:   mov	edi, ebx
+  0x00007ccd13fdd014:   jmp	0x7ccd13fdcff8
+  0x00007ccd13fdd016:   lea	r11d, [r9 - 0x3f]
+  0x00007ccd13fdd01a:   cmp	ebx, r11d
+  0x00007ccd13fdd01d:   jge	0x7ccd13fdd098
+  0x00007ccd13fdd01f:   inc	edi
+  0x00007ccd13fdd021:   jmp	0x7ccd13fdcede
+  0x00007ccd13fdd026:   mov	rbx, rdx
+  0x00007ccd13fdd029:   vmovq	rcx, xmm0
+  0x00007ccd13fdd02e:   vmovq	rdi, xmm1
+  0x00007ccd13fdd033:   vmovq	rdx, xmm2
+  0x00007ccd13fdd038:   mov	esi, 0xffffff6e
+  0x00007ccd13fdd03d:   mov	rbp, rcx
+  0x00007ccd13fdd040:   mov	qword ptr [rsp], rdi
+  0x00007ccd13fdd044:   mov	qword ptr [rsp + 0x18], r14
+  0x00007ccd13fdd049:   mov	qword ptr [rsp + 0x20], rbx
+  0x00007ccd13fdd04e:   mov	qword ptr [rsp + 0x28], rdx
+  0x00007ccd13fdd053:   mov	qword ptr [rsp + 0x30], r13
+  0x00007ccd13fdd058:   mov	dword ptr [rsp + 0x38], r9d
+  0x00007ccd13fdd05d:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdd060:   vzeroupper
+  0x00007ccd13fdd063:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop [0]=Oop [40]=Oop [48]=Oop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@8 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fdd068:   nop	dword ptr [rax + rax + 0x2000460]
+  0x00007ccd13fdd070:   mov	rbx, rdx
+  0x00007ccd13fdd073:   vmovq	rcx, xmm0
+  0x00007ccd13fdd078:   vmovq	rdi, xmm1
+  0x00007ccd13fdd07d:   vmovq	rdx, xmm2
+  0x00007ccd13fdd082:   jmp	0x7ccd13fdd038
+  0x00007ccd13fdd084:   mov	rbx, rdx
+  0x00007ccd13fdd087:   vmovq	rcx, xmm0
+  0x00007ccd13fdd08c:   vmovq	rdi, xmm1
+  0x00007ccd13fdd091:   vmovq	rdx, xmm2
+  0x00007ccd13fdd096:   jmp	0x7ccd13fdd038
+  0x00007ccd13fdd098:   mov	edi, ebx
+  0x00007ccd13fdd09a:   jmp	0x7ccd13fdcf27
+  0x00007ccd13fdd09f:   mov	rbx, rdx
+  0x00007ccd13fdd0a2:   vmovq	rcx, xmm0
+  0x00007ccd13fdd0a7:   vmovq	rdi, xmm1
+  0x00007ccd13fdd0ac:   vmovq	rdx, xmm2
+  0x00007ccd13fdd0b1:   jmp	0x7ccd13fdd038
+  0x00007ccd13fdd0b3:   mov	rbx, rdx
+  0x00007ccd13fdd0b6:   vmovq	rcx, xmm0
+  0x00007ccd13fdd0bb:   vmovq	rdi, xmm1
+  0x00007ccd13fdd0c0:   vmovq	rdx, xmm2
+  0x00007ccd13fdd0c5:   jmp	0x7ccd13fdd038
+  0x00007ccd13fdd0ca:   mov	esi, 0xffffff45
+  0x00007ccd13fdd0cf:   mov	rbp, rdi
+  0x00007ccd13fdd0d2:   mov	qword ptr [rsp], r14
+  0x00007ccd13fdd0d6:   mov	qword ptr [rsp + 8], rbx
+  0x00007ccd13fdd0db:   mov	dword ptr [rsp + 0x10], r9d
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdd0e0:   vzeroupper
+  0x00007ccd13fdd0e3:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@33 (line 192)
+
+;   {post_call_nop}
+  0x00007ccd13fdd0e8:   nop	dword ptr [rax + rax + 0x30004e0]
+  0x00007ccd13fdd0f0:   mov	r11, r10
+  0x00007ccd13fdd0f3:   xor	ecx, ecx
+  0x00007ccd13fdd0f5:   jmp	0x7ccd13fdcd8d
+  0x00007ccd13fdd0fa:   xor	edi, edi
+  0x00007ccd13fdd0fc:   jmp	0x7ccd13fdcdb3
+  0x00007ccd13fdd101:   xor	edx, edx
+  0x00007ccd13fdd103:   jmp	0x7ccd13fdcdd4
+  0x00007ccd13fdd108:   xor	r13d, r13d
+  0x00007ccd13fdd10b:   mov	esi, 0xffffff6e
+  0x00007ccd13fdd110:   mov	rbp, rcx
+  0x00007ccd13fdd113:   mov	qword ptr [rsp], rdi
+  0x00007ccd13fdd117:   mov	qword ptr [rsp + 8], rdx
+  0x00007ccd13fdd11c:   mov	qword ptr [rsp + 0x10], r13
+  0x00007ccd13fdd121:   mov	qword ptr [rsp + 0x18], r14
+  0x00007ccd13fdd126:   mov	qword ptr [rsp + 0x20], rbx
+  0x00007ccd13fdd12b:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdd12c:   vzeroupper
+  0x00007ccd13fdd12f:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop [0]=Oop [8]=Oop [16]=Oop }
+                      ;*aload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@13 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fdd134:   nop	dword ptr [rax + rax + 0x400052c]
+  0x00007ccd13fdd13c:   mov	r8, qword ptr [rsp + 8]
+  0x00007ccd13fdd141:   mov	esi, 0xffffff85
+  0x00007ccd13fdd146:   mov	qword ptr [rsp], r13
+  0x00007ccd13fdd14a:   mov	qword ptr [rsp + 8], r14
+  0x00007ccd13fdd14f:   mov	qword ptr [rsp + 0x10], rbx
+  0x00007ccd13fdd154:   mov	qword ptr [rsp + 0x18], r11
+  0x00007ccd13fdd159:   mov	qword ptr [rsp + 0x20], r8
+  0x00007ccd13fdd15e:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdd160:   vzeroupper
+  0x00007ccd13fdd163:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop [0]=Oop [24]=Oop [32]=Oop }
+                      ;*aload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@13 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fdd168:   nop	dword ptr [rax + rax + 0x5000560]
+  0x00007ccd13fdd170:   mov	esi, 0xfffffff6
+  0x00007ccd13fdd175:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdd178:   vzeroupper
+  0x00007ccd13fdd17b:   call	0x7ccd139828e0
+
+; ImmutableOopMap {}
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@7 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fdd180:   nop	dword ptr [rax + rax + 0x6000578]
+  0x00007ccd13fdd188:   mov	rbx, rdx
+  0x00007ccd13fdd18b:   vmovq	rcx, xmm0
+  0x00007ccd13fdd190:   vmovq	rdi, xmm1
+  0x00007ccd13fdd195:   vmovq	rdx, xmm2
+  0x00007ccd13fdd19a:   jmp	0x7ccd13fdd038
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd13fdd19f:   call	0x7ccd13891a20
+  0x00007ccd13fdd1a4:   jmp	0x7ccd13fdcd2a
+  0x00007ccd13fdd1a9:   hlt
+  0x00007ccd13fdd1aa:   hlt
+  0x00007ccd13fdd1ab:   hlt
+  0x00007ccd13fdd1ac:   hlt
+  0x00007ccd13fdd1ad:   hlt
+  0x00007ccd13fdd1ae:   hlt
+  0x00007ccd13fdd1af:   hlt
+[Stub Code]
+;   {runtime_call DeoptimizationBlob}
+  0x00007ccd13fdd1b0:   call	0x7ccd138acee0
+  0x00007ccd13fdd1b5:   jmp	0x7ccd13fdd1b0
+  0x00007ccd13fdd1b7:   hlt
+[/Disassembly]
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1) 1257  979 %     3       eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub @ 13 (57 bytes)
+ total in heap  [0x00007ccd0c517188,0x00007ccd0c517790] = 1544
+ main code      [0x00007ccd0c517280,0x00007ccd0c517750] = 1232
+ stub code      [0x00007ccd0c517750,0x00007ccd0c517788] = 56
+ oops           [0x00007ccd0c517788,0x00007ccd0c517790] = 8
+ mutable data [0x00007cccc803d580,0x00007cccc803d618] = 152
+ relocation     [0x00007cccc803d580,0x00007cccc803d5e8] = 104
+ metadata       [0x00007cccc803d5e8,0x00007cccc803d618] = 48
+ immutable data [0x00007cccc803d380,0x00007cccc803d574] = 500
+ dependencies   [0x00007cccc803d380,0x00007cccc803d390] = 16
+ nul chk table  [0x00007cccc803d390,0x00007cccc803d3c0] = 48
+ scopes pcs     [0x00007cccc803d3c0,0x00007cccc803d480] = 192
+ scopes data    [0x00007cccc803d480,0x00007cccc803d570] = 240
+
+[Constant Pool (empty)]
+
+
+[Disassembly] (capstone, Intel syntax)
+[Verified Entry Point]
+  # {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest'
+  0x00007ccd0c517280:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd0c517287:   push	rbp
+  0x00007ccd0c517288:   sub	rsp, 0xd0
+  0x00007ccd0c51728f:   nop
+  0x00007ccd0c517290:   cmp	dword ptr [r15 + 0x20], 1
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd0c517298:   je	0x7ccd0c51729f
+  0x00007ccd0c51729a:   call	0x7ccd13891a20
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c51729f:   movabs	rbx, 0x7cccf0b07cf8
+  0x00007ccd0c5172a9:   mov	eax, dword ptr [rbx + 0x70]
+  0x00007ccd0c5172ac:   add	eax, 2
+  0x00007ccd0c5172af:   mov	dword ptr [rbx + 0x70], eax
+  0x00007ccd0c5172b2:   and	eax, 0x7fe
+  0x00007ccd0c5172b7:   test	eax, eax
+  0x00007ccd0c5172b9:   je	0x7ccd0c517691
+  0x00007ccd0c5172bf:   mov	qword ptr [rsp + 0x48], rdi
+  0x00007ccd0c5172c4:   mov	qword ptr [rsp + 0x40], rdx
+  0x00007ccd0c5172c9:   mov	qword ptr [rsp + 0x50], rsi
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c5172ce:   movabs	rax, 0x7cccf0b07cf8
+  0x00007ccd0c5172d8:   add	qword ptr [rax + 0xa8], 1
+
+;   {runtime_call os::javaTimeNanos()}
+  0x00007ccd0c5172e0:   call	0x7ccd2bdb5740
+
+;   {post_call_nop}
+  0x00007ccd0c5172e5:   nop	dword ptr [rax + rax]
+  0x00007ccd0c5172ed:   mov	rdx, qword ptr [rsp + 0x40]
+  0x00007ccd0c5172f2:   mov	qword ptr [rdx + 0x20], rax
+  0x00007ccd0c5172f6:   mov	rdi, qword ptr [rsp + 0xf0]
+  0x00007ccd0c5172fe:   mov	rbx, qword ptr [rsp + 0x48]
+  0x00007ccd0c517303:   mov	rsi, qword ptr [rsp + 0x50]
+  0x00007ccd0c517308:   mov	eax, 0
+  0x00007ccd0c51730d:   mov	ecx, 0
+  0x00007ccd0c517312:   mov	qword ptr [rsp + 0xb0], rax
+  0x00007ccd0c51731a:   mov	qword ptr [rsp + 0x90], rcx
+  0x00007ccd0c517322:   mov	qword ptr [rsp + 0x88], rbx
+  0x00007ccd0c51732a:   mov	qword ptr [rsp + 0xa8], rdx
+  0x00007ccd0c517332:   jmp	0x7ccd0c517400
+  0x00007ccd0c517337:   nop
+
+;   {metadata(method data for {method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c517338:   movabs	rsi, 0x981de810
+  0x00007ccd0c517342:   add	qword ptr [rsi + 0xc8], 1
+
+;   {metadata(method data for {method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c51734a:   movabs	rsi, 0x981de810
+  0x00007ccd0c517354:   inc	dword ptr [rsi + 0xd8]
+  0x00007ccd0c51735a:   mov	rsi, qword ptr [rsp + 0x98]
+  0x00007ccd0c517362:   mov	rcx, qword ptr [rsp + 0x90]
+  0x00007ccd0c51736a:   mov	r10d, 1
+  0x00007ccd0c517370:   add	rcx, r10
+  0x00007ccd0c517373:   movsx	edi, byte ptr [rsi + 0x90]
+  0x00007ccd0c51737a:   test	edi, edi
+  0x00007ccd0c51737c:   mov	eax, 2
+  0x00007ccd0c517381:   je	0x7ccd0c517388
+  0x00007ccd0c517383:   mov	eax, 0
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c517388:   movabs	rdx, 0x7cccf0b07cf8
+  0x00007ccd0c517392:   mov	r8d, dword ptr [rdx + 0x74]
+  0x00007ccd0c517396:   add	r8d, eax
+  0x00007ccd0c517399:   mov	dword ptr [rdx + 0x74], r8d
+  0x00007ccd0c51739d:   test	eax, eax
+  0x00007ccd0c51739f:   jne	0x7ccd0c5173a7
+  0x00007ccd0c5173a1:   mov	r8d, 2
+  0x00007ccd0c5173a7:   and	r8d, 0x3ffe
+  0x00007ccd0c5173ae:   test	r8d, r8d
+  0x00007ccd0c5173b1:   je	0x7ccd0c5176bc
+  0x00007ccd0c5173b7:   mov	r10, qword ptr [r15 + 0x30]
+
+; ImmutableOopMap {rbx=Oop rsi=Oop [160]=Oop [168]=Oop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@33 (line 192)
+                      ;   {poll}
+  0x00007ccd0c5173bb:   test	dword ptr [r10], eax
+  0x00007ccd0c5173be:   test	edi, edi
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c5173c0:   movabs	rdi, 0x7cccf0b07cf8
+  0x00007ccd0c5173ca:   mov	eax, 0x128
+  0x00007ccd0c5173cf:   jne	0x7ccd0c5173d6
+  0x00007ccd0c5173d1:   mov	eax, 0x118
+  0x00007ccd0c5173d6:   mov	rdx, qword ptr [rdi + rax]
+  0x00007ccd0c5173da:   lea	rdx, [rdx + 1]
+  0x00007ccd0c5173de:   mov	qword ptr [rdi + rax], rdx
+  0x00007ccd0c5173e2:   jne	0x7ccd0c517540
+  0x00007ccd0c5173e8:   mov	qword ptr [rsp + 0x90], rcx
+  0x00007ccd0c5173f0:   mov	rdi, qword ptr [rsp + 0xa0]
+  0x00007ccd0c5173f8:   mov	qword ptr [rsp + 0x88], rbx
+  0x00007ccd0c517400:   mov	qword ptr [rsp + 0x98], rsi
+
+; implicit exception: dispatches to 0x00007ccd0c5176dd
+  0x00007ccd0c517408:   cmp	rax, qword ptr [rdi]
+  0x00007ccd0c51740b:   mov	r8, rdi
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c51740e:   movabs	r9, 0x7cccf0b07cf8
+  0x00007ccd0c517418:   mov	r8, qword ptr [r8]
+  0x00007ccd0c51741b:   shr	r8, 0x2a
+  0x00007ccd0c51741f:   shl	r8, 9
+  0x00007ccd0c517423:   mov	r10d, 0x98000000
+  0x00007ccd0c517429:   add	r8, r10
+  0x00007ccd0c51742c:   mov	r10d, 0x18
+  0x00007ccd0c517432:   cmp	r8, qword ptr [r9 + r10*8]
+  0x00007ccd0c517436:   je	0x7ccd0c51746d
+  0x00007ccd0c517438:   add	r10, 2
+  0x00007ccd0c51743c:   cmp	r10, 0x1c
+  0x00007ccd0c517440:   jne	0x7ccd0c517432
+  0x00007ccd0c517442:   mov	r10d, 0x18
+  0x00007ccd0c517448:   cmp	qword ptr [r9 + r10*8], 0
+  0x00007ccd0c51744d:   je	0x7ccd0c517461
+  0x00007ccd0c51744f:   add	r10, 2
+  0x00007ccd0c517453:   cmp	r10, 0x1c
+  0x00007ccd0c517457:   jne	0x7ccd0c517448
+  0x00007ccd0c517459:   mov	r10d, 0x17
+  0x00007ccd0c51745f:   jmp	0x7ccd0c517471
+  0x00007ccd0c517461:   push	rax
+  0x00007ccd0c517462:   xor	rax, rax
+  0x00007ccd0c517465:   cmpxchg	qword ptr [r9 + r10*8], r8
+  0x00007ccd0c51746a:   pop	rax
+  0x00007ccd0c51746b:   jmp	0x7ccd0c51742c
+  0x00007ccd0c51746d:   add	r10, 1
+  0x00007ccd0c517471:   add	qword ptr [r9 + r10*8], 1
+  0x00007ccd0c517476:   mov	rsi, rdi
+  0x00007ccd0c517479:   mov	qword ptr [rsp + 0xa0], rdi
+  0x00007ccd0c517481:   nop	word ptr [rax + rax]
+
+;   {optimized virtual_call}
+  0x00007ccd0c517487:   call	0x7ccd13fdc920
+
+; ImmutableOopMap {[136]=Oop [152]=Oop [160]=Oop [168]=Oop }
+                      ;*invokevirtual scalar {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd0c51748c:   nop	dword ptr [rax + rax + 0x1000304]
+  0x00007ccd0c517494:   mov	rbx, qword ptr [rsp + 0x88]
+
+; implicit exception: dispatches to 0x00007ccd0c5176e2
+  0x00007ccd0c51749c:   cmp	rax, qword ptr [rbx]
+  0x00007ccd0c51749f:   mov	rsi, rbx
+
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c5174a2:   movabs	rdi, 0x7cccf0b07cf8
+  0x00007ccd0c5174ac:   mov	rsi, qword ptr [rsi]
+  0x00007ccd0c5174af:   shr	rsi, 0x2a
+  0x00007ccd0c5174b3:   shl	rsi, 9
+  0x00007ccd0c5174b7:   mov	r10d, 0x98000000
+  0x00007ccd0c5174bd:   add	rsi, r10
+  0x00007ccd0c5174c0:   mov	r10d, 0x1e
+  0x00007ccd0c5174c6:   cmp	rsi, qword ptr [rdi + r10*8]
+  0x00007ccd0c5174ca:   je	0x7ccd0c517501
+  0x00007ccd0c5174cc:   add	r10, 2
+  0x00007ccd0c5174d0:   cmp	r10, 0x22
+  0x00007ccd0c5174d4:   jne	0x7ccd0c5174c6
+  0x00007ccd0c5174d6:   mov	r10d, 0x1e
+  0x00007ccd0c5174dc:   cmp	qword ptr [rdi + r10*8], 0
+  0x00007ccd0c5174e1:   je	0x7ccd0c5174f5
+  0x00007ccd0c5174e3:   add	r10, 2
+  0x00007ccd0c5174e7:   cmp	r10, 0x22
+  0x00007ccd0c5174eb:   jne	0x7ccd0c5174dc
+  0x00007ccd0c5174ed:   mov	r10d, 0x1d
+  0x00007ccd0c5174f3:   jmp	0x7ccd0c517505
+  0x00007ccd0c5174f5:   push	rax
+  0x00007ccd0c5174f6:   xor	rax, rax
+  0x00007ccd0c5174f9:   cmpxchg	qword ptr [rdi + r10*8], rsi
+  0x00007ccd0c5174fe:   pop	rax
+  0x00007ccd0c5174ff:   jmp	0x7ccd0c5174c0
+  0x00007ccd0c517501:   add	r10, 1
+  0x00007ccd0c517505:   add	qword ptr [rdi + r10*8], 1
+
+;   {metadata(method data for {method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c51750a:   movabs	rsi, 0x981de810
+  0x00007ccd0c517514:   mov	edi, dword ptr [rsi + 0x70]
+  0x00007ccd0c517517:   add	edi, 2
+  0x00007ccd0c51751a:   mov	dword ptr [rsi + 0x70], edi
+  0x00007ccd0c51751d:   and	edi, 0x1ffffe
+  0x00007ccd0c517523:   test	edi, edi
+  0x00007ccd0c517525:   je	0x7ccd0c5176e7
+;   {metadata(method data for {method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c51752b:   movabs	rsi, 0x981de810
+  0x00007ccd0c517535:   inc	dword ptr [rsi + 0xb8]
+  0x00007ccd0c51753b:   jmp	0x7ccd0c517338
+  0x00007ccd0c517540:   mov	qword ptr [rsp + 0xb8], rcx
+;   {metadata(method data for {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c517548:   movabs	rsi, 0x7cccf0b07cf8
+  0x00007ccd0c517552:   add	qword ptr [rsi + 0x138], 1
+
+;   {runtime_call os::javaTimeNanos()}
+  0x00007ccd0c51755a:   call	0x7ccd2bdb5740
+
+;   {post_call_nop}
+  0x00007ccd0c51755f:   nop	dword ptr [rax + rax]
+  0x00007ccd0c517567:   mov	rdx, qword ptr [rsp + 0xa8]
+  0x00007ccd0c51756f:   mov	qword ptr [rdx + 0x28], rax
+  0x00007ccd0c517573:   mov	rax, qword ptr [rsp + 0xb0]
+  0x00007ccd0c51757b:   mov	qword ptr [rdx + 0x18], rax
+  0x00007ccd0c51757f:   mov	rcx, qword ptr [rsp + 0xb8]
+  0x00007ccd0c517587:   vcvtsi2sd	xmm0, xmm0, rcx
+  0x00007ccd0c51758c:   vmovsd	qword ptr [rdx + 0x10], xmm0
+  0x00007ccd0c517591:   add	rsp, 0xd0
+
+;   {poll_return}
+  0x00007ccd0c517598:   pop	rbp
+  0x00007ccd0c517599:   cmp	rsp, qword ptr [r15 + 0x28]
+  0x00007ccd0c51759d:   ja	0x7ccd0c51770d
+  0x00007ccd0c5175a3:   ret
+  0x00007ccd0c5175a4:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd0c5175ab:   push	rbp
+  0x00007ccd0c5175ac:   sub	rsp, 0xd0
+  0x00007ccd0c5175b3:   nop
+  0x00007ccd0c5175b4:   cmp	dword ptr [r15 + 0x20], 0
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd0c5175bc:   je	0x7ccd0c5175c3
+  0x00007ccd0c5175be:   call	0x7ccd13891a20
+  0x00007ccd0c5175c3:   mov	edi, 0x60
+  0x00007ccd0c5175c8:   movsxd	rdi, edi
+  0x00007ccd0c5175cb:   mov	rbx, qword ptr [rsi + rdi]
+  0x00007ccd0c5175cf:   mov	edi, 0x58
+  0x00007ccd0c5175d4:   movsxd	rdi, edi
+  0x00007ccd0c5175d7:   mov	rax, qword ptr [rsi + rdi]
+  0x00007ccd0c5175db:   mov	edi, 0x38
+  0x00007ccd0c5175e0:   movsxd	rdi, edi
+  0x00007ccd0c5175e3:   mov	rdx, qword ptr [rsi + rdi]
+  0x00007ccd0c5175e7:   mov	edi, 0x20
+  0x00007ccd0c5175ec:   movsxd	rdi, edi
+  0x00007ccd0c5175ef:   mov	rcx, qword ptr [rsi + rdi]
+  0x00007ccd0c5175f3:   mov	edi, 0x10
+  0x00007ccd0c5175f8:   movsxd	rdi, edi
+  0x00007ccd0c5175fb:   mov	r8, qword ptr [rsi + rdi]
+  0x00007ccd0c5175ff:   mov	edi, 0
+  0x00007ccd0c517604:   movsxd	rdi, edi
+  0x00007ccd0c517607:   mov	r9, qword ptr [rsi + rdi]
+  0x00007ccd0c51760b:   mov	rdi, rsi
+  0x00007ccd0c51760e:   mov	qword ptr [rsp + 0x80], rbx
+  0x00007ccd0c517616:   mov	qword ptr [rsp + 0x78], rax
+  0x00007ccd0c51761b:   mov	qword ptr [rsp + 0x70], rdx
+  0x00007ccd0c517620:   mov	qword ptr [rsp + 0x68], rcx
+  0x00007ccd0c517625:   mov	qword ptr [rsp + 0x60], r8
+  0x00007ccd0c51762a:   mov	qword ptr [rsp + 0x58], r9
+
+;   {runtime_call SharedRuntime::OSR_migration_end(long*)}
+  0x00007ccd0c51762f:   call	0x7ccd2be81f80
+
+;   {post_call_nop}
+  0x00007ccd0c517634:   nop	dword ptr [rax + rax]
+  0x00007ccd0c51763c:   mov	r9, qword ptr [rsp + 0x58]
+  0x00007ccd0c517641:   mov	rax, r9
+  0x00007ccd0c517644:   mov	r8, qword ptr [rsp + 0x60]
+  0x00007ccd0c517649:   mov	rcx, r8
+  0x00007ccd0c51764c:   mov	rsi, qword ptr [rsp + 0x68]
+  0x00007ccd0c517651:   mov	rdi, rsi
+  0x00007ccd0c517654:   mov	rdx, qword ptr [rsp + 0x70]
+  0x00007ccd0c517659:   mov	rbx, rdx
+  0x00007ccd0c51765c:   mov	rsi, qword ptr [rsp + 0x78]
+  0x00007ccd0c517661:   mov	rdx, rsi
+  0x00007ccd0c517664:   mov	rsi, qword ptr [rsp + 0x80]
+  0x00007ccd0c51766c:   mov	qword ptr [rsp + 0xb0], rax
+  0x00007ccd0c517674:   mov	qword ptr [rsp + 0x90], rcx
+  0x00007ccd0c51767c:   mov	qword ptr [rsp + 0x88], rbx
+  0x00007ccd0c517684:   mov	qword ptr [rsp + 0xa8], rdx
+  0x00007ccd0c51768c:   jmp	0x7ccd0c517400
+
+;   {metadata({method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c517691:   movabs	r10, 0x981cbb78
+  0x00007ccd0c51769b:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c5176a0:   mov	qword ptr [rsp], 0xffffffffffffffff
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c5176a8:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rsi=Oop rdx=Oop rcx=Oop r8=Oop r9=Oop rdi=Oop [224]=Oop [240]=Oop }
+                      ;*synchronization entry
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@-1 (line 186)
+  0x00007ccd0c5176ad:   jmp	0x7ccd0c5172bf
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c5176b2:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rdx=Oop [72]=Oop [80]=Oop [240]=Oop }
+                      ;*putfield startTime {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@10 (line 188)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c5176b7:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rbx=Oop rsi=Oop [160]=Oop [168]=Oop }
+                      ;*getfield isDone {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@30 (line 192)
+
+;   {metadata({method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest')}
+  0x00007ccd0c5176bc:   movabs	r10, 0x981cbb78
+  0x00007ccd0c5176c6:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c5176cb:   mov	qword ptr [rsp], 0x21
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c5176d3:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rbx=Oop rsi=Oop [160]=Oop [168]=Oop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@33 (line 192)
+  0x00007ccd0c5176d8:   jmp	0x7ccd0c5173b7
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c5176dd:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rdi=Oop [136]=Oop [152]=Oop [168]=Oop }
+                      ;*invokevirtual scalar {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+                      ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c5176e2:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rax=Oop rbx=Oop [152]=Oop [160]=Oop [168]=Oop }
+                      ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@20 (line 190)
+                      ;   {metadata({method} {0x00007cccf093fd98} 'consume' '(Ljava/lang/Object;)V' in 'org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd0c5176e7:   movabs	r10, 0x7cccf093fd98
+  0x00007ccd0c5176f1:   mov	qword ptr [rsp + 8], r10
+  0x00007ccd0c5176f6:   mov	qword ptr [rsp], 0xffffffffffffffff
+
+;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x00007ccd0c5176fe:   call	0x7ccd139816e0
+
+; ImmutableOopMap {rax=Oop rbx=Oop [152]=Oop [160]=Oop [168]=Oop }
+                      ;*synchronization entry
+                      ; - org.openjdk.jmh.infra.Blackhole::consume@-1 (line 322)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@20 (line 190)
+  0x00007ccd0c517703:   jmp	0x7ccd0c51752b
+
+;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x00007ccd0c517708:   call	0x7ccd1397c060
+
+; ImmutableOopMap {rdx=Oop }
+                      ;*putfield stopTime {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@40 (line 193)
+                      ;   {internal_word}
+  0x00007ccd0c51770d:   movabs	r10, 0x7ccd0c517599
+  0x00007ccd0c517717:   mov	qword ptr [r15 + 0x510], r10
+
+;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00007ccd0c51771e:   jmp	0x7ccd138acbe0
+  0x00007ccd0c517723:   mov	rax, qword ptr [r15 + 0x578]
+  0x00007ccd0c51772a:   mov	qword ptr [r15 + 0x578], 0
+  0x00007ccd0c517735:   mov	qword ptr [r15 + 0x580], 0
+  0x00007ccd0c517740:   add	rsp, 0xd0
+  0x00007ccd0c517747:   pop	rbp
+
+;   {runtime_call unwind_exception_blob (C1 runtime)}
+  0x00007ccd0c517748:   jmp	0x7ccd1397b160
+  0x00007ccd0c51774d:   hlt
+  0x00007ccd0c51774e:   hlt
+  0x00007ccd0c51774f:   hlt
+[Stub Code]
+;   {other}
+  0x00007ccd0c517750:   nop	dword ptr [rax + rax]
+
+;   {static_stub}
+  0x00007ccd0c517755:   movabs	rbx, 0
+
+;   {runtime_call nmethod}
+  0x00007ccd0c51775f:   jmp	0x7ccd0c51775f
+[Exception Handler]
+;   {runtime_call handle_exception_from_callee_blob (C1 runtime)}
+  0x00007ccd0c517764:   call	0x7ccd1397de60
+
+;   {external_word}
+  0x00007ccd0c517769:   movabs	rdi, 0x7ccd2c17762f
+  0x00007ccd0c517773:   and	rsp, 0xfffffffffffffff0
+
+;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x00007ccd0c517777:   call	0x7ccd2bc8bd30
+
+;   {runtime_call DeoptimizationBlob}
+  0x00007ccd0c51777c:   hlt
+  0x00007ccd0c51777d:   call	0x7ccd138acee0
+  0x00007ccd0c517782:   jmp	0x7ccd0c51777d
+  0x00007ccd0c517784:   hlt
+  0x00007ccd0c517785:   hlt
+  0x00007ccd0c517786:   hlt
+  0x00007ccd0c517787:   hlt
+[/Disassembly]
+
+============================= C2-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c2) 1266  980 %     4       eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub @ 13 (57 bytes)
+ total in heap  [0x00007ccd13fdf588,0x00007ccd13fdfb90] = 1544
+ main code      [0x00007ccd13fdf680,0x00007ccd13fdfb80] = 1280
+ stub code      [0x00007ccd13fdfb80,0x00007ccd13fdfb88] = 8
+ oops           [0x00007ccd13fdfb88,0x00007ccd13fdfb90] = 8
+ mutable data [0x00007cccd016af60,0x00007cccd016afe0] = 128
+ relocation     [0x00007cccd016af60,0x00007cccd016afa8] = 72
+ metadata       [0x00007cccd016afa8,0x00007cccd016afe0] = 56
+ immutable data [0x00007cccd016ad40,0x00007cccd016af4c] = 524
+ dependencies   [0x00007cccd016ad40,0x00007cccd016ad58] = 24
+ nul chk table  [0x00007cccd016ad58,0x00007cccd016ad88] = 48
+ scopes pcs     [0x00007cccd016ad88,0x00007cccd016ae18] = 144
+ scopes data    [0x00007cccd016ae18,0x00007cccd016af48] = 304
+
+[Constant Pool (empty)]
+
+
+[Disassembly] (capstone, Intel syntax)
+[Verified Entry Point]
+  # {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest'
+;   {runtime_call os::breakpoint()}
+  0x00007ccd13fdf680:   call	0x7ccd2bdb3f80
+  0x00007ccd13fdf685:   nop	word ptr [rax + rax]
+  0x00007ccd13fdf690:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd13fdf697:   push	rbp
+  0x00007ccd13fdf698:   sub	rsp, 0x50
+  0x00007ccd13fdf69c:   cmp	dword ptr [r15 + 0x20], 1
+  0x00007ccd13fdf6a4:   jne	0x7ccd13fdfb72
+  0x00007ccd13fdf6aa:   mov	r13, qword ptr [rsi + 0x60]
+  0x00007ccd13fdf6ae:   mov	r10, qword ptr [rsi + 0x58]
+  0x00007ccd13fdf6b2:   mov	qword ptr [rsp], r10
+  0x00007ccd13fdf6b6:   mov	r14, qword ptr [rsi]
+  0x00007ccd13fdf6b9:   mov	rbp, qword ptr [rsi + 0x38]
+  0x00007ccd13fdf6bd:   mov	rbx, qword ptr [rsi + 0x20]
+  0x00007ccd13fdf6c1:   mov	r10, qword ptr [rsi + 0x10]
+  0x00007ccd13fdf6c5:   mov	qword ptr [rsp + 0x18], r10
+  0x00007ccd13fdf6ca:   mov	rdi, rsi
+  0x00007ccd13fdf6cd:   vzeroupper
+
+;   {runtime_call SharedRuntime::OSR_migration_end(long*)}
+  0x00007ccd13fdf6d0:   movabs	r10, 0x7ccd2be81f80
+  0x00007ccd13fdf6da:   call	r10
+
+;   {post_call_nop}
+  0x00007ccd13fdf6dd:   nop	dword ptr [rax + rax]
+  0x00007ccd13fdf6e5:   test	r13, r13
+  0x00007ccd13fdf6e8:   je	0x7ccd13fdfa96
+  0x00007ccd13fdf6ee:   mov	r11, r13
+  0x00007ccd13fdf6f1:   mov	r8d, dword ptr [r13 + 4]
+  0x00007ccd13fdf6f5:   shr	r8d, 0xa
+
+;   {metadata('org/openjdk/jmh/runner/InfraControl')}
+  0x00007ccd13fdf6f9:   cmp	r8d, 0xe82
+  0x00007ccd13fdf700:   jne	0x7ccd13fdfae0
+  0x00007ccd13fdf706:   mov	r8, r13
+  0x00007ccd13fdf709:   mov	r9, qword ptr [rsp]
+  0x00007ccd13fdf70d:   test	r9, r9
+  0x00007ccd13fdf710:   je	0x7ccd13fdfaa1
+  0x00007ccd13fdf716:   mov	r10d, dword ptr [r9 + 4]
+  0x00007ccd13fdf71a:   shr	r10d, 0xa
+
+;   {metadata('org/openjdk/jmh/results/RawResults')}
+  0x00007ccd13fdf71e:   cmp	r10d, 0xe92
+  0x00007ccd13fdf725:   jne	0x7ccd13fdfae4
+  0x00007ccd13fdf72b:   mov	r13, r9
+  0x00007ccd13fdf72e:   test	rbp, rbp
+  0x00007ccd13fdf731:   je	0x7ccd13fdfaa9
+  0x00007ccd13fdf737:   mov	r10d, dword ptr [rbp + 4]
+  0x00007ccd13fdf73b:   shr	r10d, 0xa
+;   {metadata('org/openjdk/jmh/infra/Blackhole')}
+  0x00007ccd13fdf73f:   cmp	r10d, 0xe9e
+  0x00007ccd13fdf746:   jne	0x7ccd13fdfae4
+  0x00007ccd13fdf74c:   mov	rcx, rbp
+  0x00007ccd13fdf74f:   mov	r10d, dword ptr [rbx + 4]
+  0x00007ccd13fdf753:   shr	r10d, 0xa
+
+;   {metadata('eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType')}
+  0x00007ccd13fdf757:   cmp	r10d, 0xeb6
+  0x00007ccd13fdf75e:   jne	0x7ccd13fdfae4
+  0x00007ccd13fdf764:   test	rcx, rcx
+  0x00007ccd13fdf767:   je	0x7ccd13fdfab2
+  0x00007ccd13fdf76d:   test	r8, r8
+  0x00007ccd13fdf770:   je	0x7ccd13fdfab2
+  0x00007ccd13fdf776:   mov	esi, 0xfa00
+  0x00007ccd13fdf77b:   xor	r11d, r11d
+  0x00007ccd13fdf77e:   jmp	0x7ccd13fdf917
+  0x00007ccd13fdf783:   mov	r8d, ecx
+  0x00007ccd13fdf786:   vmovups	ymm2, ymmword ptr [r13 + r8*4 + 0xc]
+  0x00007ccd13fdf78d:   vaddps	ymm2, ymm2, ymmword ptr [rdi + r8*4 + 0xc]
+  0x00007ccd13fdf794:   vmovdqu	ymmword ptr [rdx + r8*4 + 0xc], ymm2
+  0x00007ccd13fdf79b:   vmovups	ymm2, ymmword ptr [r13 + r8*4 + 0x2c]
+  0x00007ccd13fdf7a2:   vaddps	ymm2, ymm2, ymmword ptr [rdi + r8*4 + 0x2c]
+  0x00007ccd13fdf7a9:   vmovdqu	ymmword ptr [rdx + r8*4 + 0x2c], ymm2
+  0x00007ccd13fdf7b0:   vmovups	ymm2, ymmword ptr [r13 + r8*4 + 0x4c]
+  0x00007ccd13fdf7b7:   vaddps	ymm2, ymm2, ymmword ptr [rdi + r8*4 + 0x4c]
+  0x00007ccd13fdf7be:   vmovdqu	ymmword ptr [rdx + r8*4 + 0x4c], ymm2
+  0x00007ccd13fdf7c5:   vmovups	ymm2, ymmword ptr [r13 + r8*4 + 0x6c]
+  0x00007ccd13fdf7cc:   vaddps	ymm2, ymm2, ymmword ptr [rdi + r8*4 + 0x6c]
+  0x00007ccd13fdf7d3:   vmovdqu	ymmword ptr [rdx + r8*4 + 0x6c], ymm2
+  0x00007ccd13fdf7da:   vmovups	ymm2, ymmword ptr [r13 + r8*4 + 0x8c]
+  0x00007ccd13fdf7e4:   vaddps	ymm2, ymm2, ymmword ptr [rdi + r8*4 + 0x8c]
+  0x00007ccd13fdf7ee:   vmovdqu	ymmword ptr [rdx + r8*4 + 0x8c], ymm2
+  0x00007ccd13fdf7f8:   vmovups	ymm2, ymmword ptr [r13 + r8*4 + 0xac]
+  0x00007ccd13fdf802:   vaddps	ymm2, ymm2, ymmword ptr [rdi + r8*4 + 0xac]
+  0x00007ccd13fdf80c:   vmovdqu	ymmword ptr [rdx + r8*4 + 0xac], ymm2
+  0x00007ccd13fdf816:   vmovups	ymm2, ymmword ptr [r13 + r8*4 + 0xcc]
+  0x00007ccd13fdf820:   vaddps	ymm2, ymm2, ymmword ptr [rdi + r8*4 + 0xcc]
+  0x00007ccd13fdf82a:   vmovdqu	ymmword ptr [rdx + r8*4 + 0xcc], ymm2
+  0x00007ccd13fdf834:   vmovups	ymm2, ymmword ptr [r13 + r8*4 + 0xec]
+  0x00007ccd13fdf83e:   vaddps	ymm2, ymm2, ymmword ptr [rdi + r8*4 + 0xec]
+  0x00007ccd13fdf848:   vmovdqu	ymmword ptr [rdx + r8*4 + 0xec], ymm2
+  0x00007ccd13fdf852:   lea	ecx, [r8 + 0x40]
+;   {other}
+  0x00007ccd13fdf856:   cmp	ecx, r10d
+  0x00007ccd13fdf859:   jl	0x7ccd13fdf783
+  0x00007ccd13fdf85f:   mov	r10, qword ptr [r15 + 0x30]
+
+; ImmutableOopMap {rbx=Oop rdi=Oop rdx=Oop rbp=Oop r13=Oop xmm0=Oop xmm1=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+           33.712 ns/op
+           ;   {poll}
+  0x00007ccd13fdf863:   test	dword ptr [r10], eax
+  0x00007ccd13fdf866:   cmp	ecx, eax
+  0x00007ccd13fdf868:   jge	0x7ccd13fdf8b5
+  0x00007ccd13fdf86a:   mov	r8d, ecx
+  0x00007ccd13fdf86d:   mov	r10d, r9d
+  0x00007ccd13fdf870:   sub	r10d, r8d
+  0x00007ccd13fdf873:   add	r10d, -0x3f
+  0x00007ccd13fdf877:   cmp	eax, r8d
+  0x00007ccd13fdf87a:   cmovl	r10d, r11d
+  0x00007ccd13fdf87e:   cmp	r10d, 0xfa00
+  0x00007ccd13fdf885:   cmova	r10d, esi
+  0x00007ccd13fdf889:   add	r10d, r8d
+  0x00007ccd13fdf88c:   jmp	0x7ccd13fdf786
+  0x00007ccd13fdf891:   add	r8d, 0x40
+  0x00007ccd13fdf895:   vmovups	ymm2, ymmword ptr [r13 + r8*4 + 0xc]
+  0x00007ccd13fdf89c:   vaddps	ymm2, ymm2, ymmword ptr [rdi + r8*4 + 0xc]
+  0x00007ccd13fdf8a3:   vmovdqu	ymmword ptr [rdx + r8*4 + 0xc], ymm2
+  0x00007ccd13fdf8aa:   add	r8d, 8
+  0x00007ccd13fdf8ae:   cmp	r8d, r10d
+  0x00007ccd13fdf8b1:   jl	0x7ccd13fdf895
+  0x00007ccd13fdf8b3:   jmp	0x7ccd13fdf8c1
+  0x00007ccd13fdf8b5:   lea	r10d, [r9 - 7]
+  0x00007ccd13fdf8b9:   cmp	ecx, r10d
+  0x00007ccd13fdf8bc:   jl	0x7ccd13fdf891
+  0x00007ccd13fdf8be:   mov	r8d, ecx
+  0x00007ccd13fdf8c1:   cmp	r8d, r9d
+  0x00007ccd13fdf8c4:   jge	0x7ccd13fdf8e5
+  0x00007ccd13fdf8c6:   nop
+  0x00007ccd13fdf8c8:   vmovss	xmm2, dword ptr [r13 + r8*4 + 0xc]
+  0x00007ccd13fdf8cf:   vaddss	xmm3, xmm2, dword ptr [rdi + r8*4 + 0xc]
+  0x00007ccd13fdf8d6:   vmovss	dword ptr [rdx + r8*4 + 0xc], xmm3
+  0x00007ccd13fdf8dd:   inc	r8d
+  0x00007ccd13fdf8e0:   cmp	r8d, r9d
+  0x00007ccd13fdf8e3:   jl	0x7ccd13fdf8c8
+  0x00007ccd13fdf8e5:   mov	r8, rbp
+  0x00007ccd13fdf8e8:   vmovq	r13, xmm0
+  0x00007ccd13fdf8ed:   vmovq	rcx, xmm1
+  0x00007ccd13fdf8f2:   movzx	r10d, byte ptr [r8 + 0x90]
+  0x00007ccd13fdf8fa:   mov	r9, qword ptr [r15 + 0x30]
+  0x00007ccd13fdf8fe:   mov	rdi, qword ptr [rsp + 0x18]
+  0x00007ccd13fdf903:   inc	rdi
+  0x00007ccd13fdf906:   mov	qword ptr [rsp + 0x18], rdi
+
+  0x00007ccd13fdf9# Warmup Iteration   2: 08: ; ImmutableOopMap {r8=Oop rcx=Oop rbx=Oop r13=Oop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@33 (line 192)
+                      ;   {poll}
+  0x00007ccd13fdf90b:   test	dword ptr [r9], eax
+  0x00007ccd13fdf90e:   test	r10d, r10d
+  0x00007ccd13fdf911:   jne	0x7ccd13fdf9d4
+  0x00007ccd13fdf917:   mov	r9d, dword ptr [rbx + 0xc]
+  0x00007ccd13fdf91b:   mov	rdi, r9
+  0x00007ccd13fdf91e:   shl	rdi, 5
+  0x00007ccd13fdf922:   mov	r9d, dword ptr [rdi + 8]
+  0x00007ccd13fdf926:   mov	r10d, dword ptr [rbx + 0x14]
+  0x00007ccd13fdf92a:   mov	rdx, r10
+  0x00007ccd13fdf92d:   shl	rdx, 5
+  0x00007ccd13fdf931:   test	r9d, r9d
+  0x00007ccd13fdf934:   jbe	0x7ccd13fdf8f2
+  0x00007ccd13fdf936:   lea	r10d, [r9 - 1]
+  0x00007ccd13fdf93a:   cmp	r10d, r9d
+  0x00007ccd13fdf93d:   jae	0x7ccd13fdfa25
+  0x00007ccd13fdf943:   vmovq	xmm1, rcx
+  0x00007ccd13fdf948:   vmovq	xmm0, r13
+  0x00007ccd13fdf94d:   mov	rbp, r8
+  0x00007ccd13fdf950:   mov	ecx, dword ptr [rbx + 0x10]
+  0x00007ccd13fdf953:   mov	r13, rcx
+  0x00007ccd13fdf956:   shl	r13, 5
+  0x00007ccd13fdf95a:   mov	ecx, dword ptr [r13 + 8]
+  0x00007ccd13fdf95e:   test	ecx, ecx
+  0x00007ccd13fdf960:   jbe	0x7ccd13fdfa7b
+  0x00007ccd13fdf966:   cmp	r10d, ecx
+  0x00007ccd13fdf969:   jae	0x7ccd13fdfa58
+  0x00007ccd13fdf96f:   mov	r8d, dword ptr [rdx + 8]
+  0x00007ccd13fdf973:   test	r8d, r8d
+  0x00007ccd13fdf976:   jbe	0x7ccd13fdfa87
+  0x00007ccd13fdf97c:   cmp	r10d, r8d
+  0x00007ccd13fdf97f:   jae	0x7ccd13fdfa64
+  0x00007ccd13fdf985:   movsxd	r10, r9d
+  0x00007ccd13fdf988:   cmp	r9d, 5
+  0x00007ccd13fdf98c:   mov	r8d, 5
+  0x00007ccd13fdf992:   cmovg	r10, r8
+  0x00007ccd13fdf996:   mov	ecx, r10d
+  0x00007ccd13fdf999:   xor	r8d, r8d
+  0x00007ccd13fdf99c:   vmovss	xmm2, dword ptr [r13 + r8*4 + 0xc]
+  0x00007ccd13fdf9a3:   vaddss	xmm3, xmm2, dword ptr [rdi + r8*4 + 0xc]
+  0x00007ccd13fdf9aa:   vmovss	dword ptr [rdx + r8*4 + 0xc], xmm3
+  0x00007ccd13fdf9b1:   lea	r10d, [r8 + 1]
+  0x00007ccd13fdf9b5:   cmp	r10d, ecx
+  0x00007ccd13fdf9b8:   jge	0x7ccd13fdf9bf
+  0x00007ccd13fdf9ba:   mov	r8d, r10d
+  0x00007ccd13fdf9bd:   jmp	0x7ccd13fdf99c
+  0x00007ccd13fdf9bf:   lea	eax, [r9 - 0x3f]
+  0x00007ccd13fdf9c3:   cmp	r10d, eax
+  0x00007ccd13fdf9c6:   jge	0x7ccd13fdfa73
+  0x00007ccd13fdf9cc:   inc	r8d
+  0x00007ccd13fdf9cf:   jmp	0x7ccd13fdf86d
+
+;   {runtime_call os::javaTimeNanos()}
+  0x00007ccd13fdf9d4:   vzeroupper
+  0x00007ccd13fdf9d7:   movabs	r10, 0x7ccd2bdb5740
+  0x00007ccd13fdf9e1:   call	r10
+
+;   {post_call_nop}
+  0x00007ccd13fdf9e4:   nop	dword ptr [rax + rax]
+
+; implicit exception: dispatches to 0x00007ccd13fdfb42
+  0x00007ccd13fdf9ec:   mov	qword ptr [r13 + 0x28], rax
+  0x00007ccd13fdf9f0:   mov	qword ptr [r13 + 0x18], r14
+  0x00007ccd13fdf9f4:   mov	r10, qword ptr [rsp + 0x18]
+  0x00007ccd13fdf9f9:   vpxor	xmm0, xmm0, xmm0
+  0x00007ccd13fdf9fd:   vcvtsi2sd	xmm0, xmm0, r10
+  0x00007ccd13fdfa02:   vmovsd	qword ptr [r13 + 0x10], xmm0
+  0x00007ccd13fdfa08:   vzeroupper
+  0x00007ccd13fdfa0b:   add	rsp, 0x50
+  0x00007ccd13fdfa0f:   pop	rbp
+
+;   {poll_return}
+  0x00007ccd13fdfa10:   cmp	rsp, qword ptr [r15 + 0x28]
+  0x00007ccd13fdfa14:   ja	0x7ccd13fdfb5c
+  0x00007ccd13fdfa1a:   ret
+  0x00007ccd13fdfa1b:   vmovq	r13, xmm0
+  0x00007ccd13fdfa20:   vmovq	rcx, xmm1
+  0x00007ccd13fdfa25:   mov	esi, 0xffffff6e
+  0x00007ccd13fdfa2a:   mov	rbp, r8
+  0x00007ccd13fdfa2d:   mov	qword ptr [rsp], r13
+  0x00007ccd13fdfa31:   mov	qword ptr [rsp + 0x20], r14
+  0x00007ccd13fdfa36:   mov	qword ptr [rsp + 0x28], rcx
+  0x00007ccd13fdfa3b:   mov	qword ptr [rsp + 0x30], rbx
+  0x00007ccd13fdfa40:   mov	dword ptr [rsp + 0x38], r9d
+  0x00007ccd13fdfa45:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdfa48:   vzeroupper
+  0x00007ccd13fdfa4b:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop [0]=Oop [40]=Oop [48]=Oop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@8 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fdfa50:   nop	dword ptr [rax + rax + 0x20004c8]
+  0x00007ccd13fdfa58:   vmovq	r13, xmm0
+  0x00007ccd13fdfa5d:   vmovq	rcx, xmm1
+  0x00007ccd13fdfa62:   jmp	0x7ccd13fdfa25
+  0x00007ccd13fdfa64:   mov	r8, rbp
+  0x00007ccd13fdfa67:   vmovq	r13, xmm0
+  0x00007ccd13fdfa6c:   vmovq	rcx, xmm1
+  0x00007ccd13fdfa71:   jmp	0x7ccd13fdfa25
+  0x00007ccd13fdfa73:   mov	r8d, r10d
+  0x00007ccd13fdfa76:   jmp	0x7ccd13fdf8c1
+  0x00007ccd13fdfa7b:   vmovq	r13, xmm0
+  0x00007ccd13fdfa80:   vmovq	rcx, xmm1
+  0x00007ccd13fdfa85:   jmp	0x7ccd13fdfa25
+  0x00007ccd13fdfa87:   mov	r8, rbp
+  0x00007ccd13fdfa8a:   vmovq	r13, xmm0
+  0x00007ccd13fdfa8f:   vmovq	rcx, xmm1
+  0x00007ccd13fdfa94:   jmp	0x7ccd13fdfa25
+  0x00007ccd13fdfa96:   mov	r11, r13
+  0x00007ccd13fdfa99:   xor	r8d, r8d
+  0x00007ccd13fdfa9c:   jmp	0x7ccd13fdf709
+  0x00007ccd13fdfaa1:   xor	r13d, r13d
+  0x00007ccd13fdfaa4:   jmp	0x7ccd13fdf72e
+  0x00007ccd13fdfaa9:   xor	ecx, ecx
+  0x00007ccd13fdfaab:   jmp	0x7ccd13fdf74f
+  0x00007ccd13fdfab0:   xor	ebx, ebx
+  0x00007ccd13fdfab2:   mov	esi, 0xffffff6e
+  0x00007ccd13fdfab7:   mov	rbp, r8
+  0x00007ccd13fdfaba:   mov	qword ptr [rsp], r13
+  0x00007ccd13fdfabe:   mov	qword ptr [rsp + 8], rcx
+  0x00007ccd13fdfac3:   mov	qword ptr [rsp + 0x10], rbx
+  0x00007ccd13fdfac8:   mov	qword ptr [rsp + 0x20], r14
+  0x00007ccd13fdfacd:   nop
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdfad0:   vzeroupper
+  0x00007ccd13fdfad3:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop [0]=Oop [8]=Oop [16]=Oop }
+                      ;*aload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@13 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fdfad8:   nop	dword ptr [rax + rax + 0x3000550]
+  0x00007ccd13fdfae0:   mov	r9, qword ptr [rsp]
+  0x00007ccd13fdfae4:   mov	esi, 0xffffff85
+  0x00007ccd13fdfae9:   mov	qword ptr [rsp], rbx
+  0x00007ccd13fdfaed:   push	qword ptr [rsp + 0x18]
+  0x00007ccd13fdfaf2:   pop	qword ptr [rsp + 8]
+  0x00007ccd13fdfaf7:   mov	qword ptr [rsp + 0x10], r14
+  0x00007ccd13fdfafc:   mov	qword ptr [rsp + 0x18], r11
+  0x00007ccd13fdfb01:   mov	qword ptr [rsp + 0x20], r9
+  0x00007ccd13fdfb06:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdfb08:   vzeroupper
+  0x00007ccd13fdfb0b:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop [0]=Oop [24]=Oop [32]=Oop }
+                      ;*aload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@13 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fdfb10:   nop	dword ptr [rax + rax + 0x4000588]
+  0x00007ccd13fdfb18:   mov	esi, 0xfffffff6
+  0x00007ccd13fdfb1d:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdfb20:   vzeroupper
+  0x00007ccd13fdfb23:   call	0x7ccd139828e0
+
+; ImmutableOopMap {}
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@7 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fdfb28:   nop	dword ptr [rax + rax + 0x50005a0]
+  0x00007ccd13fdfb30:   mov	r8, rbp
+  0x00007ccd13fdfb33:   vmovq	r13, xmm0
+  0x00007ccd13fdfb38:   vmovq	rcx, xmm1
+  0x00007ccd13fdfb3d:   jmp	0x7ccd13fdfa25
+  0x00007ccd13fdfb42:   mov	esi, 0xfffffff6
+  0x00007ccd13fdfb47:   mov	rbp, rax
+  0x00007ccd13fdfb4a:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fdfb4c:   vzeroupper
+  0x00007ccd13fdfb4f:   call	0x7ccd139828e0
+
+; ImmutableOopMap {}
+                      ;*putfield stopTime {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@40 (line 193)
+
+;   {post_call_nop}
+  0x00007ccd13fdfb54:   nop	dword ptr [rax + rax + 0x60005cc]
+
+;   {internal_word}
+  0x00007ccd13fdfb5c:   movabs	r10, 0x7ccd13fdfa10
+  0x00007ccd13fdfb66:   mov	qword ptr [r15 + 0x510], r10
+
+;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00007ccd13fdfb6d:   jmp	0x7ccd138acbe0
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd13fdfb72:   call	0x7ccd13891a20
+  0x00007ccd13fdfb77:   jmp	0x7ccd13fdf6aa
+  0x00007ccd13fdfb7c:   hlt
+  0x00007ccd13fdfb7d:   hlt
+  0x00007ccd13fdfb7e:   hlt
+  0x00007ccd13fdfb7f:   hlt
+[Stub Code]
+;   {runtime_call DeoptimizationBlob}
+  0x00007ccd13fdfb80:   call	0x7ccd138acee0
+  0x00007ccd13fdfb85:   jmp	0x7ccd13fdfb80
+  0x00007ccd13fdfb87:   hlt
+[/Disassembly]
+35.159 ns/op
+# Warmup Iteration   3: 
+============================= C2-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c2) 2266  985       4       eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub (57 bytes)
+ total in heap  [0x00007ccd13fdfc08,0x00007ccd13fe0330] = 1832
+ main code      [0x00007ccd13fdfd00,0x00007ccd13fe0320] = 1568
+ stub code      [0x00007ccd13fe0320,0x00007ccd13fe0328] = 8
+ oops           [0x00007ccd13fe0328,0x00007ccd13fe0330] = 8
+ mutable data [0x00007cccd00d2080,0x00007cccd00d20e0] = 96
+ relocation     [0x00007cccd00d2080,0x00007cccd00d20c0] = 64
+ metadata       [0x00007cccd00d20c0,0x00007cccd00d20e0] = 32
+ immutable data [0x00007cccd016b200,0x00007cccd016b4a4] = 676
+ dependencies   [0x00007cccd016b200,0x00007cccd016b210] = 16
+ nul chk table  [0x00007cccd016b210,0x00007cccd016b258] = 72
+ scopes pcs     [0x00007cccd016b258,0x00007cccd016b328] = 208
+ scopes data    [0x00007cccd016b328,0x00007cccd016b4a0] = 376
+
+[Constant Pool (empty)]
+
+
+[Disassembly] (capstone, Intel syntax)
+[Verified Entry Point]
+  # {method} {0x00000000981cbb78} 'scalar_avgt_jmhStub' '(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V' in 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_scalar_jmhTest'
+  # parm0:    rsi:rsi   = 'org/openjdk/jmh/runner/InfraControl'
+  # parm1:    rdx:rdx   = 'org/openjdk/jmh/results/RawResults'
+  # parm2:    rcx:rcx   = 'org/openjdk/jmh/infra/BenchmarkParams'
+  # parm3:    r8:r8     = 'org/openjdk/jmh/infra/IterationParams'
+  # parm4:    r9:r9     = 'org/openjdk/jmh/infra/ThreadParams'
+  # parm5:    rdi:rdi   = 'org/openjdk/jmh/infra/Blackhole'
+  # parm6:    [sp+0x40]   = 'org/openjdk/jmh/infra/Control'  (sp of caller)
+  # parm7:    [sp+0x48]   = int
+  # parm8:    [sp+0x50]   = 'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType'
+  0x00007ccd13fdfd00:   mov	dword ptr [rsp - 0x14000], eax
+  0x00007ccd13fdfd07:   push	rbp
+  0x00007ccd13fdfd08:   sub	rsp, 0x30
+  0x00007ccd13fdfd0c:   cmp	dword ptr [r15 + 0x20], 1
+  0x00007ccd13fdfd14:   jne	0x7ccd13fe0312
+  0x00007ccd13fdfd1a:   mov	qword ptr [rsp + 0x48], rdi
+  0x00007ccd13fdfd1f:   mov	r13, rsi
+  0x00007ccd13fdfd22:   mov	rbx, rdx
+  0x00007ccd13fdfd25:   vzeroupper
+
+;   {runtime_call os::javaTimeNanos()}
+  0x00007ccd13fdfd28:   movabs	r10, 0x7ccd2bdb5740
+  0x00007ccd13fdfd32:   call	r10
+
+;   {post_call_nop}
+  0x00007ccd13fdfd35:   nop	dword ptr [rax + rax]
+  0x00007ccd13fdfd3d:   test	rbx, rbx
+  0x00007ccd13fdfd40:   je	0x7ccd13fe0240
+  0x00007ccd13fdfd46:   mov	qword ptr [rbx + 0x20], rax
+  0x00007ccd13fdfd4a:   mov	rdx, qword ptr [rsp + 0x50]
+  0x00007ccd13fdfd4f:   mov	r10d, dword ptr [rdx + 0xc]
+  0x00007ccd13fdfd53:   mov	r11, r10
+  0x00007ccd13fdfd56:   shl	r11, 5
+  0x00007ccd13fdfd5a:   mov	edi, dword ptr [r11 + 8]
+  0x00007ccd13fdfd5e:   mov	r10d, dword ptr [rdx + 0x14]
+  0x00007ccd13fdfd62:   mov	r8, r10
+  0x00007ccd13fdfd65:   shl	r8, 5
+  0x00007ccd13fdfd69:   mov	r14d, 0xfa00
+  0x00007ccd13fdfd6f:   xor	ebp, ebp
+  0x00007ccd13fdfd71:   test	edi, edi
+  0x00007ccd13fdfd73:   jbe	0x7ccd13fdff6e
+  0x00007ccd13fdfd79:   lea	r9d, [rdi - 1]
+  0x00007ccd13fdfd7d:   cmp	r9d, edi
+  0x00007ccd13fdfd80:   jae	0x7ccd13fe0270
+  0x00007ccd13fdfd86:   mov	r10d, dword ptr [rdx + 0x10]
+  0x00007ccd13fdfd8a:   mov	rsi, r10
+  0x00007ccd13fdfd8d:   shl	rsi, 5
+  0x00007ccd13fdfd91:   mov	r10d, dword ptr [rsi + 8]
+  0x00007ccd13fdfd95:   test	r10d, r10d
+  0x00007ccd13fdfd98:   jbe	0x7ccd13fe0270
+  0x00007ccd13fdfd9e:   cmp	r9d, r10d
+  0x00007ccd13fdfda1:   jae	0x7ccd13fe0270
+  0x00007ccd13fdfda7:   mov	r10d, dword ptr [r8 + 8]
+  0x00007ccd13fdfdab:   test	r10d, r10d
+  0x00007ccd13fdfdae:   jbe	0x7ccd13fe0270
+  0x00007ccd13fdfdb4:   cmp	r9d, r10d
+  0x00007ccd13fdfdb7:   jae	0x7ccd13fe0270
+  0x00007ccd13fdfdbd:   movsxd	r10, edi
+  0x00007ccd13fdfdc0:   cmp	edi, 5
+  0x00007ccd13fdfdc3:   mov	r9d, 5
+  0x00007ccd13fdfdc9:   cmovg	r10, r9
+  0x00007ccd13fdfdcd:   mov	r10d, r10d
+  0x00007ccd13fdfdd0:   xor	ecx, ecx
+  0x00007ccd13fdfdd2:   vmovss	xmm0, dword ptr [rsi + rcx*4 + 0xc]
+  0x00007ccd13fdfdd8:   vaddss	xmm1, xmm0, dword ptr [r11 + rcx*4 + 0xc]
+  0x00007ccd13fdfddf:   vmovss	dword ptr [r8 + rcx*4 + 0xc], xmm1
+  0x00007ccd13fdfde6:   lea	r9d, [rcx + 1]
+  0x00007ccd13fdfdea:   cmp	r9d, r10d
+  0x00007ccd13fdfded:   jge	0x7ccd13fdfdf4
+  0x00007ccd13fdfdef:   mov	ecx, r9d
+  0x00007ccd13fdfdf2:   jmp	0x7ccd13fdfdd2
+  0x00007ccd13fdfdf4:   lea	eax, [rdi - 0x3f]
+  0x00007ccd13fdfdf7:   cmp	r9d, eax
+  0x00007ccd13fdfdfa:   jge	0x7ccd13fe0294
+  0x00007ccd13fdfe00:   inc	ecx
+  0x00007ccd13fdfe02:   jmp	0x7ccd13fdfef8
+  0x00007ccd13fdfe07:   nop	word ptr [rax + rax]
+  0x00007ccd13fdfe10:   mov	ecx, r9d
+  0x00007ccd13fdfe13:   vmovups	ymm1, ymmword ptr [rsi + rcx*4 + 0xc]
+  0x00007ccd13fdfe19:   vaddps	ymm1, ymm1, ymmword ptr [r11 + rcx*4 + 0xc]
+  0x00007ccd13fdfe20:   vmovdqu	ymmword ptr [r8 + rcx*4 + 0xc], ymm1
+  0x00007ccd13fdfe27:   vmovups	ymm1, ymmword ptr [rsi + rcx*4 + 0x2c]
+  0x00007ccd13fdfe2d:   vaddps	ymm1, ymm1, ymmword ptr [r11 + rcx*4 + 0x2c]
+;   {other}
+  0x00007ccd13fdfe34:   vmovdqu	ymmword ptr [r8 + rcx*4 + 0x2c], ymm1
+  0x00007ccd13fdfe3b:   vmovups	ymm1, ymmword ptr [rsi + rcx*4 + 0x4c]
+  0x00007ccd13fdfe41:   vaddps	ymm1, ymm1, ymmword ptr [r11 + rcx*4 + 0x4c]
+  0x00007ccd13fdfe48:   vmovdqu	ymmword ptr [r8 + rcx*4 + 0x4c], ymm1
+  0x00007ccd13fdfe4f:   vmovups	ymm1, ymmword ptr [rsi + rcx*4 + 0x6c]
+  0x00007ccd13fdfe55:   vaddps	ymm1, ymm1, ymmword ptr [r11 + rcx*4 + 0x6c]
+  0x00007ccd13fdfe5c:   vmovdqu	ymmword ptr [r8 + rcx*4 + 0x6c], ymm1
+  0x00007ccd13fdfe63:   vmovups	ymm1, ymmword ptr [rsi + rcx*4 + 0x8c]
+  0x00007ccd13fdfe6c:   vaddps	ymm1, ymm1, ymmword ptr [r11 + rcx*4 + 0x8c]
+  0x00007ccd13fdfe76:   vmovdqu	ymmword ptr [r8 + rcx*4 + 0x8c], ymm1
+  0x00007ccd13fdfe80:   vmovups	ymm1, ymmword ptr [rsi + rcx*4 + 0xac]
+  0x00007ccd13fdfe89:   vaddps	ymm1, ymm1, ymmword ptr [r11 + rcx*4 + 0xac]
+  0x00007ccd13fdfe93:   vmovdqu	ymmword ptr [r8 + rcx*4 + 0xac], ymm1
+  0x00007ccd13fdfe9d:   vmovups	ymm1, ymmword ptr [rsi + rcx*4 + 0xcc]
+  0x00007ccd13fdfea6:   vaddps	ymm1, ymm1, ymmword ptr [r11 + rcx*4 + 0xcc]
+  0x00007ccd13fdfeb0:   vmovdqu	ymmword ptr [r8 + rcx*4 + 0xcc], ymm1
+  0x00007ccd13fdfeba:   vmovups	ymm1, ymmword ptr [rsi + rcx*4 + 0xec]
+  0x00007ccd13fdfec3:   vaddps	ymm1, ymm1, ymmword ptr [r11 + rcx*4 + 0xec]
+  0x00007ccd13fdfecd:   vmovdqu	ymmword ptr [r8 + rcx*4 + 0xec], ymm1
+  0x00007ccd13fdfed7:   lea	r9d, [rcx + 0x40]
+  0x00007ccd13fdfedb:   cmp	r9d, r10d
+  0x00007ccd13fdfede:   jl	0x7ccd13fdfe10
+
+; ImmutableOopMap {r11=Oop r8=Oop rdx=Oop rsi=Oop r13=Oop xmm0=Oop [72]=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+  0x00007ccd13fdfee4:   mov	r10, qword ptr [r15 + 0x30]
+
+;   {poll}
+  0x00007ccd13fdfee8:   test	dword ptr [r10], eax
+  0x00007ccd13fdfeeb:   cmp	r9d, eax
+  0x00007ccd13fdfeee:   jge	0x7ccd13fdff20
+  0x00007ccd13fdfef0:   mov	ecx, r9d
+  0x00007ccd13fdfef3:   vmovq	rbx, xmm0
+  0x00007ccd13fdfef8:   mov	r10d, edi
+  0x00007ccd13fdfefb:   sub	r10d, ecx
+  0x00007ccd13fdfefe:   add	r10d, -0x3f
+  0x00007ccd13fdff02:   cmp	eax, ecx
+  0x00007ccd13fdff04:   cmovl	r10d, ebp
+  0x00007ccd13fdff08:   cmp	r10d, 0xfa00
+  0x00007ccd13fdff0f:   cmova	r10d, r14d
+  0x00007ccd13fdff13:   add	r10d, ecx
+  0x00007ccd13fdff16:   vmovq	xmm0, rbx
+  0x00007ccd13fdff1b:   jmp	0x7ccd13fdfe13
+  0x00007ccd13fdff20:   lea	ebx, [rdi - 7]
+  0x00007ccd13fdff23:   cmp	r9d, ebx
+  0x00007ccd13fdff26:   jge	0x7ccd13fdffd7
+  0x00007ccd13fdff2c:   add	ecx, 0x40
+  0x00007ccd13fdff2f:   vmovups	ymm1, ymmword ptr [rsi + rcx*4 + 0xc]
+  0x00007ccd13fdff35:   vaddps	ymm1, ymm1, ymmword ptr [r11 + rcx*4 + 0xc]
+  0x00007ccd13fdff3c:   vmovdqu	ymmword ptr [r8 + rcx*4 + 0xc], ymm1
+  0x00007ccd13fdff43:   add	ecx, 8
+  0x00007ccd13fdff46:   cmp	ecx, ebx
+  0x00007ccd13fdff48:   jl	0x7ccd13fdff2f
+  0x00007ccd13fdff4a:   vmovq	rbx, xmm0
+  0x00007ccd13fdff4f:   cmp	ecx, edi
+  0x00007ccd13fdff51:   jge	0x7ccd13fdff6e
+  0x00007ccd13fdff53:   nop
+  0x00007ccd13fdff54:   vmovss	xmm0, dword ptr [rsi + rcx*4 + 0xc]
+  0x00007ccd13fdff5a:   vaddss	xmm1, xmm0, dword ptr [r11 + rcx*4 + 0xc]
+  0x00007ccd13fdff61:   vmovss	dword ptr [r8 + rcx*4 + 0xc], xmm1
+  0x00007ccd13fdff68:   inc	ecx
+  0x00007ccd13fdff6a:   cmp	ecx, edi
+  0x00007ccd13fdff6c:   jl	0x7ccd13fdff54
+  0x00007ccd13fdff6e:   mov	rcx, qword ptr [rsp + 0x48]
+  0x00007ccd13fdff73:   test	rcx, rcx
+  0x00007ccd13fdff76:   je	0x7ccd13fe0258
+  0x00007ccd13fdff7c:   mov	r8, r13
+  0x00007ccd13fdff7f:   movzx	r11d, byte ptr [r8 + 0x90]
+  0x00007ccd13fdff87:   mov	r13d, 1
+  0x00007ccd13fdff8d:   test	r11d, r11d
+  0x00007ccd13fdff90:   je	0x7ccd13fe0167
+  0x00007ccd13fdff96:   vzeroupper
+
+;   {runtime_call os::javaTimeNanos()}
+  0x00007ccd13fdff99:   movabs	r10, 0x7ccd2bdb5740
+  0x00007ccd13fdffa3:   call	r10
+
+;   {post_call_nop}
+  0x00007ccd13fdffa6:   nop	dword ptr [rax + rax]
+  0x00007ccd13fdffae:   mov	qword ptr [rbx + 0x28], rax
+  0x00007ccd13fdffb2:   mov	qword ptr [rbx + 0x18], r12
+  0x00007ccd13fdffb6:   vpxor	xmm0, xmm0, xmm0
+  0x00007ccd13fdffba:   vcvtsi2sd	xmm0, xmm0, r13
+  0x00007ccd13fdffbf:   vmovsd	qword ptr [rbx + 0x10], xmm0
+  0x00007ccd13fdffc4:   vzeroupper
+  0x00007ccd13fdffc7:   add	rsp, 0x30
+  0x00007ccd13fdffcb:   pop	rbp
+
+;   {poll_return}
+  0x00007ccd13fdffcc:   cmp	rsp, qword ptr [r15 + 0x28]
+  0x00007ccd13fdffd0:   ja	0x7ccd13fe02fc
+  0x00007ccd13fdffd6:   ret
+  0x00007ccd13fdffd7:   mov	ecx, r9d
+  0x00007ccd13fdffda:   jmp	0x7ccd13fdff4a
+  0x00007ccd13fdffdf:   nop
+  0x00007ccd13fdffe0:   mov	r9d, r8d
+  0x00007ccd13fdffe3:   vmovups	ymm3, ymmword ptr [rax + r9*4 + 0xc]
+  0x00007ccd13fdffea:   vaddps	ymm3, ymm3, ymmword ptr [r11 + r9*4 + 0xc]
+  0x00007ccd13fdfff1:   vmovdqu	ymmword ptr [rsi + r9*4 + 0xc], ymm3
+  0x00007ccd13fdfff8:   vmovups	ymm3, ymmword ptr [rax + r9*4 + 0x2c]
+  0x00007ccd13fdffff:   vaddps	ymm3, ymm3, ymmword ptr [r11 + r9*4 + 0x2c]
+  0x00007ccd13fe0006:   vmovdqu	ymmword ptr [rsi + r9*4 + 0x2c], ymm3
+  0x00007ccd13fe000d:   vmovups	ymm3, ymmword ptr [rax + r9*4 + 0x4c]
+  0x00007ccd13fe0014:   vaddps	ymm3, ymm3, ymmword ptr [r11 + r9*4 + 0x4c]
+  0x00007ccd13fe001b:   vmovdqu	ymmword ptr [rsi + r9*4 + 0x4c], ymm3
+  0x00007ccd13fe0022:   vmovups	ymm3, ymmword ptr [rax + r9*4 + 0x6c]
+  0x00007ccd13fe0029:   vaddps	ymm3, ymm3, ymmword ptr [r11 + r9*4 + 0x6c]
+  0x00007ccd13fe0030:   vmovdqu	ymmword ptr [rsi + r9*4 + 0x6c], ymm3
+  0x00007ccd13fe0037:   vmovups	ymm3, ymmword ptr [rax + r9*4 + 0x8c]
+  0x00007ccd13fe0041:   vaddps	ymm3, ymm3, ymmword ptr [r11 + r9*4 + 0x8c]
+  0x00007ccd13fe004b:   vmovdqu	ymmword ptr [rsi + r9*4 + 0x8c], ymm3
+  0x00007ccd13fe0055:   vmovups	ymm3, ymmword ptr [rax + r9*4 + 0xac]
+  0x00007ccd13fe005f:   vaddps	ymm3, ymm3, ymmword ptr [r11 + r9*4 + 0xac]
+  0x00007ccd13fe0069:   vmovdqu	ymmword ptr [rsi + r9*4 + 0xac], ymm3
+  0x00007ccd13fe0073:   vmovups	ymm3, ymmword ptr [rax + r9*4 + 0xcc]
+  0x00007ccd13fe007d:   vaddps	ymm3, ymm3, ymmword ptr [r11 + r9*4 + 0xcc]
+  0x00007ccd13fe0087:   vmovdqu	ymmword ptr [rsi + r9*4 + 0xcc], ymm3
+  0x00007ccd13fe0091:   vmovups	ymm3, ymmword ptr [rax + r9*4 + 0xec]
+  0x00007ccd13fe009b:   vaddps	ymm3, ymm3, ymmword ptr [r11 + r9*4 + 0xec]
+  0x00007ccd13fe00a5:   vmovdqu	ymmword ptr [rsi + r9*4 + 0xec], ymm3
+  0x00007ccd13fe00af:   lea	r8d, [r9 + 0x40]
+  0x00007ccd13fe00b3:   cmp	r8d, ebx
+  0x00007ccd13fe00b6:   jl	0x7ccd13fdffe0
+
+; ImmutableOopMap {r11=Oop rdx=Oop rsi=Oop rax=Oop xmm0=Oop xmm1=Oop xmm2=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@33 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+  0x00007ccd13fe00bc:   mov	rcx, qword ptr [r15 + 0x30]
+
+;   {poll}
+  0x00007ccd13fe00c0:   test	dword ptr [rcx], eax
+  0x00007ccd13fe00c2:   cmp	r8d, edi
+  0x00007ccd13fe00c5:   jge	0x7ccd13fe010f
+  0x00007ccd13fe00c7:   mov	r9d, r8d
+  0x00007ccd13fe00ca:   mov	ebx, r10d
+  0x00007ccd13fe00cd:   sub	ebx, r9d
+  0x00007ccd13fe00d0:   add	ebx, -0x3f
+  0x00007ccd13fe00d3:   cmp	edi, r9d
+  0x00007ccd13fe00d6:   cmovl	ebx, ebp
+  0x00007ccd13fe00d9:   cmp	ebx, 0xfa00
+  0x00007ccd13fe00df:   cmova	ebx, r14d
+  0x00007ccd13fe00e3:   add	ebx, r9d
+  0x00007ccd13fe00e6:   jmp	0x7ccd13fdffe3
+  0x00007ccd13fe00eb:   add	r9d, 0x40
+  0x00007ccd13fe00ef:   vmovups	ymm3, ymmword ptr [rax + r9*4 + 0xc]
+  0x00007ccd13fe00f6:   vaddps	ymm3, ymm3, ymmword ptr [r11 + r9*4 + 0xc]
+  0x00007ccd13fe00fd:   vmovdqu	ymmword ptr [rsi + r9*4 + 0xc], ymm3
+  0x00007ccd13fe0104:   add	r9d, 8
+  0x00007ccd13fe0108:   cmp	r9d, edi
+  0x00007ccd13fe010b:   jl	0x7ccd13fe00ef
+  0x00007ccd13fe010d:   jmp	0x7ccd13fe011b
+  0x00007ccd13fe010f:   lea	edi, [r10 - 7]
+  0x00007ccd13fe0113:   cmp	r8d, edi
+  0x00007ccd13fe0116:   jl	0x7ccd13fe00eb
+  0x00007ccd13fe0118:   mov	r9d, r8d
+  0x00007ccd13fe011b:   cmp	r9d, r10d
+  0x00007ccd13fe011e:   jge	0x7ccd13fe013d
+  0x00007ccd13fe0120:   vmovss	xmm4, dword ptr [rax + r9*4 + 0xc]
+  0x00007ccd13fe0127:   vaddss	xmm3, xmm4, dword ptr [r11 + r9*4 + 0xc]
+  0x00007ccd13fe012e:   vmovss	dword ptr [rsi + r9*4 + 0xc], xmm3
+  0x00007ccd13fe0135:   inc	r9d
+  0x00007ccd13fe0138:   cmp	r9d, r10d
+  0x00007ccd13fe013b:   jl	0x7ccd13fe0120
+  0x00007ccd13fe013d:   vmovq	rbx, xmm0
+  0x00007ccd13fe0142:   vmovq	r8, xmm1
+  0x00007ccd13fe0147:   vmovq	rcx, xmm2
+  0x00007ccd13fe014c:   movzx	r10d, byte ptr [r8 + 0x90]
+  0x00007ccd13fe0154:   mov	r11, qword ptr [r15 + 0x30]
+
+; ImmutableOopMap {r8=Oop rcx=Oop rbx=Oop rdx=Oop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@33 (line 192)
+                      ;   {poll}
+  0x00007ccd13fe0158:   inc	r13
+  0x00007ccd13fe015b:   test	dword ptr [r11], eax
+  0x00007ccd13fe015e:   test	r10d, r10d
+  0x00007ccd13fe0161:   jne	0x7ccd13fdff96
+  0x00007ccd13fe0167:   mov	r11d, dword ptr [rdx + 0xc]
+  0x00007ccd13fe016b:   shl	r11, 5
+  0x00007ccd13fe016f:   mov	r10d, dword ptr [r11 + 8]
+  0x00007ccd13fe0173:   mov	edi, dword ptr [rdx + 0x14]
+  0x00007ccd13fe0176:   mov	rsi, rdi
+  0x00007ccd13fe0179:   shl	rsi, 5
+  0x00007ccd13fe017d:   test	r10d, r10d
+  0x00007ccd13fe0180:   jbe	0x7ccd13fe014c
+  0x00007ccd13fe0182:   lea	r9d, [r10 - 1]
+  0x00007ccd13fe0186:   cmp	r9d, r10d
+  0x00007ccd13fe0189:   jae	0x7ccd13fe0206
+  0x00007ccd13fe018b:   mov	edi, dword ptr [rdx + 0x10]
+  0x00007ccd13fe018e:   mov	rax, rdi
+  0x00007ccd13fe0191:   shl	rax, 5
+  0x00007ccd13fe0195:   mov	edi, dword ptr [rax + 8]
+  0x00007ccd13fe0198:   test	edi, edi
+  0x00007ccd13fe019a:   jbe	0x7ccd13fe0206
+  0x00007ccd13fe019c:   cmp	r9d, edi
+  0x00007ccd13fe019f:   jae	0x7ccd13fe0206
+  0x00007ccd13fe01a1:   mov	edi, dword ptr [rsi + 8]
+  0x00007ccd13fe01a4:   test	edi, edi
+  0x00007ccd13fe01a6:   jbe	0x7ccd13fe0206
+  0x00007ccd13fe01a8:   cmp	r9d, edi
+  0x00007ccd13fe01ab:   jae	0x7ccd13fe0206
+  0x00007ccd13fe01ad:   movsxd	r9, r10d
+  0x00007ccd13fe01b0:   cmp	r10d, 5
+  0x00007ccd13fe01b4:   mov	edi, 5
+  0x00007ccd13fe01b9:   cmovg	r9, rdi
+  0x00007ccd13fe01bd:   mov	edi, r9d
+  0x00007ccd13fe01c0:   xor	r9d, r9d
+  0x00007ccd13fe01c3:   vmovq	xmm0, rbx
+  0x00007ccd13fe01c8:   vmovq	xmm1, r8
+  0x00007ccd13fe01cd:   vmovq	xmm2, rcx
+  0x00007ccd13fe01d2:   vmovss	xmm4, dword ptr [rax + r9*4 + 0xc]
+  0x00007ccd13fe01d9:   vaddss	xmm3, xmm4, dword ptr [r11 + r9*4 + 0xc]
+  0x00007ccd13fe01e0:   vmovss	dword ptr [rsi + r9*4 + 0xc], xmm3
+  0x00007ccd13fe01e7:   lea	r8d, [r9 + 1]
+  0x00007ccd13fe01eb:   cmp	r8d, edi
+  0x00007ccd13fe01ee:   jge	0x7ccd13fe01f5
+  0x00007ccd13fe01f0:   mov	r9d, r8d
+  0x00007ccd13fe01f3:   jmp	0x7ccd13fe01d2
+  0x00007ccd13fe01f5:   lea	edi, [r10 - 0x3f]
+  0x00007ccd13fe01f9:   cmp	r8d, edi
+  0x00007ccd13fe01fc:   jge	0x7ccd13fe0238
+  0x00007ccd13fe01fe:   inc	r9d
+  0x00007ccd13fe0201:   jmp	0x7ccd13fe00ca
+  0x00007ccd13fe0206:   mov	esi, 0xffffff6e
+  0x00007ccd13fe020b:   mov	rbp, r8
+  0x00007ccd13fe020e:   mov	qword ptr [rsp + 0x40], rbx
+  0x00007ccd13fe0213:   mov	qword ptr [rsp], r13
+  0x00007ccd13fe0217:   mov	qword ptr [rsp + 8], rcx
+  0x00007ccd13fe021c:   mov	qword ptr [rsp + 0x10], rdx
+  0x00007ccd13fe0221:   mov	dword ptr [rsp + 0x18], r10d
+  0x00007ccd13fe0226:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fe0228:   vzeroupper
+  0x00007ccd13fe022b:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop [8]=Oop [16]=Oop [64]=Oop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@8 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fe0230:   nop	dword ptr [rax + rax + 0x3000628]
+  0x00007ccd13fe0238:   mov	r9d, r8d
+  0x00007ccd13fe023b:   jmp	0x7ccd13fe011b
+  0x00007ccd13fe0240:   mov	esi, 0xfffffff6
+  0x00007ccd13fe0245:   mov	rbp, rax
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fe0248:   vzeroupper
+  0x00007ccd13fe024b:   call	0x7ccd139828e0
+
+; ImmutableOopMap {}
+                      ;*putfield startTime {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@10 (line 188)
+
+;   {post_call_nop}
+  0x00007ccd13fe0250:   nop	dword ptr [rax + rax + 0x4000648]
+  0x00007ccd13fe0258:   mov	esi, 0xfffffff6
+  0x00007ccd13fe025d:   mov	rbp, r8
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fe0260:   vzeroupper
+  0x00007ccd13fe0263:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop }
+                      ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@20 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fe0268:   nop	dword ptr [rax + rax + 0x5000660]
+  0x00007ccd13fe0270:   mov	esi, 0xffffff6e
+  0x00007ccd13fe0275:   mov	rbp, r13
+  0x00007ccd13fe0278:   mov	qword ptr [rsp + 0x40], rbx
+  0x00007ccd13fe027d:   mov	dword ptr [rsp + 0x10], edi
+  0x00007ccd13fe0281:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fe0284:   vzeroupper
+  0x00007ccd13fe0287:   call	0x7ccd139828e0
+
+; ImmutableOopMap {rbp=Oop [64]=Oop [72]=Oop [80]=Oop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.AddBenchmark::scalar@8 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fe028c:   nop	dword ptr [rax + rax + 0x6000684]
+  0x00007ccd13fe0294:   mov	ecx, r9d
+  0x00007ccd13fe0297:   jmp	0x7ccd13fdff4f
+  0x00007ccd13fe029c:   mov	esi, 0xfffffff6
+  0x00007ccd13fe02a1:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fe02a4:   vzeroupper
+  0x00007ccd13fe02a7:   call	0x7ccd139828e0
+
+; ImmutableOopMap {}
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@7 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fe02ac:   nop	dword ptr [rax + rax + 0x70006a4]
+  0x00007ccd13fe02b4:   mov	esi, 0xfffffff6
+  0x00007ccd13fe02b9:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fe02bc:   vzeroupper
+  0x00007ccd13fe02bf:   call	0x7ccd139828e0
+
+; ImmutableOopMap {}
+                      ;*invokevirtual scalar {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fe02c4:   nop	dword ptr [rax + rax + 0x80006bc]
+  0x00007ccd13fe02cc:   mov	esi, 0xfffffff6
+  0x00007ccd13fe02d1:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fe02d4:   vzeroupper
+  0x00007ccd13fe02d7:   call	0x7ccd139828e0
+
+; ImmutableOopMap {}
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - eu.happycoders.vector.benchmarks.AddBenchmark::scalar@7 (line 40)
+                      ; - eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@17 (line 190)
+
+;   {post_call_nop}
+  0x00007ccd13fe02dc:   nop	dword ptr [rax + rax + 0x90006d4]
+  0x00007ccd13fe02e4:   mov	esi, 0xfffffff6
+  0x00007ccd13fe02e9:   nop
+
+;   {runtime_call UncommonTrapBlob}
+  0x00007ccd13fe02ec:   vzeroupper
+  0x00007ccd13fe02ef:   call	0x7ccd139828e0
+
+; ImmutableOopMap {}
+                      ;*getfield isDone {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub@30 (line 192)
+
+;   {post_call_nop}
+  0x00007ccd13fe02f4:   nop	dword ptr [rax + rax + 0xa0006ec]
+
+;   {internal_word}
+  0x00007ccd13fe02fc:   movabs	r10, 0x7ccd13fdffcc
+  0x00007ccd13fe0306:   mov	qword ptr [r15 + 0x510], r10
+
+;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00007ccd13fe030d:   jmp	0x7ccd138acbe0
+
+;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00007ccd13fe0312:   call	0x7ccd13891a20
+  0x00007ccd13fe0317:   jmp	0x7ccd13fdfd1a
+  0x00007ccd13fe031c:   hlt
+  0x00007ccd13fe031d:   hlt
+  0x00007ccd13fe031e:   hlt
+  0x00007ccd13fe031f:   hlt
+[Stub Code]
+;   {runtime_call DeoptimizationBlob}
+  0x00007ccd13fe0320:   call	0x7ccd138acee0
+  0x00007ccd13fe0325:   jmp	0x7ccd13fe0320
+  0x00007ccd13fe0327:   hlt
+[/Disassembly]
+34.005 ns/op
+Iteration   1: 32.031 ns/op
+------------------------------------------------------------------------
+eu.happycoders.vector.benchmarks.AddBenchmark::scalar()[F
+  interpreter_invocation_count:        5437
+  invocation_counter:                  5437
+  backedge_counter:                 5437208
+  decompile_count:                        0
+  mdo size: 248 bytes
+
+   0 iconst_0
+   1 istore_1
+   2 iload_1
+   3 fast_aaccess_0
+   4 fast_agetfield 19 <eu/happycoders/vector/benchmarks/AddBenchmark.a:[F> 
+   7 arraylength
+   8 if_icmpge 36
+  0    bci: 8    BranchData         taken(5374) displacement(56)
+                                    not taken(5374000)
+  11 fast_aaccess_0
+  12 fast_agetfield 28 <eu/happycoders/vector/benchmarks/AddBenchmark.c:[F> 
+  15 iload_1
+  16 fast_aaccess_0
+  17 fast_agetfield 19 <eu/happycoders/vector/benchmarks/AddBenchmark.a:[F> 
+  20 iload_1
+  21 faload
+  22 fast_aaccess_0
+  23 fast_agetfield 25 <eu/happycoders/vector/benchmarks/AddBenchmark.b:[F> 
+  26 iload_1
+  27 faload
+  28 fadd
+  29 fastore
+  30 iinc #1 1
+  33 goto 2
+  32   bci: 33   JumpData           taken(5374000) displacement(-32)
+  36 fast_aaccess_0
+  37 fast_agetfield 28 <eu/happycoders/vector/benchmarks/AddBenchmark.c:[F> 
+  40 areturn
+------------------------------------------------------------------------
+static eu.happycoders.vector.benchmarks.jmh_generated.AddBenchmark_scalar_jmhTest::scalar_avgt_jmhStub(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILeu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType;)V
+  interpreter_invocation_count:           3
+  invocation_counter:                     3
+  backedge_counter:                  488863
+  decompile_count:                        1
+  mdo size: 456 bytes
+
+   0 lconst_0
+   1 lstore #9
+   3 lconst_0
+   4 lstore #11
+   6 aload_1
+   7 invokestatic 175 <java/lang/System.nanoTime()J> 
+  0    bci: 7    CounterData        count(2)
+  10 fast_lputfield 180 <org/openjdk/jmh/results/RawResults.startTime:J> 
+  13 aload #5
+  15 aload #8
+  17 invokevirtual 64 <eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType.scalar()[F> 
+  16   bci: 17   VirtualCallData    count(0) entries(1)
+                                    'eu/happycoders/vector/benchmarks/jmh_generated/AddBenchmark_jmhType'(424958 1.00)
+  20 invokevirtual 70 <org/openjdk/jmh/infra/Blackhole.consume(Ljava/lang/Object;)V> 
+  64   bci: 20   VirtualCallData    count(8190) entries(1)
+                                    'org/openjdk/jmh/infra/Blackhole'(416768 0.98)
+  23 lload #9
+  25 lconst_1
+  26 ladd
+  27 lstore #9
+  29 fast_aload_0
+  30 fast_bgetfield 184 <org/openjdk/jmh/runner/InfraControl.isDone:Z> 
+  33 ifeq 13
+  112  bci: 33   BranchData         trap(intrinsic recompiled) taken(424958) displacement(-96)
+                                    not taken(1)
+  36 aload_1
+  37 invokestatic 175 <java/lang/System.nanoTime()J> 
+  144  bci: 37   CounterData        count(1)
+  40 fast_lputfield 187 <org/openjdk/jmh/results/RawResults.stopTime:J> 
+  43 aload_1
+  44 lload #11
+  46 fast_lputfield 190 <org/openjdk/jmh/results/RawResults.realTime:J> 
+  49 aload_1
+  50 lload #9
+  52 l2d
+  53 fast_dputfield 123 <org/openjdk/jmh/results/RawResults.measuredOps:D> 
+  56 return
+------------------------------------------------------------------------
+Total MDO size: 704 bytes
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.scalar":
+  32.031 ns/op
+
+
+# Run complete. Total time: 00:00:04
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark            (size)  Mode  Cnt   Score   Error  Units
+AddBenchmark.scalar    1000  avgt       32.031          ns/op
