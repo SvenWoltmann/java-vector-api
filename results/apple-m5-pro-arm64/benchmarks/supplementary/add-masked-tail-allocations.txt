@@ -1,0 +1,10 @@
+# Allocation samples of AddBenchmark.vectorMasked with 1,003 elements
+# JDK 27+35, Apple M5 Pro, recorded 2026-11-15 with:
+#   $JMH 'AddBenchmark\.vectorMasked$' -p size=1003 -f 1 -wi 3 -i 2 -jvmArgsAppend "-XX:StartFlightRecording:filename=masked.jfr,settings=profile"
+#   jfr print --events jdk.ObjectAllocationSample --stack-depth 8 masked.jfr
+# Samples per allocated class and the top four frames of its stack:
+323 float[]  <-  FloatVector.lanewiseTemplate:808 <- FloatVector128.lanewise:290 <- FloatVector128.lanewise:42 <- FloatVector.add:1268
+301 jdk.incubator.vector.FloatVector128  <-  FloatVector.fromArray0Template:3368 <- FloatVector128.fromArray0:948 <- FloatVector.fromArray:2895 <- AddBenchmark.vectorMasked:72
+300 float[]  <-  FloatVector.fromArray0Template:3368 <- FloatVector128.fromArray0:948 <- FloatVector.fromArray:2895 <- AddBenchmark.vectorMasked:73
+281 float[]  <-  FloatVector.fromArray0Template:3368 <- FloatVector128.fromArray0:948 <- FloatVector.fromArray:2895 <- AddBenchmark.vectorMasked:72
+270 jdk.incubator.vector.FloatVector128  <-  FloatVector.lanewiseTemplate:808 <- FloatVector128.lanewise:290 <- FloatVector128.lanewise:42 <- FloatVector.add:1268

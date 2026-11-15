@@ -7,6 +7,7 @@ Run on 2026-11-15 right after the main run in `../results.json`, on the same mac
 | `dot-product-four-accumulators` | `DotProductBenchmark.vectorFourAccumulators`, added after the main run: the dot product with four independent vectors of sums instead of one |
 | `add-masked-tail` | `AddBenchmark.vector` and `vectorMasked` with 1,003 and 100,003 elements, where the last iteration needs a partial mask (all sizes of the main run except 7 are multiples of the four lanes), with the GC profiler |
 | `dot-product-dependency-chains` | All variants of `DotProductBenchmark` in one run, including `scalarFourSums` (the scalar loop with four independent sums) and `vectorEightAccumulators`. The latter allocates one vector object per `fma()` – about 10.8 KB per call for 1,000 elements – and was removed afterwards because it measures that, not the dependency chain |
+| `add-masked-tail-allocations.txt` | Where `vectorMasked` with 1,003 elements allocates: Java Flight Recorder allocation samples, grouped by class and stack. The objects come from `fromArray()` on the in-range path (`FloatVector.java` line 2895 in JDK 27), i.e. also in the iterations with a full mask, and from `add()` |
 | `add-16-byte-aligned-arrays` | `AddBenchmark.scalar` and `vector` with `-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=16`, which puts the first element of every array on a 16-byte boundary |
 
 Commands, run from the repository root after `scripts/run-benchmarks.sh` had built the benchmarks:
