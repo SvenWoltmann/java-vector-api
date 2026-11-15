@@ -33,3 +33,15 @@ java --add-modules jdk.incubator.vector -cp 'benchmarks/target/classes:benchmark
 | `AddBenchmark-scalar-12-byte-offset.txt` | `-XX:ObjectAlignmentInBytes=32` (compact object headers, the default) | 12 bytes after a 32-byte boundary |
 
 In both, C2 puts a scalar pre-loop (`vmovss`/`vaddss`/`vmovss`) in front of the eight-fold unrolled vector loop, and its limit is a constant: `min(length, 4)` with the 16-byte offset and `min(length, 5)` with the 12-byte offset. Since the objects are 32-byte aligned, C2 knows the address of the first element modulo 32 at compile time and chooses the number of scalar iterations that puts the vector stores on 32-byte boundaries (`SuperWordAutomaticAlignment = 1`, align with the store). This is what `AddAlignmentBenchmark.vectorAfterHead` does by hand with `head` = 4, and it explains why the auto-vectorized loop does not depend on where the arrays lie; see `../../benchmarks/supplementary/add-alignment-sweep.txt` and `add-scalar-12-byte-offset.txt`.
+
+## AddAlignmentBenchmark.vectorAfterHead with head = 4
+
+`AddAlignmentBenchmark-vectorAfterHead-head-4.txt` shows the code for the Vector API loop with all vector accesses on 32-byte boundaries, to find out why it stays about 10 % slower than the auto-vectorized scalar loop with 1,000 elements (36.0 against 32.4 to 32.6 ns/op):
+
+```
+java --add-modules jdk.incubator.vector -cp 'benchmarks/target/classes:benchmarks/target/lib/*' \
+  org.openjdk.jmh.Main 'AddAlignmentBenchmark\.vectorAfterHead$' -p size=1000 -p head=4 -f 1 -wi 3 -i 1 \
+  -jvmArgsAppend "-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=32 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:CompileCommand=print,*AddAlignmentBenchmark*::vectorAfterHead*"
+```
+
+The main loop is the same as in `AddBenchmark-scalar-16-byte-offset.txt`: eight-fold unrolled, `vmovups`/`vaddps`/`vmovdqu` per vector, plus one `mov` per iteration. The difference lies around it. C2 auto-vectorizes the head loop, whose length `head` is not a constant, into its own scalar pre-loop, 128-bit main loop and post-loop; it checks the bounds of all three arrays before the vector loop (about 40 instructions); and it peels one single-vector iteration off the vector loop before the unrolled part. This is fixed work per call, which matches the gap shrinking into the noise with 100,000 elements. How many of the 3.5 ns each part costs was not measured.
