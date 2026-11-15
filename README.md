@@ -1,5 +1,10 @@
 # Java Vector API
 
+[![Build](https://github.com/SvenWoltmann/java-vector-api/actions/workflows/build.yml/badge.svg)](https://github.com/SvenWoltmann/java-vector-api/actions/workflows/build.yml)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=SvenWoltmann_java-vector-api&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=SvenWoltmann_java-vector-api)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=SvenWoltmann_java-vector-api&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=SvenWoltmann_java-vector-api)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=SvenWoltmann_java-vector-api&metric=security_rating)](https://sonarcloud.io/dashboard?id=SvenWoltmann_java-vector-api)
+
 Example code and JMH benchmarks for the upcoming HappyCoders.eu article on the Java Vector API – the incubator module `jdk.incubator.vector`, which lets Java code use the SIMD instructions of modern CPUs. The article link follows once it is published.
 
 ## Requirements
