@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Builds the JMH benchmarks in benchmarks/ and runs all of them with the given
 # JDK. Results go to results/<machine-id>/benchmarks/results.json, the console
-# log next to it. Takes about 30 minutes (9 methods, 5 sizes,
+# log next to it. Takes about 25 minutes (10 methods, 5 sizes,
 # 3 forks of 10 seconds each); run it only on an otherwise idle machine,
 # on mains power.
 # Usage: scripts/run-benchmarks.sh <path-to-jdk-27> <machine-id> [JMH options...]

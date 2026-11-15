@@ -35,7 +35,7 @@ Many outputs depend on your CPU: the preferred vector size is 128 bits on ARM NE
 
 ## Benchmarks
 
-`benchmarks/` is a Maven project of its own with three JMH benchmarks – adding two arrays (scalar with and without auto-vectorization, Vector API with tail loop and with mask), searching a byte, and the dot product (scalar, with one and with four vectors of sums) – each for five array sizes. `scripts/run-benchmarks.sh <path-to-jdk-27> <machine-id>` builds and runs them and writes the results to `results/<machine-id>/benchmarks/`. A full run takes about 30 minutes; run it only on an otherwise idle machine. `results/apple-m5-pro-arm64/benchmarks/supplementary/` holds three shorter runs that explain results of the main run, with their commands.
+`benchmarks/` is a Maven project of its own with three JMH benchmarks – adding two arrays (scalar with and without auto-vectorization, Vector API with tail loop and with mask), searching a byte, and the dot product (scalar with one and with four sums, Vector API with one and with four vectors of sums) – each for five array sizes. `scripts/run-benchmarks.sh <path-to-jdk-27> <machine-id>` builds and runs them and writes the results to `results/<machine-id>/benchmarks/`. A full run takes about 25 minutes; run it only on an otherwise idle machine. `results/apple-m5-pro-arm64/benchmarks/supplementary/` holds four shorter runs that explain results of the main run, with their commands.
 
 
 <!-- happycoders-resources:start -->
