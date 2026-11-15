@@ -1,0 +1,4 @@
+Lines:          3
+First 'J' at:   41
+Expected:       41
+First '#' at:   -1

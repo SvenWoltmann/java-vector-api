@@ -1,0 +1,4 @@
+openjdk version "27" 2026-09-15
+OpenJDK Runtime Environment (build 27+35-2325)
+OpenJDK 64-Bit Server VM (build 27+35-2325, mixed mode, sharing)
+os.arch: x86_64

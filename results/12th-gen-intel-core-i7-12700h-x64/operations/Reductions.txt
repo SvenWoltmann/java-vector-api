@@ -1,0 +1,4 @@
+Lane sums:   [11, -8, 16, 14]
+Lane maxima: [8, -1, 12, 9]
+Sum: 41, maximum: 12
+Positive sum of [3, -7, 12, 5]: 20

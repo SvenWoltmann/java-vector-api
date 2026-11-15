@@ -1,0 +1,7 @@
+$ grep -o -w -E 'avx2|avx512f|avx512bw|avx512vl' /proc/cpuinfo | sort | uniq -c
+     20 avx2
+
+$ $JDK/bin/java -XX:+PrintFlagsFinal -version | grep -E ' UseAVX | UseSSE | MaxVectorSize '
+     intx MaxVectorSize                            = 32                                     {C2 product} {default}
+      int UseAVX                                   = 2                                    {ARCH product} {default}
+      int UseSSE                                   = 4                                    {ARCH product} {default}

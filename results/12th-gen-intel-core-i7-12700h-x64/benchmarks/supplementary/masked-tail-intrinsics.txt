@@ -1,0 +1,1 @@
+      1   ** missing constant: opr=RShiftI vclass=ConP etype=ConI vlen=ConI

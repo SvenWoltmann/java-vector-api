@@ -1,0 +1,7 @@
+byte: 256 bits, 32 lanes
+short: 256 bits, 16 lanes
+int: 256 bits, 8 lanes
+long: 256 bits, 4 lanes
+float: 256 bits, 8 lanes
+double: 256 bits, 4 lanes
+Largest shape: 256 bits
