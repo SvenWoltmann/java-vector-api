@@ -3,7 +3,8 @@
 # JDK. Results go to results/<machine-id>/benchmarks/results.json, the console
 # log next to it. Takes about 28 minutes (11 methods, 5 sizes,
 # 3 forks of 10 seconds each); run it only on an otherwise idle machine,
-# on mains power.
+# on mains power. AddAlignmentBenchmark is left out: it only means something
+# with the alignment flags described in its Javadoc.
 # Usage: scripts/run-benchmarks.sh <path-to-jdk-27> <machine-id> [JMH options...]
 set -euo pipefail
 
@@ -22,5 +23,5 @@ mkdir -p "$OUT"
 
 "$JDK/bin/java" --add-modules jdk.incubator.vector \
   -cp "$ROOT/benchmarks/target/classes:$ROOT/benchmarks/target/lib/*" \
-  org.openjdk.jmh.Main -rf json -rff "$OUT/results.json" "$@" \
+  org.openjdk.jmh.Main -rf json -rff "$OUT/results.json" -e AddAlignmentBenchmark "$@" \
   2>&1 | tee "$OUT/console.txt"
