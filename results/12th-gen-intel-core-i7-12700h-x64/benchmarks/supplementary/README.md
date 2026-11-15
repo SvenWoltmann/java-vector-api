@@ -13,6 +13,7 @@ The machine is a laptop with a 12th Gen Intel Core i7-12700H (AVX2, no AVX-512, 
 | `add-masked-tail-variants` | `AddBenchmark.vector`, `vectorMasked` and `vectorMaskedTail` with 7, 1,000, 1,003 and 100,003 elements. `vectorMaskedTail` was added to `AddBenchmark` after the other runs: an unmasked main loop up to `loopBound()` and a single masked iteration for the remaining elements, to see whether a mask is still worth it for the tail on a CPU without mask registers |
 | `add-masked-tail-epsilon-gc` | `AddBenchmark.vector` and `vectorMaskedTail` with 100,003 elements under Epsilon GC (no collection, so the arrays stay where `setUp()` put them), because `vectorMaskedTail` was about 30 % slower than `vector` at this size although the disassembled main loops are practically identical (same eight-fold unrolled loop, one extra `lea`/`mov`). The gap remains (10,684 vs. 13,869 ns/op), so arrays moved by the GC are not the cause |
 | `add-masked-tail-with-and-without-tail` | `AddBenchmark.vector` and `vectorMaskedTail` with 100,000, 100,003 and 100,008 elements. Without a tail (100,000 and 100,008), both are equally fast; only with the masked tail (100,003) is `vectorMaskedTail` consistently slower, in all forks of all four runs at this size (13.0 to 14.0 µs). A single masked iteration should cost nanoseconds, not about 3 µs; the cause could not be determined, since WSL2 exposes no hardware performance counters |
+| `add-alignment-sweep` | `AddAlignmentBenchmark.vectorAfterHead` with `head` = 0 to 7 and `AddBenchmark.scalar`, with 1,000 and 100,000 elements, with `-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=32`. With these flags, every float array starts 16 bytes after a 32-byte boundary, and `vectorAfterHead` starts the vector loop only after `head` scalar elements, which shifts all vector accesses by `head` × 4 bytes; `head` = 4 puts them on 32-byte boundaries, the width of the AVX2 vectors |
 
 `vectorMasked` was about three times slower than `vector` with 1,003 elements, so a short diagnostic run with `-XX:+PrintIntrinsics` followed; `masked-tail-intrinsics.txt` holds the lines of intrinsics C2 could not inline (marked `**`), with their counts.
 
@@ -30,6 +31,8 @@ $JMH -rff add-masked-tail-variants.json 'AddBenchmark\.(vector|vectorMasked|vect
 $JMH -rff add-masked-tail-epsilon-gc.json 'AddBenchmark\.(vector|vectorMaskedTail)$' -p size=100003 \
   -jvmArgsAppend "-XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xms12g -Xmx12g -XX:+AlwaysPreTouch"
 $JMH -rff add-masked-tail-with-and-without-tail.json 'AddBenchmark\.(vector|vectorMaskedTail)$' -p size=100000,100003,100008
+$JMH -rff add-alignment-sweep.json 'AddAlignmentBenchmark\.|AddBenchmark\.scalar$' -p size=1000,100000 \
+  -jvmArgsAppend "-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=32"
 
 $JMH 'AddBenchmark\.vectorMasked$' -p size=1003 -f 1 -wi 3 -i 1 \
   -jvmArgsAppend "-XX:+UnlockDiagnosticVMOptions -XX:+PrintIntrinsics" 2>&1 \
