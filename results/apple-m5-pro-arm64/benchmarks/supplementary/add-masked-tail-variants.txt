@@ -1,0 +1,1960 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 7)
+
+# Run progress: 0,00% complete, ETA 00:06:00
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3,023 ns/op
+# Warmup Iteration   2: 2,964 ns/op
+# Warmup Iteration   3: 2,896 ns/op
+# Warmup Iteration   4: 2,933 ns/op
+# Warmup Iteration   5: 2,895 ns/op
+Iteration   1: 2,888 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 2,895 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 2,892 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 2,892 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 2,895 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 2,78% complete, ETA 00:05:56
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3,016 ns/op
+# Warmup Iteration   2: 2,960 ns/op
+# Warmup Iteration   3: 2,918 ns/op
+# Warmup Iteration   4: 2,907 ns/op
+# Warmup Iteration   5: 3,105 ns/op
+Iteration   1: 2,912 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 2,913 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 2,893 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 2,907 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 2,911 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 5,56% complete, ETA 00:05:46
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3,042 ns/op
+# Warmup Iteration   2: 3,006 ns/op
+# Warmup Iteration   3: 2,905 ns/op
+# Warmup Iteration   4: 2,897 ns/op
+# Warmup Iteration   5: 2,909 ns/op
+Iteration   1: 2,906 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 2,900 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 2,920 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 2,917 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 2,904 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁵ B/op
+                 gc.count:           ≈ 0 counts
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  2,903 ±(99.9%) 0,011 ns/op [Average]
+  (min, avg, max) = (2,888, 2,903, 2,920), stdev = 0,010
+  CI (99.9%): [2,892, 2,914] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.alloc.rate":
+  0,006 ±(99.9%) 0,001 MB/sec [Average]
+  (min, avg, max) = (0,006, 0,006, 0,006), stdev = 0,001
+  CI (99.9%): [0,006, 0,006] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.alloc.rate.norm":
+  ≈ 10⁻⁵ B/op
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 1000)
+
+# Run progress: 8,33% complete, ETA 00:05:35
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 53,568 ns/op
+# Warmup Iteration   2: 52,245 ns/op
+# Warmup Iteration   3: 53,330 ns/op
+# Warmup Iteration   4: 52,673 ns/op
+# Warmup Iteration   5: 52,383 ns/op
+Iteration   1: 52,430 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 52,567 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 52,437 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 52,396 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 52,560 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 11,11% complete, ETA 00:05:25
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 60,562 ns/op
+# Warmup Iteration   2: 59,073 ns/op
+# Warmup Iteration   3: 59,750 ns/op
+# Warmup Iteration   4: 59,511 ns/op
+# Warmup Iteration   5: 59,599 ns/op
+Iteration   1: 59,709 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 59,436 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 59,567 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 59,765 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 59,509 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 13,89% complete, ETA 00:05:15
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 51,348 ns/op
+# Warmup Iteration   2: 50,352 ns/op
+# Warmup Iteration   3: 50,334 ns/op
+# Warmup Iteration   4: 50,655 ns/op
+# Warmup Iteration   5: 50,656 ns/op
+Iteration   1: 50,410 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 50,616 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 50,721 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 50,350 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 50,704 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  54,212 ±(99.9%) 4,304 ns/op [Average]
+  (min, avg, max) = (50,350, 54,212, 59,765), stdev = 4,026
+  CI (99.9%): [49,908, 58,516] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.alloc.rate":
+  0,006 ±(99.9%) 0,001 MB/sec [Average]
+  (min, avg, max) = (0,006, 0,006, 0,006), stdev = 0,001
+  CI (99.9%): [0,006, 0,006] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.alloc.rate.norm":
+  ≈ 10⁻³ B/op
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 1003)
+
+# Run progress: 16,67% complete, ETA 00:05:05
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 58,500 ns/op
+# Warmup Iteration   2: 56,871 ns/op
+# Warmup Iteration   3: 57,599 ns/op
+# Warmup Iteration   4: 57,597 ns/op
+# Warmup Iteration   5: 57,254 ns/op
+Iteration   1: 57,669 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 57,574 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 57,131 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 57,569 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 57,604 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 19,44% complete, ETA 00:04:55
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 49,940 ns/op
+# Warmup Iteration   2: 49,205 ns/op
+# Warmup Iteration   3: 49,273 ns/op
+# Warmup Iteration   4: 49,056 ns/op
+# Warmup Iteration   5: 49,355 ns/op
+Iteration   1: 49,263 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 49,017 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 49,333 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 49,378 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 49,072 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 22,22% complete, ETA 00:04:44
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 57,637 ns/op
+# Warmup Iteration   2: 56,382 ns/op
+# Warmup Iteration   3: 56,514 ns/op
+# Warmup Iteration   4: 56,744 ns/op
+# Warmup Iteration   5: 56,647 ns/op
+Iteration   1: 56,505 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 57,014 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 56,700 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 56,471 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 56,950 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  54,483 ±(99.9%) 4,145 ns/op [Average]
+  (min, avg, max) = (49,017, 54,483, 57,669), stdev = 3,877
+  CI (99.9%): [50,339, 58,628] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.alloc.rate":
+  0,006 ±(99.9%) 0,001 MB/sec [Average]
+  (min, avg, max) = (0,006, 0,006, 0,006), stdev = 0,001
+  CI (99.9%): [0,006, 0,006] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.alloc.rate.norm":
+  ≈ 10⁻³ B/op
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 100003)
+
+# Run progress: 25,00% complete, ETA 00:04:34
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11151,593 ns/op
+# Warmup Iteration   2: 10990,447 ns/op
+# Warmup Iteration   3: 10909,612 ns/op
+# Warmup Iteration   4: 10856,911 ns/op
+# Warmup Iteration   5: 10887,570 ns/op
+Iteration   1: 10896,447 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 10863,614 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 10861,836 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 10906,941 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 10863,141 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 27,78% complete, ETA 00:04:24
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11146,313 ns/op
+# Warmup Iteration   2: 10842,350 ns/op
+# Warmup Iteration   3: 10835,458 ns/op
+# Warmup Iteration   4: 10856,978 ns/op
+# Warmup Iteration   5: 10874,305 ns/op
+Iteration   1: 10829,851 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,068 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 10843,565 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 10885,572 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 10826,253 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,068 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 10849,327 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 30,56% complete, ETA 00:04:14
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11195,882 ns/op
+# Warmup Iteration   2: 10813,556 ns/op
+# Warmup Iteration   3: 10882,426 ns/op
+# Warmup Iteration   4: 10900,763 ns/op
+# Warmup Iteration   5: 10829,581 ns/op
+Iteration   1: 10872,756 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 10901,805 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 10822,431 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 10895,239 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 10904,639 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,069 B/op
+                 gc.count:           ≈ 0 counts
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  10868,228 ±(99.9%) 31,539 ns/op [Average]
+  (min, avg, max) = (10822,431, 10868,228, 10906,941), stdev = 29,502
+  CI (99.9%): [10836,689, 10899,767] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.alloc.rate":
+  0,006 ±(99.9%) 0,001 MB/sec [Average]
+  (min, avg, max) = (0,006, 0,006, 0,006), stdev = 0,001
+  CI (99.9%): [0,006, 0,006] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.alloc.rate.norm":
+  0,069 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (0,068, 0,069, 0,069), stdev = 0,001
+  CI (99.9%): [0,069, 0,069] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vector:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 7)
+
+# Run progress: 33,33% complete, ETA 00:04:04
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 58,381 ns/op
+# Warmup Iteration   2: 45,304 ns/op
+# Warmup Iteration   3: 45,422 ns/op
+# Warmup Iteration   4: 45,164 ns/op
+# Warmup Iteration   5: 45,424 ns/op
+Iteration   1: 45,394 ns/op
+                 gc.alloc.rate:      7730,411 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   2: 45,036 ns/op
+                 gc.alloc.rate:      7791,778 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   3: 45,485 ns/op
+                 gc.alloc.rate:      7714,862 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            5,000 ms
+
+Iteration   4: 45,413 ns/op
+                 gc.alloc.rate:      7727,111 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           9,000 counts
+                 gc.time:            5,000 ms
+
+Iteration   5: 45,017 ns/op
+                 gc.alloc.rate:      7795,062 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            4,000 ms
+
+
+# Run progress: 36,11% complete, ETA 00:03:53
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 59,212 ns/op
+# Warmup Iteration   2: 45,512 ns/op
+# Warmup Iteration   3: 45,335 ns/op
+# Warmup Iteration   4: 45,624 ns/op
+# Warmup Iteration   5: 45,634 ns/op
+Iteration   1: 45,351 ns/op
+                 gc.alloc.rate:      7737,618 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   2: 45,575 ns/op
+                 gc.alloc.rate:      7699,698 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   3: 45,662 ns/op
+                 gc.alloc.rate:      7684,901 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            5,000 ms
+
+Iteration   4: 45,279 ns/op
+                 gc.alloc.rate:      7749,970 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   5: 45,620 ns/op
+                 gc.alloc.rate:      7692,161 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            5,000 ms
+
+
+# Run progress: 38,89% complete, ETA 00:03:43
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 59,405 ns/op
+# Warmup Iteration   2: 45,463 ns/op
+# Warmup Iteration   3: 45,967 ns/op
+# Warmup Iteration   4: 45,840 ns/op
+# Warmup Iteration   5: 45,778 ns/op
+Iteration   1: 46,135 ns/op
+                 gc.alloc.rate:      7606,121 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            5,000 ms
+
+Iteration   2: 45,960 ns/op
+                 gc.alloc.rate:      7635,168 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   3: 45,690 ns/op
+                 gc.alloc.rate:      7680,206 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   4: 45,985 ns/op
+                 gc.alloc.rate:      7627,313 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           9,000 counts
+                 gc.time:            5,000 ms
+
+Iteration   5: 45,702 ns/op
+                 gc.alloc.rate:      7678,246 MB/sec
+                 gc.alloc.rate.norm: 368,000 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            5,000 ms
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  45,554 ±(99.9%) 0,346 ns/op [Average]
+  (min, avg, max) = (45,017, 45,554, 46,135), stdev = 0,324
+  CI (99.9%): [45,207, 45,900] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.alloc.rate":
+  7703,375 ±(99.9%) 58,928 MB/sec [Average]
+  (min, avg, max) = (7606,121, 7703,375, 7795,062), stdev = 55,121
+  CI (99.9%): [7644,447, 7762,303] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.alloc.rate.norm":
+  368,000 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (368,000, 368,000, 368,000), stdev = 0,001
+  CI (99.9%): [368,000, 368,000] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.count":
+  119,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (7,000, 7,933, 9,000), stdev = 0,594
+  CI (99.9%): [119,000, 119,000] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.time":
+  67,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (4,000, 4,467, 5,000), stdev = 0,516
+  CI (99.9%): [67,000, 67,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 1000)
+
+# Run progress: 41,67% complete, ETA 00:03:33
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 88,782 ns/op
+# Warmup Iteration   2: 85,418 ns/op
+# Warmup Iteration   3: 84,983 ns/op
+# Warmup Iteration   4: 85,031 ns/op
+# Warmup Iteration   5: 85,312 ns/op
+Iteration   1: 85,070 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 85,386 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 85,288 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 85,084 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 85,066 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 44,44% complete, ETA 00:03:23
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 87,901 ns/op
+# Warmup Iteration   2: 85,486 ns/op
+# Warmup Iteration   3: 86,804 ns/op
+# Warmup Iteration   4: 86,633 ns/op
+# Warmup Iteration   5: 86,807 ns/op
+Iteration   1: 86,498 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 85,324 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 84,928 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 85,333 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 85,333 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 47,22% complete, ETA 00:03:13
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 87,768 ns/op
+# Warmup Iteration   2: 85,485 ns/op
+# Warmup Iteration   3: 85,434 ns/op
+# Warmup Iteration   4: 85,124 ns/op
+# Warmup Iteration   5: 85,469 ns/op
+Iteration   1: 85,563 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 85,289 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 85,496 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 85,539 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 85,169 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: 0,001 B/op
+                 gc.count:           ≈ 0 counts
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  85,358 ±(99.9%) 0,391 ns/op [Average]
+  (min, avg, max) = (84,928, 85,358, 86,498), stdev = 0,365
+  CI (99.9%): [84,967, 85,748] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.alloc.rate":
+  0,006 ±(99.9%) 0,001 MB/sec [Average]
+  (min, avg, max) = (0,006, 0,006, 0,006), stdev = 0,001
+  CI (99.9%): [0,006, 0,006] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.alloc.rate.norm":
+  0,001 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (0,001, 0,001, 0,001), stdev = 0,001
+  CI (99.9%): [0,001, 0,001] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 1003)
+
+# Run progress: 50,00% complete, ETA 00:03:03
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3216,559 ns/op
+# Warmup Iteration   2: 2416,380 ns/op
+# Warmup Iteration   3: 2653,484 ns/op
+# Warmup Iteration   4: 2685,562 ns/op
+# Warmup Iteration   5: 2673,140 ns/op
+Iteration   1: 2657,980 ns/op
+                 gc.alloc.rate:      11566,321 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           11,000 counts
+                 gc.time:            6,000 ms
+
+Iteration   2: 2670,487 ns/op
+                 gc.alloc.rate:      11512,159 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           12,000 counts
+                 gc.time:            6,000 ms
+
+Iteration   3: 2677,588 ns/op
+                 gc.alloc.rate:      11481,483 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           12,000 counts
+                 gc.time:            7,000 ms
+
+Iteration   4: 2649,916 ns/op
+                 gc.alloc.rate:      11601,502 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           13,000 counts
+                 gc.time:            7,000 ms
+
+Iteration   5: 2675,929 ns/op
+                 gc.alloc.rate:      11488,678 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           13,000 counts
+                 gc.time:            7,000 ms
+
+
+# Run progress: 52,78% complete, ETA 00:02:52
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3208,803 ns/op
+# Warmup Iteration   2: 2401,100 ns/op
+# Warmup Iteration   3: 2653,492 ns/op
+# Warmup Iteration   4: 2652,540 ns/op
+# Warmup Iteration   5: 2633,071 ns/op
+Iteration   1: 2655,238 ns/op
+                 gc.alloc.rate:      11578,130 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           12,000 counts
+                 gc.time:            6,000 ms
+
+Iteration   2: 2653,564 ns/op
+                 gc.alloc.rate:      11585,571 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           12,000 counts
+                 gc.time:            7,000 ms
+
+Iteration   3: 2633,662 ns/op
+                 gc.alloc.rate:      11672,978 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           12,000 counts
+                 gc.time:            6,000 ms
+
+Iteration   4: 2651,883 ns/op
+                 gc.alloc.rate:      11592,884 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           13,000 counts
+                 gc.time:            7,000 ms
+
+Iteration   5: 2650,288 ns/op
+                 gc.alloc.rate:      11599,476 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           13,000 counts
+                 gc.time:            8,000 ms
+
+
+# Run progress: 55,56% complete, ETA 00:02:42
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3187,805 ns/op
+# Warmup Iteration   2: 2442,290 ns/op
+# Warmup Iteration   3: 2670,805 ns/op
+# Warmup Iteration   4: 2657,369 ns/op
+# Warmup Iteration   5: 2667,782 ns/op
+Iteration   1: 2678,447 ns/op
+                 gc.alloc.rate:      11477,949 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           11,000 counts
+                 gc.time:            6,000 ms
+
+Iteration   2: 2660,631 ns/op
+                 gc.alloc.rate:      11554,639 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           12,000 counts
+                 gc.time:            6,000 ms
+
+Iteration   3: 2680,707 ns/op
+                 gc.alloc.rate:      11468,148 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           12,000 counts
+                 gc.time:            7,000 ms
+
+Iteration   4: 2669,667 ns/op
+                 gc.alloc.rate:      11515,571 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           13,000 counts
+                 gc.time:            7,000 ms
+
+Iteration   5: 2703,320 ns/op
+                 gc.alloc.rate:      11372,016 MB/sec
+                 gc.alloc.rate.norm: 32240,017 B/op
+                 gc.count:           13,000 counts
+                 gc.time:            7,000 ms
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  2664,621 ±(99.9%) 18,331 ns/op [Average]
+  (min, avg, max) = (2633,662, 2664,621, 2703,320), stdev = 17,147
+  CI (99.9%): [2646,290, 2682,951] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.alloc.rate":
+  11537,834 ±(99.9%) 79,195 MB/sec [Average]
+  (min, avg, max) = (11372,016, 11537,834, 11672,978), stdev = 74,079
+  CI (99.9%): [11458,638, 11617,029] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.alloc.rate.norm":
+  32240,017 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (32240,017, 32240,017, 32240,017), stdev = 0,001
+  CI (99.9%): [32240,017, 32240,017] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.count":
+  184,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (11,000, 12,267, 13,000), stdev = 0,704
+  CI (99.9%): [184,000, 184,000] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.time":
+  100,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (6,000, 6,667, 8,000), stdev = 0,617
+  CI (99.9%): [100,000, 100,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 100003)
+
+# Run progress: 58,33% complete, ETA 00:02:32
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 279311,015 ns/op
+# Warmup Iteration   2: 201644,015 ns/op
+# Warmup Iteration   3: 202008,700 ns/op
+# Warmup Iteration   4: 202220,479 ns/op
+# Warmup Iteration   5: 201805,444 ns/op
+Iteration   1: 201413,093 ns/op
+                 gc.alloc.rate:      15151,185 MB/sec
+                 gc.alloc.rate.norm: 3200241,283 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   2: 202011,162 ns/op
+                 gc.alloc.rate:      15106,044 MB/sec
+                 gc.alloc.rate.norm: 3200241,286 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   3: 201281,017 ns/op
+                 gc.alloc.rate:      15160,870 MB/sec
+                 gc.alloc.rate.norm: 3200241,288 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   4: 201479,824 ns/op
+                 gc.alloc.rate:      15146,222 MB/sec
+                 gc.alloc.rate.norm: 3200241,279 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   5: 202903,151 ns/op
+                 gc.alloc.rate:      15039,829 MB/sec
+                 gc.alloc.rate.norm: 3200241,292 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+
+# Run progress: 61,11% complete, ETA 00:02:22
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 274904,635 ns/op
+# Warmup Iteration   2: 199943,248 ns/op
+# Warmup Iteration   3: 200261,648 ns/op
+# Warmup Iteration   4: 199253,676 ns/op
+# Warmup Iteration   5: 199685,911 ns/op
+Iteration   1: 199436,136 ns/op
+                 gc.alloc.rate:      15301,366 MB/sec
+                 gc.alloc.rate.norm: 3200241,270 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   2: 199057,587 ns/op
+                 gc.alloc.rate:      15330,009 MB/sec
+                 gc.alloc.rate.norm: 3200241,268 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            9,000 ms
+
+Iteration   3: 199797,447 ns/op
+                 gc.alloc.rate:      15273,343 MB/sec
+                 gc.alloc.rate.norm: 3200241,272 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            7,000 ms
+
+Iteration   4: 200075,131 ns/op
+                 gc.alloc.rate:      15252,296 MB/sec
+                 gc.alloc.rate.norm: 3200241,268 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   5: 199009,874 ns/op
+                 gc.alloc.rate:      15334,145 MB/sec
+                 gc.alloc.rate.norm: 3200241,267 B/op
+                 gc.count:           16,000 counts
+                 gc.time:            8,000 ms
+
+
+# Run progress: 63,89% complete, ETA 00:02:12
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 279024,508 ns/op
+# Warmup Iteration   2: 201427,271 ns/op
+# Warmup Iteration   3: 199940,810 ns/op
+# Warmup Iteration   4: 201393,076 ns/op
+# Warmup Iteration   5: 200386,613 ns/op
+Iteration   1: 199851,880 ns/op
+                 gc.alloc.rate:      15269,477 MB/sec
+                 gc.alloc.rate.norm: 3200241,272 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   2: 200947,018 ns/op
+                 gc.alloc.rate:      15185,885 MB/sec
+                 gc.alloc.rate.norm: 3200241,284 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   3: 200934,726 ns/op
+                 gc.alloc.rate:      15186,917 MB/sec
+                 gc.alloc.rate.norm: 3200241,279 B/op
+                 gc.count:           14,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   4: 200112,960 ns/op
+                 gc.alloc.rate:      15249,699 MB/sec
+                 gc.alloc.rate.norm: 3200241,271 B/op
+                 gc.count:           16,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   5: 200977,339 ns/op
+                 gc.alloc.rate:      15184,025 MB/sec
+                 gc.alloc.rate.norm: 3200241,282 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            8,000 ms
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  200619,223 ±(99.9%) 1196,706 ns/op [Average]
+  (min, avg, max) = (199009,874, 200619,223, 202903,151), stdev = 1119,399
+  CI (99.9%): [199422,517, 201815,929] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.alloc.rate":
+  15211,421 ±(99.9%) 90,596 MB/sec [Average]
+  (min, avg, max) = (15039,829, 15211,421, 15334,145), stdev = 84,744
+  CI (99.9%): [15120,825, 15302,017] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.alloc.rate.norm":
+  3200241,277 ±(99.9%) 0,009 B/op [Average]
+  (min, avg, max) = (3200241,267, 3200241,277, 3200241,292), stdev = 0,008
+  CI (99.9%): [3200241,269, 3200241,286] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.count":
+  226,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (14,000, 15,067, 16,000), stdev = 0,458
+  CI (99.9%): [226,000, 226,000] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked:gc.time":
+  120,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (7,000, 8,000, 9,000), stdev = 0,378
+  CI (99.9%): [120,000, 120,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 7)
+
+# Run progress: 66,67% complete, ETA 00:02:02
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 33,393 ns/op
+# Warmup Iteration   2: 25,974 ns/op
+# Warmup Iteration   3: 26,341 ns/op
+# Warmup Iteration   4: 26,354 ns/op
+# Warmup Iteration   5: 26,131 ns/op
+Iteration   1: 26,281 ns/op
+                 gc.alloc.rate:      6385,871 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   2: 26,324 ns/op
+                 gc.alloc.rate:      6375,591 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 26,199 ns/op
+                 gc.alloc.rate:      6405,812 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   4: 26,193 ns/op
+                 gc.alloc.rate:      6407,336 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   5: 26,237 ns/op
+                 gc.alloc.rate:      6396,615 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+
+# Run progress: 69,44% complete, ETA 00:01:51
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 32,667 ns/op
+# Warmup Iteration   2: 26,274 ns/op
+# Warmup Iteration   3: 26,288 ns/op
+# Warmup Iteration   4: 26,187 ns/op
+# Warmup Iteration   5: 26,200 ns/op
+Iteration   1: 26,268 ns/op
+                 gc.alloc.rate:      6389,088 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   2: 26,202 ns/op
+                 gc.alloc.rate:      6405,188 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 26,270 ns/op
+                 gc.alloc.rate:      6388,571 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   4: 26,247 ns/op
+                 gc.alloc.rate:      6394,218 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   5: 26,156 ns/op
+                 gc.alloc.rate:      6416,381 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+
+# Run progress: 72,22% complete, ETA 00:01:41
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 33,247 ns/op
+# Warmup Iteration   2: 26,390 ns/op
+# Warmup Iteration   3: 26,594 ns/op
+# Warmup Iteration   4: 26,716 ns/op
+# Warmup Iteration   5: 26,580 ns/op
+Iteration   1: 26,635 ns/op
+                 gc.alloc.rate:      6300,930 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   2: 26,741 ns/op
+                 gc.alloc.rate:      6275,931 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 26,625 ns/op
+                 gc.alloc.rate:      6299,871 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   4: 26,729 ns/op
+                 gc.alloc.rate:      6278,742 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   5: 26,626 ns/op
+                 gc.alloc.rate:      6303,227 MB/sec
+                 gc.alloc.rate.norm: 176,000 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  26,382 ±(99.9%) 0,233 ns/op [Average]
+  (min, avg, max) = (26,156, 26,382, 26,741), stdev = 0,218
+  CI (99.9%): [26,149, 26,615] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.alloc.rate":
+  6361,558 ±(99.9%) 56,141 MB/sec [Average]
+  (min, avg, max) = (6275,931, 6361,558, 6416,381), stdev = 52,514
+  CI (99.9%): [6305,417, 6417,699] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.alloc.rate.norm":
+  176,000 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (176,000, 176,000, 176,000), stdev = 0,001
+  CI (99.9%): [176,000, 176,000] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.count":
+  97,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (6,000, 6,467, 7,000), stdev = 0,516
+  CI (99.9%): [97,000, 97,000] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.time":
+  55,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (3,000, 3,667, 4,000), stdev = 0,488
+  CI (99.9%): [55,000, 55,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 1000)
+
+# Run progress: 75,00% complete, ETA 00:01:31
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 55,174 ns/op
+# Warmup Iteration   2: 53,927 ns/op
+# Warmup Iteration   3: 54,233 ns/op
+# Warmup Iteration   4: 54,109 ns/op
+# Warmup Iteration   5: 54,186 ns/op
+Iteration   1: 54,248 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 54,209 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 54,122 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 54,519 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 54,149 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻³ B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 77,78% complete, ETA 00:01:21
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 50,563 ns/op
+# Warmup Iteration   2: 49,853 ns/op
+# Warmup Iteration   3: 49,269 ns/op
+# Warmup Iteration   4: 49,403 ns/op
+# Warmup Iteration   5: 49,474 ns/op
+Iteration   1: 49,294 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 49,387 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 49,501 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 49,275 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 49,361 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 80,56% complete, ETA 00:01:11
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 50,764 ns/op
+# Warmup Iteration   2: 49,413 ns/op
+# Warmup Iteration   3: 49,778 ns/op
+# Warmup Iteration   4: 49,846 ns/op
+# Warmup Iteration   5: 49,675 ns/op
+Iteration   1: 49,863 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 49,876 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 49,579 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 49,814 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 49,900 ns/op
+                 gc.alloc.rate:      0,006 MB/sec
+                 gc.alloc.rate.norm: ≈ 10⁻⁴ B/op
+                 gc.count:           ≈ 0 counts
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  51,140 ±(99.9%) 2,445 ns/op [Average]
+  (min, avg, max) = (49,275, 51,140, 54,519), stdev = 2,287
+  CI (99.9%): [48,695, 53,585] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.alloc.rate":
+  0,006 ±(99.9%) 0,001 MB/sec [Average]
+  (min, avg, max) = (0,006, 0,006, 0,006), stdev = 0,001
+  CI (99.9%): [0,006, 0,006] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.alloc.rate.norm":
+  ≈ 10⁻³ B/op
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 1003)
+
+# Run progress: 83,33% complete, ETA 00:01:01
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 95,665 ns/op
+# Warmup Iteration   2: 94,204 ns/op
+# Warmup Iteration   3: 91,591 ns/op
+# Warmup Iteration   4: 90,068 ns/op
+# Warmup Iteration   5: 91,219 ns/op
+Iteration   1: 91,695 ns/op
+                 gc.alloc.rate:      1830,272 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   2: 90,823 ns/op
+                 gc.alloc.rate:      1847,873 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 91,602 ns/op
+                 gc.alloc.rate:      1832,126 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   4: 91,657 ns/op
+                 gc.alloc.rate:      1831,032 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   5: 90,911 ns/op
+                 gc.alloc.rate:      1846,078 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+
+# Run progress: 86,11% complete, ETA 00:00:50
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 96,934 ns/op
+# Warmup Iteration   2: 89,008 ns/op
+# Warmup Iteration   3: 83,692 ns/op
+# Warmup Iteration   4: 84,687 ns/op
+# Warmup Iteration   5: 84,274 ns/op
+Iteration   1: 83,920 ns/op
+                 gc.alloc.rate:      1999,849 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   2: 84,750 ns/op
+                 gc.alloc.rate:      1980,276 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 84,307 ns/op
+                 gc.alloc.rate:      1990,648 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   4: 83,772 ns/op
+                 gc.alloc.rate:      2003,408 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   5: 84,525 ns/op
+                 gc.alloc.rate:      1985,552 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            2,000 ms
+
+
+# Run progress: 88,89% complete, ETA 00:00:40
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 94,820 ns/op
+# Warmup Iteration   2: 89,041 ns/op
+# Warmup Iteration   3: 90,311 ns/op
+# Warmup Iteration   4: 90,589 ns/op
+# Warmup Iteration   5: 89,744 ns/op
+Iteration   1: 91,081 ns/op
+                 gc.alloc.rate:      1842,611 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   2: 90,365 ns/op
+                 gc.alloc.rate:      1857,222 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 91,896 ns/op
+                 gc.alloc.rate:      1826,267 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   4: 90,787 ns/op
+                 gc.alloc.rate:      1848,565 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   5: 90,226 ns/op
+                 gc.alloc.rate:      1860,089 MB/sec
+                 gc.alloc.rate.norm: 176,001 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  88,821 ±(99.9%) 3,615 ns/op [Average]
+  (min, avg, max) = (83,772, 88,821, 91,896), stdev = 3,382
+  CI (99.9%): [85,206, 92,437] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.alloc.rate":
+  1892,124 ±(99.9%) 78,954 MB/sec [Average]
+  (min, avg, max) = (1826,267, 1892,124, 2003,408), stdev = 73,854
+  CI (99.9%): [1813,170, 1971,079] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.alloc.rate.norm":
+  176,001 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (176,001, 176,001, 176,001), stdev = 0,001
+  CI (99.9%): [176,001, 176,001] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.count":
+  88,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (5,000, 5,867, 7,000), stdev = 0,516
+  CI (99.9%): [88,000, 88,000] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.time":
+  41,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (2,000, 2,733, 3,000), stdev = 0,458
+  CI (99.9%): [41,000, 41,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27.0.0+35-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 100003)
+
+# Run progress: 91,67% complete, ETA 00:00:30
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11623,405 ns/op
+# Warmup Iteration   2: 11291,446 ns/op
+# Warmup Iteration   3: 11136,344 ns/op
+# Warmup Iteration   4: 11147,650 ns/op
+# Warmup Iteration   5: 11000,935 ns/op
+Iteration   1: 11270,365 ns/op
+                 gc.alloc.rate:      20,312 MB/sec
+                 gc.alloc.rate.norm: 240,072 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   2: 11387,602 ns/op
+                 gc.alloc.rate:      20,102 MB/sec
+                 gc.alloc.rate.norm: 240,073 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 11238,285 ns/op
+                 gc.alloc.rate:      20,369 MB/sec
+                 gc.alloc.rate.norm: 240,071 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 11099,150 ns/op
+                 gc.alloc.rate:      20,625 MB/sec
+                 gc.alloc.rate.norm: 240,071 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 11006,562 ns/op
+                 gc.alloc.rate:      20,799 MB/sec
+                 gc.alloc.rate.norm: 240,070 B/op
+                 gc.count:           ≈ 0 counts
+
+
+# Run progress: 94,44% complete, ETA 00:00:20
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11790,078 ns/op
+# Warmup Iteration   2: 11337,627 ns/op
+# Warmup Iteration   3: 11064,615 ns/op
+# Warmup Iteration   4: 11178,965 ns/op
+# Warmup Iteration   5: 11355,834 ns/op
+Iteration   1: 11340,540 ns/op
+                 gc.alloc.rate:      20,186 MB/sec
+                 gc.alloc.rate.norm: 240,072 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   2: 11256,547 ns/op
+                 gc.alloc.rate:      20,337 MB/sec
+                 gc.alloc.rate.norm: 240,072 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 11000,623 ns/op
+                 gc.alloc.rate:      20,810 MB/sec
+                 gc.alloc.rate.norm: 240,070 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 10991,340 ns/op
+                 gc.alloc.rate:      20,828 MB/sec
+                 gc.alloc.rate.norm: 240,070 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 11017,453 ns/op
+                 gc.alloc.rate:      20,778 MB/sec
+                 gc.alloc.rate.norm: 240,070 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+
+# Run progress: 97,22% complete, ETA 00:00:10
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11522,698 ns/op
+# Warmup Iteration   2: 11215,036 ns/op
+# Warmup Iteration   3: 10970,849 ns/op
+# Warmup Iteration   4: 10944,497 ns/op
+# Warmup Iteration   5: 11027,648 ns/op
+Iteration   1: 11210,916 ns/op
+                 gc.alloc.rate:      20,420 MB/sec
+                 gc.alloc.rate.norm: 240,071 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   2: 11105,583 ns/op
+                 gc.alloc.rate:      20,613 MB/sec
+                 gc.alloc.rate.norm: 240,070 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 10995,077 ns/op
+                 gc.alloc.rate:      20,820 MB/sec
+                 gc.alloc.rate.norm: 240,069 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 10968,252 ns/op
+                 gc.alloc.rate:      20,871 MB/sec
+                 gc.alloc.rate.norm: 240,070 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 10873,598 ns/op
+                 gc.alloc.rate:      21,053 MB/sec
+                 gc.alloc.rate.norm: 240,069 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  11117,460 ±(99.9%) 166,072 ns/op [Average]
+  (min, avg, max) = (10873,598, 11117,460, 11387,602), stdev = 155,343
+  CI (99.9%): [10951,388, 11283,531] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.alloc.rate":
+  20,595 ±(99.9%) 0,307 MB/sec [Average]
+  (min, avg, max) = (20,102, 20,595, 21,053), stdev = 0,287
+  CI (99.9%): [20,288, 20,902] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.alloc.rate.norm":
+  240,071 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (240,069, 240,071, 240,073), stdev = 0,001
+  CI (99.9%): [240,069, 240,072] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.count":
+  11,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (≈ 0, 0,733, 1,000), stdev = 0,458
+  CI (99.9%): [11,000, 11,000] (assumes normal distribution)
+
+Secondary result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail:gc.time":
+  11,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 0,733, 1,000), stdev = 0,458
+  CI (99.9%): [11,000, 11,000] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:06:06
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                         (size)  Mode  Cnt        Score      Error   Units
+AddBenchmark.vector                                    7  avgt   15        2,903 ±    0,011   ns/op
+AddBenchmark.vector:gc.alloc.rate                      7  avgt   15        0,006 ±    0,001  MB/sec
+AddBenchmark.vector:gc.alloc.rate.norm                 7  avgt   15       ≈ 10⁻⁵               B/op
+AddBenchmark.vector:gc.count                           7  avgt   15          ≈ 0             counts
+AddBenchmark.vector                                 1000  avgt   15       54,212 ±    4,304   ns/op
+AddBenchmark.vector:gc.alloc.rate                   1000  avgt   15        0,006 ±    0,001  MB/sec
+AddBenchmark.vector:gc.alloc.rate.norm              1000  avgt   15       ≈ 10⁻³               B/op
+AddBenchmark.vector:gc.count                        1000  avgt   15          ≈ 0             counts
+AddBenchmark.vector                                 1003  avgt   15       54,483 ±    4,145   ns/op
+AddBenchmark.vector:gc.alloc.rate                   1003  avgt   15        0,006 ±    0,001  MB/sec
+AddBenchmark.vector:gc.alloc.rate.norm              1003  avgt   15       ≈ 10⁻³               B/op
+AddBenchmark.vector:gc.count                        1003  avgt   15          ≈ 0             counts
+AddBenchmark.vector                               100003  avgt   15    10868,228 ±   31,539   ns/op
+AddBenchmark.vector:gc.alloc.rate                 100003  avgt   15        0,006 ±    0,001  MB/sec
+AddBenchmark.vector:gc.alloc.rate.norm            100003  avgt   15        0,069 ±    0,001    B/op
+AddBenchmark.vector:gc.count                      100003  avgt   15          ≈ 0             counts
+AddBenchmark.vectorMasked                              7  avgt   15       45,554 ±    0,346   ns/op
+AddBenchmark.vectorMasked:gc.alloc.rate                7  avgt   15     7703,375 ±   58,928  MB/sec
+AddBenchmark.vectorMasked:gc.alloc.rate.norm           7  avgt   15      368,000 ±    0,001    B/op
+AddBenchmark.vectorMasked:gc.count                     7  avgt   15      119,000             counts
+AddBenchmark.vectorMasked:gc.time                      7  avgt   15       67,000                 ms
+AddBenchmark.vectorMasked                           1000  avgt   15       85,358 ±    0,391   ns/op
+AddBenchmark.vectorMasked:gc.alloc.rate             1000  avgt   15        0,006 ±    0,001  MB/sec
+AddBenchmark.vectorMasked:gc.alloc.rate.norm        1000  avgt   15        0,001 ±    0,001    B/op
+AddBenchmark.vectorMasked:gc.count                  1000  avgt   15          ≈ 0             counts
+AddBenchmark.vectorMasked                           1003  avgt   15     2664,621 ±   18,331   ns/op
+AddBenchmark.vectorMasked:gc.alloc.rate             1003  avgt   15    11537,834 ±   79,195  MB/sec
+AddBenchmark.vectorMasked:gc.alloc.rate.norm        1003  avgt   15    32240,017 ±    0,001    B/op
+AddBenchmark.vectorMasked:gc.count                  1003  avgt   15      184,000             counts
+AddBenchmark.vectorMasked:gc.time                   1003  avgt   15      100,000                 ms
+AddBenchmark.vectorMasked                         100003  avgt   15   200619,223 ± 1196,706   ns/op
+AddBenchmark.vectorMasked:gc.alloc.rate           100003  avgt   15    15211,421 ±   90,596  MB/sec
+AddBenchmark.vectorMasked:gc.alloc.rate.norm      100003  avgt   15  3200241,277 ±    0,009    B/op
+AddBenchmark.vectorMasked:gc.count                100003  avgt   15      226,000             counts
+AddBenchmark.vectorMasked:gc.time                 100003  avgt   15      120,000                 ms
+AddBenchmark.vectorMaskedTail                          7  avgt   15       26,382 ±    0,233   ns/op
+AddBenchmark.vectorMaskedTail:gc.alloc.rate            7  avgt   15     6361,558 ±   56,141  MB/sec
+AddBenchmark.vectorMaskedTail:gc.alloc.rate.norm       7  avgt   15      176,000 ±    0,001    B/op
+AddBenchmark.vectorMaskedTail:gc.count                 7  avgt   15       97,000             counts
+AddBenchmark.vectorMaskedTail:gc.time                  7  avgt   15       55,000                 ms
+AddBenchmark.vectorMaskedTail                       1000  avgt   15       51,140 ±    2,445   ns/op
+AddBenchmark.vectorMaskedTail:gc.alloc.rate         1000  avgt   15        0,006 ±    0,001  MB/sec
+AddBenchmark.vectorMaskedTail:gc.alloc.rate.norm    1000  avgt   15       ≈ 10⁻³               B/op
+AddBenchmark.vectorMaskedTail:gc.count              1000  avgt   15          ≈ 0             counts
+AddBenchmark.vectorMaskedTail                       1003  avgt   15       88,821 ±    3,615   ns/op
+AddBenchmark.vectorMaskedTail:gc.alloc.rate         1003  avgt   15     1892,124 ±   78,954  MB/sec
+AddBenchmark.vectorMaskedTail:gc.alloc.rate.norm    1003  avgt   15      176,001 ±    0,001    B/op
+AddBenchmark.vectorMaskedTail:gc.count              1003  avgt   15       88,000             counts
+AddBenchmark.vectorMaskedTail:gc.time               1003  avgt   15       41,000                 ms
+AddBenchmark.vectorMaskedTail                     100003  avgt   15    11117,460 ±  166,072   ns/op
+AddBenchmark.vectorMaskedTail:gc.alloc.rate       100003  avgt   15       20,595 ±    0,307  MB/sec
+AddBenchmark.vectorMaskedTail:gc.alloc.rate.norm  100003  avgt   15      240,071 ±    0,001    B/op
+AddBenchmark.vectorMaskedTail:gc.count            100003  avgt   15       11,000             counts
+AddBenchmark.vectorMaskedTail:gc.time             100003  avgt   15       11,000                 ms
+
+Benchmark result is saved to /Users/sven/Projects/HappyCoders/git-articles/java-vector-api/results/apple-m5-pro-arm64/benchmarks/supplementary/add-masked-tail-variants.json
