@@ -6,6 +6,32 @@ Example code and JMH benchmarks for the upcoming HappyCoders.eu article on the J
 
 The Vector API is an incubator module. The examples use Java 27, where it is in its twelfth incubator round ([JEP 537](https://openjdk.org/jeps/537)), and need the module added with `--add-modules jdk.incubator.vector`, at compile time and at run time. The API may change until it leaves the incubator.
 
+## Programs
+
+The programs are compact source files in the unnamed package, one directory per topic:
+
+```
+java --add-modules jdk.incubator.vector src/main/java/firststeps/AddArrays.java
+```
+
+| Directory | Programs |
+|---|---|
+| `species` | `PreferredSpecies` – vector size and lane count the JVM prefers on your CPU |
+| `firststeps` | `AddArrays` – adding two arrays, with a tail loop and with a mask |
+| `operations` | `Arithmetic` – `add()`, `mul()`, `fma()`, `lanewise()`; `CompareAndBlend` – conditions without branches; `Reductions` – `reduceLanes()`, also with a mask; `CompressExpand` – filtering with `compress()`; `Shuffles` – `rearrange()` and `selectFrom()` as a table lookup; `Conversions` – `convertShape()`, `convert()`, reinterpreting; `MemorySegments` – vectors from off-heap memory |
+| `examples` | `CosineSimilarity` – dot product and norms with `fma()`, compared with the scalar result; `ByteSearch` – counting and finding a byte |
+| `jit` | `JitDemo` – four methods whose machine code the article shows; `Allocations` – when vectors end up on the heap |
+
+Many outputs depend on your CPU: the preferred vector size is 128 bits on ARM NEON, 256 or 512 bits on x86 with AVX2 or AVX-512. `results/<machine-id>/` holds the outputs of one machine; `scripts/run-examples.sh <path-to-jdk-27> <machine-id>` writes your own.
+
+## Machine code
+
+`scripts/print-assembly.sh <path-to-jdk-27> <hsdis-dir> <machine-id>` prints what the C2 compiler generates for the four methods of `JitDemo` to `results/<machine-id>/jit/assembly/`. It needs the hsdis disassembler library, which the JDK does not ship; one way to get it is to compile `src/utils/hsdis/capstone/hsdis-capstone.c` from the [OpenJDK sources](https://github.com/openjdk/jdk) against [Capstone](https://www.capstone-engine.org/).
+
+## Benchmarks
+
+`benchmarks/` is a Maven project of its own with three JMH benchmarks – adding two arrays (scalar with and without auto-vectorization, Vector API with tail loop and with mask), searching a byte, and the dot product – each for five array sizes. `scripts/run-benchmarks.sh <path-to-jdk-27> <machine-id>` builds and runs them and writes the results to `results/<machine-id>/benchmarks/`. A full run takes about 25 minutes; run it only on an otherwise idle machine.
+
 
 <!-- happycoders-resources:start -->
 <!-- Generated from happycoders-website-astro/data/github-readme by scripts/content/sync-github-readmes.mjs. Edit there, not here. -->

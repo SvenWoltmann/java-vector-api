@@ -28,3 +28,14 @@ jobs:
 
       - name: Build
         run: mvn -B verify
+
+      # Fails if a program ends with an exception. The outputs depend on the
+      # CPU of the runner, so they are only shown, not compared.
+      - name: Run all examples
+        run: |
+          scripts/run-examples.sh "$JAVA_HOME" github-actions
+          tail -n +1 results/github-actions/*/*.txt >> "$GITHUB_STEP_SUMMARY"
+
+      # Compiles the benchmarks; running them needs an idle machine
+      - name: Compile the benchmarks
+        run: mvn -B -f benchmarks/pom.xml package

@@ -5,8 +5,13 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-  # Maven plugins (and JMH, once the benchmarks are in)
+  # Maven plugins of the examples
   - package-ecosystem: "maven"
     directory: "/"
+    schedule:
+      interval: "daily"
+  # JMH and the Maven plugins of the benchmarks
+  - package-ecosystem: "maven"
+    directory: "/benchmarks"
     schedule:
       interval: "daily"
