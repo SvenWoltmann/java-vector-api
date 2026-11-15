@@ -1,0 +1,856 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1) 336 2296 %     3       JitDemo::indexOfScalar @ 2 (25 bytes)
+ total in heap  [0x000000011b148548,0x000000011b148930] = 1000
+ main code      [0x000000011b148640,0x000000011b148908] = 712
+ stub code      [0x000000011b148908,0x000000011b148928] = 32
+ oops           [0x000000011b148928,0x000000011b148930] = 8
+ mutable data [0x00000077c2f65140,0x00000077c2f651a0] = 96
+ relocation     [0x00000077c2f65140,0x00000077c2f65190] = 80
+ metadata       [0x00000077c2f65190,0x00000077c2f651a0] = 16
+ immutable data [0x00000077c336da40,0x00000077c336db04] = 196
+ dependencies   [0x00000077c336da40,0x00000077c336da48] = 8
+ nul chk table  [0x00000077c336da48,0x00000077c336da58] = 16
+ scopes pcs     [0x00000077c336da58,0x00000077c336dac8] = 112
+ scopes data    [0x00000077c336dac8,0x00000077c336db00] = 56
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Instructions begin]
+  0x000000011b148640:   nop		
+  0x000000011b148644:   nop		
+  0x000000011b148648:   nop		
+  0x000000011b14864c:   nop		
+  0x000000011b148650:   nop		
+  0x000000011b148654:   nop		
+  0x000000011b148658:   nop		
+  0x000000011b14865c:   nop		
+  0x000000011b148660:   nop		
+  0x000000011b148664:   nop		
+[Entry Point]
+  # {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo'
+  0x000000011b148668:   ldr		x8, [x1]
+  0x000000011b14866c:   lsr		x8, x8, #0x2a
+  0x000000011b148670:   ldr		w10, [x9, #8]
+  0x000000011b148674:   cmp		w8, w10
+  0x000000011b148678:   b.eq		#0x11b148680
+  0x000000011b14867c:   b		#0x122253640        ;   {runtime_call ic_miss_blob (shared runtime)}
+[Verified Entry Point]
+  0x000000011b148680:   nop		
+  0x000000011b148684:   sub		x9, sp, #0x14, lsl #12
+  0x000000011b148688:   str		xzr, [x9]
+  0x000000011b14868c:   sub		sp, sp, #0x40
+  0x000000011b148690:   stp		x29, x30, [sp, #0x30]
+  0x000000011b148694:   ldr		w8, #0x11b1486b8
+  0x000000011b148698:   ldr		w9, [x28, #0x20]
+  0x000000011b14869c:   cmp		x8, x9
+  0x000000011b1486a0:   b.eq		#0x11b1486bc
+  0x000000011b1486a4:   mov		x8, #0xc5c0         ;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x000000011b1486a8:   movk		x8, #0x2225, lsl #16
+  0x000000011b1486ac:   movk		x8, #1, lsl #32
+  0x000000011b1486b0:   blr		x8
+  0x000000011b1486b4:   b		#0x11b1486bc
+  0x000000011b1486b8:   udf		#1
+  0x000000011b1486bc:   mov		x0, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b1486c0:   movk		x0, #0x42a9, lsl #16
+  0x000000011b1486c4:   movk		x0, #1, lsl #32
+  0x000000011b1486c8:   ldr		w4, [x0, #0x70]
+  0x000000011b1486cc:   add		w4, w4, #2
+  0x000000011b1486d0:   str		w4, [x0, #0x70]
+  0x000000011b1486d4:   and		w4, w4, #0x7fe
+  0x000000011b1486d8:   cmp		w4, #0
+  0x000000011b1486dc:   b.eq		#0x11b148878
+  0x000000011b1486e0:   movz		w0, #0, lsl #16
+  0x000000011b1486e4:   b		#0x11b148770
+  0x000000011b1486e8:   ldr		w1, [x2, #8]
+  0x000000011b1486ec:   cmp		w0, w1
+  0x000000011b1486f0:   b.hs		#0x11b148898
+  0x000000011b1486f4:   add		w1, w0, #0xc
+  0x000000011b1486f8:   ldrsb		x1, [x2, x1, lsl #0]
+  0x000000011b1486fc:   cmp		w1, w3
+  0x000000011b148700:   mov		x1, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b148704:   movk		x1, #0x42a9, lsl #16
+  0x000000011b148708:   movk		x1, #1, lsl #32
+  0x000000011b14870c:   mov		x8, #0xd8
+  0x000000011b148710:   mov		x9, #0xc8
+  0x000000011b148714:   csel		x4, x8, x9, eq
+  0x000000011b148718:   ldr		x5, [x1, x4]
+  0x000000011b14871c:   add		x5, x5, #1
+  0x000000011b148720:   str		x5, [x1, x4]
+  0x000000011b148724:   b.eq		#0x11b1487a4
+  0x000000011b148728:   add		w0, w0, #1
+  0x000000011b14872c:   mov		x1, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b148730:   movk		x1, #0x42a9, lsl #16
+  0x000000011b148734:   movk		x1, #1, lsl #32
+  0x000000011b148738:   ldr		w4, [x1, #0x74]
+  0x000000011b14873c:   add		w4, w4, #2
+  0x000000011b148740:   str		w4, [x1, #0x74]
+  0x000000011b148744:   and		w4, w4, #0x3ffe
+  0x000000011b148748:   cmp		w4, #0
+  0x000000011b14874c:   b.eq		#0x11b1488b0
+  0x000000011b148750:   ldr		x8, [x28, #0x30]    ; ImmutableOopMap {c_rarg2=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@20 (line 53)
+  0x000000011b148754:   ldr		wzr, [x8]           ;   {poll}
+  0x000000011b148758:   mov		x1, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14875c:   movk		x1, #0x42a9, lsl #16
+  0x000000011b148760:   movk		x1, #1, lsl #32
+  0x000000011b148764:   ldr		x4, [x1, #0xe8]
+  0x000000011b148768:   add		x4, x4, #1
+  0x000000011b14876c:   str		x4, [x1, #0xe8]
+  0x000000011b148770:   ldr		w1, [x2, #8]        ; implicit exception: dispatches to 0x000000011b1488d0
+  0x000000011b148774:   cmp		w0, w1
+  0x000000011b148778:   mov		x1, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14877c:   movk		x1, #0x42a9, lsl #16
+  0x000000011b148780:   movk		x1, #1, lsl #32
+  0x000000011b148784:   mov		x8, #0xa8
+  0x000000011b148788:   mov		x9, #0xb8
+  0x000000011b14878c:   csel		x4, x8, x9, ge
+  0x000000011b148790:   ldr		x5, [x1, x4]
+  0x000000011b148794:   add		x5, x5, #1
+  0x000000011b148798:   str		x5, [x1, x4]
+  0x000000011b14879c:   b.ge		#0x11b1487bc
+  0x000000011b1487a0:   b		#0x11b1486e8
+  0x000000011b1487a4:   ldp		x29, x30, [sp, #0x30]
+  0x000000011b1487a8:   add		sp, sp, #0x40
+  0x000000011b1487ac:   ldr		x8, [x28, #0x28]    ;   {poll_return}
+  0x000000011b1487b0:   cmp		sp, x8
+  0x000000011b1487b4:   b.hi		#0x11b1488d4
+  0x000000011b1487b8:   ret		
+  0x000000011b1487bc:   movn		w0, #0, lsl #16
+  0x000000011b1487c0:   ldp		x29, x30, [sp, #0x30]
+  0x000000011b1487c4:   add		sp, sp, #0x40
+  0x000000011b1487c8:   ldr		x8, [x28, #0x28]    ;   {poll_return}
+  0x000000011b1487cc:   cmp		sp, x8
+  0x000000011b1487d0:   b.hi		#0x11b1488e0
+  0x000000011b1487d4:   ret		
+  0x000000011b1487d8:   sub		x9, sp, #0x14, lsl #12
+  0x000000011b1487dc:   str		xzr, [x9]
+  0x000000011b1487e0:   sub		sp, sp, #0x40
+  0x000000011b1487e4:   stp		x29, x30, [sp, #0x30]
+  0x000000011b1487e8:   ldr		w8, #0x11b14880c
+  0x000000011b1487ec:   ldr		w9, [x28, #0x20]
+  0x000000011b1487f0:   cmp		x8, x9
+  0x000000011b1487f4:   b.eq		#0x11b148810
+  0x000000011b1487f8:   mov		x8, #0xc5c0         ;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x000000011b1487fc:   movk		x8, #0x2225, lsl #16
+  0x000000011b148800:   movk		x8, #1, lsl #32
+  0x000000011b148804:   blr		x8
+  0x000000011b148808:   b		#0x11b148810
+  0x000000011b14880c:   udf		#0
+  0x000000011b148810:   mov		w0, #0x10
+  0x000000011b148814:   sxtw		x0, w0
+  0x000000011b148818:   ldr		x29, [x1, x0]
+  0x000000011b14881c:   mov		w0, #8
+  0x000000011b148820:   sxtw		x0, w0
+  0x000000011b148824:   ldr		w2, [x1, x0]
+  0x000000011b148828:   movz		w0, #0, lsl #16
+  0x000000011b14882c:   sxtw		x0, w0
+  0x000000011b148830:   ldr		w3, [x1, x0]
+  0x000000011b148834:   mov		x0, x1
+  0x000000011b148838:   str		w2, [sp, #0x20]
+  0x000000011b14883c:   str		x29, [sp, #0x18]
+  0x000000011b148840:   mov		x29, x3
+  0x000000011b148844:   mov		x8, #0x67d8         ;   {runtime_call SharedRuntime::OSR_migration_end(long*)}
+  0x000000011b148848:   movk		x8, #0x11a7, lsl #16
+  0x000000011b14884c:   movk		x8, #1, lsl #32
+  0x000000011b148850:   blr		x8
+  0x000000011b148854:   nop		                    ;   {post_call_nop}
+  0x000000011b148858:   movk		xzr, #0
+  0x000000011b14885c:   movk		xzr, #0
+  0x000000011b148860:   mov		x0, x29
+  0x000000011b148864:   ldr		w2, [sp, #0x20]
+  0x000000011b148868:   mov		x3, x2
+  0x000000011b14886c:   ldr		x29, [sp, #0x18]
+  0x000000011b148870:   mov		x2, x29
+  0x000000011b148874:   b		#0x11b148770
+  0x000000011b148878:   mov		x8, #0x8940         ;   {metadata({method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14887c:   movk		x8, #0x42a8, lsl #16
+  0x000000011b148880:   movk		x8, #1, lsl #32
+  0x000000011b148884:   str		x8, [sp, #8]
+  0x000000011b148888:   mov		x8, #-1
+  0x000000011b14888c:   str		x8, [sp]
+  0x000000011b148890:   bl		#0x122329b40        ; ImmutableOopMap {c_rarg1=Oop c_rarg2=Oop }
+                                                            ;*synchronization entry
+                                                            ; - JitDemo::indexOfScalar@-1 (line 53)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b148894:   b		#0x11b1486e0
+  0x000000011b148898:   mov		x8, x0
+  0x000000011b14889c:   mov		x9, x2
+  0x000000011b1488a0:   mov		x30, #0x6740        ;   {runtime_call throw_range_check_failed_blob (C1 runtime)}
+  0x000000011b1488a4:   movk		x30, #0x2232, lsl #16
+  0x000000011b1488a8:   movk		x30, #1, lsl #32
+  0x000000011b1488ac:   blr		x30                 ; ImmutableOopMap {c_rarg2=Oop }
+                                                            ;*baload {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::indexOfScalar@10 (line 54)
+  0x000000011b1488b0:   mov		x8, #0x8940         ;   {metadata({method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b1488b4:   movk		x8, #0x42a8, lsl #16
+  0x000000011b1488b8:   movk		x8, #1, lsl #32
+  0x000000011b1488bc:   str		x8, [sp, #8]
+  0x000000011b1488c0:   mov		x8, #0x14
+  0x000000011b1488c4:   str		x8, [sp]
+  0x000000011b1488c8:   bl		#0x122329b40        ; ImmutableOopMap {c_rarg2=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@20 (line 53)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1488cc:   b		#0x11b148750
+  0x000000011b1488d0:   bl		#0x122326bc0        ; ImmutableOopMap {c_rarg2=Oop }
+                                                            ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::indexOfScalar@4 (line 53)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b1488d4:   adr		x8, #0x11b1487ac    ;   {internal_word}
+  0x000000011b1488d8:   str		x8, [x28, #0x498]
+  0x000000011b1488dc:   b		#0x122254ec0        ;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x000000011b1488e0:   adr		x8, #0x11b1487c8    ;   {internal_word}
+  0x000000011b1488e4:   str		x8, [x28, #0x498]
+  0x000000011b1488e8:   b		#0x122254ec0        ;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x000000011b1488ec:   ldr		x0, [x28, #0x500]
+  0x000000011b1488f0:   str		xzr, [x28, #0x500]
+  0x000000011b1488f4:   str		xzr, [x28, #0x508]
+  0x000000011b1488f8:   ldp		x29, x30, [sp, #0x30]
+  0x000000011b1488fc:   add		sp, sp, #0x40
+  0x000000011b148900:   b		#0x122325d80        ;   {runtime_call unwind_exception_blob (C1 runtime)}
+  0x000000011b148904:   udf		#0
+[Exception Handler]
+  0x000000011b148908:   bl		#0x122327d40        ;   {runtime_call handle_exception_from_callee_blob (C1 runtime)}
+  0x000000011b14890c:   mov		x0, #0x894a         ;   {external_word}
+  0x000000011b148910:   movk		x0, #0x11ce, lsl #16
+  0x000000011b148914:   movk		x0, #1, lsl #32
+  0x000000011b148918:   dcps1		#0xdeae
+  0x000000011b14891c:   bl		#0x1222550c0        ;   {runtime_call DeoptimizationBlob}
+[Deopt Handler Entry Point]
+  0x000000011b148920:   b		#0x11b14891c
+  0x000000011b148924:   udf		#0
+--------------------------------------------------------------------------------
+[/Disassembly]
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1) 341 2312       3       JitDemo::indexOfScalar (25 bytes)
+ total in heap  [0x000000011b14c2c8,0x000000011b14c5e8] = 800
+ main code      [0x000000011b14c3c0,0x000000011b14c5c0] = 512
+ stub code      [0x000000011b14c5c0,0x000000011b14c5e0] = 32
+ oops           [0x000000011b14c5e0,0x000000011b14c5e8] = 8
+ mutable data [0x00000077c2f652c0,0x00000077c2f65318] = 88
+ relocation     [0x00000077c2f652c0,0x00000077c2f65308] = 72
+ metadata       [0x00000077c2f65308,0x00000077c2f65318] = 16
+ immutable data [0x00000077c3367300,0x00000077c33673ac] = 172
+ dependencies   [0x00000077c3367300,0x00000077c3367308] = 8
+ nul chk table  [0x00000077c3367308,0x00000077c3367318] = 16
+ scopes pcs     [0x00000077c3367318,0x00000077c3367378] = 96
+ scopes data    [0x00000077c3367378,0x00000077c33673a8] = 48
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Instructions begin]
+  0x000000011b14c3c0:   nop		
+  0x000000011b14c3c4:   nop		
+  0x000000011b14c3c8:   nop		
+  0x000000011b14c3cc:   nop		
+  0x000000011b14c3d0:   nop		
+  0x000000011b14c3d4:   nop		
+  0x000000011b14c3d8:   nop		
+  0x000000011b14c3dc:   nop		
+  0x000000011b14c3e0:   nop		
+  0x000000011b14c3e4:   nop		
+[Entry Point]
+  # {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo'
+  # this:     c_rarg1:c_rarg1 
+                        = 'JitDemo'
+  # parm0:    c_rarg2:c_rarg2 
+                        = '[B'
+  # parm1:    c_rarg3   = byte
+  #           [sp+0x30]  (sp of caller)
+  0x000000011b14c3e8:   ldr		x8, [x1]
+  0x000000011b14c3ec:   lsr		x8, x8, #0x2a
+  0x000000011b14c3f0:   ldr		w10, [x9, #8]
+  0x000000011b14c3f4:   cmp		w8, w10
+  0x000000011b14c3f8:   b.eq		#0x11b14c400
+  0x000000011b14c3fc:   b		#0x122253640        ;   {runtime_call ic_miss_blob (shared runtime)}
+[Verified Entry Point]
+  0x000000011b14c400:   nop		
+  0x000000011b14c404:   sub		x9, sp, #0x14, lsl #12
+  0x000000011b14c408:   str		xzr, [x9]
+  0x000000011b14c40c:   sub		sp, sp, #0x30
+  0x000000011b14c410:   stp		x29, x30, [sp, #0x20]
+  0x000000011b14c414:   ldr		w8, #0x11b14c438
+  0x000000011b14c418:   ldr		w9, [x28, #0x20]
+  0x000000011b14c41c:   cmp		x8, x9
+  0x000000011b14c420:   b.eq		#0x11b14c43c
+  0x000000011b14c424:   mov		x8, #0xc5c0         ;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x000000011b14c428:   movk		x8, #0x2225, lsl #16
+  0x000000011b14c42c:   movk		x8, #1, lsl #32
+  0x000000011b14c430:   blr		x8
+  0x000000011b14c434:   b		#0x11b14c43c
+  0x000000011b14c438:   udf		#1
+  0x000000011b14c43c:   mov		x0, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14c440:   movk		x0, #0x42a9, lsl #16
+  0x000000011b14c444:   movk		x0, #1, lsl #32
+  0x000000011b14c448:   ldr		w4, [x0, #0x70]
+  0x000000011b14c44c:   add		w4, w4, #2
+  0x000000011b14c450:   str		w4, [x0, #0x70]
+  0x000000011b14c454:   and		w4, w4, #0x7fe
+  0x000000011b14c458:   cmp		w4, #0
+  0x000000011b14c45c:   b.eq		#0x11b14c54c
+  0x000000011b14c460:   movz		w0, #0, lsl #16
+  0x000000011b14c464:   b		#0x11b14c4e4
+  0x000000011b14c468:   add		w1, w0, #0xc
+  0x000000011b14c46c:   ldrsb		x1, [x2, x1, lsl #0]
+  0x000000011b14c470:   cmp		w1, w3
+  0x000000011b14c474:   mov		x1, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14c478:   movk		x1, #0x42a9, lsl #16
+  0x000000011b14c47c:   movk		x1, #1, lsl #32
+  0x000000011b14c480:   mov		x8, #0xd8
+  0x000000011b14c484:   mov		x9, #0xc8
+  0x000000011b14c488:   csel		x4, x8, x9, eq
+  0x000000011b14c48c:   ldr		x5, [x1, x4]
+  0x000000011b14c490:   add		x5, x5, #1
+  0x000000011b14c494:   str		x5, [x1, x4]
+  0x000000011b14c498:   b.eq		#0x11b14c518
+  0x000000011b14c49c:   add		w0, w0, #1
+  0x000000011b14c4a0:   mov		x1, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14c4a4:   movk		x1, #0x42a9, lsl #16
+  0x000000011b14c4a8:   movk		x1, #1, lsl #32
+  0x000000011b14c4ac:   ldr		w4, [x1, #0x74]
+  0x000000011b14c4b0:   add		w4, w4, #2
+  0x000000011b14c4b4:   str		w4, [x1, #0x74]
+  0x000000011b14c4b8:   and		w4, w4, #0x3ffe
+  0x000000011b14c4bc:   cmp		w4, #0
+  0x000000011b14c4c0:   b.eq		#0x11b14c56c
+  0x000000011b14c4c4:   ldr		x8, [x28, #0x30]    ; ImmutableOopMap {c_rarg2=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@20 (line 53)
+  0x000000011b14c4c8:   ldr		wzr, [x8]           ;   {poll}
+  0x000000011b14c4cc:   mov		x1, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14c4d0:   movk		x1, #0x42a9, lsl #16
+  0x000000011b14c4d4:   movk		x1, #1, lsl #32
+  0x000000011b14c4d8:   ldr		x4, [x1, #0xe8]
+  0x000000011b14c4dc:   add		x4, x4, #1
+  0x000000011b14c4e0:   str		x4, [x1, #0xe8]
+  0x000000011b14c4e4:   ldr		w1, [x2, #8]        ; implicit exception: dispatches to 0x000000011b14c58c
+  0x000000011b14c4e8:   cmp		w0, w1
+  0x000000011b14c4ec:   mov		x1, #0x3910         ;   {metadata(method data for {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14c4f0:   movk		x1, #0x42a9, lsl #16
+  0x000000011b14c4f4:   movk		x1, #1, lsl #32
+  0x000000011b14c4f8:   mov		x8, #0xa8
+  0x000000011b14c4fc:   mov		x9, #0xb8
+  0x000000011b14c500:   csel		x4, x8, x9, ge
+  0x000000011b14c504:   ldr		x5, [x1, x4]
+  0x000000011b14c508:   add		x5, x5, #1
+  0x000000011b14c50c:   str		x5, [x1, x4]
+  0x000000011b14c510:   b.ge		#0x11b14c530
+  0x000000011b14c514:   b		#0x11b14c468
+  0x000000011b14c518:   ldp		x29, x30, [sp, #0x20]
+  0x000000011b14c51c:   add		sp, sp, #0x30
+  0x000000011b14c520:   ldr		x8, [x28, #0x28]    ;   {poll_return}
+  0x000000011b14c524:   cmp		sp, x8
+  0x000000011b14c528:   b.hi		#0x11b14c590
+  0x000000011b14c52c:   ret		
+  0x000000011b14c530:   movn		w0, #0, lsl #16
+  0x000000011b14c534:   ldp		x29, x30, [sp, #0x20]
+  0x000000011b14c538:   add		sp, sp, #0x30
+  0x000000011b14c53c:   ldr		x8, [x28, #0x28]    ;   {poll_return}
+  0x000000011b14c540:   cmp		sp, x8
+  0x000000011b14c544:   b.hi		#0x11b14c59c
+  0x000000011b14c548:   ret		
+  0x000000011b14c54c:   mov		x8, #0x8940         ;   {metadata({method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14c550:   movk		x8, #0x42a8, lsl #16
+  0x000000011b14c554:   movk		x8, #1, lsl #32
+  0x000000011b14c558:   str		x8, [sp, #8]
+  0x000000011b14c55c:   mov		x8, #-1
+  0x000000011b14c560:   str		x8, [sp]
+  0x000000011b14c564:   bl		#0x122329b40        ; ImmutableOopMap {c_rarg1=Oop c_rarg2=Oop }
+                                                            ;*synchronization entry
+                                                            ; - JitDemo::indexOfScalar@-1 (line 53)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b14c568:   b		#0x11b14c460
+  0x000000011b14c56c:   mov		x8, #0x8940         ;   {metadata({method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo')}
+  0x000000011b14c570:   movk		x8, #0x42a8, lsl #16
+  0x000000011b14c574:   movk		x8, #1, lsl #32
+  0x000000011b14c578:   str		x8, [sp, #8]
+  0x000000011b14c57c:   mov		x8, #0x14
+  0x000000011b14c580:   str		x8, [sp]
+  0x000000011b14c584:   bl		#0x122329b40        ; ImmutableOopMap {c_rarg2=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@20 (line 53)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b14c588:   b		#0x11b14c4c4
+  0x000000011b14c58c:   bl		#0x122326bc0        ; ImmutableOopMap {c_rarg2=Oop }
+                                                            ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::indexOfScalar@4 (line 53)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b14c590:   adr		x8, #0x11b14c520    ;   {internal_word}
+  0x000000011b14c594:   str		x8, [x28, #0x498]
+  0x000000011b14c598:   b		#0x122254ec0        ;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x000000011b14c59c:   adr		x8, #0x11b14c53c    ;   {internal_word}
+  0x000000011b14c5a0:   str		x8, [x28, #0x498]
+  0x000000011b14c5a4:   b		#0x122254ec0        ;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x000000011b14c5a8:   ldr		x0, [x28, #0x500]
+  0x000000011b14c5ac:   str		xzr, [x28, #0x500]
+  0x000000011b14c5b0:   str		xzr, [x28, #0x508]
+  0x000000011b14c5b4:   ldp		x29, x30, [sp, #0x20]
+  0x000000011b14c5b8:   add		sp, sp, #0x30
+  0x000000011b14c5bc:   b		#0x122325d80        ;   {runtime_call unwind_exception_blob (C1 runtime)}
+[Exception Handler]
+  0x000000011b14c5c0:   bl		#0x122327d40        ;   {runtime_call handle_exception_from_callee_blob (C1 runtime)}
+  0x000000011b14c5c4:   mov		x0, #0x894a         ;   {external_word}
+  0x000000011b14c5c8:   movk		x0, #0x11ce, lsl #16
+  0x000000011b14c5cc:   movk		x0, #1, lsl #32
+  0x000000011b14c5d0:   dcps1		#0xdeae
+  0x000000011b14c5d4:   bl		#0x1222550c0        ;   {runtime_call DeoptimizationBlob}
+[Deopt Handler Entry Point]
+  0x000000011b14c5d8:   b		#0x11b14c5d4
+  0x000000011b14c5dc:   udf		#0
+--------------------------------------------------------------------------------
+[/Disassembly]
+
+============================= C2-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c2) 347 2314 %     4       JitDemo::indexOfScalar @ 2 (25 bytes)
+ total in heap  [0x00000001229d4848,0x00000001229d4bf8] = 944
+ main code      [0x00000001229d4940,0x00000001229d4be8] = 680
+ stub code      [0x00000001229d4be8,0x00000001229d4bf0] = 8
+ oops           [0x00000001229d4bf0,0x00000001229d4bf8] = 8
+ mutable data [0x00000077bf8c8340,0x00000077bf8c8380] = 64
+ relocation     [0x00000077bf8c8340,0x00000077bf8c8370] = 48
+ metadata       [0x00000077bf8c8370,0x00000077bf8c8380] = 16
+ immutable data [0x00000077bf8cc500,0x00000077bf8cc5ec] = 236
+ dependencies   [0x00000077bf8cc500,0x00000077bf8cc508] = 8
+ nul chk table  [0x00000077bf8cc508,0x00000077bf8cc518] = 16
+ scopes pcs     [0x00000077bf8cc518,0x00000077bf8cc588] = 112
+ scopes data    [0x00000077bf8cc588,0x00000077bf8cc5e8] = 96
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Verified Entry Point]
+  # {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo'
+  0x00000001229d4940:   brk		#0
+  0x00000001229d4944:   nop		
+  0x00000001229d4948:   nop		
+  0x00000001229d494c:   nop		
+  0x00000001229d4950:   sub		x9, sp, #0x14, lsl #12
+  0x00000001229d4954:   str		xzr, [x9]
+  0x00000001229d4958:   sub		sp, sp, #0x40
+  0x00000001229d495c:   stp		x29, x30, [sp, #0x30]
+  0x00000001229d4960:   ldr		w8, #0x1229d4be0
+  0x00000001229d4964:   ldr		w9, [x28, #0x20]
+  0x00000001229d4968:   cmp		x8, x9
+  0x00000001229d496c:   b.ne		#0x1229d4bcc
+  0x00000001229d4970:   ldr		x21, [x1, #0x10]
+  0x00000001229d4974:   ldr		w20, [x1, #8]
+  0x00000001229d4978:   ldr		w19, [x1]
+  0x00000001229d497c:   mov		x0, x1
+  0x00000001229d4980:   adr		x9, #0x1229d4998
+  0x00000001229d4984:   str		x9, [x28, #0x3f8]
+  0x00000001229d4988:   mov		x8, #0x67d8         ;   {runtime_call SharedRuntime::OSR_migration_end(long*)}
+  0x00000001229d498c:   movk		x8, #0x11a7, lsl #16
+  0x00000001229d4990:   movk		x8, #1, lsl #32
+  0x00000001229d4994:   blr		x8
+  0x00000001229d4998:   nop		                    ;   {post_call_nop}
+  0x00000001229d499c:   movk		xzr, #0
+  0x00000001229d49a0:   movk		xzr, #0
+  0x00000001229d49a4:   ldr		w10, [x21, #4]      ; implicit exception: dispatches to 0x00000001229d4ba4
+  0x00000001229d49a8:   lsr		w10, w10, #0xa
+  0x00000001229d49ac:   movz		x11, #0, lsl #16    ;   {metadata({type array byte})}
+  0x00000001229d49b0:   movk		x11, #0x5f4
+  0x00000001229d49b4:   cmp		w10, w11
+  0x00000001229d49b8:   b.ne		#0x1229d4b64
+  0x00000001229d49bc:   add		w12, w19, #1
+  0x00000001229d49c0:   cmp		w12, #0
+  0x00000001229d49c4:   ldr		w10, [x21, #8]
+  0x00000001229d49c8:   sxtw		x11, w12
+  0x00000001229d49cc:   csel		x11, xzr, x11, lt
+  0x00000001229d49d0:   cmp		w19, w10
+  0x00000001229d49d4:   b.ge		#0x1229d4b80
+  0x00000001229d49d8:   cmp		w11, w10
+  0x00000001229d49dc:   csel		w12, w11, w10, lt
+  0x00000001229d49e0:   cmp		w19, w10
+  0x00000001229d49e4:   b.hs		#0x1229d4b44
+  0x00000001229d49e8:   add		x11, x21, w19, sxtw
+  0x00000001229d49ec:   ldrsb		w13, [x11, #0xc]
+  0x00000001229d49f0:   cmp		w13, w20
+  0x00000001229d49f4:   b.eq		#0x1229d4af8
+  0x00000001229d49f8:   add		w19, w19, #1
+  0x00000001229d49fc:   cmp		w19, w12
+  0x00000001229d4a00:   b.lt		#0x1229d49e0
+  0x00000001229d4a04:   sub		w11, w10, #7
+  0x00000001229d4a08:   cmp		w19, w11
+  0x00000001229d4a0c:   b.ge		#0x1229d4ac0
+  0x00000001229d4a10:   sub		w14, w10, w19
+  0x00000001229d4a14:   cmp		w11, w19
+  0x00000001229d4a18:   sub		w13, w14, #7
+  0x00000001229d4a1c:   csel		w13, wzr, w13, lt
+  0x00000001229d4a20:   mov		w8, #0x1f40
+  0x00000001229d4a24:   cmp		w13, w8
+  0x00000001229d4a28:   mov		w12, #0x1f40
+  0x00000001229d4a2c:   csel		w12, w12, w13, hi
+  0x00000001229d4a30:   add		w13, w12, w19
+  0x00000001229d4a34:   nop		
+  0x00000001229d4a38:   nop		
+  0x00000001229d4a3c:   nop		
+  0x00000001229d4a40:   add		x12, x21, w19, sxtw
+  0x00000001229d4a44:   ldrsb		w14, [x12, #0xc]
+  0x00000001229d4a48:   cmp		w14, w20
+  0x00000001229d4a4c:   b.eq		#0x1229d4af8
+  0x00000001229d4a50:   ldrsb		w14, [x12, #0xd]
+  0x00000001229d4a54:   cmp		w14, w20
+  0x00000001229d4a58:   b.eq		#0x1229d4af4
+  0x00000001229d4a5c:   ldrsb		w14, [x12, #0xe]
+  0x00000001229d4a60:   cmp		w14, w20
+  0x00000001229d4a64:   b.eq		#0x1229d4b14
+  0x00000001229d4a68:   ldrsb		w14, [x12, #0xf]
+  0x00000001229d4a6c:   cmp		w14, w20
+  0x00000001229d4a70:   b.eq		#0x1229d4b1c
+  0x00000001229d4a74:   ldrsb		w14, [x12, #0x10]
+  0x00000001229d4a78:   cmp		w14, w20
+  0x00000001229d4a7c:   b.eq		#0x1229d4b24
+  0x00000001229d4a80:   ldrsb		w14, [x12, #0x11]
+  0x00000001229d4a84:   cmp		w14, w20
+  0x00000001229d4a88:   b.eq		#0x1229d4b2c
+  0x00000001229d4a8c:   ldrsb		w14, [x12, #0x12]
+  0x00000001229d4a90:   cmp		w14, w20
+  0x00000001229d4a94:   b.eq		#0x1229d4b34
+  0x00000001229d4a98:   ldrsb		w12, [x12, #0x13]
+  0x00000001229d4a9c:   cmp		w12, w20
+  0x00000001229d4aa0:   b.eq		#0x1229d4b3c
+  0x00000001229d4aa4:   add		w19, w19, #8
+  0x00000001229d4aa8:   cmp		w19, w13
+  0x00000001229d4aac:   b.lt		#0x1229d4a40
+  0x00000001229d4ab0:   ldr		x13, [x28, #0x30]   ; ImmutableOopMap {rdispatch=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@20 (line 53)
+  0x00000001229d4ab4:   ldr		wzr, [x13]          ;   {poll}
+  0x00000001229d4ab8:   cmp		w19, w11
+  0x00000001229d4abc:   b.lt		#0x1229d4a10
+  0x00000001229d4ac0:   cmp		w19, w10
+  0x00000001229d4ac4:   b.ge		#0x1229d4aec
+  0x00000001229d4ac8:   add		x11, x21, w19, sxtw
+  0x00000001229d4acc:   cmp		w19, w10
+  0x00000001229d4ad0:   b.hs		#0x1229d4b9c
+  0x00000001229d4ad4:   ldrsb		w12, [x11, #0xc]
+  0x00000001229d4ad8:   cmp		w12, w20
+  0x00000001229d4adc:   b.eq		#0x1229d4af8
+  0x00000001229d4ae0:   add		w19, w19, #1
+  0x00000001229d4ae4:   cmp		w19, w10
+  0x00000001229d4ae8:   b.lt		#0x1229d4ac8
+  0x00000001229d4aec:   mov		w29, w19
+  0x00000001229d4af0:   b		#0x1229d4b84
+  0x00000001229d4af4:   add		w19, w19, #1
+  0x00000001229d4af8:   mov		w0, w19
+  0x00000001229d4afc:   ldp		x29, x30, [sp, #0x30]
+  0x00000001229d4b00:   add		sp, sp, #0x40
+  0x00000001229d4b04:   ldr		x8, [x28, #0x28]    ;   {poll_return}
+  0x00000001229d4b08:   cmp		sp, x8
+  0x00000001229d4b0c:   b.hi		#0x1229d4bc0
+  0x00000001229d4b10:   ret		
+  0x00000001229d4b14:   add		w19, w19, #2
+  0x00000001229d4b18:   b		#0x1229d4af8
+  0x00000001229d4b1c:   add		w19, w19, #3
+  0x00000001229d4b20:   b		#0x1229d4af8
+  0x00000001229d4b24:   add		w19, w19, #4
+  0x00000001229d4b28:   b		#0x1229d4af8
+  0x00000001229d4b2c:   add		w19, w19, #5
+  0x00000001229d4b30:   b		#0x1229d4af8
+  0x00000001229d4b34:   add		w19, w19, #6
+  0x00000001229d4b38:   b		#0x1229d4af8
+  0x00000001229d4b3c:   add		w19, w19, #7
+  0x00000001229d4b40:   b		#0x1229d4af8
+  0x00000001229d4b44:   mov		w29, w19
+  0x00000001229d4b48:   mov		w1, #-0x1c
+  0x00000001229d4b4c:   str		w20, [sp, #8]
+  0x00000001229d4b50:   str		x21, [sp, #0x10]
+  0x00000001229d4b54:   bl		#0x12232b700        ; ImmutableOopMap {[16]=Oop }
+                                                            ;*baload {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::indexOfScalar@10 (line 54)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229d4b58:   nop		                    ;   {post_call_nop}
+  0x00000001229d4b5c:   movk		xzr, #0x310
+  0x00000001229d4b60:   movk		xzr, #0x100
+  0x00000001229d4b64:   mov		w1, #-0x7b
+  0x00000001229d4b68:   mov		x29, x21
+  0x00000001229d4b6c:   stp		w20, w19, [sp]
+  0x00000001229d4b70:   bl		#0x12232b700        ; ImmutableOopMap {rfp=Oop }
+                                                            ;*iload_3 {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::indexOfScalar@2 (line 53)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229d4b74:   nop		                    ;   {post_call_nop}
+  0x00000001229d4b78:   movk		xzr, #0x32c
+  0x00000001229d4b7c:   movk		xzr, #0x200
+  0x00000001229d4b80:   mov		w29, w19
+  0x00000001229d4b84:   mov		w1, #-0xbb
+  0x00000001229d4b88:   str		w10, [sp]
+  0x00000001229d4b8c:   bl		#0x12232b700        ; ImmutableOopMap {}
+                                                            ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@5 (line 53)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229d4b90:   nop		                    ;   {post_call_nop}
+  0x00000001229d4b94:   movk		xzr, #0x348
+  0x00000001229d4b98:   movk		xzr, #0x300
+  0x00000001229d4b9c:   mov		w29, w19
+  0x00000001229d4ba0:   b		#0x1229d4b48
+  0x00000001229d4ba4:   mov		w1, #-0x92
+  0x00000001229d4ba8:   mov		w29, w20
+  0x00000001229d4bac:   str		w19, [sp]
+  0x00000001229d4bb0:   bl		#0x12232b700        ; ImmutableOopMap {}
+                                                            ;*iload_3 {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::indexOfScalar@2 (line 53)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229d4bb4:   nop		                    ;   {post_call_nop}
+  0x00000001229d4bb8:   movk		xzr, #0x36c
+  0x00000001229d4bbc:   movk		xzr, #0x400
+  0x00000001229d4bc0:   adr		x8, #0x1229d4b04    ;   {internal_word}
+  0x00000001229d4bc4:   str		x8, [x28, #0x498]
+  0x00000001229d4bc8:   b		#0x122254ec0        ;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00000001229d4bcc:   mov		x8, #0xc5c0         ;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00000001229d4bd0:   movk		x8, #0x2225, lsl #16
+  0x00000001229d4bd4:   movk		x8, #1, lsl #32
+  0x00000001229d4bd8:   blr		x8
+  0x00000001229d4bdc:   b		#0x1229d4970
+  0x00000001229d4be0:   udf		#1                  ;   {entry_guard}
+  0x00000001229d4be4:   udf		#0
+[Stub Code]
+  0x00000001229d4be8:   bl		#0x1222550c0        ;   {runtime_call DeoptimizationBlob}
+[Deopt Handler Entry Point]
+  0x00000001229d4bec:   b		#0x1229d4be8
+--------------------------------------------------------------------------------
+[/Disassembly]
+
+============================= C2-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c2) 355 2319       4       JitDemo::indexOfScalar (25 bytes)
+ total in heap  [0x00000001229d5b48,0x00000001229d5e70] = 808
+ main code      [0x00000001229d5c40,0x00000001229d5e60] = 544
+ stub code      [0x00000001229d5e60,0x00000001229d5e68] = 8
+ oops           [0x00000001229d5e68,0x00000001229d5e70] = 8
+ mutable data [0x00000077c338c570,0x00000077c338c5a0] = 48
+ relocation     [0x00000077c338c570,0x00000077c338c598] = 40
+ metadata       [0x00000077c338c598,0x00000077c338c5a0] = 8
+ immutable data [0x00000077bf8cc900,0x00000077bf8cc9e4] = 228
+ dependencies   [0x00000077bf8cc900,0x00000077bf8cc908] = 8
+ nul chk table  [0x00000077bf8cc908,0x00000077bf8cc918] = 16
+ scopes pcs     [0x00000077bf8cc918,0x00000077bf8cc988] = 112
+ scopes data    [0x00000077bf8cc988,0x00000077bf8cc9e0] = 88
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Instructions begin]
+  0x00000001229d5c40:   nop		
+  0x00000001229d5c44:   nop		
+[Entry Point]
+  # {method} {0x0000000142a88940} 'indexOfScalar' '([BB)I' in 'JitDemo'
+  # this:     c_rarg1:c_rarg1 
+                        = 'JitDemo'
+  # parm0:    c_rarg2:c_rarg2 
+                        = '[B'
+  # parm1:    c_rarg3   = byte
+  #           [sp+0x30]  (sp of caller)
+  0x00000001229d5c48:   ldr		x8, [x1]
+  0x00000001229d5c4c:   lsr		x8, x8, #0x2a
+  0x00000001229d5c50:   ldr		w10, [x9, #8]
+  0x00000001229d5c54:   cmp		w8, w10
+  0x00000001229d5c58:   b.eq		#0x1229d5c60
+  0x00000001229d5c5c:   b		#0x122253640        ;   {runtime_call ic_miss_blob (shared runtime)}
+[Verified Entry Point]
+  0x00000001229d5c60:   sub		x9, sp, #0x14, lsl #12
+  0x00000001229d5c64:   str		xzr, [x9]
+  0x00000001229d5c68:   sub		sp, sp, #0x30
+  0x00000001229d5c6c:   stp		x29, x30, [sp, #0x20]
+  0x00000001229d5c70:   ldr		w8, #0x1229d5e58
+  0x00000001229d5c74:   ldr		w9, [x28, #0x20]
+  0x00000001229d5c78:   cmp		x8, x9
+  0x00000001229d5c7c:   b.ne		#0x1229d5e44
+  0x00000001229d5c80:   ldr		w16, [x2, #8]       ; implicit exception: dispatches to 0x00000001229d5e24
+  0x00000001229d5c84:   sub		w11, w16, #1
+  0x00000001229d5c88:   cbz		w16, #0x1229d5e04
+  0x00000001229d5c8c:   cmp		w11, w16
+  0x00000001229d5c90:   b.hs		#0x1229d5de8
+  0x00000001229d5c94:   ldrsb		w11, [x2, #0xc]
+  0x00000001229d5c98:   cmp		w11, w3
+  0x00000001229d5c9c:   b.eq		#0x1229d5de0
+  0x00000001229d5ca0:   sub		w10, w16, #7
+  0x00000001229d5ca4:   mov		w0, #1
+  0x00000001229d5ca8:   cmp		w10, #1
+  0x00000001229d5cac:   b.le		#0x1229d5d60
+  0x00000001229d5cb0:   mov		w11, #0x1f40
+  0x00000001229d5cb4:   sub		w13, w16, w0
+  0x00000001229d5cb8:   cmp		w10, w0
+  0x00000001229d5cbc:   sub		w12, w13, #7
+  0x00000001229d5cc0:   csel		w12, wzr, w12, lt
+  0x00000001229d5cc4:   mov		w8, #0x1f40
+  0x00000001229d5cc8:   cmp		w12, w8
+  0x00000001229d5ccc:   csel		w12, w11, w12, hi
+  0x00000001229d5cd0:   add		w13, w12, w0
+  0x00000001229d5cd4:   nop		
+  0x00000001229d5cd8:   nop		
+  0x00000001229d5cdc:   nop		
+  0x00000001229d5ce0:   add		x12, x2, w0, sxtw
+  0x00000001229d5ce4:   ldrsb		w14, [x12, #0xc]
+  0x00000001229d5ce8:   cmp		w14, w3
+  0x00000001229d5cec:   b.eq		#0x1229d5dc0
+  0x00000001229d5cf0:   ldrsb		w14, [x12, #0xd]
+  0x00000001229d5cf4:   cmp		w14, w3
+  0x00000001229d5cf8:   b.eq		#0x1229d5db0
+  0x00000001229d5cfc:   ldrsb		w14, [x12, #0xe]
+  0x00000001229d5d00:   cmp		w14, w3
+  0x00000001229d5d04:   b.eq		#0x1229d5dbc
+  0x00000001229d5d08:   ldrsb		w14, [x12, #0xf]
+  0x00000001229d5d0c:   cmp		w14, w3
+  0x00000001229d5d10:   b.eq		#0x1229d5da4
+  0x00000001229d5d14:   ldrsb		w14, [x12, #0x10]
+  0x00000001229d5d18:   cmp		w14, w3
+  0x00000001229d5d1c:   b.eq		#0x1229d5dd8
+  0x00000001229d5d20:   ldrsb		w14, [x12, #0x11]
+  0x00000001229d5d24:   cmp		w14, w3
+  0x00000001229d5d28:   b.eq		#0x1229d5dac
+  0x00000001229d5d2c:   ldrsb		w14, [x12, #0x12]
+  0x00000001229d5d30:   cmp		w14, w3
+  0x00000001229d5d34:   b.eq		#0x1229d5db8
+  0x00000001229d5d38:   ldrsb		w12, [x12, #0x13]
+  0x00000001229d5d3c:   cmp		w12, w3
+  0x00000001229d5d40:   b.eq		#0x1229d5da0
+  0x00000001229d5d44:   add		w0, w0, #8
+  0x00000001229d5d48:   cmp		w0, w13
+  0x00000001229d5d4c:   b.lt		#0x1229d5ce0
+  0x00000001229d5d50:   ldr		x12, [x28, #0x30]   ; ImmutableOopMap {c_rarg2=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@20 (line 53)
+  0x00000001229d5d54:   ldr		wzr, [x12]          ;   {poll}
+  0x00000001229d5d58:   cmp		w0, w10
+  0x00000001229d5d5c:   b.lt		#0x1229d5cb4
+  0x00000001229d5d60:   cmp		w0, w16
+  0x00000001229d5d64:   b.ge		#0x1229d5e1c
+  0x00000001229d5d68:   add		x10, x2, w0, sxtw
+  0x00000001229d5d6c:   ldrsb		w10, [x10, #0xc]
+  0x00000001229d5d70:   cmp		w10, w3
+  0x00000001229d5d74:   b.eq		#0x1229d5dc0
+  0x00000001229d5d78:   add		w0, w0, #1
+  0x00000001229d5d7c:   cmp		w0, w16
+  0x00000001229d5d80:   b.lt		#0x1229d5d68
+  0x00000001229d5d84:   mov		w29, w0
+  0x00000001229d5d88:   mov		w1, #-0xbb
+  0x00000001229d5d8c:   str		w16, [sp]
+  0x00000001229d5d90:   bl		#0x12232b700        ; ImmutableOopMap {}
+                                                            ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@5 (line 53)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229d5d94:   nop		                    ;   {post_call_nop}
+  0x00000001229d5d98:   movk		xzr, #0x24c
+  0x00000001229d5d9c:   movk		xzr, #0x100
+  0x00000001229d5da0:   add		w0, w0, #4
+  0x00000001229d5da4:   add		w0, w0, #2
+  0x00000001229d5da8:   b		#0x1229d5db0
+  0x00000001229d5dac:   add		w0, w0, #4
+  0x00000001229d5db0:   add		w0, w0, #1
+  0x00000001229d5db4:   b		#0x1229d5dc0
+  0x00000001229d5db8:   add		w0, w0, #4
+  0x00000001229d5dbc:   add		w0, w0, #2
+  0x00000001229d5dc0:   ldp		x29, x30, [sp, #0x20]
+  0x00000001229d5dc4:   add		sp, sp, #0x30
+  0x00000001229d5dc8:   ldr		x8, [x28, #0x28]    ;   {poll_return}
+  0x00000001229d5dcc:   cmp		sp, x8
+  0x00000001229d5dd0:   b.hi		#0x1229d5e38
+  0x00000001229d5dd4:   ret		
+  0x00000001229d5dd8:   add		w0, w0, #4
+  0x00000001229d5ddc:   b		#0x1229d5dc0
+  0x00000001229d5de0:   mov		w0, wzr
+  0x00000001229d5de4:   b		#0x1229d5dc0
+  0x00000001229d5de8:   mov		w1, #-0x92
+  0x00000001229d5dec:   mov		x29, x2
+  0x00000001229d5df0:   stp		w3, w16, [sp]
+  0x00000001229d5df4:   bl		#0x12232b700        ; ImmutableOopMap {rfp=Oop }
+                                                            ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@5 (line 53)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229d5df8:   nop		                    ;   {post_call_nop}
+  0x00000001229d5dfc:   movk		xzr, #0x2b0
+  0x00000001229d5e00:   movk		xzr, #0x200
+  0x00000001229d5e04:   mov		w1, #-0xbb
+  0x00000001229d5e08:   mov		w29, w16
+  0x00000001229d5e0c:   bl		#0x12232b700        ; ImmutableOopMap {}
+                                                            ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::indexOfScalar@5 (line 53)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229d5e10:   nop		                    ;   {post_call_nop}
+  0x00000001229d5e14:   movk		xzr, #0x2c8
+  0x00000001229d5e18:   movk		xzr, #0x300
+  0x00000001229d5e1c:   mov		w29, w0
+  0x00000001229d5e20:   b		#0x1229d5d88
+  0x00000001229d5e24:   mov		w1, #-0xa
+  0x00000001229d5e28:   bl		#0x12232b700        ; ImmutableOopMap {}
+                                                            ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::indexOfScalar@4 (line 53)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229d5e2c:   nop		                    ;   {post_call_nop}
+  0x00000001229d5e30:   movk		xzr, #0x2e4
+  0x00000001229d5e34:   movk		xzr, #0x400
+  0x00000001229d5e38:   adr		x8, #0x1229d5dc8    ;   {internal_word}
+  0x00000001229d5e3c:   str		x8, [x28, #0x498]
+  0x00000001229d5e40:   b		#0x122254ec0        ;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00000001229d5e44:   mov		x8, #0xc5c0         ;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00000001229d5e48:   movk		x8, #0x2225, lsl #16
+  0x00000001229d5e4c:   movk		x8, #1, lsl #32
+  0x00000001229d5e50:   blr		x8
+  0x00000001229d5e54:   b		#0x1229d5c80
+  0x00000001229d5e58:   udf		#1                  ;   {entry_guard}
+  0x00000001229d5e5c:   udf		#0
+[Stub Code]
+  0x00000001229d5e60:   bl		#0x1222550c0        ;   {runtime_call DeoptimizationBlob}
+[Deopt Handler Entry Point]
+  0x00000001229d5e64:   b		#0x1229d5e60
+--------------------------------------------------------------------------------
+[/Disassembly]
+999000000
+------------------------------------------------------------------------
+JitDemo::indexOfScalar([BB)I
+  interpreter_invocation_count:         434
+  invocation_counter:                   434
+  backedge_counter:                  433582
+  decompile_count:                        0
+  mdo size: 296 bytes
+
+   0 iconst_0
+   1 istore_3
+   2 iload_3
+   3 aload_1
+   4 arraylength
+   5 if_icmpge 23
+  0    bci: 5    BranchData         taken(0) displacement(88)
+                                    not taken(373000)
+   8 aload_1
+   9 iload_3
+  10 baload
+  11 iload_2
+  12 if_icmpne 17
+  32   bci: 12   BranchData         taken(372627) displacement(32)
+                                    not taken(373)
+  15 iload_3
+  16 ireturn
+  17 iinc #3 1
+  20 goto 2
+  64   bci: 20   JumpData           taken(372627) displacement(-64)
+  23 iconst_m1
+  24 ireturn
+------------------------------------------------------------------------
+Total MDO size: 296 bytes

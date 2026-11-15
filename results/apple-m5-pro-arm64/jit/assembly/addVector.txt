@@ -1,0 +1,2701 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1) 351 2306       3       JitDemo::addVector (96 bytes)
+ total in heap  [0x000000011b142748,0x000000011b144538] = 7664
+ main code      [0x000000011b142840,0x000000011b1443d0] = 7056
+ stub code      [0x000000011b1443d0,0x000000011b1444f0] = 288
+ oops           [0x000000011b1444f0,0x000000011b144538] = 72
+ mutable data [0x000000789b384a00,0x000000789b384ea0] = 1184
+ relocation     [0x000000789b384a00,0x000000789b384d48] = 840
+ metadata       [0x000000789b384d48,0x000000789b384ea0] = 344
+ immutable data [0x000000789b808000,0x000000789b80897c] = 2428
+ dependencies   [0x000000789b808000,0x000000789b808030] = 48
+ nul chk table  [0x000000789b808030,0x000000789b808078] = 72
+ scopes pcs     [0x000000789b808078,0x000000789b808468] = 1008
+ scopes data    [0x000000789b808468,0x000000789b808978] = 1296
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Instructions begin]
+  0x000000011b142840:   nop		
+  0x000000011b142844:   nop		
+  0x000000011b142848:   nop		
+  0x000000011b14284c:   nop		
+  0x000000011b142850:   nop		
+  0x000000011b142854:   nop		
+  0x000000011b142858:   nop		
+  0x000000011b14285c:   nop		
+  0x000000011b142860:   nop		
+  0x000000011b142864:   nop		
+[Entry Point]
+  # {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo'
+  # this:     c_rarg1:c_rarg1 
+                        = 'JitDemo'
+  # parm0:    c_rarg2:c_rarg2 
+                        = '[I'
+  # parm1:    c_rarg3:c_rarg3 
+                        = '[I'
+  # parm2:    c_rarg4:c_rarg4 
+                        = '[I'
+  #           [sp+0x150]  (sp of caller)
+  0x000000011b142868:   ldr		x8, [x1]
+  0x000000011b14286c:   lsr		x8, x8, #0x2a
+  0x000000011b142870:   ldr		w10, [x9, #8]
+  0x000000011b142874:   cmp		w8, w10
+  0x000000011b142878:   b.eq		#0x11b142880
+  0x000000011b14287c:   b		#0x122253640        ;   {runtime_call ic_miss_blob (shared runtime)}
+[Verified Entry Point]
+  0x000000011b142880:   nop		
+  0x000000011b142884:   sub		x9, sp, #0x14, lsl #12
+  0x000000011b142888:   str		xzr, [x9]
+  0x000000011b14288c:   sub		sp, sp, #0x150
+  0x000000011b142890:   stp		x29, x30, [sp, #0x140]
+  0x000000011b142894:   ldr		w8, #0x11b1428b8
+  0x000000011b142898:   ldr		w9, [x28, #0x20]
+  0x000000011b14289c:   cmp		x8, x9
+  0x000000011b1428a0:   b.eq		#0x11b1428bc
+  0x000000011b1428a4:   mov		x8, #0xc5c0         ;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x000000011b1428a8:   movk		x8, #0x2225, lsl #16
+  0x000000011b1428ac:   movk		x8, #1, lsl #32
+  0x000000011b1428b0:   blr		x8
+  0x000000011b1428b4:   b		#0x11b1428bc
+  0x000000011b1428b8:   udf		#1
+  0x000000011b1428bc:   mov		x29, x2
+  0x000000011b1428c0:   str		x29, [sp, #0x108]
+  0x000000011b1428c4:   stp		x4, x3, [sp, #0x118]
+  0x000000011b1428c8:   mov		x2, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b1428cc:   movk		x2, #0x30a9, lsl #16
+  0x000000011b1428d0:   movk		x2, #1, lsl #32
+  0x000000011b1428d4:   ldr		w5, [x2, #0x70]
+  0x000000011b1428d8:   add		w5, w5, #2
+  0x000000011b1428dc:   str		w5, [x2, #0x70]
+  0x000000011b1428e0:   and		w5, w5, #0x7fe
+  0x000000011b1428e4:   cmp		w5, #0
+  0x000000011b1428e8:   b.eq		#0x11b143eac
+  0x000000011b1428ec:   movz		w10, #0, lsl #16
+  0x000000011b1428f0:   ldr		w0, [x29, #8]       ; implicit exception: dispatches to 0x000000011b143ecc
+  0x000000011b1428f4:   mov		x1, #0x7b0          ;   {oop(a 'jdk/incubator/vector/IntVector$IntSpecies'{0x0000007b9e6007b0})}
+  0x000000011b1428f8:   movk		x1, #0x9e60, lsl #16
+  0x000000011b1428fc:   movk		x1, #0x7b, lsl #32
+  0x000000011b142900:   mov		x2, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b142904:   movk		x2, #0x30a9, lsl #16
+  0x000000011b142908:   movk		x2, #1, lsl #32
+  0x000000011b14290c:   ldr		x1, [x1]
+  0x000000011b142910:   lsr		x1, x1, #0x2a
+  0x000000011b142914:   lsl		x1, x1, #0xa
+  0x000000011b142918:   eor		x1, x1, #0xff800000000
+  0x000000011b14291c:   mov		x9, #0xb0
+  0x000000011b142920:   ldr		x8, [x2, x9]
+  0x000000011b142924:   cmp		x8, x1
+  0x000000011b142928:   b.eq		#0x11b14296c
+  0x000000011b14292c:   add		x9, x9, #0x10
+  0x000000011b142930:   sub		x8, x9, #0xd0
+  0x000000011b142934:   cbnz		x8, #0x11b142920
+  0x000000011b142938:   mov		x9, #0xb0
+  0x000000011b14293c:   ldr		x8, [x2, x9]
+  0x000000011b142940:   cbz		x8, #0x11b142958
+  0x000000011b142944:   add		x9, x9, #0x10
+  0x000000011b142948:   sub		x8, x9, #0xd0
+  0x000000011b14294c:   cbnz		x8, #0x11b14293c
+  0x000000011b142950:   mov		x9, #0xa8
+  0x000000011b142954:   b		#0x11b142970
+  0x000000011b142958:   add		x9, x2, x9, uxtx
+  0x000000011b14295c:   mov		x8, xzr
+  0x000000011b142960:   cas		x8, x1, [x9]
+  0x000000011b142964:   cmp		x8, xzr
+  0x000000011b142968:   b		#0x11b14291c
+  0x000000011b14296c:   add		x9, x9, #8
+  0x000000011b142970:   ldr		x8, [x2, x9]
+  0x000000011b142974:   add		x8, x8, #1
+  0x000000011b142978:   str		x8, [x2, x9]
+  0x000000011b14297c:   mov		x1, #0x3a98         ;   {metadata(method data for {method} {0x00000001301f2d58} 'loopBound' '(I)I' in 'jdk/incubator/vector/AbstractSpecies')}
+  0x000000011b142980:   movk		x1, #0x302f, lsl #16
+  0x000000011b142984:   movk		x1, #1, lsl #32
+  0x000000011b142988:   ldr		w2, [x1, #0x70]
+  0x000000011b14298c:   add		w2, w2, #2
+  0x000000011b142990:   str		w2, [x1, #0x70]
+  0x000000011b142994:   and		w2, w2, #0x1ffffe
+  0x000000011b142998:   cmp		w2, #0
+  0x000000011b14299c:   b.eq		#0x11b143ed0
+  0x000000011b1429a0:   mov		x1, #0x3a98         ;   {metadata(method data for {method} {0x00000001301f2d58} 'loopBound' '(I)I' in 'jdk/incubator/vector/AbstractSpecies')}
+  0x000000011b1429a4:   movk		x1, #0x302f, lsl #16
+  0x000000011b1429a8:   movk		x1, #1, lsl #32
+  0x000000011b1429ac:   ldr		x8, [x1, #0xa8]
+  0x000000011b1429b0:   add		x8, x8, #1
+  0x000000011b1429b4:   str		x8, [x1, #0xa8]
+  0x000000011b1429b8:   mov		x1, #0x3b98         ;   {metadata(method data for {method} {0x00000001302de7e8} 'roundDown' '(II)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b1429bc:   movk		x1, #0x302f, lsl #16
+  0x000000011b1429c0:   movk		x1, #1, lsl #32
+  0x000000011b1429c4:   ldr		w2, [x1, #0x70]
+  0x000000011b1429c8:   add		w2, w2, #2
+  0x000000011b1429cc:   str		w2, [x1, #0x70]
+  0x000000011b1429d0:   and		w2, w2, #0x1ffffe
+  0x000000011b1429d4:   cmp		w2, #0
+  0x000000011b1429d8:   b.eq		#0x11b143ef0
+  0x000000011b1429dc:   mov		x1, #0x3b98         ;   {metadata(method data for {method} {0x00000001302de7e8} 'roundDown' '(II)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b1429e0:   movk		x1, #0x302f, lsl #16
+  0x000000011b1429e4:   movk		x1, #1, lsl #32
+  0x000000011b1429e8:   ldr		x2, [x1, #0xb8]
+  0x000000011b1429ec:   add		x2, x2, #1
+  0x000000011b1429f0:   str		x2, [x1, #0xb8]
+  0x000000011b1429f4:   and		w1, w0, #0xfffffffc
+  0x000000011b1429f8:   cmp		w10, w1
+  0x000000011b1429fc:   mov		x1, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b142a00:   movk		x1, #0x30a9, lsl #16
+  0x000000011b142a04:   movk		x1, #1, lsl #32
+  0x000000011b142a08:   mov		x8, #0xd8
+  0x000000011b142a0c:   mov		x9, #0xe8
+  0x000000011b142a10:   csel		x2, x8, x9, ge
+  0x000000011b142a14:   ldr		x5, [x1, x2]
+  0x000000011b142a18:   add		x5, x5, #1
+  0x000000011b142a1c:   str		x5, [x1, x2]
+  0x000000011b142a20:   b.ge		#0x11b143db8
+  0x000000011b142a24:   mov		x1, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b142a28:   movk		x1, #0x30a9, lsl #16
+  0x000000011b142a2c:   movk		x1, #1, lsl #32
+  0x000000011b142a30:   ldr		x8, [x1, #0xf8]
+  0x000000011b142a34:   add		x8, x8, #1
+  0x000000011b142a38:   str		x8, [x1, #0xf8]
+  0x000000011b142a3c:   mov		x1, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142a40:   movk		x1, #0x121, lsl #16
+  0x000000011b142a44:   movk		x1, #0xff8, lsl #32
+  0x000000011b142a48:   ldr		w2, [x1, #0x70]
+  0x000000011b142a4c:   add		w2, w2, #2
+  0x000000011b142a50:   str		w2, [x1, #0x70]
+  0x000000011b142a54:   and		w2, w2, #0x1ffffe
+  0x000000011b142a58:   cmp		w2, #0
+  0x000000011b142a5c:   b.eq		#0x11b143f10
+  0x000000011b142a60:   mov		x1, #0x7b0          ;   {oop(a 'jdk/incubator/vector/IntVector$IntSpecies'{0x0000007b9e6007b0})}
+  0x000000011b142a64:   movk		x1, #0x9e60, lsl #16
+  0x000000011b142a68:   movk		x1, #0x7b, lsl #32
+  0x000000011b142a6c:   mov		x2, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142a70:   movk		x2, #0x121, lsl #16
+  0x000000011b142a74:   movk		x2, #0xff8, lsl #32
+  0x000000011b142a78:   ldr		x1, [x1]
+  0x000000011b142a7c:   lsr		x1, x1, #0x2a
+  0x000000011b142a80:   lsl		x1, x1, #0xa
+  0x000000011b142a84:   eor		x1, x1, #0xff800000000
+  0x000000011b142a88:   mov		x9, #0xb0
+  0x000000011b142a8c:   ldr		x8, [x2, x9]
+  0x000000011b142a90:   cmp		x8, x1
+  0x000000011b142a94:   b.eq		#0x11b142ad8
+  0x000000011b142a98:   add		x9, x9, #0x10
+  0x000000011b142a9c:   sub		x8, x9, #0xd0
+  0x000000011b142aa0:   cbnz		x8, #0x11b142a8c
+  0x000000011b142aa4:   mov		x9, #0xb0
+  0x000000011b142aa8:   ldr		x8, [x2, x9]
+  0x000000011b142aac:   cbz		x8, #0x11b142ac4
+  0x000000011b142ab0:   add		x9, x9, #0x10
+  0x000000011b142ab4:   sub		x8, x9, #0xd0
+  0x000000011b142ab8:   cbnz		x8, #0x11b142aa8
+  0x000000011b142abc:   mov		x9, #0xa8
+  0x000000011b142ac0:   b		#0x11b142adc
+  0x000000011b142ac4:   add		x9, x2, x9, uxtx
+  0x000000011b142ac8:   mov		x8, xzr
+  0x000000011b142acc:   cas		x8, x1, [x9]
+  0x000000011b142ad0:   cmp		x8, xzr
+  0x000000011b142ad4:   b		#0x11b142a88
+  0x000000011b142ad8:   add		x9, x9, #8
+  0x000000011b142adc:   ldr		x8, [x2, x9]
+  0x000000011b142ae0:   add		x8, x8, #1
+  0x000000011b142ae4:   str		x8, [x2, x9]
+  0x000000011b142ae8:   mov		x1, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142aec:   movk		x1, #0x121, lsl #16
+  0x000000011b142af0:   movk		x1, #0xff8, lsl #32
+  0x000000011b142af4:   ldr		x8, [x1, #0xd8]
+  0x000000011b142af8:   add		x8, x8, #1
+  0x000000011b142afc:   str		x8, [x1, #0xd8]
+  0x000000011b142b00:   mov		x1, #0x2e08         ;   {metadata(method data for {method} {0x00000001302de3d0} 'checkFromIndexSize' '(III)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b142b04:   movk		x1, #0x121, lsl #16
+  0x000000011b142b08:   movk		x1, #0xff8, lsl #32
+  0x000000011b142b0c:   ldr		w2, [x1, #0x70]
+  0x000000011b142b10:   add		w2, w2, #2
+  0x000000011b142b14:   str		w2, [x1, #0x70]
+  0x000000011b142b18:   and		w2, w2, #0x1ffffe
+  0x000000011b142b1c:   cmp		w2, #0
+  0x000000011b142b20:   b.eq		#0x11b143f30
+  0x000000011b142b24:   mov		x1, #0x2e08         ;   {metadata(method data for {method} {0x00000001302de3d0} 'checkFromIndexSize' '(III)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b142b28:   movk		x1, #0x121, lsl #16
+  0x000000011b142b2c:   movk		x1, #0xff8, lsl #32
+  0x000000011b142b30:   ldr		x8, [x1, #0x108]
+  0x000000011b142b34:   add		x8, x8, #1
+  0x000000011b142b38:   str		x8, [x1, #0x108]
+  0x000000011b142b3c:   sub		w1, w0, #3
+  0x000000011b142b40:   mov		x2, #0x35b0         ;   {metadata(method data for {method} {0x00000ff8004e7b88} 'checkIndex' '(II)I' in 'java/util/Objects')}
+  0x000000011b142b44:   movk		x2, #0x3011, lsl #16
+  0x000000011b142b48:   movk		x2, #1, lsl #32
+  0x000000011b142b4c:   ldr		w5, [x2, #0x70]
+  0x000000011b142b50:   add		w5, w5, #2
+  0x000000011b142b54:   str		w5, [x2, #0x70]
+  0x000000011b142b58:   and		w5, w5, #0x1ffffe
+  0x000000011b142b5c:   cmp		w5, #0
+  0x000000011b142b60:   b.eq		#0x11b143f50
+  0x000000011b142b64:   mov		x2, #0x35b0         ;   {metadata(method data for {method} {0x00000ff8004e7b88} 'checkIndex' '(II)I' in 'java/util/Objects')}
+  0x000000011b142b68:   movk		x2, #0x3011, lsl #16
+  0x000000011b142b6c:   movk		x2, #1, lsl #32
+  0x000000011b142b70:   ldr		x8, [x2, #0xa8]
+  0x000000011b142b74:   add		x8, x8, #1
+  0x000000011b142b78:   str		x8, [x2, #0xa8]
+  0x000000011b142b7c:   mov		x2, xzr
+  0x000000011b142b80:   movz		w2, #0, lsl #16
+  0x000000011b142b84:   cmp		w10, w2
+  0x000000011b142b88:   b.lt		#0x11b143f70
+  0x000000011b142b8c:   cmp		w10, w1
+  0x000000011b142b90:   b.ge		#0x11b143f7c
+  0x000000011b142b94:   mov		x1, x10
+  0x000000011b142b98:   mov		x2, #0x7b0          ;   {oop(a 'jdk/incubator/vector/IntVector$IntSpecies'{0x0000007b9e6007b0})}
+  0x000000011b142b9c:   movk		x2, #0x9e60, lsl #16
+  0x000000011b142ba0:   movk		x2, #0x7b, lsl #32
+  0x000000011b142ba4:   mov		x5, x2
+  0x000000011b142ba8:   mov		x6, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142bac:   movk		x6, #0x121, lsl #16
+  0x000000011b142bb0:   movk		x6, #0xff8, lsl #32
+  0x000000011b142bb4:   ldr		x5, [x5]
+  0x000000011b142bb8:   lsr		x5, x5, #0x2a
+  0x000000011b142bbc:   lsl		x5, x5, #0xa
+  0x000000011b142bc0:   eor		x5, x5, #0xff800000000
+  0x000000011b142bc4:   mov		x9, #0x120
+  0x000000011b142bc8:   ldr		x8, [x6, x9]
+  0x000000011b142bcc:   cmp		x8, x5
+  0x000000011b142bd0:   b.eq		#0x11b142c14
+  0x000000011b142bd4:   add		x9, x9, #0x10
+  0x000000011b142bd8:   sub		x8, x9, #0x140
+  0x000000011b142bdc:   cbnz		x8, #0x11b142bc8
+  0x000000011b142be0:   mov		x9, #0x120
+  0x000000011b142be4:   ldr		x8, [x6, x9]
+  0x000000011b142be8:   cbz		x8, #0x11b142c00
+  0x000000011b142bec:   add		x9, x9, #0x10
+  0x000000011b142bf0:   sub		x8, x9, #0x140
+  0x000000011b142bf4:   cbnz		x8, #0x11b142be4
+  0x000000011b142bf8:   mov		x9, #0x118
+  0x000000011b142bfc:   b		#0x11b142c18
+  0x000000011b142c00:   add		x9, x6, x9, uxtx
+  0x000000011b142c04:   mov		x8, xzr
+  0x000000011b142c08:   cas		x8, x5, [x9]
+  0x000000011b142c0c:   cmp		x8, xzr
+  0x000000011b142c10:   b		#0x11b142bc4
+  0x000000011b142c14:   add		x9, x9, #8
+  0x000000011b142c18:   ldr		x8, [x6, x9]
+  0x000000011b142c1c:   add		x8, x8, #1
+  0x000000011b142c20:   str		x8, [x6, x9]
+  0x000000011b142c24:   mov		x5, #0x3a28         ;   {metadata(method data for {method} {0x00000001301ed638} 'dummyVector' '()Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector$IntSpecies')}
+  0x000000011b142c28:   movk		x5, #0x121, lsl #16
+  0x000000011b142c2c:   movk		x5, #0xff8, lsl #32
+  0x000000011b142c30:   ldr		w6, [x5, #0x70]
+  0x000000011b142c34:   add		w6, w6, #2
+  0x000000011b142c38:   str		w6, [x5, #0x70]
+  0x000000011b142c3c:   and		w6, w6, #0x1ffffe
+  0x000000011b142c40:   cmp		w6, #0
+  0x000000011b142c44:   b.eq		#0x11b143f88
+  0x000000011b142c48:   mov		x5, #0x3a28         ;   {metadata(method data for {method} {0x00000001301ed638} 'dummyVector' '()Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector$IntSpecies')}
+  0x000000011b142c4c:   movk		x5, #0x121, lsl #16
+  0x000000011b142c50:   movk		x5, #0xff8, lsl #32
+  0x000000011b142c54:   ldr		x8, [x5, #0xa8]
+  0x000000011b142c58:   add		x8, x8, #1
+  0x000000011b142c5c:   str		x8, [x5, #0xa8]
+  0x000000011b142c60:   mov		x2, #0x3228         ;   {metadata(method data for {method} {0x00000001301f39a8} 'dummyVector' '()Ljdk/incubator/vector/AbstractVector;' in 'jdk/incubator/vector/AbstractSpecies')}
+  0x000000011b142c64:   movk		x2, #0x121, lsl #16
+  0x000000011b142c68:   movk		x2, #0xff8, lsl #32
+  0x000000011b142c6c:   ldr		w5, [x2, #0x70]
+  0x000000011b142c70:   add		w5, w5, #2
+  0x000000011b142c74:   str		w5, [x2, #0x70]
+  0x000000011b142c78:   and		w5, w5, #0x1ffffe
+  0x000000011b142c7c:   cmp		w5, #0
+  0x000000011b142c80:   b.eq		#0x11b143fa8
+  0x000000011b142c84:   mov		x2, #0x3228         ;   {metadata(method data for {method} {0x00000001301f39a8} 'dummyVector' '()Ljdk/incubator/vector/AbstractVector;' in 'jdk/incubator/vector/AbstractSpecies')}
+  0x000000011b142c88:   movk		x2, #0x121, lsl #16
+  0x000000011b142c8c:   movk		x2, #0xff8, lsl #32
+  0x000000011b142c90:   ldr		x5, [x2, #0xb8]
+  0x000000011b142c94:   add		x5, x5, #1
+  0x000000011b142c98:   str		x5, [x2, #0xb8]
+  0x000000011b142c9c:   str		w10, [sp, #0x110]
+  0x000000011b142ca0:   mov		x2, #0x2de8         ;   {oop(a 'jdk/incubator/vector/IntVector128'{0x0000007b9e662de8})}
+  0x000000011b142ca4:   movk		x2, #0x9e66, lsl #16
+  0x000000011b142ca8:   movk		x2, #0x7b, lsl #32
+  0x000000011b142cac:   mov		x5, x2
+  0x000000011b142cb0:   mov		x6, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142cb4:   movk		x6, #0x121, lsl #16
+  0x000000011b142cb8:   movk		x6, #0xff8, lsl #32
+  0x000000011b142cbc:   ldr		x8, [x6, #0x158]
+  0x000000011b142cc0:   add		x8, x8, #1
+  0x000000011b142cc4:   str		x8, [x6, #0x158]
+  0x000000011b142cc8:   mov		x5, #0xc720         ;   {metadata(method data for {method} {0x000000013021ba00} 'fromArray0' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b142ccc:   movk		x5, #0x120, lsl #16
+  0x000000011b142cd0:   movk		x5, #0xff8, lsl #32
+  0x000000011b142cd4:   ldr		w6, [x5, #0x70]
+  0x000000011b142cd8:   add		w6, w6, #2
+  0x000000011b142cdc:   str		w6, [x5, #0x70]
+  0x000000011b142ce0:   and		w6, w6, #0x1ffffe
+  0x000000011b142ce4:   cmp		w6, #0
+  0x000000011b142ce8:   b.eq		#0x11b143fc8
+  0x000000011b142cec:   mov		x5, x2
+  0x000000011b142cf0:   mov		x6, #0xc720         ;   {metadata(method data for {method} {0x000000013021ba00} 'fromArray0' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b142cf4:   movk		x6, #0x120, lsl #16
+  0x000000011b142cf8:   movk		x6, #0xff8, lsl #32
+  0x000000011b142cfc:   ldr		x8, [x6, #0xa8]
+  0x000000011b142d00:   add		x8, x8, #1
+  0x000000011b142d04:   str		x8, [x6, #0xa8]
+  0x000000011b142d08:   mov		x5, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142d0c:   movk		x5, #0x121, lsl #16
+  0x000000011b142d10:   movk		x5, #0xff8, lsl #32
+  0x000000011b142d14:   ldr		w6, [x5, #0x70]
+  0x000000011b142d18:   add		w6, w6, #2
+  0x000000011b142d1c:   str		w6, [x5, #0x70]
+  0x000000011b142d20:   and		w6, w6, #0x1ffffe
+  0x000000011b142d24:   cmp		w6, #0
+  0x000000011b142d28:   b.eq		#0x11b143fe8
+  0x000000011b142d2c:   mov		x5, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142d30:   movk		x5, #0x121, lsl #16
+  0x000000011b142d34:   movk		x5, #0xff8, lsl #32
+  0x000000011b142d38:   ldr		x8, [x5, #0xb8]
+  0x000000011b142d3c:   add		x8, x8, #1
+  0x000000011b142d40:   str		x8, [x5, #0xb8]
+  0x000000011b142d44:   mov		x2, #0xd628         ;   {metadata(method data for {method} {0x0000000130217e50} 'vspecies' '()Ljdk/incubator/vector/IntVector$IntSpecies;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b142d48:   movk		x2, #0x302e, lsl #16
+  0x000000011b142d4c:   movk		x2, #1, lsl #32
+  0x000000011b142d50:   ldr		w5, [x2, #0x70]
+  0x000000011b142d54:   add		w5, w5, #2
+  0x000000011b142d58:   str		w5, [x2, #0x70]
+  0x000000011b142d5c:   and		w5, w5, #0x1ffffe
+  0x000000011b142d60:   cmp		w5, #0
+  0x000000011b142d64:   b.eq		#0x11b144008
+  0x000000011b142d68:   mov		x11, #0x7b0         ;   {oop(a 'jdk/incubator/vector/IntVector$IntSpecies'{0x0000007b9e6007b0})}
+  0x000000011b142d6c:   movk		x11, #0x9e60, lsl #16
+  0x000000011b142d70:   movk		x11, #0x7b, lsl #32
+  0x000000011b142d74:   mov		x2, x11
+  0x000000011b142d78:   mov		x5, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142d7c:   movk		x5, #0x121, lsl #16
+  0x000000011b142d80:   movk		x5, #0xff8, lsl #32
+  0x000000011b142d84:   ldr		x2, [x2]
+  0x000000011b142d88:   lsr		x2, x2, #0x2a
+  0x000000011b142d8c:   lsl		x2, x2, #0xa
+  0x000000011b142d90:   eor		x2, x2, #0xff800000000
+  0x000000011b142d94:   mov		x9, #0xe0
+  0x000000011b142d98:   ldr		x8, [x5, x9]
+  0x000000011b142d9c:   cmp		x8, x2
+  0x000000011b142da0:   b.eq		#0x11b142de4
+  0x000000011b142da4:   add		x9, x9, #0x10
+  0x000000011b142da8:   sub		x8, x9, #0x100
+  0x000000011b142dac:   cbnz		x8, #0x11b142d98
+  0x000000011b142db0:   mov		x9, #0xe0
+  0x000000011b142db4:   ldr		x8, [x5, x9]
+  0x000000011b142db8:   cbz		x8, #0x11b142dd0
+  0x000000011b142dbc:   add		x9, x9, #0x10
+  0x000000011b142dc0:   sub		x8, x9, #0x100
+  0x000000011b142dc4:   cbnz		x8, #0x11b142db4
+  0x000000011b142dc8:   mov		x9, #0xd8
+  0x000000011b142dcc:   b		#0x11b142de8
+  0x000000011b142dd0:   add		x9, x5, x9, uxtx
+  0x000000011b142dd4:   mov		x8, xzr
+  0x000000011b142dd8:   cas		x8, x2, [x9]
+  0x000000011b142ddc:   cmp		x8, xzr
+  0x000000011b142de0:   b		#0x11b142d94
+  0x000000011b142de4:   add		x9, x9, #8
+  0x000000011b142de8:   ldr		x8, [x5, x9]
+  0x000000011b142dec:   add		x8, x8, #1
+  0x000000011b142df0:   str		x8, [x5, x9]
+  0x000000011b142df4:   mov		x2, x11
+  0x000000011b142df8:   mov		x5, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142dfc:   movk		x5, #0x121, lsl #16
+  0x000000011b142e00:   movk		x5, #0xff8, lsl #32
+  0x000000011b142e04:   ldr		x2, [x2]
+  0x000000011b142e08:   lsr		x2, x2, #0x2a
+  0x000000011b142e0c:   lsl		x2, x2, #0xa
+  0x000000011b142e10:   eor		x2, x2, #0xff800000000
+  0x000000011b142e14:   mov		x9, #0x110
+  0x000000011b142e18:   ldr		x8, [x5, x9]
+  0x000000011b142e1c:   cmp		x8, x2
+  0x000000011b142e20:   b.eq		#0x11b142e64
+  0x000000011b142e24:   add		x9, x9, #0x10
+  0x000000011b142e28:   sub		x8, x9, #0x130
+  0x000000011b142e2c:   cbnz		x8, #0x11b142e18
+  0x000000011b142e30:   mov		x9, #0x110
+  0x000000011b142e34:   ldr		x8, [x5, x9]
+  0x000000011b142e38:   cbz		x8, #0x11b142e50
+  0x000000011b142e3c:   add		x9, x9, #0x10
+  0x000000011b142e40:   sub		x8, x9, #0x130
+  0x000000011b142e44:   cbnz		x8, #0x11b142e34
+  0x000000011b142e48:   mov		x9, #0x108
+  0x000000011b142e4c:   b		#0x11b142e68
+  0x000000011b142e50:   add		x9, x5, x9, uxtx
+  0x000000011b142e54:   mov		x8, xzr
+  0x000000011b142e58:   cas		x8, x2, [x9]
+  0x000000011b142e5c:   cmp		x8, xzr
+  0x000000011b142e60:   b		#0x11b142e14
+  0x000000011b142e64:   add		x9, x9, #8
+  0x000000011b142e68:   ldr		x8, [x5, x9]
+  0x000000011b142e6c:   add		x8, x8, #1
+  0x000000011b142e70:   str		x8, [x5, x9]
+  0x000000011b142e74:   mov		x2, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142e78:   movk		x2, #0x121, lsl #16
+  0x000000011b142e7c:   movk		x2, #0xff8, lsl #32
+  0x000000011b142e80:   ldr		x8, [x2, #0x138]
+  0x000000011b142e84:   add		x8, x8, #1
+  0x000000011b142e88:   str		x8, [x2, #0x138]
+  0x000000011b142e8c:   mov		x2, #0xd560         ;   {metadata(method data for {method} {0x00000001301a0d68} 'arrayAddress' '([II)J' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142e90:   movk		x2, #0x302e, lsl #16
+  0x000000011b142e94:   movk		x2, #1, lsl #32
+  0x000000011b142e98:   ldr		w5, [x2, #0x70]
+  0x000000011b142e9c:   add		w5, w5, #2
+  0x000000011b142ea0:   str		w5, [x2, #0x70]
+  0x000000011b142ea4:   and		w5, w5, #0x1ffffe
+  0x000000011b142ea8:   cmp		w5, #0
+  0x000000011b142eac:   b.eq		#0x11b144028
+  0x000000011b142eb0:   mov		x2, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142eb4:   movk		x2, #0x121, lsl #16
+  0x000000011b142eb8:   movk		x2, #0xff8, lsl #32
+  0x000000011b142ebc:   ldr		x8, [x2, #0x148]
+  0x000000011b142ec0:   add		x8, x8, #1
+  0x000000011b142ec4:   str		x8, [x2, #0x148]
+  0x000000011b142ec8:   sxtw		x0, w1
+  0x000000011b142ecc:   lsl		x1, x0, #2
+  0x000000011b142ed0:   mov		x2, #0xc
+  0x000000011b142ed4:   add		x5, x1, x2
+  0x000000011b142ed8:   mov		x1, #0xca00         ;   {metadata(method data for {method} {0x00000ff800224df8} 'linkToTargetMethod' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/Invokers$Holder')}
+  0x000000011b142edc:   movk		x1, #0x101, lsl #16
+  0x000000011b142ee0:   movk		x1, #0xff8, lsl #32
+  0x000000011b142ee4:   ldr		w2, [x1, #0x70]
+  0x000000011b142ee8:   add		w2, w2, #2
+  0x000000011b142eec:   str		w2, [x1, #0x70]
+  0x000000011b142ef0:   and		w2, w2, #0x1ffffe
+  0x000000011b142ef4:   cmp		w2, #0
+  0x000000011b142ef8:   b.eq		#0x11b144048
+  0x000000011b142efc:   mov		x1, #0xca00         ;   {metadata(method data for {method} {0x00000ff800224df8} 'linkToTargetMethod' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/Invokers$Holder')}
+  0x000000011b142f00:   movk		x1, #0x101, lsl #16
+  0x000000011b142f04:   movk		x1, #0xff8, lsl #32
+  0x000000011b142f08:   ldr		x8, [x1, #0xd8]
+  0x000000011b142f0c:   add		x8, x8, #1
+  0x000000011b142f10:   str		x8, [x1, #0xd8]
+  0x000000011b142f14:   mov		x1, #0xc600         ;   {metadata(method data for {method} {0x00000ff80022b370} 'constant_L' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/LambdaForm$Holder')}
+  0x000000011b142f18:   movk		x1, #0x101, lsl #16
+  0x000000011b142f1c:   movk		x1, #0xff8, lsl #32
+  0x000000011b142f20:   ldr		w2, [x1, #0x70]
+  0x000000011b142f24:   add		w2, w2, #2
+  0x000000011b142f28:   str		w2, [x1, #0x70]
+  0x000000011b142f2c:   and		w2, w2, #0x1ffffe
+  0x000000011b142f30:   cmp		w2, #0
+  0x000000011b142f34:   b.eq		#0x11b144068
+  0x000000011b142f38:   mov		x1, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142f3c:   movk		x1, #0x121, lsl #16
+  0x000000011b142f40:   movk		x1, #0xff8, lsl #32
+  0x000000011b142f44:   ldr		x8, [x1, #0x168]
+  0x000000011b142f48:   add		x8, x8, #1
+  0x000000011b142f4c:   str		x8, [x1, #0x168]
+  0x000000011b142f50:   mov		x1, #0x7f8          ;   {oop(a 'java/lang/Class'{0x0000007b9e6007f8} = 'jdk/incubator/vector/IntVector128')}
+  0x000000011b142f54:   movk		x1, #0x9e60, lsl #16
+  0x000000011b142f58:   movk		x1, #0x7b, lsl #32
+  0x000000011b142f5c:   mov		x12, #0x28a0        ;   {oop(a 'jdk/incubator/vector/IntVector$$Lambda+0x00000ff80120a400'{0x0000007b9e6728a0})}
+  0x000000011b142f60:   movk		x12, #0x9e67, lsl #16
+  0x000000011b142f64:   movk		x12, #0x7b, lsl #32
+  0x000000011b142f68:   mov		w2, #4
+  0x000000011b142f6c:   mov		x13, x3
+  0x000000011b142f70:   mov		w3, #4
+  0x000000011b142f74:   mov		x4, x29
+  0x000000011b142f78:   movz		w6, #0, lsl #16
+  0x000000011b142f7c:   mov		x7, x29
+  0x000000011b142f80:   str		x11, [sp]
+  0x000000011b142f84:   str		x12, [sp, #8]
+  0x000000011b142f88:   mov		x29, x13
+  0x000000011b142f8c:   bl		#0x1229cc400        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*invokestatic load {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@30 (line 3509)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {static_call}
+  0x000000011b142f90:   nop		                    ;   {post_call_nop}
+  0x000000011b142f94:   movk		xzr, #0x848
+  0x000000011b142f98:   movk		xzr, #0
+  0x000000011b142f9c:   mov		x3, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b142fa0:   movk		x3, #0x121, lsl #16
+  0x000000011b142fa4:   movk		x3, #0xff8, lsl #32
+  0x000000011b142fa8:   cbnz		x0, #0x11b142fbc
+  0x000000011b142fac:   ldrb		w8, [x3, #0x171]
+  0x000000011b142fb0:   orr		x8, x8, #1
+  0x000000011b142fb4:   strb		w8, [x3, #0x171]
+  0x000000011b142fb8:   b		#0x11b143058
+  0x000000011b142fbc:   ldr		x2, [x0]
+  0x000000011b142fc0:   lsr		x2, x2, #0x2a
+  0x000000011b142fc4:   lsl		x2, x2, #0xa
+  0x000000011b142fc8:   eor		x2, x2, #0xff800000000
+  0x000000011b142fcc:   mov		x9, #0x180
+  0x000000011b142fd0:   ldr		x8, [x3, x9]
+  0x000000011b142fd4:   cmp		x8, x2
+  0x000000011b142fd8:   b.eq		#0x11b14301c
+  0x000000011b142fdc:   add		x9, x9, #0x10
+  0x000000011b142fe0:   sub		x8, x9, #0x1a0
+  0x000000011b142fe4:   cbnz		x8, #0x11b142fd0
+  0x000000011b142fe8:   mov		x9, #0x180
+  0x000000011b142fec:   ldr		x8, [x3, x9]
+  0x000000011b142ff0:   cbz		x8, #0x11b143008
+  0x000000011b142ff4:   add		x9, x9, #0x10
+  0x000000011b142ff8:   sub		x8, x9, #0x1a0
+  0x000000011b142ffc:   cbnz		x8, #0x11b142fec
+  0x000000011b143000:   mov		x9, #0x178
+  0x000000011b143004:   b		#0x11b143020
+  0x000000011b143008:   add		x9, x3, x9, uxtx
+  0x000000011b14300c:   mov		x8, xzr
+  0x000000011b143010:   cas		x8, x2, [x9]
+  0x000000011b143014:   cmp		x8, xzr
+  0x000000011b143018:   b		#0x11b142fcc
+  0x000000011b14301c:   add		x9, x9, #8
+  0x000000011b143020:   ldr		x8, [x3, x9]
+  0x000000011b143024:   add		x8, x8, #1
+  0x000000011b143028:   str		x8, [x3, x9]
+  0x000000011b14302c:   mov		x2, #0x9800         ;   {metadata('jdk/incubator/vector/IntVector')}
+  0x000000011b143030:   movk		x2, #0x103, lsl #16
+  0x000000011b143034:   movk		x2, #0xff8, lsl #32
+  0x000000011b143038:   ldr		x3, [x0]
+  0x000000011b14303c:   lsr		x3, x3, #0x2a
+  0x000000011b143040:   lsl		x3, x3, #0xa
+  0x000000011b143044:   eor		x3, x3, #0xff800000000
+  0x000000011b143048:   ldr		x8, [x3, #0x58]
+  0x000000011b14304c:   cmp		x2, x8
+  0x000000011b143050:   b.ne		#0x11b144088
+  0x000000011b143054:   b		#0x11b143058
+  0x000000011b143058:   mov		x10, x0
+  0x000000011b14305c:   mov		x1, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b143060:   movk		x1, #0x30a9, lsl #16
+  0x000000011b143064:   movk		x1, #1, lsl #32
+  0x000000011b143068:   ldr		x8, [x1, #0x108]
+  0x000000011b14306c:   add		x8, x8, #1
+  0x000000011b143070:   str		x8, [x1, #0x108]
+  0x000000011b143074:   mov		x1, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143078:   movk		x1, #0x121, lsl #16
+  0x000000011b14307c:   movk		x1, #0xff8, lsl #32
+  0x000000011b143080:   ldr		w2, [x1, #0x70]
+  0x000000011b143084:   add		w2, w2, #2
+  0x000000011b143088:   str		w2, [x1, #0x70]
+  0x000000011b14308c:   and		w2, w2, #0x1ffffe
+  0x000000011b143090:   cmp		w2, #0
+  0x000000011b143094:   b.eq		#0x11b144090
+  0x000000011b143098:   mov		x1, #0x7b0          ;   {oop(a 'jdk/incubator/vector/IntVector$IntSpecies'{0x0000007b9e6007b0})}
+  0x000000011b14309c:   movk		x1, #0x9e60, lsl #16
+  0x000000011b1430a0:   movk		x1, #0x7b, lsl #32
+  0x000000011b1430a4:   mov		x2, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1430a8:   movk		x2, #0x121, lsl #16
+  0x000000011b1430ac:   movk		x2, #0xff8, lsl #32
+  0x000000011b1430b0:   ldr		x1, [x1]
+  0x000000011b1430b4:   lsr		x1, x1, #0x2a
+  0x000000011b1430b8:   lsl		x1, x1, #0xa
+  0x000000011b1430bc:   eor		x1, x1, #0xff800000000
+  0x000000011b1430c0:   mov		x9, #0xb0
+  0x000000011b1430c4:   ldr		x8, [x2, x9]
+  0x000000011b1430c8:   cmp		x8, x1
+  0x000000011b1430cc:   b.eq		#0x11b143110
+  0x000000011b1430d0:   add		x9, x9, #0x10
+  0x000000011b1430d4:   sub		x8, x9, #0xd0
+  0x000000011b1430d8:   cbnz		x8, #0x11b1430c4
+  0x000000011b1430dc:   mov		x9, #0xb0
+  0x000000011b1430e0:   ldr		x8, [x2, x9]
+  0x000000011b1430e4:   cbz		x8, #0x11b1430fc
+  0x000000011b1430e8:   add		x9, x9, #0x10
+  0x000000011b1430ec:   sub		x8, x9, #0xd0
+  0x000000011b1430f0:   cbnz		x8, #0x11b1430e0
+  0x000000011b1430f4:   mov		x9, #0xa8
+  0x000000011b1430f8:   b		#0x11b143114
+  0x000000011b1430fc:   add		x9, x2, x9, uxtx
+  0x000000011b143100:   mov		x8, xzr
+  0x000000011b143104:   cas		x8, x1, [x9]
+  0x000000011b143108:   cmp		x8, xzr
+  0x000000011b14310c:   b		#0x11b1430c0
+  0x000000011b143110:   add		x9, x9, #8
+  0x000000011b143114:   ldr		x8, [x2, x9]
+  0x000000011b143118:   add		x8, x8, #1
+  0x000000011b14311c:   str		x8, [x2, x9]
+  0x000000011b143120:   ldr		w1, [x29, #8]       ; implicit exception: dispatches to 0x000000011b1440b0
+  0x000000011b143124:   mov		x2, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143128:   movk		x2, #0x121, lsl #16
+  0x000000011b14312c:   movk		x2, #0xff8, lsl #32
+  0x000000011b143130:   ldr		x8, [x2, #0xd8]
+  0x000000011b143134:   add		x8, x8, #1
+  0x000000011b143138:   str		x8, [x2, #0xd8]
+  0x000000011b14313c:   mov		x2, #0x2e08         ;   {metadata(method data for {method} {0x00000001302de3d0} 'checkFromIndexSize' '(III)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b143140:   movk		x2, #0x121, lsl #16
+  0x000000011b143144:   movk		x2, #0xff8, lsl #32
+  0x000000011b143148:   ldr		w3, [x2, #0x70]
+  0x000000011b14314c:   add		w3, w3, #2
+  0x000000011b143150:   str		w3, [x2, #0x70]
+  0x000000011b143154:   and		w3, w3, #0x1ffffe
+  0x000000011b143158:   cmp		w3, #0
+  0x000000011b14315c:   b.eq		#0x11b1440b4
+  0x000000011b143160:   ldr		w11, [sp, #0x110]
+  0x000000011b143164:   mov		x2, #0x2e08         ;   {metadata(method data for {method} {0x00000001302de3d0} 'checkFromIndexSize' '(III)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b143168:   movk		x2, #0x121, lsl #16
+  0x000000011b14316c:   movk		x2, #0xff8, lsl #32
+  0x000000011b143170:   ldr		x8, [x2, #0x108]
+  0x000000011b143174:   add		x8, x8, #1
+  0x000000011b143178:   str		x8, [x2, #0x108]
+  0x000000011b14317c:   sub		w1, w1, #3
+  0x000000011b143180:   mov		x2, #0x35b0         ;   {metadata(method data for {method} {0x00000ff8004e7b88} 'checkIndex' '(II)I' in 'java/util/Objects')}
+  0x000000011b143184:   movk		x2, #0x3011, lsl #16
+  0x000000011b143188:   movk		x2, #1, lsl #32
+  0x000000011b14318c:   ldr		w3, [x2, #0x70]
+  0x000000011b143190:   add		w3, w3, #2
+  0x000000011b143194:   str		w3, [x2, #0x70]
+  0x000000011b143198:   and		w3, w3, #0x1ffffe
+  0x000000011b14319c:   cmp		w3, #0
+  0x000000011b1431a0:   b.eq		#0x11b1440d4
+  0x000000011b1431a4:   mov		x2, #0x35b0         ;   {metadata(method data for {method} {0x00000ff8004e7b88} 'checkIndex' '(II)I' in 'java/util/Objects')}
+  0x000000011b1431a8:   movk		x2, #0x3011, lsl #16
+  0x000000011b1431ac:   movk		x2, #1, lsl #32
+  0x000000011b1431b0:   ldr		x8, [x2, #0xa8]
+  0x000000011b1431b4:   add		x8, x8, #1
+  0x000000011b1431b8:   str		x8, [x2, #0xa8]
+  0x000000011b1431bc:   mov		x2, xzr
+  0x000000011b1431c0:   movz		w2, #0, lsl #16
+  0x000000011b1431c4:   cmp		w11, w2
+  0x000000011b1431c8:   b.lt		#0x11b1440f4
+  0x000000011b1431cc:   cmp		w11, w1
+  0x000000011b1431d0:   b.ge		#0x11b144100
+  0x000000011b1431d4:   mov		x1, x11
+  0x000000011b1431d8:   mov		x2, #0x7b0          ;   {oop(a 'jdk/incubator/vector/IntVector$IntSpecies'{0x0000007b9e6007b0})}
+  0x000000011b1431dc:   movk		x2, #0x9e60, lsl #16
+  0x000000011b1431e0:   movk		x2, #0x7b, lsl #32
+  0x000000011b1431e4:   mov		x3, x2
+  0x000000011b1431e8:   mov		x4, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1431ec:   movk		x4, #0x121, lsl #16
+  0x000000011b1431f0:   movk		x4, #0xff8, lsl #32
+  0x000000011b1431f4:   ldr		x3, [x3]
+  0x000000011b1431f8:   lsr		x3, x3, #0x2a
+  0x000000011b1431fc:   lsl		x3, x3, #0xa
+  0x000000011b143200:   eor		x3, x3, #0xff800000000
+  0x000000011b143204:   mov		x9, #0x120
+  0x000000011b143208:   ldr		x8, [x4, x9]
+  0x000000011b14320c:   cmp		x8, x3
+  0x000000011b143210:   b.eq		#0x11b143254
+  0x000000011b143214:   add		x9, x9, #0x10
+  0x000000011b143218:   sub		x8, x9, #0x140
+  0x000000011b14321c:   cbnz		x8, #0x11b143208
+  0x000000011b143220:   mov		x9, #0x120
+  0x000000011b143224:   ldr		x8, [x4, x9]
+  0x000000011b143228:   cbz		x8, #0x11b143240
+  0x000000011b14322c:   add		x9, x9, #0x10
+  0x000000011b143230:   sub		x8, x9, #0x140
+  0x000000011b143234:   cbnz		x8, #0x11b143224
+  0x000000011b143238:   mov		x9, #0x118
+  0x000000011b14323c:   b		#0x11b143258
+  0x000000011b143240:   add		x9, x4, x9, uxtx
+  0x000000011b143244:   mov		x8, xzr
+  0x000000011b143248:   cas		x8, x3, [x9]
+  0x000000011b14324c:   cmp		x8, xzr
+  0x000000011b143250:   b		#0x11b143204
+  0x000000011b143254:   add		x9, x9, #8
+  0x000000011b143258:   ldr		x8, [x4, x9]
+  0x000000011b14325c:   add		x8, x8, #1
+  0x000000011b143260:   str		x8, [x4, x9]
+  0x000000011b143264:   mov		x3, #0x3a28         ;   {metadata(method data for {method} {0x00000001301ed638} 'dummyVector' '()Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector$IntSpecies')}
+  0x000000011b143268:   movk		x3, #0x121, lsl #16
+  0x000000011b14326c:   movk		x3, #0xff8, lsl #32
+  0x000000011b143270:   ldr		w4, [x3, #0x70]
+  0x000000011b143274:   add		w4, w4, #2
+  0x000000011b143278:   str		w4, [x3, #0x70]
+  0x000000011b14327c:   and		w4, w4, #0x1ffffe
+  0x000000011b143280:   cmp		w4, #0
+  0x000000011b143284:   b.eq		#0x11b14410c
+  0x000000011b143288:   mov		x3, #0x3a28         ;   {metadata(method data for {method} {0x00000001301ed638} 'dummyVector' '()Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector$IntSpecies')}
+  0x000000011b14328c:   movk		x3, #0x121, lsl #16
+  0x000000011b143290:   movk		x3, #0xff8, lsl #32
+  0x000000011b143294:   ldr		x8, [x3, #0xa8]
+  0x000000011b143298:   add		x8, x8, #1
+  0x000000011b14329c:   str		x8, [x3, #0xa8]
+  0x000000011b1432a0:   mov		x2, #0x3228         ;   {metadata(method data for {method} {0x00000001301f39a8} 'dummyVector' '()Ljdk/incubator/vector/AbstractVector;' in 'jdk/incubator/vector/AbstractSpecies')}
+  0x000000011b1432a4:   movk		x2, #0x121, lsl #16
+  0x000000011b1432a8:   movk		x2, #0xff8, lsl #32
+  0x000000011b1432ac:   ldr		w3, [x2, #0x70]
+  0x000000011b1432b0:   add		w3, w3, #2
+  0x000000011b1432b4:   str		w3, [x2, #0x70]
+  0x000000011b1432b8:   and		w3, w3, #0x1ffffe
+  0x000000011b1432bc:   cmp		w3, #0
+  0x000000011b1432c0:   b.eq		#0x11b14412c
+  0x000000011b1432c4:   mov		x2, #0x3228         ;   {metadata(method data for {method} {0x00000001301f39a8} 'dummyVector' '()Ljdk/incubator/vector/AbstractVector;' in 'jdk/incubator/vector/AbstractSpecies')}
+  0x000000011b1432c8:   movk		x2, #0x121, lsl #16
+  0x000000011b1432cc:   movk		x2, #0xff8, lsl #32
+  0x000000011b1432d0:   ldr		x3, [x2, #0xb8]
+  0x000000011b1432d4:   add		x3, x3, #1
+  0x000000011b1432d8:   str		x3, [x2, #0xb8]
+  0x000000011b1432dc:   str		w11, [sp, #0x110]
+  0x000000011b1432e0:   mov		x2, #0x2de8         ;   {oop(a 'jdk/incubator/vector/IntVector128'{0x0000007b9e662de8})}
+  0x000000011b1432e4:   movk		x2, #0x9e66, lsl #16
+  0x000000011b1432e8:   movk		x2, #0x7b, lsl #32
+  0x000000011b1432ec:   mov		x3, x2
+  0x000000011b1432f0:   mov		x4, #0x1600         ;   {metadata(method data for {method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1432f4:   movk		x4, #0x121, lsl #16
+  0x000000011b1432f8:   movk		x4, #0xff8, lsl #32
+  0x000000011b1432fc:   ldr		x8, [x4, #0x158]
+  0x000000011b143300:   add		x8, x8, #1
+  0x000000011b143304:   str		x8, [x4, #0x158]
+  0x000000011b143308:   mov		x3, #0xc720         ;   {metadata(method data for {method} {0x000000013021ba00} 'fromArray0' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b14330c:   movk		x3, #0x120, lsl #16
+  0x000000011b143310:   movk		x3, #0xff8, lsl #32
+  0x000000011b143314:   ldr		w4, [x3, #0x70]
+  0x000000011b143318:   add		w4, w4, #2
+  0x000000011b14331c:   str		w4, [x3, #0x70]
+  0x000000011b143320:   and		w4, w4, #0x1ffffe
+  0x000000011b143324:   cmp		w4, #0
+  0x000000011b143328:   b.eq		#0x11b14414c
+  0x000000011b14332c:   mov		x3, x2
+  0x000000011b143330:   mov		x4, #0xc720         ;   {metadata(method data for {method} {0x000000013021ba00} 'fromArray0' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b143334:   movk		x4, #0x120, lsl #16
+  0x000000011b143338:   movk		x4, #0xff8, lsl #32
+  0x000000011b14333c:   ldr		x8, [x4, #0xa8]
+  0x000000011b143340:   add		x8, x8, #1
+  0x000000011b143344:   str		x8, [x4, #0xa8]
+  0x000000011b143348:   mov		x3, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b14334c:   movk		x3, #0x121, lsl #16
+  0x000000011b143350:   movk		x3, #0xff8, lsl #32
+  0x000000011b143354:   ldr		w4, [x3, #0x70]
+  0x000000011b143358:   add		w4, w4, #2
+  0x000000011b14335c:   str		w4, [x3, #0x70]
+  0x000000011b143360:   and		w4, w4, #0x1ffffe
+  0x000000011b143364:   cmp		w4, #0
+  0x000000011b143368:   b.eq		#0x11b14416c
+  0x000000011b14336c:   mov		x3, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143370:   movk		x3, #0x121, lsl #16
+  0x000000011b143374:   movk		x3, #0xff8, lsl #32
+  0x000000011b143378:   ldr		x8, [x3, #0xb8]
+  0x000000011b14337c:   add		x8, x8, #1
+  0x000000011b143380:   str		x8, [x3, #0xb8]
+  0x000000011b143384:   mov		x2, #0xd628         ;   {metadata(method data for {method} {0x0000000130217e50} 'vspecies' '()Ljdk/incubator/vector/IntVector$IntSpecies;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b143388:   movk		x2, #0x302e, lsl #16
+  0x000000011b14338c:   movk		x2, #1, lsl #32
+  0x000000011b143390:   ldr		w3, [x2, #0x70]
+  0x000000011b143394:   add		w3, w3, #2
+  0x000000011b143398:   str		w3, [x2, #0x70]
+  0x000000011b14339c:   and		w3, w3, #0x1ffffe
+  0x000000011b1433a0:   cmp		w3, #0
+  0x000000011b1433a4:   b.eq		#0x11b14418c
+  0x000000011b1433a8:   mov		x12, #0x7b0         ;   {oop(a 'jdk/incubator/vector/IntVector$IntSpecies'{0x0000007b9e6007b0})}
+  0x000000011b1433ac:   movk		x12, #0x9e60, lsl #16
+  0x000000011b1433b0:   movk		x12, #0x7b, lsl #32
+  0x000000011b1433b4:   mov		x2, x12
+  0x000000011b1433b8:   mov		x3, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1433bc:   movk		x3, #0x121, lsl #16
+  0x000000011b1433c0:   movk		x3, #0xff8, lsl #32
+  0x000000011b1433c4:   ldr		x2, [x2]
+  0x000000011b1433c8:   lsr		x2, x2, #0x2a
+  0x000000011b1433cc:   lsl		x2, x2, #0xa
+  0x000000011b1433d0:   eor		x2, x2, #0xff800000000
+  0x000000011b1433d4:   mov		x9, #0xe0
+  0x000000011b1433d8:   ldr		x8, [x3, x9]
+  0x000000011b1433dc:   cmp		x8, x2
+  0x000000011b1433e0:   b.eq		#0x11b143424
+  0x000000011b1433e4:   add		x9, x9, #0x10
+  0x000000011b1433e8:   sub		x8, x9, #0x100
+  0x000000011b1433ec:   cbnz		x8, #0x11b1433d8
+  0x000000011b1433f0:   mov		x9, #0xe0
+  0x000000011b1433f4:   ldr		x8, [x3, x9]
+  0x000000011b1433f8:   cbz		x8, #0x11b143410
+  0x000000011b1433fc:   add		x9, x9, #0x10
+  0x000000011b143400:   sub		x8, x9, #0x100
+  0x000000011b143404:   cbnz		x8, #0x11b1433f4
+  0x000000011b143408:   mov		x9, #0xd8
+  0x000000011b14340c:   b		#0x11b143428
+  0x000000011b143410:   add		x9, x3, x9, uxtx
+  0x000000011b143414:   mov		x8, xzr
+  0x000000011b143418:   cas		x8, x2, [x9]
+  0x000000011b14341c:   cmp		x8, xzr
+  0x000000011b143420:   b		#0x11b1433d4
+  0x000000011b143424:   add		x9, x9, #8
+  0x000000011b143428:   ldr		x8, [x3, x9]
+  0x000000011b14342c:   add		x8, x8, #1
+  0x000000011b143430:   str		x8, [x3, x9]
+  0x000000011b143434:   mov		x2, x12
+  0x000000011b143438:   mov		x3, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b14343c:   movk		x3, #0x121, lsl #16
+  0x000000011b143440:   movk		x3, #0xff8, lsl #32
+  0x000000011b143444:   ldr		x2, [x2]
+  0x000000011b143448:   lsr		x2, x2, #0x2a
+  0x000000011b14344c:   lsl		x2, x2, #0xa
+  0x000000011b143450:   eor		x2, x2, #0xff800000000
+  0x000000011b143454:   mov		x9, #0x110
+  0x000000011b143458:   ldr		x8, [x3, x9]
+  0x000000011b14345c:   cmp		x8, x2
+  0x000000011b143460:   b.eq		#0x11b1434a4
+  0x000000011b143464:   add		x9, x9, #0x10
+  0x000000011b143468:   sub		x8, x9, #0x130
+  0x000000011b14346c:   cbnz		x8, #0x11b143458
+  0x000000011b143470:   mov		x9, #0x110
+  0x000000011b143474:   ldr		x8, [x3, x9]
+  0x000000011b143478:   cbz		x8, #0x11b143490
+  0x000000011b14347c:   add		x9, x9, #0x10
+  0x000000011b143480:   sub		x8, x9, #0x130
+  0x000000011b143484:   cbnz		x8, #0x11b143474
+  0x000000011b143488:   mov		x9, #0x108
+  0x000000011b14348c:   b		#0x11b1434a8
+  0x000000011b143490:   add		x9, x3, x9, uxtx
+  0x000000011b143494:   mov		x8, xzr
+  0x000000011b143498:   cas		x8, x2, [x9]
+  0x000000011b14349c:   cmp		x8, xzr
+  0x000000011b1434a0:   b		#0x11b143454
+  0x000000011b1434a4:   add		x9, x9, #8
+  0x000000011b1434a8:   ldr		x8, [x3, x9]
+  0x000000011b1434ac:   add		x8, x8, #1
+  0x000000011b1434b0:   str		x8, [x3, x9]
+  0x000000011b1434b4:   mov		x2, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1434b8:   movk		x2, #0x121, lsl #16
+  0x000000011b1434bc:   movk		x2, #0xff8, lsl #32
+  0x000000011b1434c0:   ldr		x8, [x2, #0x138]
+  0x000000011b1434c4:   add		x8, x8, #1
+  0x000000011b1434c8:   str		x8, [x2, #0x138]
+  0x000000011b1434cc:   mov		x2, #0xd560         ;   {metadata(method data for {method} {0x00000001301a0d68} 'arrayAddress' '([II)J' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1434d0:   movk		x2, #0x302e, lsl #16
+  0x000000011b1434d4:   movk		x2, #1, lsl #32
+  0x000000011b1434d8:   ldr		w3, [x2, #0x70]
+  0x000000011b1434dc:   add		w3, w3, #2
+  0x000000011b1434e0:   str		w3, [x2, #0x70]
+  0x000000011b1434e4:   and		w3, w3, #0x1ffffe
+  0x000000011b1434e8:   cmp		w3, #0
+  0x000000011b1434ec:   b.eq		#0x11b1441ac
+  0x000000011b1434f0:   mov		x2, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1434f4:   movk		x2, #0x121, lsl #16
+  0x000000011b1434f8:   movk		x2, #0xff8, lsl #32
+  0x000000011b1434fc:   ldr		x8, [x2, #0x148]
+  0x000000011b143500:   add		x8, x8, #1
+  0x000000011b143504:   str		x8, [x2, #0x148]
+  0x000000011b143508:   sxtw		x0, w1
+  0x000000011b14350c:   lsl		x1, x0, #2
+  0x000000011b143510:   mov		x2, #0xc
+  0x000000011b143514:   add		x5, x1, x2
+  0x000000011b143518:   mov		x1, #0xca00         ;   {metadata(method data for {method} {0x00000ff800224df8} 'linkToTargetMethod' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/Invokers$Holder')}
+  0x000000011b14351c:   movk		x1, #0x101, lsl #16
+  0x000000011b143520:   movk		x1, #0xff8, lsl #32
+  0x000000011b143524:   ldr		w2, [x1, #0x70]
+  0x000000011b143528:   add		w2, w2, #2
+  0x000000011b14352c:   str		w2, [x1, #0x70]
+  0x000000011b143530:   and		w2, w2, #0x1ffffe
+  0x000000011b143534:   cmp		w2, #0
+  0x000000011b143538:   b.eq		#0x11b1441cc
+  0x000000011b14353c:   mov		x1, #0xca00         ;   {metadata(method data for {method} {0x00000ff800224df8} 'linkToTargetMethod' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/Invokers$Holder')}
+  0x000000011b143540:   movk		x1, #0x101, lsl #16
+  0x000000011b143544:   movk		x1, #0xff8, lsl #32
+  0x000000011b143548:   ldr		x8, [x1, #0xd8]
+  0x000000011b14354c:   add		x8, x8, #1
+  0x000000011b143550:   str		x8, [x1, #0xd8]
+  0x000000011b143554:   mov		x1, #0xc600         ;   {metadata(method data for {method} {0x00000ff80022b370} 'constant_L' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/LambdaForm$Holder')}
+  0x000000011b143558:   movk		x1, #0x101, lsl #16
+  0x000000011b14355c:   movk		x1, #0xff8, lsl #32
+  0x000000011b143560:   ldr		w2, [x1, #0x70]
+  0x000000011b143564:   add		w2, w2, #2
+  0x000000011b143568:   str		w2, [x1, #0x70]
+  0x000000011b14356c:   and		w2, w2, #0x1ffffe
+  0x000000011b143570:   cmp		w2, #0
+  0x000000011b143574:   b.eq		#0x11b1441ec
+  0x000000011b143578:   mov		x1, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b14357c:   movk		x1, #0x121, lsl #16
+  0x000000011b143580:   movk		x1, #0xff8, lsl #32
+  0x000000011b143584:   ldr		x8, [x1, #0x168]
+  0x000000011b143588:   add		x8, x8, #1
+  0x000000011b14358c:   str		x8, [x1, #0x168]
+  0x000000011b143590:   mov		x1, #0x7f8          ;   {oop(a 'java/lang/Class'{0x0000007b9e6007f8} = 'jdk/incubator/vector/IntVector128')}
+  0x000000011b143594:   movk		x1, #0x9e60, lsl #16
+  0x000000011b143598:   movk		x1, #0x7b, lsl #32
+  0x000000011b14359c:   mov		x13, #0x28a0        ;   {oop(a 'jdk/incubator/vector/IntVector$$Lambda+0x00000ff80120a400'{0x0000007b9e6728a0})}
+  0x000000011b1435a0:   movk		x13, #0x9e67, lsl #16
+  0x000000011b1435a4:   movk		x13, #0x7b, lsl #32
+  0x000000011b1435a8:   mov		w2, #4
+  0x000000011b1435ac:   mov		w3, #4
+  0x000000011b1435b0:   mov		x4, x29
+  0x000000011b1435b4:   movz		w6, #0, lsl #16
+  0x000000011b1435b8:   mov		x7, x29
+  0x000000011b1435bc:   str		x12, [sp]
+  0x000000011b1435c0:   str		x13, [sp, #8]
+  0x000000011b1435c4:   mov		x29, x10
+  0x000000011b1435c8:   bl		#0x1229cc400        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*invokestatic load {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@30 (line 3509)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {static_call}
+  0x000000011b1435cc:   nop		                    ;   {post_call_nop}
+  0x000000011b1435d0:   movk		xzr, #0xe84
+  0x000000011b1435d4:   movk		xzr, #0x100
+  0x000000011b1435d8:   mov		x3, #0x1200         ;   {metadata(method data for {method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1435dc:   movk		x3, #0x121, lsl #16
+  0x000000011b1435e0:   movk		x3, #0xff8, lsl #32
+  0x000000011b1435e4:   cbnz		x0, #0x11b1435f8
+  0x000000011b1435e8:   ldrb		w8, [x3, #0x171]
+  0x000000011b1435ec:   orr		x8, x8, #1
+  0x000000011b1435f0:   strb		w8, [x3, #0x171]
+  0x000000011b1435f4:   b		#0x11b143694
+  0x000000011b1435f8:   ldr		x1, [x0]
+  0x000000011b1435fc:   lsr		x1, x1, #0x2a
+  0x000000011b143600:   lsl		x1, x1, #0xa
+  0x000000011b143604:   eor		x1, x1, #0xff800000000
+  0x000000011b143608:   mov		x9, #0x180
+  0x000000011b14360c:   ldr		x8, [x3, x9]
+  0x000000011b143610:   cmp		x8, x1
+  0x000000011b143614:   b.eq		#0x11b143658
+  0x000000011b143618:   add		x9, x9, #0x10
+  0x000000011b14361c:   sub		x8, x9, #0x1a0
+  0x000000011b143620:   cbnz		x8, #0x11b14360c
+  0x000000011b143624:   mov		x9, #0x180
+  0x000000011b143628:   ldr		x8, [x3, x9]
+  0x000000011b14362c:   cbz		x8, #0x11b143644
+  0x000000011b143630:   add		x9, x9, #0x10
+  0x000000011b143634:   sub		x8, x9, #0x1a0
+  0x000000011b143638:   cbnz		x8, #0x11b143628
+  0x000000011b14363c:   mov		x9, #0x178
+  0x000000011b143640:   b		#0x11b14365c
+  0x000000011b143644:   add		x9, x3, x9, uxtx
+  0x000000011b143648:   mov		x8, xzr
+  0x000000011b14364c:   cas		x8, x1, [x9]
+  0x000000011b143650:   cmp		x8, xzr
+  0x000000011b143654:   b		#0x11b143608
+  0x000000011b143658:   add		x9, x9, #8
+  0x000000011b14365c:   ldr		x8, [x3, x9]
+  0x000000011b143660:   add		x8, x8, #1
+  0x000000011b143664:   str		x8, [x3, x9]
+  0x000000011b143668:   mov		x1, #0x9800         ;   {metadata('jdk/incubator/vector/IntVector')}
+  0x000000011b14366c:   movk		x1, #0x103, lsl #16
+  0x000000011b143670:   movk		x1, #0xff8, lsl #32
+  0x000000011b143674:   ldr		x3, [x0]
+  0x000000011b143678:   lsr		x3, x3, #0x2a
+  0x000000011b14367c:   lsl		x3, x3, #0xa
+  0x000000011b143680:   eor		x3, x3, #0xff800000000
+  0x000000011b143684:   ldr		x8, [x3, #0x58]
+  0x000000011b143688:   cmp		x1, x8
+  0x000000011b14368c:   b.ne		#0x11b14420c
+  0x000000011b143690:   b		#0x11b143694
+  0x000000011b143694:   mov		x3, x0
+  0x000000011b143698:   ldr		x4, [sp, #0x118]
+  0x000000011b14369c:   ldr		xzr, [x29]          ; implicit exception: dispatches to 0x000000011b144214
+  0x000000011b1436a0:   mov		x10, x29
+  0x000000011b1436a4:   mov		x2, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b1436a8:   movk		x2, #0x30a9, lsl #16
+  0x000000011b1436ac:   movk		x2, #1, lsl #32
+  0x000000011b1436b0:   ldr		x10, [x10]
+  0x000000011b1436b4:   lsr		x10, x10, #0x2a
+  0x000000011b1436b8:   lsl		x10, x10, #0xa
+  0x000000011b1436bc:   eor		x10, x10, #0xff800000000
+  0x000000011b1436c0:   mov		x9, #0x120
+  0x000000011b1436c4:   ldr		x8, [x2, x9]
+  0x000000011b1436c8:   cmp		x8, x10
+  0x000000011b1436cc:   b.eq		#0x11b143710
+  0x000000011b1436d0:   add		x9, x9, #0x10
+  0x000000011b1436d4:   sub		x8, x9, #0x140
+  0x000000011b1436d8:   cbnz		x8, #0x11b1436c4
+  0x000000011b1436dc:   mov		x9, #0x120
+  0x000000011b1436e0:   ldr		x8, [x2, x9]
+  0x000000011b1436e4:   cbz		x8, #0x11b1436fc
+  0x000000011b1436e8:   add		x9, x9, #0x10
+  0x000000011b1436ec:   sub		x8, x9, #0x140
+  0x000000011b1436f0:   cbnz		x8, #0x11b1436e0
+  0x000000011b1436f4:   mov		x9, #0x118
+  0x000000011b1436f8:   b		#0x11b143714
+  0x000000011b1436fc:   add		x9, x2, x9, uxtx
+  0x000000011b143700:   mov		x8, xzr
+  0x000000011b143704:   cas		x8, x10, [x9]
+  0x000000011b143708:   cmp		x8, xzr
+  0x000000011b14370c:   b		#0x11b1436c0
+  0x000000011b143710:   add		x9, x9, #8
+  0x000000011b143714:   ldr		x8, [x2, x9]
+  0x000000011b143718:   add		x8, x8, #1
+  0x000000011b14371c:   str		x8, [x2, x9]
+  0x000000011b143720:   mov		x2, #0x4df8         ;   {metadata(method data for {method} {0x00000001301990a0} 'add' '(Ljdk/incubator/vector/Vector;)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143724:   movk		x2, #0x302f, lsl #16
+  0x000000011b143728:   movk		x2, #1, lsl #32
+  0x000000011b14372c:   ldr		w1, [x2, #0x70]
+  0x000000011b143730:   add		w1, w1, #2
+  0x000000011b143734:   str		w1, [x2, #0x70]
+  0x000000011b143738:   and		w1, w1, #0x1ffffe
+  0x000000011b14373c:   cmp		w1, #0
+  0x000000011b143740:   b.eq		#0x11b144218
+  0x000000011b143744:   mov		x10, x29
+  0x000000011b143748:   mov		x2, #0x4df8         ;   {metadata(method data for {method} {0x00000001301990a0} 'add' '(Ljdk/incubator/vector/Vector;)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b14374c:   movk		x2, #0x302f, lsl #16
+  0x000000011b143750:   movk		x2, #1, lsl #32
+  0x000000011b143754:   ldr		x10, [x10]
+  0x000000011b143758:   lsr		x10, x10, #0x2a
+  0x000000011b14375c:   lsl		x10, x10, #0xa
+  0x000000011b143760:   eor		x10, x10, #0xff800000000
+  0x000000011b143764:   mov		x9, #0xb0
+  0x000000011b143768:   ldr		x8, [x2, x9]
+  0x000000011b14376c:   cmp		x8, x10
+  0x000000011b143770:   b.eq		#0x11b1437b4
+  0x000000011b143774:   add		x9, x9, #0x10
+  0x000000011b143778:   sub		x8, x9, #0xd0
+  0x000000011b14377c:   cbnz		x8, #0x11b143768
+  0x000000011b143780:   mov		x9, #0xb0
+  0x000000011b143784:   ldr		x8, [x2, x9]
+  0x000000011b143788:   cbz		x8, #0x11b1437a0
+  0x000000011b14378c:   add		x9, x9, #0x10
+  0x000000011b143790:   sub		x8, x9, #0xd0
+  0x000000011b143794:   cbnz		x8, #0x11b143784
+  0x000000011b143798:   mov		x9, #0xa8
+  0x000000011b14379c:   b		#0x11b1437b8
+  0x000000011b1437a0:   add		x9, x2, x9, uxtx
+  0x000000011b1437a4:   mov		x8, xzr
+  0x000000011b1437a8:   cas		x8, x10, [x9]
+  0x000000011b1437ac:   cmp		x8, xzr
+  0x000000011b1437b0:   b		#0x11b143764
+  0x000000011b1437b4:   add		x9, x9, #8
+  0x000000011b1437b8:   ldr		x8, [x2, x9]
+  0x000000011b1437bc:   add		x8, x8, #1
+  0x000000011b1437c0:   str		x8, [x2, x9]
+  0x000000011b1437c4:   mov		x2, #0x2868         ;   {oop(a 'jdk/incubator/vector/VectorOperators$AssociativeImpl'{0x0000007b9e682868})}
+  0x000000011b1437c8:   movk		x2, #0x9e68, lsl #16
+  0x000000011b1437cc:   movk		x2, #0x7b, lsl #32
+  0x000000011b1437d0:   mov		x1, x29
+  0x000000011b1437d4:   mov		x29, x4
+  0x000000011b1437d8:   mov		x9, #0xf480
+  0x000000011b1437dc:   movk		x9, #0x9b41, lsl #16
+  0x000000011b1437e0:   movk		x9, #0x78, lsl #32
+  0x000000011b1437e4:   bl		#0x1229cd008        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*invokevirtual lanewise {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::add@5 (line 1385)
+                                                            ; - JitDemo::addVector@44 (line 45)
+                                                            ;   {virtual_call}
+  0x000000011b1437e8:   nop		                    ;   {post_call_nop}
+  0x000000011b1437ec:   movk		xzr, #0x10a0
+  0x000000011b1437f0:   movk		xzr, #0x200
+  0x000000011b1437f4:   str		x0, [sp, #0x128]
+  0x000000011b1437f8:   ldr		xzr, [x0]           ; implicit exception: dispatches to 0x000000011b144238
+  0x000000011b1437fc:   mov		x1, x0
+  0x000000011b143800:   mov		x2, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b143804:   movk		x2, #0x30a9, lsl #16
+  0x000000011b143808:   movk		x2, #1, lsl #32
+  0x000000011b14380c:   ldr		x1, [x1]
+  0x000000011b143810:   lsr		x1, x1, #0x2a
+  0x000000011b143814:   lsl		x1, x1, #0xa
+  0x000000011b143818:   eor		x1, x1, #0xff800000000
+  0x000000011b14381c:   mov		x9, #0x150
+  0x000000011b143820:   ldr		x8, [x2, x9]
+  0x000000011b143824:   cmp		x8, x1
+  0x000000011b143828:   b.eq		#0x11b14386c
+  0x000000011b14382c:   add		x9, x9, #0x10
+  0x000000011b143830:   sub		x8, x9, #0x170
+  0x000000011b143834:   cbnz		x8, #0x11b143820
+  0x000000011b143838:   mov		x9, #0x150
+  0x000000011b14383c:   ldr		x8, [x2, x9]
+  0x000000011b143840:   cbz		x8, #0x11b143858
+  0x000000011b143844:   add		x9, x9, #0x10
+  0x000000011b143848:   sub		x8, x9, #0x170
+  0x000000011b14384c:   cbnz		x8, #0x11b14383c
+  0x000000011b143850:   mov		x9, #0x148
+  0x000000011b143854:   b		#0x11b143870
+  0x000000011b143858:   add		x9, x2, x9, uxtx
+  0x000000011b14385c:   mov		x8, xzr
+  0x000000011b143860:   cas		x8, x1, [x9]
+  0x000000011b143864:   cmp		x8, xzr
+  0x000000011b143868:   b		#0x11b14381c
+  0x000000011b14386c:   add		x9, x9, #8
+  0x000000011b143870:   ldr		x8, [x2, x9]
+  0x000000011b143874:   add		x8, x8, #1
+  0x000000011b143878:   str		x8, [x2, x9]
+  0x000000011b14387c:   mov		x1, #0xacf0         ;   {metadata(method data for {method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143880:   movk		x1, #0x302f, lsl #16
+  0x000000011b143884:   movk		x1, #1, lsl #32
+  0x000000011b143888:   ldr		w2, [x1, #0x70]
+  0x000000011b14388c:   add		w2, w2, #2
+  0x000000011b143890:   str		w2, [x1, #0x70]
+  0x000000011b143894:   and		w2, w2, #0x1ffffe
+  0x000000011b143898:   cmp		w2, #0
+  0x000000011b14389c:   b.eq		#0x11b14423c
+  0x000000011b1438a0:   mov		x1, x0
+  0x000000011b1438a4:   mov		x2, #0xacf0         ;   {metadata(method data for {method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1438a8:   movk		x2, #0x302f, lsl #16
+  0x000000011b1438ac:   movk		x2, #1, lsl #32
+  0x000000011b1438b0:   ldr		x1, [x1]
+  0x000000011b1438b4:   lsr		x1, x1, #0x2a
+  0x000000011b1438b8:   lsl		x1, x1, #0xa
+  0x000000011b1438bc:   eor		x1, x1, #0xff800000000
+  0x000000011b1438c0:   mov		x9, #0xb0
+  0x000000011b1438c4:   ldr		x8, [x2, x9]
+  0x000000011b1438c8:   cmp		x8, x1
+  0x000000011b1438cc:   b.eq		#0x11b143910
+  0x000000011b1438d0:   add		x9, x9, #0x10
+  0x000000011b1438d4:   sub		x8, x9, #0xd0
+  0x000000011b1438d8:   cbnz		x8, #0x11b1438c4
+  0x000000011b1438dc:   mov		x9, #0xb0
+  0x000000011b1438e0:   ldr		x8, [x2, x9]
+  0x000000011b1438e4:   cbz		x8, #0x11b1438fc
+  0x000000011b1438e8:   add		x9, x9, #0x10
+  0x000000011b1438ec:   sub		x8, x9, #0xd0
+  0x000000011b1438f0:   cbnz		x8, #0x11b1438e0
+  0x000000011b1438f4:   mov		x9, #0xa8
+  0x000000011b1438f8:   b		#0x11b143914
+  0x000000011b1438fc:   add		x9, x2, x9, uxtx
+  0x000000011b143900:   mov		x8, xzr
+  0x000000011b143904:   cas		x8, x1, [x9]
+  0x000000011b143908:   cmp		x8, xzr
+  0x000000011b14390c:   b		#0x11b1438c0
+  0x000000011b143910:   add		x9, x9, #8
+  0x000000011b143914:   ldr		x8, [x2, x9]
+  0x000000011b143918:   add		x8, x8, #1
+  0x000000011b14391c:   str		x8, [x2, x9]
+  0x000000011b143920:   mov		x1, x0
+  0x000000011b143924:   mov		x9, #0xf4a8
+  0x000000011b143928:   movk		x9, #0x9b41, lsl #16
+  0x000000011b14392c:   movk		x9, #0x78, lsl #32
+  0x000000011b143930:   bl		#0x1229c9848        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*invokevirtual length {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@2 (line 3291)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {virtual_call}
+  0x000000011b143934:   nop		                    ;   {post_call_nop}
+  0x000000011b143938:   movk		xzr, #0x11ec
+  0x000000011b14393c:   movk		xzr, #0x300
+  0x000000011b143940:   ldr		w1, [x29, #8]       ; implicit exception: dispatches to 0x000000011b14425c
+  0x000000011b143944:   mov		x2, #0xacf0         ;   {metadata(method data for {method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143948:   movk		x2, #0x302f, lsl #16
+  0x000000011b14394c:   movk		x2, #1, lsl #32
+  0x000000011b143950:   ldr		x8, [x2, #0xd8]
+  0x000000011b143954:   add		x8, x8, #1
+  0x000000011b143958:   str		x8, [x2, #0xd8]
+  0x000000011b14395c:   mov		x2, #0x2e08         ;   {metadata(method data for {method} {0x00000001302de3d0} 'checkFromIndexSize' '(III)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b143960:   movk		x2, #0x121, lsl #16
+  0x000000011b143964:   movk		x2, #0xff8, lsl #32
+  0x000000011b143968:   ldr		w3, [x2, #0x70]
+  0x000000011b14396c:   add		w3, w3, #2
+  0x000000011b143970:   str		w3, [x2, #0x70]
+  0x000000011b143974:   and		w3, w3, #0x1ffffe
+  0x000000011b143978:   cmp		w3, #0
+  0x000000011b14397c:   b.eq		#0x11b144260
+  0x000000011b143980:   ldr		w10, [sp, #0x110]
+  0x000000011b143984:   mov		x2, #0x2e08         ;   {metadata(method data for {method} {0x00000001302de3d0} 'checkFromIndexSize' '(III)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b143988:   movk		x2, #0x121, lsl #16
+  0x000000011b14398c:   movk		x2, #0xff8, lsl #32
+  0x000000011b143990:   ldr		x8, [x2, #0x108]
+  0x000000011b143994:   add		x8, x8, #1
+  0x000000011b143998:   str		x8, [x2, #0x108]
+  0x000000011b14399c:   sub		w0, w0, #1
+  0x000000011b1439a0:   sub		w1, w1, w0
+  0x000000011b1439a4:   mov		x0, #0x35b0         ;   {metadata(method data for {method} {0x00000ff8004e7b88} 'checkIndex' '(II)I' in 'java/util/Objects')}
+  0x000000011b1439a8:   movk		x0, #0x3011, lsl #16
+  0x000000011b1439ac:   movk		x0, #1, lsl #32
+  0x000000011b1439b0:   ldr		w2, [x0, #0x70]
+  0x000000011b1439b4:   add		w2, w2, #2
+  0x000000011b1439b8:   str		w2, [x0, #0x70]
+  0x000000011b1439bc:   and		w2, w2, #0x1ffffe
+  0x000000011b1439c0:   cmp		w2, #0
+  0x000000011b1439c4:   b.eq		#0x11b144280
+  0x000000011b1439c8:   mov		x0, #0x35b0         ;   {metadata(method data for {method} {0x00000ff8004e7b88} 'checkIndex' '(II)I' in 'java/util/Objects')}
+  0x000000011b1439cc:   movk		x0, #0x3011, lsl #16
+  0x000000011b1439d0:   movk		x0, #1, lsl #32
+  0x000000011b1439d4:   ldr		x8, [x0, #0xa8]
+  0x000000011b1439d8:   add		x8, x8, #1
+  0x000000011b1439dc:   str		x8, [x0, #0xa8]
+  0x000000011b1439e0:   mov		x0, xzr
+  0x000000011b1439e4:   movz		w0, #0, lsl #16
+  0x000000011b1439e8:   cmp		w10, w0
+  0x000000011b1439ec:   b.lt		#0x11b1442a0
+  0x000000011b1439f0:   cmp		w10, w1
+  0x000000011b1439f4:   b.ge		#0x11b1442ac
+  0x000000011b1439f8:   mov		x0, x10
+  0x000000011b1439fc:   mov		x2, x0
+  0x000000011b143a00:   ldr		x0, [sp, #0x128]
+  0x000000011b143a04:   str		w10, [sp, #0x110]
+  0x000000011b143a08:   mov		x1, x0
+  0x000000011b143a0c:   mov		x3, #0xacf0         ;   {metadata(method data for {method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143a10:   movk		x3, #0x302f, lsl #16
+  0x000000011b143a14:   movk		x3, #1, lsl #32
+  0x000000011b143a18:   ldr		x1, [x1]
+  0x000000011b143a1c:   lsr		x1, x1, #0x2a
+  0x000000011b143a20:   lsl		x1, x1, #0xa
+  0x000000011b143a24:   eor		x1, x1, #0xff800000000
+  0x000000011b143a28:   mov		x9, #0xf0
+  0x000000011b143a2c:   ldr		x8, [x3, x9]
+  0x000000011b143a30:   cmp		x8, x1
+  0x000000011b143a34:   b.eq		#0x11b143a78
+  0x000000011b143a38:   add		x9, x9, #0x10
+  0x000000011b143a3c:   sub		x8, x9, #0x110
+  0x000000011b143a40:   cbnz		x8, #0x11b143a2c
+  0x000000011b143a44:   mov		x9, #0xf0
+  0x000000011b143a48:   ldr		x8, [x3, x9]
+  0x000000011b143a4c:   cbz		x8, #0x11b143a64
+  0x000000011b143a50:   add		x9, x9, #0x10
+  0x000000011b143a54:   sub		x8, x9, #0x110
+  0x000000011b143a58:   cbnz		x8, #0x11b143a48
+  0x000000011b143a5c:   mov		x9, #0xe8
+  0x000000011b143a60:   b		#0x11b143a7c
+  0x000000011b143a64:   add		x9, x3, x9, uxtx
+  0x000000011b143a68:   mov		x8, xzr
+  0x000000011b143a6c:   cas		x8, x1, [x9]
+  0x000000011b143a70:   cmp		x8, xzr
+  0x000000011b143a74:   b		#0x11b143a28
+  0x000000011b143a78:   add		x9, x9, #8
+  0x000000011b143a7c:   ldr		x8, [x3, x9]
+  0x000000011b143a80:   add		x8, x8, #1
+  0x000000011b143a84:   str		x8, [x3, x9]
+  0x000000011b143a88:   mov		x1, x0
+  0x000000011b143a8c:   mov		x29, x2
+  0x000000011b143a90:   mov		x9, #0xf4d0
+  0x000000011b143a94:   movk		x9, #0x9b41, lsl #16
+  0x000000011b143a98:   movk		x9, #0x78, lsl #32
+  0x000000011b143a9c:   bl		#0x1229c99c8        ; ImmutableOopMap {[264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*invokevirtual vspecies {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@12 (line 3292)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {virtual_call}
+  0x000000011b143aa0:   nop		                    ;   {post_call_nop}
+  0x000000011b143aa4:   movk		xzr, #0x1358
+  0x000000011b143aa8:   movk		xzr, #0x400
+  0x000000011b143aac:   ldr		xzr, [x0]           ; implicit exception: dispatches to 0x000000011b1442b8
+  0x000000011b143ab0:   mov		x1, x0
+  0x000000011b143ab4:   mov		x2, #0xacf0         ;   {metadata(method data for {method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143ab8:   movk		x2, #0x302f, lsl #16
+  0x000000011b143abc:   movk		x2, #1, lsl #32
+  0x000000011b143ac0:   ldr		x1, [x1]
+  0x000000011b143ac4:   lsr		x1, x1, #0x2a
+  0x000000011b143ac8:   lsl		x1, x1, #0xa
+  0x000000011b143acc:   eor		x1, x1, #0xff800000000
+  0x000000011b143ad0:   mov		x9, #0x120
+  0x000000011b143ad4:   ldr		x8, [x2, x9]
+  0x000000011b143ad8:   cmp		x8, x1
+  0x000000011b143adc:   b.eq		#0x11b143b20
+  0x000000011b143ae0:   add		x9, x9, #0x10
+  0x000000011b143ae4:   sub		x8, x9, #0x140
+  0x000000011b143ae8:   cbnz		x8, #0x11b143ad4
+  0x000000011b143aec:   mov		x9, #0x120
+  0x000000011b143af0:   ldr		x8, [x2, x9]
+  0x000000011b143af4:   cbz		x8, #0x11b143b0c
+  0x000000011b143af8:   add		x9, x9, #0x10
+  0x000000011b143afc:   sub		x8, x9, #0x140
+  0x000000011b143b00:   cbnz		x8, #0x11b143af0
+  0x000000011b143b04:   mov		x9, #0x118
+  0x000000011b143b08:   b		#0x11b143b24
+  0x000000011b143b0c:   add		x9, x2, x9, uxtx
+  0x000000011b143b10:   mov		x8, xzr
+  0x000000011b143b14:   cas		x8, x1, [x9]
+  0x000000011b143b18:   cmp		x8, xzr
+  0x000000011b143b1c:   b		#0x11b143ad0
+  0x000000011b143b20:   add		x9, x9, #8
+  0x000000011b143b24:   ldr		x8, [x2, x9]
+  0x000000011b143b28:   add		x8, x8, #1
+  0x000000011b143b2c:   str		x8, [x2, x9]
+  0x000000011b143b30:   ldr		w1, [x0, #0x28]
+  0x000000011b143b34:   cbz		x1, #0x11b143b3c
+  0x000000011b143b38:   add		x1, x27, x1, lsl #3
+  0x000000011b143b3c:   mov		x2, x0
+  0x000000011b143b40:   mov		x3, #0xacf0         ;   {metadata(method data for {method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143b44:   movk		x3, #0x302f, lsl #16
+  0x000000011b143b48:   movk		x3, #1, lsl #32
+  0x000000011b143b4c:   ldr		x2, [x2]
+  0x000000011b143b50:   lsr		x2, x2, #0x2a
+  0x000000011b143b54:   lsl		x2, x2, #0xa
+  0x000000011b143b58:   eor		x2, x2, #0xff800000000
+  0x000000011b143b5c:   mov		x9, #0x150
+  0x000000011b143b60:   ldr		x8, [x3, x9]
+  0x000000011b143b64:   cmp		x8, x2
+  0x000000011b143b68:   b.eq		#0x11b143bac
+  0x000000011b143b6c:   add		x9, x9, #0x10
+  0x000000011b143b70:   sub		x8, x9, #0x170
+  0x000000011b143b74:   cbnz		x8, #0x11b143b60
+  0x000000011b143b78:   mov		x9, #0x150
+  0x000000011b143b7c:   ldr		x8, [x3, x9]
+  0x000000011b143b80:   cbz		x8, #0x11b143b98
+  0x000000011b143b84:   add		x9, x9, #0x10
+  0x000000011b143b88:   sub		x8, x9, #0x170
+  0x000000011b143b8c:   cbnz		x8, #0x11b143b7c
+  0x000000011b143b90:   mov		x9, #0x148
+  0x000000011b143b94:   b		#0x11b143bb0
+  0x000000011b143b98:   add		x9, x3, x9, uxtx
+  0x000000011b143b9c:   mov		x8, xzr
+  0x000000011b143ba0:   cas		x8, x2, [x9]
+  0x000000011b143ba4:   cmp		x8, xzr
+  0x000000011b143ba8:   b		#0x11b143b5c
+  0x000000011b143bac:   add		x9, x9, #8
+  0x000000011b143bb0:   ldr		x8, [x3, x9]
+  0x000000011b143bb4:   add		x8, x8, #1
+  0x000000011b143bb8:   str		x8, [x3, x9]
+  0x000000011b143bbc:   ldr		w3, [x0, #8]
+  0x000000011b143bc0:   mov		x2, #0xacf0         ;   {metadata(method data for {method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143bc4:   movk		x2, #0x302f, lsl #16
+  0x000000011b143bc8:   movk		x2, #1, lsl #32
+  0x000000011b143bcc:   ldr		x8, [x2, #0x178]
+  0x000000011b143bd0:   add		x8, x8, #1
+  0x000000011b143bd4:   str		x8, [x2, #0x178]
+  0x000000011b143bd8:   mov		x2, #0xd560         ;   {metadata(method data for {method} {0x00000001301a0d68} 'arrayAddress' '([II)J' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143bdc:   movk		x2, #0x302e, lsl #16
+  0x000000011b143be0:   movk		x2, #1, lsl #32
+  0x000000011b143be4:   ldr		w4, [x2, #0x70]
+  0x000000011b143be8:   add		w4, w4, #2
+  0x000000011b143bec:   str		w4, [x2, #0x70]
+  0x000000011b143bf0:   and		w4, w4, #0x1ffffe
+  0x000000011b143bf4:   cmp		w4, #0
+  0x000000011b143bf8:   b.eq		#0x11b1442bc
+  0x000000011b143bfc:   mov		x2, #0xacf0         ;   {metadata(method data for {method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143c00:   movk		x2, #0x302f, lsl #16
+  0x000000011b143c04:   movk		x2, #1, lsl #32
+  0x000000011b143c08:   ldr		x8, [x2, #0x188]
+  0x000000011b143c0c:   add		x8, x8, #1
+  0x000000011b143c10:   str		x8, [x2, #0x188]
+  0x000000011b143c14:   sxtw		x10, w29
+  0x000000011b143c18:   lsl		x2, x10, #2
+  0x000000011b143c1c:   mov		x4, #0xc
+  0x000000011b143c20:   add		x5, x2, x4
+  0x000000011b143c24:   mov		x2, #0xca00         ;   {metadata(method data for {method} {0x00000ff800224df8} 'linkToTargetMethod' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/Invokers$Holder')}
+  0x000000011b143c28:   movk		x2, #0x101, lsl #16
+  0x000000011b143c2c:   movk		x2, #0xff8, lsl #32
+  0x000000011b143c30:   ldr		w4, [x2, #0x70]
+  0x000000011b143c34:   add		w4, w4, #2
+  0x000000011b143c38:   str		w4, [x2, #0x70]
+  0x000000011b143c3c:   and		w4, w4, #0x1ffffe
+  0x000000011b143c40:   cmp		w4, #0
+  0x000000011b143c44:   b.eq		#0x11b1442dc
+  0x000000011b143c48:   mov		x2, #0xca00         ;   {metadata(method data for {method} {0x00000ff800224df8} 'linkToTargetMethod' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/Invokers$Holder')}
+  0x000000011b143c4c:   movk		x2, #0x101, lsl #16
+  0x000000011b143c50:   movk		x2, #0xff8, lsl #32
+  0x000000011b143c54:   ldr		x8, [x2, #0xd8]
+  0x000000011b143c58:   add		x8, x8, #1
+  0x000000011b143c5c:   str		x8, [x2, #0xd8]
+  0x000000011b143c60:   mov		x2, #0xc600         ;   {metadata(method data for {method} {0x00000ff80022b370} 'constant_L' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/LambdaForm$Holder')}
+  0x000000011b143c64:   movk		x2, #0x101, lsl #16
+  0x000000011b143c68:   movk		x2, #0xff8, lsl #32
+  0x000000011b143c6c:   ldr		w4, [x2, #0x70]
+  0x000000011b143c70:   add		w4, w4, #2
+  0x000000011b143c74:   str		w4, [x2, #0x70]
+  0x000000011b143c78:   and		w4, w4, #0x1ffffe
+  0x000000011b143c7c:   cmp		w4, #0
+  0x000000011b143c80:   b.eq		#0x11b1442fc
+  0x000000011b143c84:   mov		x2, #0xacf0         ;   {metadata(method data for {method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143c88:   movk		x2, #0x302f, lsl #16
+  0x000000011b143c8c:   movk		x2, #1, lsl #32
+  0x000000011b143c90:   ldr		x8, [x2, #0x1a8]
+  0x000000011b143c94:   add		x8, x8, #1
+  0x000000011b143c98:   str		x8, [x2, #0x1a8]
+  0x000000011b143c9c:   mov		x11, #0x1300        ;   {oop(a 'jdk/incubator/vector/IntVector$$Lambda+0x00000ff801213800'{0x0000007b9e6d1300})}
+  0x000000011b143ca0:   movk		x11, #0x9e6d, lsl #16
+  0x000000011b143ca4:   movk		x11, #0x7b, lsl #32
+  0x000000011b143ca8:   mov		w2, #4
+  0x000000011b143cac:   ldr		x4, [sp, #0x118]
+  0x000000011b143cb0:   movz		w6, #0, lsl #16
+  0x000000011b143cb4:   ldr		x7, [sp, #0x128]
+  0x000000011b143cb8:   ldr		x0, [sp, #0x118]
+  0x000000011b143cbc:   str		x10, [sp]
+  0x000000011b143cc0:   str		x11, [sp, #8]
+  0x000000011b143cc4:   bl		#0x1229d4440        ; ImmutableOopMap {[264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*invokestatic store {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@41 (line 3293)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {static_call}
+  0x000000011b143cc8:   nop		                    ;   {post_call_nop}
+  0x000000011b143ccc:   movk		xzr, #0x1580
+  0x000000011b143cd0:   movk		xzr, #0x500
+  0x000000011b143cd4:   ldr		w10, [sp, #0x110]
+  0x000000011b143cd8:   mov		x0, #0x7b0          ;   {oop(a 'jdk/incubator/vector/IntVector$IntSpecies'{0x0000007b9e6007b0})}
+  0x000000011b143cdc:   movk		x0, #0x9e60, lsl #16
+  0x000000011b143ce0:   movk		x0, #0x7b, lsl #32
+  0x000000011b143ce4:   mov		x1, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b143ce8:   movk		x1, #0x30a9, lsl #16
+  0x000000011b143cec:   movk		x1, #1, lsl #32
+  0x000000011b143cf0:   ldr		x0, [x0]
+  0x000000011b143cf4:   lsr		x0, x0, #0x2a
+  0x000000011b143cf8:   lsl		x0, x0, #0xa
+  0x000000011b143cfc:   eor		x0, x0, #0xff800000000
+  0x000000011b143d00:   mov		x9, #0x180
+  0x000000011b143d04:   ldr		x8, [x1, x9]
+  0x000000011b143d08:   cmp		x8, x0
+  0x000000011b143d0c:   b.eq		#0x11b143d50
+  0x000000011b143d10:   add		x9, x9, #0x10
+  0x000000011b143d14:   sub		x8, x9, #0x1a0
+  0x000000011b143d18:   cbnz		x8, #0x11b143d04
+  0x000000011b143d1c:   mov		x9, #0x180
+  0x000000011b143d20:   ldr		x8, [x1, x9]
+  0x000000011b143d24:   cbz		x8, #0x11b143d3c
+  0x000000011b143d28:   add		x9, x9, #0x10
+  0x000000011b143d2c:   sub		x8, x9, #0x1a0
+  0x000000011b143d30:   cbnz		x8, #0x11b143d20
+  0x000000011b143d34:   mov		x9, #0x178
+  0x000000011b143d38:   b		#0x11b143d54
+  0x000000011b143d3c:   add		x9, x1, x9, uxtx
+  0x000000011b143d40:   mov		x8, xzr
+  0x000000011b143d44:   cas		x8, x0, [x9]
+  0x000000011b143d48:   cmp		x8, xzr
+  0x000000011b143d4c:   b		#0x11b143d00
+  0x000000011b143d50:   add		x9, x9, #8
+  0x000000011b143d54:   ldr		x8, [x1, x9]
+  0x000000011b143d58:   add		x8, x8, #1
+  0x000000011b143d5c:   str		x8, [x1, x9]
+  0x000000011b143d60:   add		w0, w10, #4
+  0x000000011b143d64:   mov		x1, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b143d68:   movk		x1, #0x30a9, lsl #16
+  0x000000011b143d6c:   movk		x1, #1, lsl #32
+  0x000000011b143d70:   ldr		w2, [x1, #0x74]
+  0x000000011b143d74:   add		w2, w2, #2
+  0x000000011b143d78:   str		w2, [x1, #0x74]
+  0x000000011b143d7c:   and		w2, w2, #0x3ffe
+  0x000000011b143d80:   cmp		w2, #0
+  0x000000011b143d84:   b.eq		#0x11b14431c
+  0x000000011b143d88:   ldr		x8, [x28, #0x30]    ; ImmutableOopMap {[264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::addVector@66 (line 42)
+  0x000000011b143d8c:   ldr		wzr, [x8]           ;   {poll}
+  0x000000011b143d90:   mov		x1, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b143d94:   movk		x1, #0x30a9, lsl #16
+  0x000000011b143d98:   movk		x1, #1, lsl #32
+  0x000000011b143d9c:   ldr		x2, [x1, #0x1a8]
+  0x000000011b143da0:   add		x2, x2, #1
+  0x000000011b143da4:   str		x2, [x1, #0x1a8]
+  0x000000011b143da8:   mov		x10, x0
+  0x000000011b143dac:   ldr		x3, [sp, #0x120]
+  0x000000011b143db0:   ldr		x29, [sp, #0x108]
+  0x000000011b143db4:   b		#0x11b1428f0
+  0x000000011b143db8:   ldp		x4, x3, [sp, #0x118]
+  0x000000011b143dbc:   ldr		x29, [sp, #0x108]
+  0x000000011b143dc0:   b		#0x11b143e68
+  0x000000011b143dc4:   ldr		w1, [x29, #8]
+  0x000000011b143dc8:   cmp		w10, w1
+  0x000000011b143dcc:   b.hs		#0x11b14433c
+  0x000000011b143dd0:   sxtw		x1, w10
+  0x000000011b143dd4:   lsl		x1, x1, #2
+  0x000000011b143dd8:   add		x1, x1, #0xc
+  0x000000011b143ddc:   ldr		w1, [x29, x1]
+  0x000000011b143de0:   ldr		w2, [x3, #8]        ; implicit exception: dispatches to 0x000000011b144354
+  0x000000011b143de4:   cmp		w10, w2
+  0x000000011b143de8:   b.hs		#0x11b144358
+  0x000000011b143dec:   sxtw		x2, w10
+  0x000000011b143df0:   lsl		x2, x2, #2
+  0x000000011b143df4:   add		x2, x2, #0xc
+  0x000000011b143df8:   ldr		w2, [x3, x2]
+  0x000000011b143dfc:   add		w1, w1, w2
+  0x000000011b143e00:   ldr		w2, [x4, #8]        ; implicit exception: dispatches to 0x000000011b144370
+  0x000000011b143e04:   cmp		w10, w2
+  0x000000011b143e08:   b.hs		#0x11b144374
+  0x000000011b143e0c:   sxtw		x2, w10
+  0x000000011b143e10:   lsl		x2, x2, #2
+  0x000000011b143e14:   add		x2, x2, #0xc
+  0x000000011b143e18:   str		w1, [x4, x2]
+  0x000000011b143e1c:   add		w1, w10, #1
+  0x000000011b143e20:   mov		x2, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b143e24:   movk		x2, #0x30a9, lsl #16
+  0x000000011b143e28:   movk		x2, #1, lsl #32
+  0x000000011b143e2c:   ldr		w5, [x2, #0x74]
+  0x000000011b143e30:   add		w5, w5, #2
+  0x000000011b143e34:   str		w5, [x2, #0x74]
+  0x000000011b143e38:   and		w5, w5, #0x3ffe
+  0x000000011b143e3c:   cmp		w5, #0
+  0x000000011b143e40:   b.eq		#0x11b14438c
+  0x000000011b143e44:   ldr		x8, [x28, #0x30]    ; ImmutableOopMap {c_rarg3=Oop c_rarg4=Oop rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::addVector@92 (line 47)
+  0x000000011b143e48:   ldr		wzr, [x8]           ;   {poll}
+  0x000000011b143e4c:   mov		x2, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b143e50:   movk		x2, #0x30a9, lsl #16
+  0x000000011b143e54:   movk		x2, #1, lsl #32
+  0x000000011b143e58:   ldr		x5, [x2, #0x1e0]
+  0x000000011b143e5c:   add		x5, x5, #1
+  0x000000011b143e60:   str		x5, [x2, #0x1e0]
+  0x000000011b143e64:   mov		x10, x1
+  0x000000011b143e68:   cmp		w10, w0
+  0x000000011b143e6c:   mov		x1, #0x3a38         ;   {metadata(method data for {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b143e70:   movk		x1, #0x30a9, lsl #16
+  0x000000011b143e74:   movk		x1, #1, lsl #32
+  0x000000011b143e78:   mov		x8, #0x1d0
+  0x000000011b143e7c:   mov		x9, #0x1c0
+  0x000000011b143e80:   csel		x2, x8, x9, lt
+  0x000000011b143e84:   ldr		x5, [x1, x2]
+  0x000000011b143e88:   add		x5, x5, #1
+  0x000000011b143e8c:   str		x5, [x1, x2]
+  0x000000011b143e90:   b.lt		#0x11b143dc4
+  0x000000011b143e94:   ldp		x29, x30, [sp, #0x140]
+  0x000000011b143e98:   add		sp, sp, #0x150
+  0x000000011b143e9c:   ldr		x8, [x28, #0x28]    ;   {poll_return}
+  0x000000011b143ea0:   cmp		sp, x8
+  0x000000011b143ea4:   b.hi		#0x11b1443ac
+  0x000000011b143ea8:   ret		
+  0x000000011b143eac:   mov		x8, #0x8870         ;   {metadata({method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b143eb0:   movk		x8, #0x30a8, lsl #16
+  0x000000011b143eb4:   movk		x8, #1, lsl #32
+  0x000000011b143eb8:   str		x8, [sp, #8]
+  0x000000011b143ebc:   mov		x8, #-1
+  0x000000011b143ec0:   str		x8, [sp]
+  0x000000011b143ec4:   bl		#0x122329e80        ; ImmutableOopMap {c_rarg1=Oop rfp=Oop c_rarg3=Oop c_rarg4=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - JitDemo::addVector@-1 (line 41)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b143ec8:   b		#0x11b1428ec
+  0x000000011b143ecc:   bl		#0x122326bc0        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@9 (line 42)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b143ed0:   mov		x8, #0x2d58         ;   {metadata({method} {0x00000001301f2d58} 'loopBound' '(I)I' in 'jdk/incubator/vector/AbstractSpecies')}
+  0x000000011b143ed4:   movk		x8, #0x301f, lsl #16
+  0x000000011b143ed8:   movk		x8, #1, lsl #32
+  0x000000011b143edc:   str		x8, [sp, #8]
+  0x000000011b143ee0:   mov		x8, #-1
+  0x000000011b143ee4:   str		x8, [sp]
+  0x000000011b143ee8:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.AbstractSpecies::loopBound@-1 (line 219)
+                                                            ; - JitDemo::addVector@10 (line 42)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b143eec:   b		#0x11b1429a0
+  0x000000011b143ef0:   mov		x8, #0xe7e8         ;   {metadata({method} {0x00000001302de7e8} 'roundDown' '(II)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b143ef4:   movk		x8, #0x302d, lsl #16
+  0x000000011b143ef8:   movk		x8, #1, lsl #32
+  0x000000011b143efc:   str		x8, [sp, #8]
+  0x000000011b143f00:   mov		x8, #-1
+  0x000000011b143f04:   str		x8, [sp]
+  0x000000011b143f08:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::roundDown@-1 (line 100)
+                                                            ; - jdk.incubator.vector.AbstractSpecies::loopBound@5 (line 219)
+                                                            ; - JitDemo::addVector@10 (line 42)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b143f0c:   b		#0x11b1429dc
+  0x000000011b143f10:   mov		x8, #0xe920         ;   {metadata({method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143f14:   movk		x8, #0x3019, lsl #16
+  0x000000011b143f18:   movk		x8, #1, lsl #32
+  0x000000011b143f1c:   str		x8, [sp, #8]
+  0x000000011b143f20:   mov		x8, #-1
+  0x000000011b143f24:   str		x8, [sp]
+  0x000000011b143f28:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@-1 (line 3020)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b143f2c:   b		#0x11b142a60
+  0x000000011b143f30:   mov		x8, #0xe3d0         ;   {metadata({method} {0x00000001302de3d0} 'checkFromIndexSize' '(III)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b143f34:   movk		x8, #0x302d, lsl #16
+  0x000000011b143f38:   movk		x8, #1, lsl #32
+  0x000000011b143f3c:   str		x8, [sp, #8]
+  0x000000011b143f40:   mov		x8, #-1
+  0x000000011b143f44:   str		x8, [sp]
+  0x000000011b143f48:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@-1 (line 55)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b143f4c:   b		#0x11b142b24
+  0x000000011b143f50:   mov		x8, #0x7b88         ;   {metadata({method} {0x00000ff8004e7b88} 'checkIndex' '(II)I' in 'java/util/Objects')}
+  0x000000011b143f54:   movk		x8, #0x4e, lsl #16
+  0x000000011b143f58:   movk		x8, #0xff8, lsl #32
+  0x000000011b143f5c:   str		x8, [sp, #8]
+  0x000000011b143f60:   mov		x8, #-1
+  0x000000011b143f64:   str		x8, [sp]
+  0x000000011b143f68:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.util.Objects::checkIndex@-1 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b143f6c:   b		#0x11b142b64
+  0x000000011b143f70:   mov		x8, #-0x1c
+  0x000000011b143f74:   str		x8, [sp]
+  0x000000011b143f78:   bl		#0x122329340        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*invokestatic checkIndex {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.util.Objects::checkIndex@3 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call deoptimize_blob (C1 runtime)}
+  0x000000011b143f7c:   mov		x8, #-0x1c
+  0x000000011b143f80:   str		x8, [sp]
+  0x000000011b143f84:   bl		#0x122329340        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*invokestatic checkIndex {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.util.Objects::checkIndex@3 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call deoptimize_blob (C1 runtime)}
+  0x000000011b143f88:   mov		x8, #0xd638         ;   {metadata({method} {0x00000001301ed638} 'dummyVector' '()Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector$IntSpecies')}
+  0x000000011b143f8c:   movk		x8, #0x301e, lsl #16
+  0x000000011b143f90:   movk		x8, #1, lsl #32
+  0x000000011b143f94:   str		x8, [sp, #8]
+  0x000000011b143f98:   mov		x8, #-1
+  0x000000011b143f9c:   str		x8, [sp]
+  0x000000011b143fa0:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop c_rarg2=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector$IntSpecies::dummyVector@-1 (line 3988)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@19 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b143fa4:   b		#0x11b142c48
+  0x000000011b143fa8:   mov		x8, #0x39a8         ;   {metadata({method} {0x00000001301f39a8} 'dummyVector' '()Ljdk/incubator/vector/AbstractVector;' in 'jdk/incubator/vector/AbstractSpecies')}
+  0x000000011b143fac:   movk		x8, #0x301f, lsl #16
+  0x000000011b143fb0:   movk		x8, #1, lsl #32
+  0x000000011b143fb4:   str		x8, [sp, #8]
+  0x000000011b143fb8:   mov		x8, #-1
+  0x000000011b143fbc:   str		x8, [sp]
+  0x000000011b143fc0:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.AbstractSpecies::dummyVector@-1 (line 323)
+                                                            ; - jdk.incubator.vector.IntVector$IntSpecies::dummyVector@1 (line 3988)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@19 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b143fc4:   b		#0x11b142c84
+  0x000000011b143fc8:   mov		x8, #0xba00         ;   {metadata({method} {0x000000013021ba00} 'fromArray0' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b143fcc:   movk		x8, #0x3021, lsl #16
+  0x000000011b143fd0:   movk		x8, #1, lsl #32
+  0x000000011b143fd4:   str		x8, [sp, #8]
+  0x000000011b143fd8:   mov		x8, #-1
+  0x000000011b143fdc:   str		x8, [sp]
+  0x000000011b143fe0:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop c_rarg2=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@-1 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b143fe4:   b		#0x11b142cec
+  0x000000011b143fe8:   mov		x8, #0xf918         ;   {metadata({method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b143fec:   movk		x8, #0x3019, lsl #16
+  0x000000011b143ff0:   movk		x8, #1, lsl #32
+  0x000000011b143ff4:   str		x8, [sp, #8]
+  0x000000011b143ff8:   mov		x8, #-1
+  0x000000011b143ffc:   str		x8, [sp]
+  0x000000011b144000:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop c_rarg2=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@-1 (line 3508)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144004:   b		#0x11b142d2c
+  0x000000011b144008:   mov		x8, #0x7e50         ;   {metadata({method} {0x0000000130217e50} 'vspecies' '()Ljdk/incubator/vector/IntVector$IntSpecies;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b14400c:   movk		x8, #0x3021, lsl #16
+  0x000000011b144010:   movk		x8, #1, lsl #32
+  0x000000011b144014:   str		x8, [sp, #8]
+  0x000000011b144018:   mov		x8, #-1
+  0x000000011b14401c:   str		x8, [sp]
+  0x000000011b144020:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector128::vspecies@-1 (line 90)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@1 (line 3508)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144024:   b		#0x11b142d68
+  0x000000011b144028:   mov		x8, #0xd68          ;   {metadata({method} {0x00000001301a0d68} 'arrayAddress' '([II)J' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b14402c:   movk		x8, #0x301a, lsl #16
+  0x000000011b144030:   movk		x8, #1, lsl #32
+  0x000000011b144034:   str		x8, [sp, #8]
+  0x000000011b144038:   mov		x8, #-1
+  0x000000011b14403c:   str		x8, [sp]
+  0x000000011b144040:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop r11=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector::arrayAddress@-1 (line 3750)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@17 (line 3511)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144044:   b		#0x11b142eb0
+  0x000000011b144048:   mov		x8, #0x4df8         ;   {metadata({method} {0x00000ff800224df8} 'linkToTargetMethod' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/Invokers$Holder')}
+  0x000000011b14404c:   movk		x8, #0x22, lsl #16
+  0x000000011b144050:   movk		x8, #0xff8, lsl #32
+  0x000000011b144054:   str		x8, [sp, #8]
+  0x000000011b144058:   mov		x8, #-1
+  0x000000011b14405c:   str		x8, [sp]
+  0x000000011b144060:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop r11=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.invoke.Invokers$Holder::linkToTargetMethod@-1
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@25 (line 3511)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144064:   b		#0x11b142efc
+  0x000000011b144068:   mov		x8, #0xb370         ;   {metadata({method} {0x00000ff80022b370} 'constant_L' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/LambdaForm$Holder')}
+  0x000000011b14406c:   movk		x8, #0x22, lsl #16
+  0x000000011b144070:   movk		x8, #0xff8, lsl #32
+  0x000000011b144074:   str		x8, [sp, #8]
+  0x000000011b144078:   mov		x8, #-1
+  0x000000011b14407c:   str		x8, [sp]
+  0x000000011b144080:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop r11=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.invoke.LambdaForm$Holder::constant_L@-1
+                                                            ; - java.lang.invoke.Invokers$Holder::linkToTargetMethod@4
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@25 (line 3511)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144084:   b		#0x11b142f38
+  0x000000011b144088:   mov		x8, x0
+  0x000000011b14408c:   bl		#0x122328040        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@33 (line 3509)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call throw_class_cast_exception_blob (C1 runtime)}
+  0x000000011b144090:   mov		x8, #0xe920         ;   {metadata({method} {0x000000013019e920} 'fromArray' '(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b144094:   movk		x8, #0x3019, lsl #16
+  0x000000011b144098:   movk		x8, #1, lsl #32
+  0x000000011b14409c:   str		x8, [sp, #8]
+  0x000000011b1440a0:   mov		x8, #-1
+  0x000000011b1440a4:   str		x8, [sp]
+  0x000000011b1440a8:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@-1 (line 3020)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1440ac:   b		#0x11b143098
+  0x000000011b1440b0:   bl		#0x122326bc0        ; ImmutableOopMap {rfp=Oop r10=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@8 (line 3020)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b1440b4:   mov		x8, #0xe3d0         ;   {metadata({method} {0x00000001302de3d0} 'checkFromIndexSize' '(III)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b1440b8:   movk		x8, #0x302d, lsl #16
+  0x000000011b1440bc:   movk		x8, #1, lsl #32
+  0x000000011b1440c0:   str		x8, [sp, #8]
+  0x000000011b1440c4:   mov		x8, #-1
+  0x000000011b1440c8:   str		x8, [sp]
+  0x000000011b1440cc:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@-1 (line 55)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1440d0:   b		#0x11b143160
+  0x000000011b1440d4:   mov		x8, #0x7b88         ;   {metadata({method} {0x00000ff8004e7b88} 'checkIndex' '(II)I' in 'java/util/Objects')}
+  0x000000011b1440d8:   movk		x8, #0x4e, lsl #16
+  0x000000011b1440dc:   movk		x8, #0xff8, lsl #32
+  0x000000011b1440e0:   str		x8, [sp, #8]
+  0x000000011b1440e4:   mov		x8, #-1
+  0x000000011b1440e8:   str		x8, [sp]
+  0x000000011b1440ec:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.util.Objects::checkIndex@-1 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1440f0:   b		#0x11b1431a4
+  0x000000011b1440f4:   mov		x8, #-0x1c
+  0x000000011b1440f8:   str		x8, [sp]
+  0x000000011b1440fc:   bl		#0x122329340        ; ImmutableOopMap {rfp=Oop r10=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*invokestatic checkIndex {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.util.Objects::checkIndex@3 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call deoptimize_blob (C1 runtime)}
+  0x000000011b144100:   mov		x8, #-0x1c
+  0x000000011b144104:   str		x8, [sp]
+  0x000000011b144108:   bl		#0x122329340        ; ImmutableOopMap {rfp=Oop r10=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*invokestatic checkIndex {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.util.Objects::checkIndex@3 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call deoptimize_blob (C1 runtime)}
+  0x000000011b14410c:   mov		x8, #0xd638         ;   {metadata({method} {0x00000001301ed638} 'dummyVector' '()Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector$IntSpecies')}
+  0x000000011b144110:   movk		x8, #0x301e, lsl #16
+  0x000000011b144114:   movk		x8, #1, lsl #32
+  0x000000011b144118:   str		x8, [sp, #8]
+  0x000000011b14411c:   mov		x8, #-1
+  0x000000011b144120:   str		x8, [sp]
+  0x000000011b144124:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop c_rarg2=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector$IntSpecies::dummyVector@-1 (line 3988)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@19 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144128:   b		#0x11b143288
+  0x000000011b14412c:   mov		x8, #0x39a8         ;   {metadata({method} {0x00000001301f39a8} 'dummyVector' '()Ljdk/incubator/vector/AbstractVector;' in 'jdk/incubator/vector/AbstractSpecies')}
+  0x000000011b144130:   movk		x8, #0x301f, lsl #16
+  0x000000011b144134:   movk		x8, #1, lsl #32
+  0x000000011b144138:   str		x8, [sp, #8]
+  0x000000011b14413c:   mov		x8, #-1
+  0x000000011b144140:   str		x8, [sp]
+  0x000000011b144144:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.AbstractSpecies::dummyVector@-1 (line 323)
+                                                            ; - jdk.incubator.vector.IntVector$IntSpecies::dummyVector@1 (line 3988)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@19 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144148:   b		#0x11b1432c4
+  0x000000011b14414c:   mov		x8, #0xba00         ;   {metadata({method} {0x000000013021ba00} 'fromArray0' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b144150:   movk		x8, #0x3021, lsl #16
+  0x000000011b144154:   movk		x8, #1, lsl #32
+  0x000000011b144158:   str		x8, [sp, #8]
+  0x000000011b14415c:   mov		x8, #-1
+  0x000000011b144160:   str		x8, [sp]
+  0x000000011b144164:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop c_rarg2=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@-1 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144168:   b		#0x11b14332c
+  0x000000011b14416c:   mov		x8, #0xf918         ;   {metadata({method} {0x000000013019f918} 'fromArray0Template' '([II)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b144170:   movk		x8, #0x3019, lsl #16
+  0x000000011b144174:   movk		x8, #1, lsl #32
+  0x000000011b144178:   str		x8, [sp, #8]
+  0x000000011b14417c:   mov		x8, #-1
+  0x000000011b144180:   str		x8, [sp]
+  0x000000011b144184:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop c_rarg2=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@-1 (line 3508)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144188:   b		#0x11b14336c
+  0x000000011b14418c:   mov		x8, #0x7e50         ;   {metadata({method} {0x0000000130217e50} 'vspecies' '()Ljdk/incubator/vector/IntVector$IntSpecies;' in 'jdk/incubator/vector/IntVector128')}
+  0x000000011b144190:   movk		x8, #0x3021, lsl #16
+  0x000000011b144194:   movk		x8, #1, lsl #32
+  0x000000011b144198:   str		x8, [sp, #8]
+  0x000000011b14419c:   mov		x8, #-1
+  0x000000011b1441a0:   str		x8, [sp]
+  0x000000011b1441a4:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector128::vspecies@-1 (line 90)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@1 (line 3508)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1441a8:   b		#0x11b1433a8
+  0x000000011b1441ac:   mov		x8, #0xd68          ;   {metadata({method} {0x00000001301a0d68} 'arrayAddress' '([II)J' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1441b0:   movk		x8, #0x301a, lsl #16
+  0x000000011b1441b4:   movk		x8, #1, lsl #32
+  0x000000011b1441b8:   str		x8, [sp, #8]
+  0x000000011b1441bc:   mov		x8, #-1
+  0x000000011b1441c0:   str		x8, [sp]
+  0x000000011b1441c4:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop r12=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector::arrayAddress@-1 (line 3750)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@17 (line 3511)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1441c8:   b		#0x11b1434f0
+  0x000000011b1441cc:   mov		x8, #0x4df8         ;   {metadata({method} {0x00000ff800224df8} 'linkToTargetMethod' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/Invokers$Holder')}
+  0x000000011b1441d0:   movk		x8, #0x22, lsl #16
+  0x000000011b1441d4:   movk		x8, #0xff8, lsl #32
+  0x000000011b1441d8:   str		x8, [sp, #8]
+  0x000000011b1441dc:   mov		x8, #-1
+  0x000000011b1441e0:   str		x8, [sp]
+  0x000000011b1441e4:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop r12=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.invoke.Invokers$Holder::linkToTargetMethod@-1
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@25 (line 3511)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1441e8:   b		#0x11b14353c
+  0x000000011b1441ec:   mov		x8, #0xb370         ;   {metadata({method} {0x00000ff80022b370} 'constant_L' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/LambdaForm$Holder')}
+  0x000000011b1441f0:   movk		x8, #0x22, lsl #16
+  0x000000011b1441f4:   movk		x8, #0xff8, lsl #32
+  0x000000011b1441f8:   str		x8, [sp, #8]
+  0x000000011b1441fc:   mov		x8, #-1
+  0x000000011b144200:   str		x8, [sp]
+  0x000000011b144204:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop r10=Oop r12=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.invoke.LambdaForm$Holder::constant_L@-1
+                                                            ; - java.lang.invoke.Invokers$Holder::linkToTargetMethod@4
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@25 (line 3511)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144208:   b		#0x11b143578
+  0x000000011b14420c:   mov		x8, x0
+  0x000000011b144210:   bl		#0x122328040        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::fromArray0Template@33 (line 3509)
+                                                            ; - jdk.incubator.vector.IntVector128::fromArray0@3 (line 952)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@24 (line 3022)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call throw_class_cast_exception_blob (C1 runtime)}
+  0x000000011b144214:   bl		#0x122326bc0        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop c_rarg4=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*invokevirtual add {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@44 (line 45)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b144218:   mov		x8, #0x90a0         ;   {metadata({method} {0x00000001301990a0} 'add' '(Ljdk/incubator/vector/Vector;)Ljdk/incubator/vector/IntVector;' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b14421c:   movk		x8, #0x3019, lsl #16
+  0x000000011b144220:   movk		x8, #1, lsl #32
+  0x000000011b144224:   str		x8, [sp, #8]
+  0x000000011b144228:   mov		x8, #-1
+  0x000000011b14422c:   str		x8, [sp]
+  0x000000011b144230:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg3=Oop c_rarg4=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector::add@-1 (line 1385)
+                                                            ; - JitDemo::addVector@44 (line 45)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144234:   b		#0x11b143744
+  0x000000011b144238:   bl		#0x122326bc0        ; ImmutableOopMap {rfp=Oop c_rarg0=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*invokevirtual intoArray {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b14423c:   mov		x8, #0xf0d8         ;   {metadata({method} {0x000000013019f0d8} 'intoArray' '([II)V' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b144240:   movk		x8, #0x3019, lsl #16
+  0x000000011b144244:   movk		x8, #1, lsl #32
+  0x000000011b144248:   str		x8, [sp, #8]
+  0x000000011b14424c:   mov		x8, #-1
+  0x000000011b144250:   str		x8, [sp]
+  0x000000011b144254:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop c_rarg0=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@-1 (line 3291)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144258:   b		#0x11b1438a0
+  0x000000011b14425c:   bl		#0x122326bc0        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@6 (line 3291)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b144260:   mov		x8, #0xe3d0         ;   {metadata({method} {0x00000001302de3d0} 'checkFromIndexSize' '(III)I' in 'jdk/incubator/vector/VectorIntrinsics')}
+  0x000000011b144264:   movk		x8, #0x302d, lsl #16
+  0x000000011b144268:   movk		x8, #1, lsl #32
+  0x000000011b14426c:   str		x8, [sp, #8]
+  0x000000011b144270:   mov		x8, #-1
+  0x000000011b144274:   str		x8, [sp]
+  0x000000011b144278:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@-1 (line 55)
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@7 (line 3291)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b14427c:   b		#0x11b143980
+  0x000000011b144280:   mov		x8, #0x7b88         ;   {metadata({method} {0x00000ff8004e7b88} 'checkIndex' '(II)I' in 'java/util/Objects')}
+  0x000000011b144284:   movk		x8, #0x4e, lsl #16
+  0x000000011b144288:   movk		x8, #0xff8, lsl #32
+  0x000000011b14428c:   str		x8, [sp, #8]
+  0x000000011b144290:   mov		x8, #-1
+  0x000000011b144294:   str		x8, [sp]
+  0x000000011b144298:   bl		#0x122329e80        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.util.Objects::checkIndex@-1 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@7 (line 3291)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b14429c:   b		#0x11b1439c8
+  0x000000011b1442a0:   mov		x8, #-0x1c
+  0x000000011b1442a4:   str		x8, [sp]
+  0x000000011b1442a8:   bl		#0x122329340        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*invokestatic checkIndex {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.util.Objects::checkIndex@3 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@7 (line 3291)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call deoptimize_blob (C1 runtime)}
+  0x000000011b1442ac:   mov		x8, #-0x1c
+  0x000000011b1442b0:   str		x8, [sp]
+  0x000000011b1442b4:   bl		#0x122329340        ; ImmutableOopMap {rfp=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*invokestatic checkIndex {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.util.Objects::checkIndex@3 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@7 (line 3291)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call deoptimize_blob (C1 runtime)}
+  0x000000011b1442b8:   bl		#0x122326bc0        ; ImmutableOopMap {c_rarg0=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*invokevirtual vectorType {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@17 (line 3294)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b1442bc:   mov		x8, #0xd68          ;   {metadata({method} {0x00000001301a0d68} 'arrayAddress' '([II)J' in 'jdk/incubator/vector/IntVector')}
+  0x000000011b1442c0:   movk		x8, #0x301a, lsl #16
+  0x000000011b1442c4:   movk		x8, #1, lsl #32
+  0x000000011b1442c8:   str		x8, [sp, #8]
+  0x000000011b1442cc:   mov		x8, #-1
+  0x000000011b1442d0:   str		x8, [sp]
+  0x000000011b1442d4:   bl		#0x122329e80        ; ImmutableOopMap {c_rarg1=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - jdk.incubator.vector.IntVector::arrayAddress@-1 (line 3750)
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@28 (line 3295)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1442d8:   b		#0x11b143bfc
+  0x000000011b1442dc:   mov		x8, #0x4df8         ;   {metadata({method} {0x00000ff800224df8} 'linkToTargetMethod' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/Invokers$Holder')}
+  0x000000011b1442e0:   movk		x8, #0x22, lsl #16
+  0x000000011b1442e4:   movk		x8, #0xff8, lsl #32
+  0x000000011b1442e8:   str		x8, [sp, #8]
+  0x000000011b1442ec:   mov		x8, #-1
+  0x000000011b1442f0:   str		x8, [sp]
+  0x000000011b1442f4:   bl		#0x122329e80        ; ImmutableOopMap {c_rarg1=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.invoke.Invokers$Holder::linkToTargetMethod@-1
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@36 (line 3295)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1442f8:   b		#0x11b143c48
+  0x000000011b1442fc:   mov		x8, #0xb370         ;   {metadata({method} {0x00000ff80022b370} 'constant_L' '(Ljava/lang/Object;)Ljava/lang/Object;' in 'java/lang/invoke/LambdaForm$Holder')}
+  0x000000011b144300:   movk		x8, #0x22, lsl #16
+  0x000000011b144304:   movk		x8, #0xff8, lsl #32
+  0x000000011b144308:   str		x8, [sp, #8]
+  0x000000011b14430c:   mov		x8, #-1
+  0x000000011b144310:   str		x8, [sp]
+  0x000000011b144314:   bl		#0x122329e80        ; ImmutableOopMap {c_rarg1=Oop [264]=Oop [280]=Oop [288]=Oop [296]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.invoke.LambdaForm$Holder::constant_L@-1
+                                                            ; - java.lang.invoke.Invokers$Holder::linkToTargetMethod@4
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@36 (line 3295)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144318:   b		#0x11b143c84
+  0x000000011b14431c:   mov		x8, #0x8870         ;   {metadata({method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b144320:   movk		x8, #0x30a8, lsl #16
+  0x000000011b144324:   movk		x8, #1, lsl #32
+  0x000000011b144328:   str		x8, [sp, #8]
+  0x000000011b14432c:   mov		x8, #0x42
+  0x000000011b144330:   str		x8, [sp]
+  0x000000011b144334:   bl		#0x122329e80        ; ImmutableOopMap {[264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::addVector@66 (line 42)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b144338:   b		#0x11b143d88
+  0x000000011b14433c:   mov		x8, x10
+  0x000000011b144340:   mov		x9, x29
+  0x000000011b144344:   mov		x30, #0x6740        ;   {runtime_call throw_range_check_failed_blob (C1 runtime)}
+  0x000000011b144348:   movk		x30, #0x2232, lsl #16
+  0x000000011b14434c:   movk		x30, #1, lsl #32
+  0x000000011b144350:   blr		x30                 ; ImmutableOopMap {c_rarg3=Oop c_rarg4=Oop rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*iaload {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@82 (line 48)
+  0x000000011b144354:   bl		#0x122326bc0        ; ImmutableOopMap {c_rarg3=Oop c_rarg4=Oop rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*iaload {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@86 (line 48)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b144358:   mov		x8, x10
+  0x000000011b14435c:   mov		x9, x3
+  0x000000011b144360:   mov		x30, #0x6740        ;   {runtime_call throw_range_check_failed_blob (C1 runtime)}
+  0x000000011b144364:   movk		x30, #0x2232, lsl #16
+  0x000000011b144368:   movk		x30, #1, lsl #32
+  0x000000011b14436c:   blr		x30                 ; ImmutableOopMap {c_rarg3=Oop c_rarg4=Oop rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*iaload {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@86 (line 48)
+  0x000000011b144370:   bl		#0x122326bc0        ; ImmutableOopMap {c_rarg3=Oop c_rarg4=Oop rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@88 (line 48)
+                                                            ;   {runtime_call throw_null_pointer_exception_blob (C1 runtime)}
+  0x000000011b144374:   mov		x8, x10
+  0x000000011b144378:   mov		x9, x4
+  0x000000011b14437c:   mov		x30, #0x6740        ;   {runtime_call throw_range_check_failed_blob (C1 runtime)}
+  0x000000011b144380:   movk		x30, #0x2232, lsl #16
+  0x000000011b144384:   movk		x30, #1, lsl #32
+  0x000000011b144388:   blr		x30                 ; ImmutableOopMap {c_rarg3=Oop c_rarg4=Oop rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@88 (line 48)
+  0x000000011b14438c:   mov		x8, #0x8870         ;   {metadata({method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo')}
+  0x000000011b144390:   movk		x8, #0x30a8, lsl #16
+  0x000000011b144394:   movk		x8, #1, lsl #32
+  0x000000011b144398:   str		x8, [sp, #8]
+  0x000000011b14439c:   mov		x8, #0x5c
+  0x000000011b1443a0:   str		x8, [sp]
+  0x000000011b1443a4:   bl		#0x122329e80        ; ImmutableOopMap {c_rarg3=Oop c_rarg4=Oop rfp=Oop [264]=Oop [280]=Oop [288]=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::addVector@92 (line 47)
+                                                            ;   {runtime_call counter_overflow_blob (C1 runtime)}
+  0x000000011b1443a8:   b		#0x11b143e44
+  0x000000011b1443ac:   adr		x8, #0x11b143e9c    ;   {internal_word}
+  0x000000011b1443b0:   str		x8, [x28, #0x498]
+  0x000000011b1443b4:   b		#0x122254ec0        ;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x000000011b1443b8:   ldr		x0, [x28, #0x500]
+  0x000000011b1443bc:   str		xzr, [x28, #0x500]
+  0x000000011b1443c0:   str		xzr, [x28, #0x508]
+  0x000000011b1443c4:   ldp		x29, x30, [sp, #0x140]
+  0x000000011b1443c8:   add		sp, sp, #0x150
+  0x000000011b1443cc:   b		#0x122326100        ;   {runtime_call unwind_exception_blob (C1 runtime)}
+[Stub Code]
+  0x000000011b1443d0:   ldr		x8, #0x11b1443d8    ;   {trampoline_stub}
+  0x000000011b1443d4:   br		x8
+  0x000000011b1443d8:   .byte		0x00, 0xc4, 0x9c, 0x22
+  0x000000011b1443dc:   udf		#1
+  0x000000011b1443e0:   ldr		x8, #0x11b1443e8    ;   {trampoline_stub}
+  0x000000011b1443e4:   br		x8
+  0x000000011b1443e8:   .byte		0x00, 0xc4, 0x9c, 0x22
+  0x000000011b1443ec:   udf		#1
+  0x000000011b1443f0:   isb		                    ;   {static_stub}
+  0x000000011b1443f4:   mov		x12, #0             ;   {metadata(nullptr)}
+  0x000000011b1443f8:   movk		x12, #0, lsl #16
+  0x000000011b1443fc:   movk		x12, #0, lsl #32
+  0x000000011b144400:   mov		x8, #0
+  0x000000011b144404:   movk		x8, #0, lsl #16
+  0x000000011b144408:   movk		x8, #0, lsl #32
+  0x000000011b14440c:   br		x8
+  0x000000011b144410:   ldr		x8, #0x11b144418    ;   {trampoline_stub}
+  0x000000011b144414:   br		x8
+  0x000000011b144418:   .byte		0x08, 0xd0, 0x9c, 0x22
+  0x000000011b14441c:   udf		#1
+  0x000000011b144420:   isb		                    ;   {static_stub}
+  0x000000011b144424:   mov		x12, #0             ;   {metadata(nullptr)}
+  0x000000011b144428:   movk		x12, #0, lsl #16
+  0x000000011b14442c:   movk		x12, #0, lsl #32
+  0x000000011b144430:   mov		x8, #0
+  0x000000011b144434:   movk		x8, #0, lsl #16
+  0x000000011b144438:   movk		x8, #0, lsl #32
+  0x000000011b14443c:   br		x8
+  0x000000011b144440:   ldr		x8, #0x11b144448    ;   {trampoline_stub}
+  0x000000011b144444:   br		x8
+  0x000000011b144448:   .byte		0x48, 0x98, 0x9c, 0x22
+  0x000000011b14444c:   udf		#1
+  0x000000011b144450:   isb		                    ;   {static_stub}
+  0x000000011b144454:   mov		x12, #0             ;   {metadata(nullptr)}
+  0x000000011b144458:   movk		x12, #0, lsl #16
+  0x000000011b14445c:   movk		x12, #0, lsl #32
+  0x000000011b144460:   mov		x8, #0
+  0x000000011b144464:   movk		x8, #0, lsl #16
+  0x000000011b144468:   movk		x8, #0, lsl #32
+  0x000000011b14446c:   br		x8
+  0x000000011b144470:   ldr		x8, #0x11b144478    ;   {trampoline_stub}
+  0x000000011b144474:   br		x8
+  0x000000011b144478:   .byte		0xc8, 0x99, 0x9c, 0x22
+  0x000000011b14447c:   udf		#1
+  0x000000011b144480:   ldr		x8, #0x11b144488    ;   {trampoline_stub}
+  0x000000011b144484:   br		x8
+  0x000000011b144488:   .byte		0x40, 0x44, 0x9d, 0x22
+  0x000000011b14448c:   udf		#1
+  0x000000011b144490:   isb		                    ;   {static_stub}
+  0x000000011b144494:   mov		x12, #0             ;   {metadata(nullptr)}
+  0x000000011b144498:   movk		x12, #0, lsl #16
+  0x000000011b14449c:   movk		x12, #0, lsl #32
+  0x000000011b1444a0:   mov		x8, #0
+  0x000000011b1444a4:   movk		x8, #0, lsl #16
+  0x000000011b1444a8:   movk		x8, #0, lsl #32
+  0x000000011b1444ac:   br		x8
+  0x000000011b1444b0:   isb		                    ;   {static_stub}
+  0x000000011b1444b4:   mov		x12, #0             ;   {metadata(nullptr)}
+  0x000000011b1444b8:   movk		x12, #0, lsl #16
+  0x000000011b1444bc:   movk		x12, #0, lsl #32
+  0x000000011b1444c0:   mov		x8, #0
+  0x000000011b1444c4:   movk		x8, #0, lsl #16
+  0x000000011b1444c8:   movk		x8, #0, lsl #32
+  0x000000011b1444cc:   br		x8
+[Exception Handler]
+  0x000000011b1444d0:   bl		#0x122327d40        ;   {runtime_call handle_exception_from_callee_blob (C1 runtime)}
+  0x000000011b1444d4:   mov		x0, #0x894a         ;   {external_word}
+  0x000000011b1444d8:   movk		x0, #0x11ce, lsl #16
+  0x000000011b1444dc:   movk		x0, #1, lsl #32
+  0x000000011b1444e0:   dcps1		#0xdeae
+  0x000000011b1444e4:   bl		#0x1222550c0        ;   {runtime_call DeoptimizationBlob}
+[Deopt Handler Entry Point]
+  0x000000011b1444e8:   b		#0x11b1444e4
+  0x000000011b1444ec:   udf		#0
+--------------------------------------------------------------------------------
+[/Disassembly]
+
+============================= C2-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c2) 407 2324 %     4       JitDemo::addVector @ 3 (96 bytes)
+ total in heap  [0x00000001229db108,0x00000001229db4c0] = 952
+ main code      [0x00000001229db200,0x00000001229db4a0] = 672
+ stub code      [0x00000001229db4a0,0x00000001229db4a8] = 8
+ oops           [0x00000001229db4a8,0x00000001229db4c0] = 24
+ mutable data [0x0000007896c56a00,0x0000007896c56b90] = 400
+ relocation     [0x0000007896c56a00,0x0000007896c56a40] = 64
+ metadata       [0x0000007896c56a40,0x0000007896c56b90] = 336
+ immutable data [0x000000789b390f00,0x000000789b39114c] = 588
+ dependencies   [0x000000789b390f00,0x000000789b390f68] = 104
+ nul chk table  [0x000000789b390f68,0x000000789b390f88] = 32
+ scopes pcs     [0x000000789b390f88,0x000000789b391028] = 160
+ scopes data    [0x000000789b391028,0x000000789b391148] = 288
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Verified Entry Point]
+  # {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo'
+  0x00000001229db200:   brk		#0
+  0x00000001229db204:   nop		
+  0x00000001229db208:   nop		
+  0x00000001229db20c:   nop		
+  0x00000001229db210:   sub		x9, sp, #0x14, lsl #12
+  0x00000001229db214:   str		xzr, [x9]
+  0x00000001229db218:   sub		sp, sp, #0x50
+  0x00000001229db21c:   stp		x29, x30, [sp, #0x40]
+  0x00000001229db220:   ldr		w8, #0x1229db498
+  0x00000001229db224:   ldr		w9, [x28, #0x20]
+  0x00000001229db228:   cmp		x8, x9
+  0x00000001229db22c:   b.ne		#0x1229db484
+  0x00000001229db230:   ldp		x22, x19, [x1, #0x20]
+  0x00000001229db234:   ldr		x21, [x1, #0x18]
+  0x00000001229db238:   ldr		w20, [x1, #0x10]
+  0x00000001229db23c:   mov		x0, x1
+  0x00000001229db240:   adr		x9, #0x1229db258
+  0x00000001229db244:   str		x9, [x28, #0x3f8]
+  0x00000001229db248:   mov		x8, #0x67d8         ;   {runtime_call SharedRuntime::OSR_migration_end(long*)}
+  0x00000001229db24c:   movk		x8, #0x11a7, lsl #16
+  0x00000001229db250:   movk		x8, #1, lsl #32
+  0x00000001229db254:   blr		x8
+  0x00000001229db258:   nop		                    ;   {post_call_nop}
+  0x00000001229db25c:   movk		xzr, #0
+  0x00000001229db260:   movk		xzr, #0
+  0x00000001229db264:   cbz		x19, #0x1229db390
+  0x00000001229db268:   ldr		w10, [x19, #4]
+  0x00000001229db26c:   lsr		w10, w10, #0xa
+  0x00000001229db270:   movz		x12, #0, lsl #16    ;   {metadata({type array int})}
+  0x00000001229db274:   movk		x12, #0x5f6
+  0x00000001229db278:   cmp		w10, w12
+  0x00000001229db27c:   b.ne		#0x1229db414
+  0x00000001229db280:   mov		x0, x19
+  0x00000001229db284:   cbz		x22, #0x1229db398
+  0x00000001229db288:   ldr		w11, [x22, #4]
+  0x00000001229db28c:   lsr		w11, w11, #0xa
+  0x00000001229db290:   movz		x10, #0, lsl #16    ;   {metadata({type array int})}
+  0x00000001229db294:   movk		x10, #0x5f6
+  0x00000001229db298:   cmp		w11, w10
+  0x00000001229db29c:   b.ne		#0x1229db414
+  0x00000001229db2a0:   mov		x16, x22
+  0x00000001229db2a4:   cbz		x21, #0x1229db3a0
+  0x00000001229db2a8:   ldr		w10, [x21, #4]
+  0x00000001229db2ac:   lsr		w10, w10, #0xa
+  0x00000001229db2b0:   movz		x12, #0, lsl #16    ;   {metadata({type array int})}
+  0x00000001229db2b4:   movk		x12, #0x5f6
+  0x00000001229db2b8:   cmp		w10, w12
+  0x00000001229db2bc:   b.ne		#0x1229db414
+  0x00000001229db2c0:   ldr		w10, [x0, #8]       ; implicit exception: dispatches to 0x00000001229db458
+  0x00000001229db2c4:   sub		w11, w10, #3
+  0x00000001229db2c8:   tbnz		w11, #0x1f, #0x1229db3f4
+  0x00000001229db2cc:   ldr		w13, [x16, #8]      ; implicit exception: dispatches to 0x00000001229db3f4
+  0x00000001229db2d0:   sub		w11, w13, #3
+  0x00000001229db2d4:   tbnz		w11, #0x1f, #0x1229db3f4
+  0x00000001229db2d8:   ldr		w14, [x21, #8]      ; implicit exception: dispatches to 0x00000001229db3f4
+  0x00000001229db2dc:   mov		w11, w10
+  0x00000001229db2e0:   and		w17, w10, #0xfffffffc
+  0x00000001229db2e4:   sub		w11, w11, #3
+  0x00000001229db2e8:   sub		w15, w14, #3
+  0x00000001229db2ec:   tbnz		w15, #0x1f, #0x1229db3f4
+  0x00000001229db2f0:   sub		w1, w13, #3
+  0x00000001229db2f4:   sub		w29, w14, #3
+  0x00000001229db2f8:   b		#0x1229db314
+  0x00000001229db2fc:   nop		
+  0x00000001229db300:   add		x12, x21, x12
+  0x00000001229db304:   stur		q16, [x12, #0xc]
+  0x00000001229db308:   ldr		x13, [x28, #0x30]
+  0x00000001229db30c:   add		w20, w20, #4        ; ImmutableOopMap {r16=Oop c_rarg0=Oop rdispatch=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::addVector@66 (line 42)
+  0x00000001229db310:   ldr		wzr, [x13]          ;   {poll}
+  0x00000001229db314:   cmp		w20, w17
+  0x00000001229db318:   b.ge		#0x1229db370
+  0x00000001229db31c:   cmp		w20, w11
+  0x00000001229db320:   b.hs		#0x1229db3a8
+  0x00000001229db324:   sbfiz		x12, x20, #2, #0x20
+  0x00000001229db328:   add		x13, x0, x12
+  0x00000001229db32c:   ldur		q17, [x13, #0xc]
+  0x00000001229db330:   cmp		w20, w1
+  0x00000001229db334:   b.hs		#0x1229db3cc
+  0x00000001229db338:   add		x13, x16, x12
+  0x00000001229db33c:   ldur		q16, [x13, #0xc]
+  0x00000001229db340:   add		v16.4s, v17.4s, v16.4s
+  0x00000001229db344:   cmp		w20, w29
+  0x00000001229db348:   b.lo		#0x1229db300
+  0x00000001229db34c:   str		q16, [sp, #0x20]
+  0x00000001229db350:   stp		x0, x16, [sp, #0x10]
+  0x00000001229db354:   str		x21, [sp, #8]
+  0x00000001229db358:   mov		w1, #-0x1c
+  0x00000001229db35c:   str		w20, [sp, #4]
+  0x00000001229db360:   bl		#0x12232bac0        ; ImmutableOopMap {[8]=Oop [16]=Oop [24]=Oop }
+                                                            ;*invokestatic checkIndex {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.util.Objects::checkIndex@3 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::intoArray@7 (line 3291)
+                                                            ; - JitDemo::addVector@50 (line 45)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229db364:   nop		                    ;   {post_call_nop}
+  0x00000001229db368:   movk		xzr, #0x25c
+  0x00000001229db36c:   movk		xzr, #0x100
+  0x00000001229db370:   cmp		w20, w10
+  0x00000001229db374:   b.lt		#0x1229db434
+  0x00000001229db378:   ldp		x29, x30, [sp, #0x40]
+  0x00000001229db37c:   add		sp, sp, #0x50
+  0x00000001229db380:   ldr		x8, [x28, #0x28]    ;   {poll_return}
+  0x00000001229db384:   cmp		sp, x8
+  0x00000001229db388:   b.hi		#0x1229db478
+  0x00000001229db38c:   ret		
+  0x00000001229db390:   mov		x0, xzr
+  0x00000001229db394:   b		#0x1229db284
+  0x00000001229db398:   mov		x16, xzr
+  0x00000001229db39c:   b		#0x1229db2a4
+  0x00000001229db3a0:   mov		x21, xzr
+  0x00000001229db3a4:   b		#0x1229db2c0
+  0x00000001229db3a8:   str		w11, [sp, #4]
+  0x00000001229db3ac:   stp		x0, x16, [sp, #0x10]
+  0x00000001229db3b0:   str		x21, [sp, #8]
+  0x00000001229db3b4:   mov		w1, #-0x1c
+  0x00000001229db3b8:   str		w20, [sp]
+  0x00000001229db3bc:   bl		#0x12232bac0        ; ImmutableOopMap {[8]=Oop [16]=Oop [24]=Oop }
+                                                            ;*invokestatic checkIndex {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.util.Objects::checkIndex@3 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@24 (line 43)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229db3c0:   nop		                    ;   {post_call_nop}
+  0x00000001229db3c4:   movk		xzr, #0x2b8
+  0x00000001229db3c8:   movk		xzr, #0x200
+  0x00000001229db3cc:   str		q17, [sp, #0x20]
+  0x00000001229db3d0:   str		w1, [sp, #4]
+  0x00000001229db3d4:   stp		x0, x16, [sp, #0x10]
+  0x00000001229db3d8:   str		x21, [sp, #8]
+  0x00000001229db3dc:   mov		w1, #-0x1c
+  0x00000001229db3e0:   str		w20, [sp]
+  0x00000001229db3e4:   bl		#0x12232bac0        ; ImmutableOopMap {[8]=Oop [16]=Oop [24]=Oop }
+                                                            ;*invokestatic checkIndex {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.util.Objects::checkIndex@3 (line 365)
+                                                            ; - jdk.incubator.vector.VectorIntrinsics::checkFromIndexSize@43 (line 58)
+                                                            ; - jdk.incubator.vector.IntVector::fromArray@9 (line 3020)
+                                                            ; - JitDemo::addVector@35 (line 44)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229db3e8:   nop		                    ;   {post_call_nop}
+  0x00000001229db3ec:   movk		xzr, #0x2e0
+  0x00000001229db3f0:   movk		xzr, #0x300
+  0x00000001229db3f4:   stp		x0, x16, [sp, #8]
+  0x00000001229db3f8:   str		x21, [sp]
+  0x00000001229db3fc:   mov		w1, #-0x42
+  0x00000001229db400:   mov		w29, w20
+  0x00000001229db404:   bl		#0x12232bac0        ; ImmutableOopMap {[0]=Oop [8]=Oop [16]=Oop }
+                                                            ;*iload {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@3 (line 42)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229db408:   nop		                    ;   {post_call_nop}
+  0x00000001229db40c:   movk		xzr, #0x300
+  0x00000001229db410:   movk		xzr, #0x400
+  0x00000001229db414:   stp		x22, x21, [sp, #8]
+  0x00000001229db418:   str		x19, [sp]
+  0x00000001229db41c:   mov		w1, #-0x7b
+  0x00000001229db420:   mov		w29, w20
+  0x00000001229db424:   bl		#0x12232bac0        ; ImmutableOopMap {[0]=Oop [8]=Oop [16]=Oop }
+                                                            ;*iload {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@3 (line 42)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229db428:   nop		                    ;   {post_call_nop}
+  0x00000001229db42c:   movk		xzr, #0x320
+  0x00000001229db430:   movk		xzr, #0x500
+  0x00000001229db434:   str		w10, [sp, #4]
+  0x00000001229db438:   stp		x0, x16, [sp, #0x10]
+  0x00000001229db43c:   str		x21, [sp, #8]
+  0x00000001229db440:   mov		w1, #-0xbb
+  0x00000001229db444:   str		w20, [sp]
+  0x00000001229db448:   bl		#0x12232bac0        ; ImmutableOopMap {[8]=Oop [16]=Oop [24]=Oop }
+                                                            ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::addVector@73 (line 47)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229db44c:   nop		                    ;   {post_call_nop}
+  0x00000001229db450:   movk		xzr, #0x344
+  0x00000001229db454:   movk		xzr, #0x600
+  0x00000001229db458:   stp		x0, x16, [sp, #8]
+  0x00000001229db45c:   str		x21, [sp]
+  0x00000001229db460:   mov		w1, #-0x92
+  0x00000001229db464:   mov		w29, w20
+  0x00000001229db468:   bl		#0x12232bac0        ; ImmutableOopMap {[0]=Oop [8]=Oop [16]=Oop }
+                                                            ;*iload {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@3 (line 42)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229db46c:   nop		                    ;   {post_call_nop}
+  0x00000001229db470:   movk		xzr, #0x364
+  0x00000001229db474:   movk		xzr, #0x700
+  0x00000001229db478:   adr		x8, #0x1229db380    ;   {internal_word}
+  0x00000001229db47c:   str		x8, [x28, #0x498]
+  0x00000001229db480:   b		#0x122254ec0        ;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00000001229db484:   mov		x8, #0xc5c0         ;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00000001229db488:   movk		x8, #0x2225, lsl #16
+  0x00000001229db48c:   movk		x8, #1, lsl #32
+  0x00000001229db490:   blr		x8
+  0x00000001229db494:   b		#0x1229db230
+  0x00000001229db498:   udf		#1                  ;   {entry_guard}
+  0x00000001229db49c:   udf		#0
+[Stub Code]
+  0x00000001229db4a0:   bl		#0x1222550c0        ;   {runtime_call DeoptimizationBlob}
+[Deopt Handler Entry Point]
+  0x00000001229db4a4:   b		#0x1229db4a0
+--------------------------------------------------------------------------------
+[/Disassembly]
+
+============================= C2-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c2) 415 2326       4       JitDemo::addVector (96 bytes)
+ total in heap  [0x00000001229db908,0x00000001229dbca0] = 920
+ main code      [0x00000001229dba00,0x00000001229dbc90] = 656
+ stub code      [0x00000001229dbc90,0x00000001229dbc98] = 8
+ oops           [0x00000001229dbc98,0x00000001229dbca0] = 8
+ mutable data [0x0000007896c67a80,0x0000007896c67be8] = 360
+ relocation     [0x0000007896c67a80,0x0000007896c67aa0] = 32
+ metadata       [0x0000007896c67aa0,0x0000007896c67be8] = 328
+ immutable data [0x0000007896c67900,0x0000007896c67a5c] = 348
+ dependencies   [0x0000007896c67900,0x0000007896c67968] = 104
+ nul chk table  [0x0000007896c67968,0x0000007896c67988] = 32
+ scopes pcs     [0x0000007896c67988,0x0000007896c679e8] = 96
+ scopes data    [0x0000007896c679e8,0x0000007896c67a58] = 112
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Instructions begin]
+  0x00000001229dba00:   nop		
+  0x00000001229dba04:   nop		
+[Entry Point]
+  # {method} {0x0000000130a88870} 'addVector' '([I[I[I)V' in 'JitDemo'
+  # this:     c_rarg1:c_rarg1 
+                        = 'JitDemo'
+  # parm0:    c_rarg2:c_rarg2 
+                        = '[I'
+  # parm1:    c_rarg3:c_rarg3 
+                        = '[I'
+  # parm2:    c_rarg4:c_rarg4 
+                        = '[I'
+  #           [sp+0x40]  (sp of caller)
+  0x00000001229dba08:   ldr		x8, [x1]
+  0x00000001229dba0c:   lsr		x8, x8, #0x2a
+  0x00000001229dba10:   ldr		w10, [x9, #8]
+  0x00000001229dba14:   cmp		w8, w10
+  0x00000001229dba18:   b.eq		#0x1229dba20
+  0x00000001229dba1c:   b		#0x122253640        ;   {runtime_call ic_miss_blob (shared runtime)}
+[Verified Entry Point]
+  0x00000001229dba20:   sub		x9, sp, #0x14, lsl #12
+  0x00000001229dba24:   str		xzr, [x9]
+  0x00000001229dba28:   sub		sp, sp, #0x40
+  0x00000001229dba2c:   stp		x29, x30, [sp, #0x30]
+  0x00000001229dba30:   ldr		w8, #0x1229dbc8c
+  0x00000001229dba34:   ldr		w9, [x28, #0x20]
+  0x00000001229dba38:   cmp		x8, x9
+  0x00000001229dba3c:   b.ne		#0x1229dbc78
+  0x00000001229dba40:   ldr		w29, [x2, #8]       ; implicit exception: dispatches to 0x00000001229dbc58
+  0x00000001229dba44:   and		w10, w29, #0xfffffffc
+  0x00000001229dba48:   cmp		w10, #0
+  0x00000001229dba4c:   b.le		#0x1229dbc10
+  0x00000001229dba50:   mov		x11, #3
+  0x00000001229dba54:   add		x11, x11, w10, sxtw
+  0x00000001229dba58:   and		x11, x11, #0xfffffffffffffffc
+  0x00000001229dba5c:   sub		w13, w29, #3
+  0x00000001229dba60:   tbnz		w13, #0x1f, #0x1229dbc18
+  0x00000001229dba64:   sub		x11, x11, #4
+  0x00000001229dba68:   mov		w12, w29
+  0x00000001229dba6c:   mov		x13, #-3
+  0x00000001229dba70:   add		x14, x13, w12, sxtw
+  0x00000001229dba74:   cmp		w12, #3
+  0x00000001229dba78:   b.eq		#0x1229dbc18
+  0x00000001229dba7c:   cmp		x11, x14
+  0x00000001229dba80:   b.hs		#0x1229dbc18
+  0x00000001229dba84:   ldr		w14, [x3, #8]       ; implicit exception: dispatches to 0x00000001229dbc18
+  0x00000001229dba88:   sub		w12, w14, #3
+  0x00000001229dba8c:   tbnz		w12, #0x1f, #0x1229dbc18
+  0x00000001229dba90:   add		x12, x13, w14, sxtw
+  0x00000001229dba94:   cmp		w14, #3
+  0x00000001229dba98:   b.eq		#0x1229dbc18
+  0x00000001229dba9c:   cmp		x11, x12
+  0x00000001229dbaa0:   b.hs		#0x1229dbc18
+  0x00000001229dbaa4:   ldur		q16, [x3, #0xc]
+  0x00000001229dbaa8:   ldur		q17, [x2, #0xc]
+  0x00000001229dbaac:   add		v16.4s, v17.4s, v16.4s
+  0x00000001229dbab0:   ldr		w14, [x4, #8]       ; implicit exception: dispatches to 0x00000001229dbc18
+  0x00000001229dbab4:   sub		w12, w14, #3
+  0x00000001229dbab8:   tbnz		w12, #0x1f, #0x1229dbc18
+  0x00000001229dbabc:   add		x12, x13, w14, sxtw
+  0x00000001229dbac0:   cmp		w14, #3
+  0x00000001229dbac4:   b.eq		#0x1229dbc18
+  0x00000001229dbac8:   cmp		x11, x12
+  0x00000001229dbacc:   b.hs		#0x1229dbc18
+  0x00000001229dbad0:   stur		q16, [x4, #0xc]
+  0x00000001229dbad4:   sub		w12, w10, #0x1c
+  0x00000001229dbad8:   mov		w15, #4
+  0x00000001229dbadc:   cmp		w12, #4
+  0x00000001229dbae0:   b.le		#0x1229dbbbc
+  0x00000001229dbae4:   mov		w11, #0x7d00
+  0x00000001229dbae8:   sub		w13, w10, w15
+  0x00000001229dbaec:   sub		w14, w13, #0x1c
+  0x00000001229dbaf0:   cmp		w12, w15
+  0x00000001229dbaf4:   csel		w14, wzr, w14, lt
+  0x00000001229dbaf8:   mov		w8, #0x7d00
+  0x00000001229dbafc:   cmp		w14, w8
+  0x00000001229dbb00:   csel		w14, w11, w14, hi
+  0x00000001229dbb04:   add		w13, w14, w15
+  0x00000001229dbb08:   nop		
+  0x00000001229dbb0c:   nop		
+  0x00000001229dbb10:   sbfiz		x14, x15, #2, #0x20
+  0x00000001229dbb14:   add		x16, x2, x14
+  0x00000001229dbb18:   add		x17, x3, x14
+  0x00000001229dbb1c:   ldur		q16, [x16, #0xc]
+  0x00000001229dbb20:   ldur		q17, [x17, #0xc]
+  0x00000001229dbb24:   add		v16.4s, v16.4s, v17.4s
+  0x00000001229dbb28:   add		x14, x4, x14
+  0x00000001229dbb2c:   stur		q16, [x14, #0xc]
+  0x00000001229dbb30:   ldur		q16, [x17, #0x1c]
+  0x00000001229dbb34:   ldur		q17, [x16, #0x1c]
+  0x00000001229dbb38:   add		v16.4s, v16.4s, v17.4s
+  0x00000001229dbb3c:   stur		q16, [x14, #0x1c]
+  0x00000001229dbb40:   ldur		q16, [x17, #0x2c]
+  0x00000001229dbb44:   ldur		q17, [x16, #0x2c]
+  0x00000001229dbb48:   add		v16.4s, v16.4s, v17.4s
+  0x00000001229dbb4c:   stur		q16, [x14, #0x2c]
+  0x00000001229dbb50:   ldur		q16, [x17, #0x3c]
+  0x00000001229dbb54:   ldur		q17, [x16, #0x3c]
+  0x00000001229dbb58:   add		v16.4s, v16.4s, v17.4s
+  0x00000001229dbb5c:   stur		q16, [x14, #0x3c]
+  0x00000001229dbb60:   ldur		q16, [x16, #0x4c]
+  0x00000001229dbb64:   ldur		q17, [x17, #0x4c]
+  0x00000001229dbb68:   add		v16.4s, v16.4s, v17.4s
+  0x00000001229dbb6c:   stur		q16, [x14, #0x4c]
+  0x00000001229dbb70:   ldur		q16, [x17, #0x5c]
+  0x00000001229dbb74:   ldur		q17, [x16, #0x5c]
+  0x00000001229dbb78:   add		v16.4s, v16.4s, v17.4s
+  0x00000001229dbb7c:   stur		q16, [x14, #0x5c]
+  0x00000001229dbb80:   ldur		q16, [x16, #0x6c]
+  0x00000001229dbb84:   ldur		q17, [x17, #0x6c]
+  0x00000001229dbb88:   add		v16.4s, v16.4s, v17.4s
+  0x00000001229dbb8c:   stur		q16, [x14, #0x6c]
+  0x00000001229dbb90:   ldur		q16, [x16, #0x7c]
+  0x00000001229dbb94:   ldur		q17, [x17, #0x7c]
+  0x00000001229dbb98:   add		v16.4s, v16.4s, v17.4s
+  0x00000001229dbb9c:   stur		q16, [x14, #0x7c]
+  0x00000001229dbba0:   add		w15, w15, #0x20
+  0x00000001229dbba4:   cmp		w15, w13
+  0x00000001229dbba8:   b.lt		#0x1229dbb10
+  0x00000001229dbbac:   ldr		x13, [x28, #0x30]   ; ImmutableOopMap {c_rarg2=Oop c_rarg3=Oop c_rarg4=Oop }
+                                                            ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::addVector@66 (line 42)
+  0x00000001229dbbb0:   ldr		wzr, [x13]          ;   {poll}
+  0x00000001229dbbb4:   cmp		w15, w12
+  0x00000001229dbbb8:   b.lt		#0x1229dbae8
+  0x00000001229dbbbc:   cmp		w15, w10
+  0x00000001229dbbc0:   b.ge		#0x1229dbbf0
+  0x00000001229dbbc4:   sbfiz		x11, x15, #2, #0x20
+  0x00000001229dbbc8:   add		x12, x2, x11
+  0x00000001229dbbcc:   add		x13, x3, x11
+  0x00000001229dbbd0:   ldur		q16, [x12, #0xc]
+  0x00000001229dbbd4:   ldur		q17, [x13, #0xc]
+  0x00000001229dbbd8:   add		v16.4s, v16.4s, v17.4s
+  0x00000001229dbbdc:   add		x11, x4, x11
+  0x00000001229dbbe0:   stur		q16, [x11, #0xc]
+  0x00000001229dbbe4:   add		w15, w15, #4
+  0x00000001229dbbe8:   cmp		w15, w10
+  0x00000001229dbbec:   b.lt		#0x1229dbbc4
+  0x00000001229dbbf0:   cmp		w15, w29
+  0x00000001229dbbf4:   b.lt		#0x1229dbc38
+  0x00000001229dbbf8:   ldp		x29, x30, [sp, #0x30]
+  0x00000001229dbbfc:   add		sp, sp, #0x40
+  0x00000001229dbc00:   ldr		x8, [x28, #0x28]    ;   {poll_return}
+  0x00000001229dbc04:   cmp		sp, x8
+  0x00000001229dbc08:   b.hi		#0x1229dbc6c
+  0x00000001229dbc0c:   ret		
+  0x00000001229dbc10:   mov		w15, wzr
+  0x00000001229dbc14:   b		#0x1229dbbf0
+  0x00000001229dbc18:   mov		w1, #-0x92
+  0x00000001229dbc1c:   mov		x29, x2
+  0x00000001229dbc20:   stp		x3, x4, [sp]
+  0x00000001229dbc24:   str		w10, [sp, #0x10]
+  0x00000001229dbc28:   bl		#0x12232bac0        ; ImmutableOopMap {rfp=Oop [0]=Oop [8]=Oop }
+                                                            ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::addVector@15 (line 42)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229dbc2c:   nop		                    ;   {post_call_nop}
+  0x00000001229dbc30:   movk		xzr, #0x324
+  0x00000001229dbc34:   movk		xzr, #0x100
+  0x00000001229dbc38:   mov		w1, #-0xbb
+  0x00000001229dbc3c:   stp		x2, x3, [sp]
+  0x00000001229dbc40:   str		x4, [sp, #0x10]
+  0x00000001229dbc44:   str		w15, [sp, #0x1c]
+  0x00000001229dbc48:   bl		#0x12232bac0        ; ImmutableOopMap {[0]=Oop [8]=Oop [16]=Oop }
+                                                            ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - (reexecute) JitDemo::addVector@73 (line 47)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229dbc4c:   nop		                    ;   {post_call_nop}
+  0x00000001229dbc50:   movk		xzr, #0x344
+  0x00000001229dbc54:   movk		xzr, #0x200
+  0x00000001229dbc58:   mov		w1, #-0xa
+  0x00000001229dbc5c:   bl		#0x12232bac0        ; ImmutableOopMap {}
+                                                            ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - JitDemo::addVector@9 (line 42)
+                                                            ;   {runtime_call UncommonTrapBlob}
+  0x00000001229dbc60:   nop		                    ;   {post_call_nop}
+  0x00000001229dbc64:   movk		xzr, #0x358
+  0x00000001229dbc68:   movk		xzr, #0x300
+  0x00000001229dbc6c:   adr		x8, #0x1229dbc00    ;   {internal_word}
+  0x00000001229dbc70:   str		x8, [x28, #0x498]
+  0x00000001229dbc74:   b		#0x122254ec0        ;   {runtime_call polling_page_return_handler_blob (shared runtime)}
+  0x00000001229dbc78:   mov		x8, #0xc5c0         ;   {runtime_call Stub::method_entry_barrier_stub (stub gen)}
+  0x00000001229dbc7c:   movk		x8, #0x2225, lsl #16
+  0x00000001229dbc80:   movk		x8, #1, lsl #32
+  0x00000001229dbc84:   blr		x8
+  0x00000001229dbc88:   b		#0x1229dba40
+  0x00000001229dbc8c:   udf		#1                  ;   {entry_guard}
+[Stub Code]
+  0x00000001229dbc90:   bl		#0x1222550c0        ;   {runtime_call DeoptimizationBlob}
+[Deopt Handler Entry Point]
+  0x00000001229dbc94:   b		#0x1229dbc90
+--------------------------------------------------------------------------------
+[/Disassembly]
+999000000
+------------------------------------------------------------------------
+JitDemo::addVector([I[I[I)V
+  interpreter_invocation_count:         878
+  invocation_counter:                   878
+  backedge_counter:                  219511
+  decompile_count:                        0
+  mdo size: 592 bytes
+
+   0 iconst_0
+   1 istore #4
+   3 fast_iload #4
+   5 getstatic 36 <JitDemo.INTS:Ljdk/incubator/vector/VectorSpecies;> 
+   8 aload_1
+   9 arraylength
+  10 invokeinterface 40 <jdk/incubator/vector/VectorSpecies.loopBound(I)I> 
+  0    bci: 10   VirtualCallData    count(0) entries(1)
+                                    'jdk/incubator/vector/IntVector$IntSpecies'(194525 1.00)
+  15 if_icmpge 69
+  48   bci: 15   BranchData         taken(775) displacement(232)
+                                    not taken(193750)
+  18 getstatic 36 <JitDemo.INTS:Ljdk/incubator/vector/VectorSpecies;> 
+  21 aload_1
+  22 fast_iload #4
+  24 invokestatic 46 <jdk/incubator/vector/IntVector.fromArray(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;> 
+  80   bci: 24   CounterData        count(193750)
+  27 astore #5
+  29 getstatic 36 <JitDemo.INTS:Ljdk/incubator/vector/VectorSpecies;> 
+  32 aload_2
+  33 fast_iload #4
+  35 invokestatic 46 <jdk/incubator/vector/IntVector.fromArray(Ljdk/incubator/vector/VectorSpecies;[II)Ljdk/incubator/vector/IntVector;> 
+  96   bci: 35   CounterData        count(193750)
+  38 astore #6
+  40 aload #5
+  42 aload #6
+  44 invokevirtual 52 <jdk/incubator/vector/IntVector.add(Ljdk/incubator/vector/Vector;)Ljdk/incubator/vector/IntVector;> 
+  112  bci: 44   VirtualCallData    count(3789) entries(1)
+                                    'jdk/incubator/vector/IntVector128'(189961 0.98)
+  47 aload_3
+  48 fast_iload #4
+  50 invokevirtual 56 <jdk/incubator/vector/IntVector.intoArray([II)V> 
+  160  bci: 50   VirtualCallData    count(3789) entries(1)
+                                    'jdk/incubator/vector/IntVector128'(189961 0.98)
+  53 fast_iload #4
+  55 getstatic 36 <JitDemo.INTS:Ljdk/incubator/vector/VectorSpecies;> 
+  58 invokeinterface 60 <jdk/incubator/vector/VectorSpecies.length()I> 
+  208  bci: 58   VirtualCallData    count(0) entries(1)
+                                    'jdk/incubator/vector/IntVector$IntSpecies'(193750 1.00)
+  63 iadd
+  64 istore #4
+  66 goto 3
+  256  bci: 66   JumpData           taken(193750) displacement(-256)
+  69 fast_iload #4
+  71 aload_1
+  72 arraylength
+  73 if_icmpge 95
+  280  bci: 73   BranchData         taken(775) displacement(56)
+                                    not taken(0)
+  76 aload_3
+  77 iload #4
+  79 aload_1
+  80 iload #4
+  82 iaload
+  83 aload_2
+  84 iload #4
+  86 iaload
+  87 iadd
+  88 iastore
+  89 iinc #4 1
+  92 goto 69
+  312  bci: 92   JumpData           taken(0) displacement(-32)
+  95 return
+------------------------------------------------------------------------
+Total MDO size: 592 bytes

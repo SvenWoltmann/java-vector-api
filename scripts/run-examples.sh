@@ -12,7 +12,7 @@ MACHINE=${2:?usage: scripts/run-examples.sh <path-to-jdk-27> <machine-id>}
 JAVA="$JDK/bin/java"
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 OUT="$ROOT/results/$MACHINE"
-rm -rf "$OUT"
+# Overwrites only its own outputs; the machine code of print-assembly.sh stays
 mkdir -p "$OUT"
 {
   "$JAVA" -version 2>&1
