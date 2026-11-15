@@ -1,0 +1,30 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      # The Vector API is the incubator module jdk.incubator.vector;
+      # the examples and measurements of the article use Java 27.
+      - name: Set up JDK 27
+        uses: actions/setup-java@v6
+        with:
+          distribution: 'temurin'
+          java-version: '27'
+          cache: 'maven'
+
+      - name: Build
+        run: mvn -B verify

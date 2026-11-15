@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  # Maven plugins (and JMH, once the benchmarks are in)
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
