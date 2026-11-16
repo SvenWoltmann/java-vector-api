@@ -26,9 +26,4 @@ void main() {
     max = Math.max(max, values[i]);
   }
   IO.println("Sum: " + sum + ", maximum: " + max);
-
-  // A reduction can also take a mask: sum of the positive values only
-  IntVector first = IntVector.fromArray(SPECIES, values, 0);
-  VectorMask<Integer> positive = first.compare(GT, 0);
-  IO.println("Positive sum of " + first + ": " + first.reduceLanes(ADD, positive));
 }

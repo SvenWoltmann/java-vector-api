@@ -1,0 +1,3 @@
+Vector:       [3, -7, 12, 5]
+Mask:         Mask[T.TT]
+Positive sum: 20
