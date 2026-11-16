@@ -20,6 +20,7 @@ void main() {
     packed.intoArray(result, count);
     count += positive.trueCount();
     IO.println("  result: " + Arrays.toString(result) + ", count: " + count);
+    IO.println();
   }
   IO.println(Arrays.toString(Arrays.copyOf(result, count)));
 }
