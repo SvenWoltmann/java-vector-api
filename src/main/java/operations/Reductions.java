@@ -21,9 +21,11 @@ void main() {
 
   int sum = sums.reduceLanes(ADD);
   int max = maxima.reduceLanes(MAX);
+  IO.println("Reduced:     sum " + sum + ", maximum " + max);
+
   for (; i < values.length; i++) {
     sum += values[i];
     max = Math.max(max, values[i]);
   }
-  IO.println("Sum: " + sum + ", maximum: " + max);
+  IO.println("With tail:   sum " + sum + ", maximum " + max);
 }

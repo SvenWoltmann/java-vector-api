@@ -1,3 +1,4 @@
 Lane sums:   [11, -8, 16, 14]
 Lane maxima: [8, -1, 12, 9]
-Sum: 41, maximum: 12
+Reduced:     sum 33, maximum 12
+With tail:   sum 41, maximum 12
