@@ -33,7 +33,7 @@ run() { # <dir> <program> <output-name> [JVM options...]
 
 run species PreferredSpecies PreferredSpecies
 run firststeps AddArrays AddArrays
-for p in Arithmetic CompareAndBlend Reductions MaskedReduction CompressExpand Shuffles Conversions MemorySegments; do
+for p in Arithmetic CompareAndBlend Reductions MaskedReduction Compress Expand Shuffles Conversions MemorySegments; do
   run operations $p $p
 done
 for p in CosineSimilarity ByteSearch; do run examples $p $p; done

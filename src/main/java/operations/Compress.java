@@ -19,12 +19,7 @@ void main() {
     // Writes all four lanes; the next round overwrites the zeros at the end
     packed.intoArray(result, count);
     count += positive.trueCount();
+    IO.println("  result: " + Arrays.toString(result) + ", count: " + count);
   }
   IO.println(Arrays.toString(Arrays.copyOf(result, count)));
-
-  // expand() is the inverse: it distributes lanes to the positions of the mask
-  IntVector source = IntVector.fromArray(SPECIES, new int[] {1, 2, 3, 4}, 0);
-  VectorMask<Integer> mask =
-      VectorMask.fromArray(SPECIES, new boolean[] {false, true, false, true}, 0);
-  IO.println(source + " -> expand " + mask + " -> " + source.expand(mask));
 }

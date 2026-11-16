@@ -23,7 +23,7 @@ java --add-modules jdk.incubator.vector src/main/java/firststeps/AddArrays.java
 |---|---|
 | `species` | `PreferredSpecies` – vector size and lane count the JVM prefers on your CPU |
 | `firststeps` | `AddArrays` – adding two arrays, with a tail loop and with a mask |
-| `operations` | `Arithmetic` – `add()`, `mul()`, `fma()`, `lanewise()`; `CompareAndBlend` – conditions without branches; `Reductions` – sum and maximum with `reduceLanes()` after the loop; `MaskedReduction` – a reduction over the lanes a mask selects; `CompressExpand` – filtering with `compress()`; `Shuffles` – `rearrange()` and `selectFrom()` as a table lookup; `Conversions` – `convertShape()`, `convert()`, reinterpreting; `MemorySegments` – vectors from off-heap memory |
+| `operations` | `Arithmetic` – `add()`, `mul()`, `fma()`, `lanewise()`; `CompareAndBlend` – conditions without branches; `Reductions` – sum and maximum with `reduceLanes()` after the loop; `MaskedReduction` – a reduction over the lanes a mask selects; `Compress` – filtering with `compress()`; `Expand` – `expand()` as the inverse of `compress()`; `Shuffles` – `rearrange()` and `selectFrom()` as a table lookup; `Conversions` – `convertShape()`, `convert()`, reinterpreting; `MemorySegments` – vectors from off-heap memory |
 | `examples` | `CosineSimilarity` – dot product and norms with `fma()`, compared with the scalar result; `ByteSearch` – counting and finding a byte |
 | `jit` | `JitDemo` – four methods whose machine code the article shows; `Allocations` – when vectors end up on the heap |
 
