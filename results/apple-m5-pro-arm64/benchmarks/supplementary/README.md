@@ -12,6 +12,7 @@ Run on 2026-11-15 right after the main run in `../results.json`, on the same mac
 | `add-masked-tail-with-and-without-tail` | `AddBenchmark.vector` and `vectorMaskedTail` with 100,000, 100,003 and 100,008 elements, with the GC profiler: only 100,003 needs a masked tail, and only there does `vectorMaskedTail` allocate (240 bytes per call) |
 | `add-alignment-sweep` | `AddAlignmentBenchmark.vectorAfterHead` with a head of 0 to 7 scalar elements before the vector loop, and `AddBenchmark.scalar`, with 1,000 and 100,000 elements, under `-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=16`. Every array then starts at a 16-byte boundary, so the vector accesses are 16-byte aligned for a head of 0 and 4 only. Exactly these two are as fast as the scalar loop; all other heads take about 20 % longer |
 | `add-16-byte-aligned-arrays` | `AddBenchmark.scalar` and `vector` with `-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=16`, which puts the first element of every array on a 16-byte boundary |
+| `add-masked-tail-sizes` | `AddBenchmark.vector`, `vectorMasked` and `vectorMaskedTail` with 7, 103, 1,003, 10,003, 30,003, 50,003 and 100,003 elements, run on 2026-11-17 to compare with the same run on the i7-12700H, where `vectorMaskedTail` is slower than `vector` only with 100,003 elements. On NEON the masked tail costs a fixed 23 to 42 ns per call up to 1,003 elements; from 30,003 elements on, both are equally fast within the error |
 
 Commands, run from the repository root after `scripts/run-benchmarks.sh` had built the benchmarks:
 
@@ -25,6 +26,8 @@ $JMH -rff add-masked-tail-with-and-without-tail.json 'AddBenchmark\.(vector|vect
 $JMH -rff add-masked-tail.json 'AddBenchmark\.(vector|vectorMasked)$' -p size=1003,100003 -prof gc
 $JMH -rff add-alignment-sweep.json 'AddAlignmentBenchmark\.|AddBenchmark\.scalar$' -p size=1000,100000 \
   -jvmArgsAppend "-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=16"
+$JMH -rff add-masked-tail-sizes.json 'AddBenchmark\.(vector|vectorMasked|vectorMaskedTail)$' \
+  -p size=7,103,1003,10003,30003,50003,100003
 $JMH -rff add-16-byte-aligned-arrays.json 'AddBenchmark\.(scalar|vector)$' -p size=1000,100000 \
   -jvmArgsAppend "-XX:-UseCompactObjectHeaders -XX:ObjectAlignmentInBytes=16"
 ```

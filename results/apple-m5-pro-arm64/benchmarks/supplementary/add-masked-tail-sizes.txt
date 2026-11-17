@@ -1,0 +1,1597 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 7)
+
+# Run progress: 0,00% complete, ETA 00:10:30
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3,181 ns/op
+# Warmup Iteration   2: 3,127 ns/op
+# Warmup Iteration   3: 3,012 ns/op
+# Warmup Iteration   4: 3,012 ns/op
+# Warmup Iteration   5: 3,014 ns/op
+Iteration   1: 3,011 ns/op
+Iteration   2: 3,011 ns/op
+Iteration   3: 3,012 ns/op
+Iteration   4: 3,022 ns/op
+Iteration   5: 3,019 ns/op
+
+# Run progress: 1,59% complete, ETA 00:10:30
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3,169 ns/op
+# Warmup Iteration   2: 3,111 ns/op
+# Warmup Iteration   3: 3,062 ns/op
+# Warmup Iteration   4: 3,018 ns/op
+# Warmup Iteration   5: 3,006 ns/op
+Iteration   1: 3,014 ns/op
+Iteration   2: 3,012 ns/op
+Iteration   3: 3,005 ns/op
+Iteration   4: 3,011 ns/op
+Iteration   5: 3,012 ns/op
+
+# Run progress: 3,17% complete, ETA 00:10:19
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3,159 ns/op
+# Warmup Iteration   2: 3,112 ns/op
+# Warmup Iteration   3: 3,002 ns/op
+# Warmup Iteration   4: 2,993 ns/op
+# Warmup Iteration   5: 2,988 ns/op
+Iteration   1: 2,988 ns/op
+Iteration   2: 2,991 ns/op
+Iteration   3: 2,993 ns/op
+Iteration   4: 2,994 ns/op
+Iteration   5: 2,992 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  3,006 ±(99.9%) 0,012 ns/op [Average]
+  (min, avg, max) = (2,988, 3,006, 3,022), stdev = 0,011
+  CI (99.9%): [2,994, 3,018] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 103)
+
+# Run progress: 4,76% complete, ETA 00:10:09
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 7,035 ns/op
+# Warmup Iteration   2: 6,877 ns/op
+# Warmup Iteration   3: 6,686 ns/op
+# Warmup Iteration   4: 6,685 ns/op
+# Warmup Iteration   5: 6,681 ns/op
+Iteration   1: 6,680 ns/op
+Iteration   2: 6,675 ns/op
+Iteration   3: 6,679 ns/op
+Iteration   4: 6,677 ns/op
+Iteration   5: 6,676 ns/op
+
+# Run progress: 6,35% complete, ETA 00:09:59
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 6,990 ns/op
+# Warmup Iteration   2: 6,852 ns/op
+# Warmup Iteration   3: 6,766 ns/op
+# Warmup Iteration   4: 6,750 ns/op
+# Warmup Iteration   5: 6,748 ns/op
+Iteration   1: 6,750 ns/op
+Iteration   2: 6,754 ns/op
+Iteration   3: 6,758 ns/op
+Iteration   4: 6,767 ns/op
+Iteration   5: 6,753 ns/op
+
+# Run progress: 7,94% complete, ETA 00:09:49
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 7,004 ns/op
+# Warmup Iteration   2: 6,876 ns/op
+# Warmup Iteration   3: 6,773 ns/op
+# Warmup Iteration   4: 6,757 ns/op
+# Warmup Iteration   5: 6,755 ns/op
+Iteration   1: 6,762 ns/op
+Iteration   2: 6,756 ns/op
+Iteration   3: 6,764 ns/op
+Iteration   4: 6,761 ns/op
+Iteration   5: 6,758 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  6,731 ±(99.9%) 0,043 ns/op [Average]
+  (min, avg, max) = (6,675, 6,731, 6,767), stdev = 0,040
+  CI (99.9%): [6,689, 6,774] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 1003)
+
+# Run progress: 9,52% complete, ETA 00:09:39
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 54,339 ns/op
+# Warmup Iteration   2: 53,247 ns/op
+# Warmup Iteration   3: 53,230 ns/op
+# Warmup Iteration   4: 52,975 ns/op
+# Warmup Iteration   5: 53,013 ns/op
+Iteration   1: 53,002 ns/op
+Iteration   2: 52,947 ns/op
+Iteration   3: 53,042 ns/op
+Iteration   4: 53,016 ns/op
+Iteration   5: 53,020 ns/op
+
+# Run progress: 11,11% complete, ETA 00:09:28
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 61,981 ns/op
+# Warmup Iteration   2: 60,681 ns/op
+# Warmup Iteration   3: 60,524 ns/op
+# Warmup Iteration   4: 60,290 ns/op
+# Warmup Iteration   5: 60,350 ns/op
+Iteration   1: 60,471 ns/op
+Iteration   2: 60,175 ns/op
+Iteration   3: 60,262 ns/op
+Iteration   4: 60,190 ns/op
+Iteration   5: 60,279 ns/op
+
+# Run progress: 12,70% complete, ETA 00:09:18
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 53,624 ns/op
+# Warmup Iteration   2: 52,414 ns/op
+# Warmup Iteration   3: 52,327 ns/op
+# Warmup Iteration   4: 52,085 ns/op
+# Warmup Iteration   5: 52,177 ns/op
+Iteration   1: 52,084 ns/op
+Iteration   2: 52,056 ns/op
+Iteration   3: 52,160 ns/op
+Iteration   4: 52,086 ns/op
+Iteration   5: 52,560 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  55,157 ±(99.9%) 4,025 ns/op [Average]
+  (min, avg, max) = (52,056, 55,157, 60,471), stdev = 3,765
+  CI (99.9%): [51,132, 59,181] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 10003)
+
+# Run progress: 14,29% complete, ETA 00:09:08
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 573,028 ns/op
+# Warmup Iteration   2: 555,603 ns/op
+# Warmup Iteration   3: 565,150 ns/op
+# Warmup Iteration   4: 568,344 ns/op
+# Warmup Iteration   5: 569,038 ns/op
+Iteration   1: 566,177 ns/op
+Iteration   2: 562,733 ns/op
+Iteration   3: 564,215 ns/op
+Iteration   4: 563,238 ns/op
+Iteration   5: 567,922 ns/op
+
+# Run progress: 15,87% complete, ETA 00:08:58
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 561,615 ns/op
+# Warmup Iteration   2: 551,322 ns/op
+# Warmup Iteration   3: 553,597 ns/op
+# Warmup Iteration   4: 547,173 ns/op
+# Warmup Iteration   5: 543,348 ns/op
+Iteration   1: 545,557 ns/op
+Iteration   2: 544,944 ns/op
+Iteration   3: 544,508 ns/op
+Iteration   4: 555,885 ns/op
+Iteration   5: 552,394 ns/op
+
+# Run progress: 17,46% complete, ETA 00:08:48
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 586,589 ns/op
+# Warmup Iteration   2: 568,833 ns/op
+# Warmup Iteration   3: 567,956 ns/op
+# Warmup Iteration   4: 568,966 ns/op
+# Warmup Iteration   5: 563,911 ns/op
+Iteration   1: 569,887 ns/op
+Iteration   2: 565,003 ns/op
+Iteration   3: 565,192 ns/op
+Iteration   4: 567,125 ns/op
+Iteration   5: 568,581 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  560,224 ±(99.9%) 9,732 ns/op [Average]
+  (min, avg, max) = (544,508, 560,224, 569,887), stdev = 9,103
+  CI (99.9%): [550,492, 569,956] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 30003)
+
+# Run progress: 19,05% complete, ETA 00:08:37
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3354,381 ns/op
+# Warmup Iteration   2: 3237,410 ns/op
+# Warmup Iteration   3: 3259,275 ns/op
+# Warmup Iteration   4: 3236,833 ns/op
+# Warmup Iteration   5: 3233,318 ns/op
+Iteration   1: 3235,005 ns/op
+Iteration   2: 3228,826 ns/op
+Iteration   3: 3245,730 ns/op
+Iteration   4: 3240,192 ns/op
+Iteration   5: 3233,736 ns/op
+
+# Run progress: 20,63% complete, ETA 00:08:27
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3401,023 ns/op
+# Warmup Iteration   2: 3299,524 ns/op
+# Warmup Iteration   3: 3276,158 ns/op
+# Warmup Iteration   4: 3303,867 ns/op
+# Warmup Iteration   5: 3332,181 ns/op
+Iteration   1: 3315,054 ns/op
+Iteration   2: 3275,749 ns/op
+Iteration   3: 3333,619 ns/op
+Iteration   4: 3261,104 ns/op
+Iteration   5: 3253,273 ns/op
+
+# Run progress: 22,22% complete, ETA 00:08:17
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3390,549 ns/op
+# Warmup Iteration   2: 3258,241 ns/op
+# Warmup Iteration   3: 3339,795 ns/op
+# Warmup Iteration   4: 3300,526 ns/op
+# Warmup Iteration   5: 3354,798 ns/op
+Iteration   1: 3265,991 ns/op
+Iteration   2: 3273,191 ns/op
+Iteration   3: 3266,846 ns/op
+Iteration   4: 3305,887 ns/op
+Iteration   5: 3328,963 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  3270,878 ±(99.9%) 37,221 ns/op [Average]
+  (min, avg, max) = (3228,826, 3270,878, 3333,619), stdev = 34,817
+  CI (99.9%): [3233,656, 3308,099] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 50003)
+
+# Run progress: 23,81% complete, ETA 00:08:07
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 5659,193 ns/op
+# Warmup Iteration   2: 5455,178 ns/op
+# Warmup Iteration   3: 5456,226 ns/op
+# Warmup Iteration   4: 5460,547 ns/op
+# Warmup Iteration   5: 5473,595 ns/op
+Iteration   1: 5417,519 ns/op
+Iteration   2: 5417,551 ns/op
+Iteration   3: 5413,090 ns/op
+Iteration   4: 5447,723 ns/op
+Iteration   5: 5472,010 ns/op
+
+# Run progress: 25,40% complete, ETA 00:07:57
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 5576,746 ns/op
+# Warmup Iteration   2: 5406,520 ns/op
+# Warmup Iteration   3: 5412,348 ns/op
+# Warmup Iteration   4: 5403,310 ns/op
+# Warmup Iteration   5: 5397,639 ns/op
+Iteration   1: 5402,247 ns/op
+Iteration   2: 5418,812 ns/op
+Iteration   3: 5397,129 ns/op
+Iteration   4: 5393,368 ns/op
+Iteration   5: 5404,114 ns/op
+
+# Run progress: 26,98% complete, ETA 00:07:47
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 5514,420 ns/op
+# Warmup Iteration   2: 5367,361 ns/op
+# Warmup Iteration   3: 5380,769 ns/op
+# Warmup Iteration   4: 5353,848 ns/op
+# Warmup Iteration   5: 5376,657 ns/op
+Iteration   1: 5380,124 ns/op
+Iteration   2: 5376,409 ns/op
+Iteration   3: 5374,875 ns/op
+Iteration   4: 5357,696 ns/op
+Iteration   5: 5362,647 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  5402,354 ±(99.9%) 33,027 ns/op [Average]
+  (min, avg, max) = (5357,696, 5402,354, 5472,010), stdev = 30,894
+  CI (99.9%): [5369,327, 5435,381] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vector
+# Parameters: (size = 100003)
+
+# Run progress: 28,57% complete, ETA 00:07:36
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11282,650 ns/op
+# Warmup Iteration   2: 10895,572 ns/op
+# Warmup Iteration   3: 10911,884 ns/op
+# Warmup Iteration   4: 10924,273 ns/op
+# Warmup Iteration   5: 10921,409 ns/op
+Iteration   1: 10926,551 ns/op
+Iteration   2: 10915,785 ns/op
+Iteration   3: 10924,299 ns/op
+Iteration   4: 10948,518 ns/op
+Iteration   5: 10903,708 ns/op
+
+# Run progress: 30,16% complete, ETA 00:07:26
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11238,542 ns/op
+# Warmup Iteration   2: 10910,360 ns/op
+# Warmup Iteration   3: 10974,751 ns/op
+# Warmup Iteration   4: 10973,792 ns/op
+# Warmup Iteration   5: 10931,648 ns/op
+Iteration   1: 10961,789 ns/op
+Iteration   2: 10962,558 ns/op
+Iteration   3: 10937,315 ns/op
+Iteration   4: 10997,463 ns/op
+Iteration   5: 10963,734 ns/op
+
+# Run progress: 31,75% complete, ETA 00:07:16
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11247,644 ns/op
+# Warmup Iteration   2: 10916,864 ns/op
+# Warmup Iteration   3: 10941,378 ns/op
+# Warmup Iteration   4: 10959,535 ns/op
+# Warmup Iteration   5: 10935,382 ns/op
+Iteration   1: 10947,547 ns/op
+Iteration   2: 10924,489 ns/op
+Iteration   3: 11023,788 ns/op
+Iteration   4: 11007,476 ns/op
+Iteration   5: 10976,372 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vector":
+  10954,759 ±(99.9%) 37,456 ns/op [Average]
+  (min, avg, max) = (10903,708, 10954,759, 11023,788), stdev = 35,036
+  CI (99.9%): [10917,303, 10992,216] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 7)
+
+# Run progress: 33,33% complete, ETA 00:07:06
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 59,557 ns/op
+# Warmup Iteration   2: 46,262 ns/op
+# Warmup Iteration   3: 46,387 ns/op
+# Warmup Iteration   4: 46,353 ns/op
+# Warmup Iteration   5: 46,291 ns/op
+Iteration   1: 46,291 ns/op
+Iteration   2: 46,286 ns/op
+Iteration   3: 46,235 ns/op
+Iteration   4: 46,088 ns/op
+Iteration   5: 46,138 ns/op
+
+# Run progress: 34,92% complete, ETA 00:06:56
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 59,228 ns/op
+# Warmup Iteration   2: 46,162 ns/op
+# Warmup Iteration   3: 46,277 ns/op
+# Warmup Iteration   4: 46,393 ns/op
+# Warmup Iteration   5: 46,195 ns/op
+Iteration   1: 46,305 ns/op
+Iteration   2: 46,173 ns/op
+Iteration   3: 46,166 ns/op
+Iteration   4: 46,092 ns/op
+Iteration   5: 46,148 ns/op
+
+# Run progress: 36,51% complete, ETA 00:06:46
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 58,759 ns/op
+# Warmup Iteration   2: 45,983 ns/op
+# Warmup Iteration   3: 46,093 ns/op
+# Warmup Iteration   4: 46,176 ns/op
+# Warmup Iteration   5: 46,057 ns/op
+Iteration   1: 46,109 ns/op
+Iteration   2: 46,009 ns/op
+Iteration   3: 46,096 ns/op
+Iteration   4: 45,952 ns/op
+Iteration   5: 46,009 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  46,140 ±(99.9%) 0,114 ns/op [Average]
+  (min, avg, max) = (45,952, 46,140, 46,305), stdev = 0,107
+  CI (99.9%): [46,026, 46,254] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 103)
+
+# Run progress: 38,10% complete, ETA 00:06:36
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 366,078 ns/op
+# Warmup Iteration   2: 279,285 ns/op
+# Warmup Iteration   3: 296,338 ns/op
+# Warmup Iteration   4: 296,448 ns/op
+# Warmup Iteration   5: 295,917 ns/op
+Iteration   1: 296,688 ns/op
+Iteration   2: 296,721 ns/op
+Iteration   3: 295,413 ns/op
+Iteration   4: 295,838 ns/op
+Iteration   5: 295,380 ns/op
+
+# Run progress: 39,68% complete, ETA 00:06:25
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 363,645 ns/op
+# Warmup Iteration   2: 278,579 ns/op
+# Warmup Iteration   3: 294,778 ns/op
+# Warmup Iteration   4: 294,917 ns/op
+# Warmup Iteration   5: 295,054 ns/op
+Iteration   1: 295,894 ns/op
+Iteration   2: 295,348 ns/op
+Iteration   3: 295,827 ns/op
+Iteration   4: 294,173 ns/op
+Iteration   5: 294,013 ns/op
+
+# Run progress: 41,27% complete, ETA 00:06:15
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 365,075 ns/op
+# Warmup Iteration   2: 278,991 ns/op
+# Warmup Iteration   3: 295,557 ns/op
+# Warmup Iteration   4: 296,009 ns/op
+# Warmup Iteration   5: 295,728 ns/op
+Iteration   1: 295,945 ns/op
+Iteration   2: 298,095 ns/op
+Iteration   3: 298,478 ns/op
+Iteration   4: 296,726 ns/op
+Iteration   5: 295,387 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  295,995 ±(99.9%) 1,307 ns/op [Average]
+  (min, avg, max) = (294,013, 295,995, 298,478), stdev = 1,223
+  CI (99.9%): [294,688, 297,303] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 1003)
+
+# Run progress: 42,86% complete, ETA 00:06:05
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3163,587 ns/op
+# Warmup Iteration   2: 2421,662 ns/op
+# Warmup Iteration   3: 2662,791 ns/op
+# Warmup Iteration   4: 2660,042 ns/op
+# Warmup Iteration   5: 2656,286 ns/op
+Iteration   1: 2662,617 ns/op
+Iteration   2: 2657,509 ns/op
+Iteration   3: 2657,766 ns/op
+Iteration   4: 2652,509 ns/op
+Iteration   5: 2653,177 ns/op
+
+# Run progress: 44,44% complete, ETA 00:05:55
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3169,663 ns/op
+# Warmup Iteration   2: 2414,436 ns/op
+# Warmup Iteration   3: 2667,189 ns/op
+# Warmup Iteration   4: 2665,298 ns/op
+# Warmup Iteration   5: 2670,066 ns/op
+Iteration   1: 2673,308 ns/op
+Iteration   2: 2659,466 ns/op
+Iteration   3: 2665,172 ns/op
+Iteration   4: 2663,301 ns/op
+Iteration   5: 2654,636 ns/op
+
+# Run progress: 46,03% complete, ETA 00:05:45
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3168,241 ns/op
+# Warmup Iteration   2: 2428,167 ns/op
+# Warmup Iteration   3: 2660,239 ns/op
+# Warmup Iteration   4: 2657,658 ns/op
+# Warmup Iteration   5: 2655,580 ns/op
+Iteration   1: 2657,451 ns/op
+Iteration   2: 2656,060 ns/op
+Iteration   3: 2655,248 ns/op
+Iteration   4: 2655,896 ns/op
+Iteration   5: 2656,364 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  2658,699 ±(99.9%) 5,812 ns/op [Average]
+  (min, avg, max) = (2652,509, 2658,699, 2673,308), stdev = 5,437
+  CI (99.9%): [2652,887, 2664,511] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 10003)
+
+# Run progress: 47,62% complete, ETA 00:05:35
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 27443,016 ns/op
+# Warmup Iteration   2: 20029,814 ns/op
+# Warmup Iteration   3: 20085,770 ns/op
+# Warmup Iteration   4: 20086,667 ns/op
+# Warmup Iteration   5: 20033,461 ns/op
+Iteration   1: 20087,660 ns/op
+Iteration   2: 20007,083 ns/op
+Iteration   3: 19985,755 ns/op
+Iteration   4: 20113,836 ns/op
+Iteration   5: 20095,285 ns/op
+
+# Run progress: 49,21% complete, ETA 00:05:25
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 27370,480 ns/op
+# Warmup Iteration   2: 20115,241 ns/op
+# Warmup Iteration   3: 20059,533 ns/op
+# Warmup Iteration   4: 20019,459 ns/op
+# Warmup Iteration   5: 19972,628 ns/op
+Iteration   1: 19987,929 ns/op
+Iteration   2: 20242,004 ns/op
+Iteration   3: 20996,900 ns/op
+Iteration   4: 20794,564 ns/op
+Iteration   5: 20561,336 ns/op
+
+# Run progress: 50,79% complete, ETA 00:05:14
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 28039,156 ns/op
+# Warmup Iteration   2: 20328,567 ns/op
+# Warmup Iteration   3: 20309,264 ns/op
+# Warmup Iteration   4: 20244,095 ns/op
+# Warmup Iteration   5: 20294,267 ns/op
+Iteration   1: 20447,111 ns/op
+Iteration   2: 20443,795 ns/op
+Iteration   3: 20395,866 ns/op
+Iteration   4: 20213,289 ns/op
+Iteration   5: 20185,993 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  20303,894 ±(99.9%) 322,914 ns/op [Average]
+  (min, avg, max) = (19985,755, 20303,894, 20996,900), stdev = 302,054
+  CI (99.9%): [19980,979, 20626,808] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 30003)
+
+# Run progress: 52,38% complete, ETA 00:05:04
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 83456,649 ns/op
+# Warmup Iteration   2: 60885,121 ns/op
+# Warmup Iteration   3: 61030,597 ns/op
+# Warmup Iteration   4: 60842,255 ns/op
+# Warmup Iteration   5: 60602,129 ns/op
+Iteration   1: 60510,470 ns/op
+Iteration   2: 60640,027 ns/op
+Iteration   3: 60012,729 ns/op
+Iteration   4: 60016,311 ns/op
+Iteration   5: 59947,495 ns/op
+
+# Run progress: 53,97% complete, ETA 00:04:54
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 82785,919 ns/op
+# Warmup Iteration   2: 60232,116 ns/op
+# Warmup Iteration   3: 60099,671 ns/op
+# Warmup Iteration   4: 59870,289 ns/op
+# Warmup Iteration   5: 59471,677 ns/op
+Iteration   1: 59414,420 ns/op
+Iteration   2: 59610,662 ns/op
+Iteration   3: 59818,452 ns/op
+Iteration   4: 60505,375 ns/op
+Iteration   5: 59543,725 ns/op
+
+# Run progress: 55,56% complete, ETA 00:04:44
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 82177,205 ns/op
+# Warmup Iteration   2: 60320,434 ns/op
+# Warmup Iteration   3: 60177,626 ns/op
+# Warmup Iteration   4: 59847,669 ns/op
+# Warmup Iteration   5: 59728,901 ns/op
+Iteration   1: 59703,435 ns/op
+Iteration   2: 59710,551 ns/op
+Iteration   3: 59814,758 ns/op
+Iteration   4: 59519,481 ns/op
+Iteration   5: 59634,689 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  59893,505 ±(99.9%) 410,553 ns/op [Average]
+  (min, avg, max) = (59414,420, 59893,505, 60640,027), stdev = 384,031
+  CI (99.9%): [59482,953, 60304,058] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 50003)
+
+# Run progress: 57,14% complete, ETA 00:04:34
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 137650,806 ns/op
+# Warmup Iteration   2: 101438,906 ns/op
+# Warmup Iteration   3: 101929,127 ns/op
+# Warmup Iteration   4: 101001,164 ns/op
+# Warmup Iteration   5: 100656,924 ns/op
+Iteration   1: 101041,616 ns/op
+Iteration   2: 100646,063 ns/op
+Iteration   3: 101282,131 ns/op
+Iteration   4: 100791,830 ns/op
+Iteration   5: 100883,200 ns/op
+
+# Run progress: 58,73% complete, ETA 00:04:24
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 137940,438 ns/op
+# Warmup Iteration   2: 99619,383 ns/op
+# Warmup Iteration   3: 99980,121 ns/op
+# Warmup Iteration   4: 99234,900 ns/op
+# Warmup Iteration   5: 99093,924 ns/op
+Iteration   1: 100049,032 ns/op
+Iteration   2: 101074,224 ns/op
+Iteration   3: 99647,306 ns/op
+Iteration   4: 99100,979 ns/op
+Iteration   5: 99071,621 ns/op
+
+# Run progress: 60,32% complete, ETA 00:04:14
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 138101,056 ns/op
+# Warmup Iteration   2: 98975,447 ns/op
+# Warmup Iteration   3: 99237,509 ns/op
+# Warmup Iteration   4: 98748,518 ns/op
+# Warmup Iteration   5: 99670,457 ns/op
+Iteration   1: 99981,469 ns/op
+Iteration   2: 99617,778 ns/op
+Iteration   3: 99021,827 ns/op
+Iteration   4: 99887,435 ns/op
+Iteration   5: 99049,344 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  100076,390 ±(99.9%) 877,685 ns/op [Average]
+  (min, avg, max) = (99021,827, 100076,390, 101282,131), stdev = 820,988
+  CI (99.9%): [99198,705, 100954,076] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked
+# Parameters: (size = 100003)
+
+# Run progress: 61,90% complete, ETA 00:04:03
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 273099,070 ns/op
+# Warmup Iteration   2: 198208,498 ns/op
+# Warmup Iteration   3: 197548,562 ns/op
+# Warmup Iteration   4: 197993,796 ns/op
+# Warmup Iteration   5: 197338,661 ns/op
+Iteration   1: 197645,183 ns/op
+Iteration   2: 197118,561 ns/op
+Iteration   3: 197128,800 ns/op
+Iteration   4: 197272,996 ns/op
+Iteration   5: 197238,087 ns/op
+
+# Run progress: 63,49% complete, ETA 00:03:53
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 272505,455 ns/op
+# Warmup Iteration   2: 198707,897 ns/op
+# Warmup Iteration   3: 198761,766 ns/op
+# Warmup Iteration   4: 198437,586 ns/op
+# Warmup Iteration   5: 198148,704 ns/op
+Iteration   1: 198381,332 ns/op
+Iteration   2: 199450,926 ns/op
+Iteration   3: 197679,695 ns/op
+Iteration   4: 197643,572 ns/op
+Iteration   5: 198685,297 ns/op
+
+# Run progress: 65,08% complete, ETA 00:03:43
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 271280,941 ns/op
+# Warmup Iteration   2: 198341,884 ns/op
+# Warmup Iteration   3: 198125,879 ns/op
+# Warmup Iteration   4: 198202,812 ns/op
+# Warmup Iteration   5: 199417,485 ns/op
+Iteration   1: 198967,480 ns/op
+Iteration   2: 197531,947 ns/op
+Iteration   3: 197458,685 ns/op
+Iteration   4: 197498,649 ns/op
+Iteration   5: 197888,495 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMasked":
+  197839,314 ±(99.9%) 758,384 ns/op [Average]
+  (min, avg, max) = (197118,561, 197839,314, 199450,926), stdev = 709,393
+  CI (99.9%): [197080,930, 198597,697] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 7)
+
+# Run progress: 66,67% complete, ETA 00:03:33
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 32,762 ns/op
+# Warmup Iteration   2: 26,002 ns/op
+# Warmup Iteration   3: 26,497 ns/op
+# Warmup Iteration   4: 26,518 ns/op
+# Warmup Iteration   5: 26,409 ns/op
+Iteration   1: 26,456 ns/op
+Iteration   2: 26,473 ns/op
+Iteration   3: 26,489 ns/op
+Iteration   4: 26,418 ns/op
+Iteration   5: 26,437 ns/op
+
+# Run progress: 68,25% complete, ETA 00:03:23
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 32,572 ns/op
+# Warmup Iteration   2: 25,996 ns/op
+# Warmup Iteration   3: 26,230 ns/op
+# Warmup Iteration   4: 26,177 ns/op
+# Warmup Iteration   5: 26,137 ns/op
+Iteration   1: 26,219 ns/op
+Iteration   2: 26,323 ns/op
+Iteration   3: 26,230 ns/op
+Iteration   4: 26,152 ns/op
+Iteration   5: 26,122 ns/op
+
+# Run progress: 69,84% complete, ETA 00:03:13
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 32,381 ns/op
+# Warmup Iteration   2: 25,944 ns/op
+# Warmup Iteration   3: 26,066 ns/op
+# Warmup Iteration   4: 26,184 ns/op
+# Warmup Iteration   5: 26,101 ns/op
+Iteration   1: 26,122 ns/op
+Iteration   2: 26,015 ns/op
+Iteration   3: 26,062 ns/op
+Iteration   4: 26,044 ns/op
+Iteration   5: 25,999 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  26,237 ±(99.9%) 0,193 ns/op [Average]
+  (min, avg, max) = (25,999, 26,237, 26,489), stdev = 0,180
+  CI (99.9%): [26,045, 26,430] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 103)
+
+# Run progress: 71,43% complete, ETA 00:03:02
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 38,664 ns/op
+# Warmup Iteration   2: 30,775 ns/op
+# Warmup Iteration   3: 31,014 ns/op
+# Warmup Iteration   4: 30,920 ns/op
+# Warmup Iteration   5: 30,996 ns/op
+Iteration   1: 30,888 ns/op
+Iteration   2: 30,984 ns/op
+Iteration   3: 30,991 ns/op
+Iteration   4: 30,884 ns/op
+Iteration   5: 30,989 ns/op
+
+# Run progress: 73,02% complete, ETA 00:02:52
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 41,320 ns/op
+# Warmup Iteration   2: 31,374 ns/op
+# Warmup Iteration   3: 30,913 ns/op
+# Warmup Iteration   4: 30,825 ns/op
+# Warmup Iteration   5: 30,943 ns/op
+Iteration   1: 30,800 ns/op
+Iteration   2: 30,869 ns/op
+Iteration   3: 30,894 ns/op
+Iteration   4: 30,916 ns/op
+Iteration   5: 30,821 ns/op
+
+# Run progress: 74,60% complete, ETA 00:02:42
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 39,816 ns/op
+# Warmup Iteration   2: 39,352 ns/op
+# Warmup Iteration   3: 39,591 ns/op
+# Warmup Iteration   4: 39,643 ns/op
+# Warmup Iteration   5: 39,431 ns/op
+Iteration   1: 39,728 ns/op
+Iteration   2: 39,452 ns/op
+Iteration   3: 39,574 ns/op
+Iteration   4: 39,455 ns/op
+Iteration   5: 39,476 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  33,781 ±(99.9%) 4,505 ns/op [Average]
+  (min, avg, max) = (30,800, 33,781, 39,728), stdev = 4,214
+  CI (99.9%): [29,277, 38,286] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 1003)
+
+# Run progress: 76,19% complete, ETA 00:02:32
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 100,766 ns/op
+# Warmup Iteration   2: 98,941 ns/op
+# Warmup Iteration   3: 100,351 ns/op
+# Warmup Iteration   4: 101,269 ns/op
+# Warmup Iteration   5: 100,646 ns/op
+Iteration   1: 100,728 ns/op
+Iteration   2: 101,023 ns/op
+Iteration   3: 97,877 ns/op
+Iteration   4: 99,774 ns/op
+Iteration   5: 101,125 ns/op
+
+# Run progress: 77,78% complete, ETA 00:02:22
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 95,800 ns/op
+# Warmup Iteration   2: 98,683 ns/op
+# Warmup Iteration   3: 94,837 ns/op
+# Warmup Iteration   4: 94,219 ns/op
+# Warmup Iteration   5: 94,826 ns/op
+Iteration   1: 95,310 ns/op
+Iteration   2: 96,322 ns/op
+Iteration   3: 95,539 ns/op
+Iteration   4: 94,576 ns/op
+Iteration   5: 94,983 ns/op
+
+# Run progress: 79,37% complete, ETA 00:02:12
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 94,159 ns/op
+# Warmup Iteration   2: 93,911 ns/op
+# Warmup Iteration   3: 96,258 ns/op
+# Warmup Iteration   4: 97,428 ns/op
+# Warmup Iteration   5: 96,746 ns/op
+Iteration   1: 96,575 ns/op
+Iteration   2: 96,533 ns/op
+Iteration   3: 96,122 ns/op
+Iteration   4: 96,462 ns/op
+Iteration   5: 96,889 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  97,323 ±(99.9%) 2,405 ns/op [Average]
+  (min, avg, max) = (94,576, 97,323, 101,125), stdev = 2,250
+  CI (99.9%): [94,917, 99,728] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 10003)
+
+# Run progress: 80,95% complete, ETA 00:02:01
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 704,597 ns/op
+# Warmup Iteration   2: 753,088 ns/op
+# Warmup Iteration   3: 624,046 ns/op
+# Warmup Iteration   4: 625,122 ns/op
+# Warmup Iteration   5: 610,586 ns/op
+Iteration   1: 611,511 ns/op
+Iteration   2: 606,650 ns/op
+Iteration   3: 608,123 ns/op
+Iteration   4: 607,481 ns/op
+Iteration   5: 611,195 ns/op
+
+# Run progress: 82,54% complete, ETA 00:01:51
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 758,692 ns/op
+# Warmup Iteration   2: 646,082 ns/op
+# Warmup Iteration   3: 726,012 ns/op
+# Warmup Iteration   4: 693,887 ns/op
+# Warmup Iteration   5: 824,381 ns/op
+Iteration   1: 820,233 ns/op
+Iteration   2: 818,714 ns/op
+Iteration   3: 817,471 ns/op
+Iteration   4: 819,302 ns/op
+Iteration   5: 818,939 ns/op
+
+# Run progress: 84,13% complete, ETA 00:01:41
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 725,176 ns/op
+# Warmup Iteration   2: 650,175 ns/op
+# Warmup Iteration   3: 649,075 ns/op
+# Warmup Iteration   4: 660,080 ns/op
+# Warmup Iteration   5: 658,868 ns/op
+Iteration   1: 656,131 ns/op
+Iteration   2: 656,785 ns/op
+Iteration   3: 654,975 ns/op
+Iteration   4: 655,548 ns/op
+Iteration   5: 655,398 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  694,564 ±(99.9%) 99,593 ns/op [Average]
+  (min, avg, max) = (606,650, 694,564, 820,233), stdev = 93,159
+  CI (99.9%): [594,971, 794,157] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 30003)
+
+# Run progress: 85,71% complete, ETA 00:01:31
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3487,654 ns/op
+# Warmup Iteration   2: 3320,121 ns/op
+# Warmup Iteration   3: 3273,325 ns/op
+# Warmup Iteration   4: 3261,104 ns/op
+# Warmup Iteration   5: 3326,087 ns/op
+Iteration   1: 3489,280 ns/op
+Iteration   2: 3496,576 ns/op
+Iteration   3: 3309,979 ns/op
+Iteration   4: 3264,161 ns/op
+Iteration   5: 3266,395 ns/op
+
+# Run progress: 87,30% complete, ETA 00:01:21
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3475,834 ns/op
+# Warmup Iteration   2: 3332,319 ns/op
+# Warmup Iteration   3: 3254,862 ns/op
+# Warmup Iteration   4: 3288,893 ns/op
+# Warmup Iteration   5: 3269,359 ns/op
+Iteration   1: 3267,277 ns/op
+Iteration   2: 3265,585 ns/op
+Iteration   3: 3266,594 ns/op
+Iteration   4: 3264,756 ns/op
+Iteration   5: 3267,190 ns/op
+
+# Run progress: 88,89% complete, ETA 00:01:11
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 3499,075 ns/op
+# Warmup Iteration   2: 3356,212 ns/op
+# Warmup Iteration   3: 3348,162 ns/op
+# Warmup Iteration   4: 3242,686 ns/op
+# Warmup Iteration   5: 3276,951 ns/op
+Iteration   1: 3247,318 ns/op
+Iteration   2: 3245,994 ns/op
+Iteration   3: 3264,481 ns/op
+Iteration   4: 3248,485 ns/op
+Iteration   5: 3247,180 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  3294,083 ±(99.9%) 87,853 ns/op [Average]
+  (min, avg, max) = (3245,994, 3294,083, 3496,576), stdev = 82,178
+  CI (99.9%): [3206,230, 3381,936] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 50003)
+
+# Run progress: 90,48% complete, ETA 00:01:00
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 5754,954 ns/op
+# Warmup Iteration   2: 5504,843 ns/op
+# Warmup Iteration   3: 5390,982 ns/op
+# Warmup Iteration   4: 5359,339 ns/op
+# Warmup Iteration   5: 5391,373 ns/op
+Iteration   1: 5399,218 ns/op
+Iteration   2: 5381,051 ns/op
+Iteration   3: 5389,828 ns/op
+Iteration   4: 5438,748 ns/op
+Iteration   5: 5421,042 ns/op
+
+# Run progress: 92,06% complete, ETA 00:00:50
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 5716,541 ns/op
+# Warmup Iteration   2: 5547,994 ns/op
+# Warmup Iteration   3: 5409,329 ns/op
+# Warmup Iteration   4: 5416,026 ns/op
+# Warmup Iteration   5: 5460,390 ns/op
+Iteration   1: 5365,708 ns/op
+Iteration   2: 5386,416 ns/op
+Iteration   3: 5363,022 ns/op
+Iteration   4: 5374,472 ns/op
+Iteration   5: 5371,789 ns/op
+
+# Run progress: 93,65% complete, ETA 00:00:40
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 5770,135 ns/op
+# Warmup Iteration   2: 5543,904 ns/op
+# Warmup Iteration   3: 5366,233 ns/op
+# Warmup Iteration   4: 5370,223 ns/op
+# Warmup Iteration   5: 5394,207 ns/op
+Iteration   1: 5416,206 ns/op
+Iteration   2: 5386,354 ns/op
+Iteration   3: 5421,390 ns/op
+Iteration   4: 5361,336 ns/op
+Iteration   5: 5348,653 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  5388,349 ±(99.9%) 27,972 ns/op [Average]
+  (min, avg, max) = (5348,653, 5388,349, 5438,748), stdev = 26,165
+  CI (99.9%): [5360,377, 5416,320] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail
+# Parameters: (size = 100003)
+
+# Run progress: 95,24% complete, ETA 00:00:30
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11326,260 ns/op
+# Warmup Iteration   2: 11014,703 ns/op
+# Warmup Iteration   3: 10778,953 ns/op
+# Warmup Iteration   4: 10851,020 ns/op
+# Warmup Iteration   5: 10856,157 ns/op
+Iteration   1: 10793,967 ns/op
+Iteration   2: 10762,642 ns/op
+Iteration   3: 10758,442 ns/op
+Iteration   4: 10788,588 ns/op
+Iteration   5: 10771,124 ns/op
+
+# Run progress: 96,83% complete, ETA 00:00:20
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11451,112 ns/op
+# Warmup Iteration   2: 11071,895 ns/op
+# Warmup Iteration   3: 11255,939 ns/op
+# Warmup Iteration   4: 11167,119 ns/op
+# Warmup Iteration   5: 10828,914 ns/op
+Iteration   1: 10823,491 ns/op
+Iteration   2: 10802,782 ns/op
+Iteration   3: 10774,963 ns/op
+Iteration   4: 10739,687 ns/op
+Iteration   5: 10756,658 ns/op
+
+# Run progress: 98,41% complete, ETA 00:00:10
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-vector-api/benchmarks/target/lib/jmh-core-1.37.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11505,591 ns/op
+# Warmup Iteration   2: 11221,454 ns/op
+# Warmup Iteration   3: 10857,838 ns/op
+# Warmup Iteration   4: 10902,782 ns/op
+# Warmup Iteration   5: 10803,089 ns/op
+Iteration   1: 10811,600 ns/op
+Iteration   2: 10815,071 ns/op
+Iteration   3: 10843,038 ns/op
+Iteration   4: 10824,296 ns/op
+Iteration   5: 10793,965 ns/op
+
+
+Result "eu.happycoders.vector.benchmarks.AddBenchmark.vectorMaskedTail":
+  10790,688 ±(99.9%) 31,772 ns/op [Average]
+  (min, avg, max) = (10739,687, 10790,688, 10843,038), stdev = 29,720
+  CI (99.9%): [10758,915, 10822,460] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:10:40
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                      (size)  Mode  Cnt       Score     Error  Units
+AddBenchmark.vector                 7  avgt   15       3,006 ±   0,012  ns/op
+AddBenchmark.vector               103  avgt   15       6,731 ±   0,043  ns/op
+AddBenchmark.vector              1003  avgt   15      55,157 ±   4,025  ns/op
+AddBenchmark.vector             10003  avgt   15     560,224 ±   9,732  ns/op
+AddBenchmark.vector             30003  avgt   15    3270,878 ±  37,221  ns/op
+AddBenchmark.vector             50003  avgt   15    5402,354 ±  33,027  ns/op
+AddBenchmark.vector            100003  avgt   15   10954,759 ±  37,456  ns/op
+AddBenchmark.vectorMasked           7  avgt   15      46,140 ±   0,114  ns/op
+AddBenchmark.vectorMasked         103  avgt   15     295,995 ±   1,307  ns/op
+AddBenchmark.vectorMasked        1003  avgt   15    2658,699 ±   5,812  ns/op
+AddBenchmark.vectorMasked       10003  avgt   15   20303,894 ± 322,914  ns/op
+AddBenchmark.vectorMasked       30003  avgt   15   59893,505 ± 410,553  ns/op
+AddBenchmark.vectorMasked       50003  avgt   15  100076,390 ± 877,685  ns/op
+AddBenchmark.vectorMasked      100003  avgt   15  197839,314 ± 758,384  ns/op
+AddBenchmark.vectorMaskedTail       7  avgt   15      26,237 ±   0,193  ns/op
+AddBenchmark.vectorMaskedTail     103  avgt   15      33,781 ±   4,505  ns/op
+AddBenchmark.vectorMaskedTail    1003  avgt   15      97,323 ±   2,405  ns/op
+AddBenchmark.vectorMaskedTail   10003  avgt   15     694,564 ±  99,593  ns/op
+AddBenchmark.vectorMaskedTail   30003  avgt   15    3294,083 ±  87,853  ns/op
+AddBenchmark.vectorMaskedTail   50003  avgt   15    5388,349 ±  27,972  ns/op
+AddBenchmark.vectorMaskedTail  100003  avgt   15   10790,688 ±  31,772  ns/op
+
+Benchmark result is saved to results/apple-m5-pro-arm64/benchmarks/supplementary/add-masked-tail-sizes.json
