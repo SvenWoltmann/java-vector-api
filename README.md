@@ -29,6 +29,16 @@ java --add-modules jdk.incubator.vector src/main/java/firststeps/AddArrays.java
 
 Many outputs depend on your CPU: the preferred vector size is 128 bits on ARM NEON, 256 or 512 bits on x86 with AVX2 or AVX-512. `results/<machine-id>/` holds the outputs of one machine; `scripts/run-examples.sh <path-to-jdk-27> <machine-id>` writes your own.
 
+### Java 28: `Float16Vector`
+
+`src/java28/` lies outside the Maven build, which compiles for Java 27. It holds what needs a Java 28 early-access build:
+
+```
+java --add-modules jdk.incubator.vector src/java28/firststeps/AddFloat16Arrays.java
+```
+
+`AddFloat16Arrays` adds two arrays of 16-bit floating-point values with `Float16Vector`, the class that [JEP 548](https://openjdk.org/jeps/548) proposes for the thirteenth incubator round. It ran on build 28-ea+23; the output is in `results/apple-m5-pro-arm64/java28/`. JEP 548 is proposed to target Java 28, not yet targeted, so the class may still change.
+
 ## Machine code
 
 `scripts/print-assembly.sh <path-to-jdk-27> <hsdis-dir> <machine-id>` prints what the C2 compiler generates for the four methods of `JitDemo` to `results/<machine-id>/jit/assembly/`. It needs the hsdis disassembler library, which the JDK does not ship; one way to get it is to compile `src/utils/hsdis/capstone/hsdis-capstone.c` from the [OpenJDK sources](https://github.com/openjdk/jdk) against [Capstone](https://www.capstone-engine.org/).
